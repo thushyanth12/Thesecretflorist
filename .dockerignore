@@ -1,7 +1,0 @@
-node_modules
-logs
-data/posters.json
-npm-debug.log
-"*.log"
-Dockerfile
-.git
