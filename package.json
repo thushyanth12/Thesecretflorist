@@ -1,0 +1,12 @@
+{
+  "name": "flower-bouquet",
+  "version": "1.0.0",
+  "description": "Since this is a simple static website (HTML, CSS, JS), deploying it is very easy and often free.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
