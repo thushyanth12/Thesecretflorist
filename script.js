@@ -47,8 +47,204 @@ const products = [
         image: "assets/wildflower.png",
         description: "Fresh wildflowers straight from the garden.",
         category: "Casual"
+    },
+    {
+        id: 7,
+        name: "golden moments",
+        price: 1699,
+        image: "assets/img1.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+
+    },
+    {
+        id: 8,
+        name: "blushing beauty",
+        price: 1699,
+        image: "assets/img 2.png",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 9,
+        name: "radiant charm",
+        price: 1699,
+        image: "assets/img3.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 10,
+        name: "elegant embrace",
+        price: 1699,
+        image: "assets/img4.png",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 11,
+        name: "serene splendor",
+        price: 1699,
+        image: "assets/img5.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 12,
+        name: "vibrant vogue",
+        price: 1699,
+        image: "assets/img6.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 13,
+        name: "charming cascade",
+        price: 1699,
+        image: "assets/img7.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 14,
+        name: "blissful bloom",
+        price: 1699,
+        image: "assets/img8.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 15,
+        name: "radiant romance",
+        price: 1699,
+        image: "assets/img9.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 16,
+        name: "timeless treasure",
+        price: 1699,
+        image: "assets/img10.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "romantic"
+    },
+    {
+        id: 17,
+        name: "enchanting elegance",
+        price: 1699,
+        image: "assets/img11.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Elegant"
+    },
+    {
+        id: 18,
+        name: "whimsical wonder",
+        price: 1699,
+        image: "assets/img12.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 19,
+        name: "floral fantasy",
+        price: 1699,
+        image: "assets/img13.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "romantic"
+    },
+    {
+        id: 20,
+        name: "garden gala",
+        price: 1699,
+        image: "assets/img14.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 21,
+        name: "blooming bliss",
+        price: 1699,
+        image: "assets/img15.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"
+    },
+    {
+        id: 22,
+        name: "petal perfection",
+        price: 1699,
+        image: "assets/img16.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Elegant"
+    },
+    {
+        id: 23,
+        name: "serenade of scents",
+        price: 1699,
+        image: "assets/img17.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Casual"        
+    },
+    {
+        id: 24,
+        name: "floral fiesta",
+        price: 1699,
+        image: "assets/img18.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Birthday"
+    },
+    {
+        id: 25,
+        name: "lavish lavender",
+        price: 1699,
+        image: "assets/img19.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        cartegory: "Elegant"     
+    },
+    {
+        id: 26,
+        name: "daisy delight",
+        price: 1699,
+        image: "assets/img20.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Birthday"   
+    },
+    {
+        id: 27,
+        name: "rose radiance",
+        price: 1699,
+        image: "assets/img21.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Romantic"
+    },
+    {
+        id: 28,
+        name: "tulip treasure",
+        price: 1699,
+        image: "assets/img22.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Elegant"
+    },
+    {
+        id: 29,
+        name: "orchid opulence",
+        price: 1699,
+        image: "assets/img23.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Elegant"
+    },
+    {
+        id: 30,
+        name: "sunset serenade",
+        price: 1699,
+        image: "assets/img24.jpeg",
+        description: "Fresh wildflowers straight from the garden.",
+        category: "Romantic"
     }
+
+
 ];
+
 
 let cart = [];
 let currentCategory = 'all';
