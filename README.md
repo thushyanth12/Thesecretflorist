@@ -1,4 +1,4 @@
-# How to Deploy FleurVerze
+# How to Deploy The secret florist 
 
 Since this is a simple static website (HTML, CSS, JS), deploying it is very easy and often free.
 
@@ -21,5 +21,5 @@ Since this is a simple static website (HTML, CSS, JS), deploying it is very easy
 2.  **Connect it**:
     *   On Netlify/Vercel: Go to "Domain Settings".
     *   Click "Add Custom Domain".
-    *   Enter your `www.yourdomain.com`.
+    *   Enter your `www.thesecretflorist.com`.
     *   Follow the instructions to add the DNS records (usually a CNAME or A record) in your Domain Registrar's dashboard.
