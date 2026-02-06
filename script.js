@@ -585,7 +585,8 @@ function checkout() {
         orderStatus.classList.remove('success');
     }
 
-    let message = "Hello The Secret Florist! I would like to order the following:%0A%0A";
+    let message = "Hello The Secret Florist! I would like to order the following:-sunset serenade (x1) - INR 1699 ,Total price: INR 1699 ,please confirm my order";
+    
 
     // Group items for cleaner message
     const itemMap = new Map();
@@ -596,33 +597,33 @@ function checkout() {
             itemMap.set(item.name, { ...item, count: 1 });
         }
     });
-
+    
     let total = 0;
     itemMap.forEach((details, name) => {
         const itemTotal = details.price * details.count;
         total += itemTotal;
-        message += `- ${name} (x${details.count}) - INR ${itemTotal}%0A`;
+        message += `- ${name} (x${details.count}) - INR ${itemTotal}`;
     });
 
-    message += `%0A*Total Price: INR ${total}*`;
-    message += "%0A%0APlease confirm my order.";
+    message += `Total Price: INR ${total}`;
+    message += "Please confirm my order.";
 
     // Replace with the actual business number. Using a dummy number for now.
     const phoneNumber = "919994588076";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     setTimeout(() => {
         if (orderStatus) {
-            orderStatus.classList.remove('loading');
-            orderStatus.classList.add('success');
+            orderStatus.classList.remove("loading");
+            orderStatus.classList.add("success");
         }
         window.open(whatsappUrl, '_blank');
         setTimeout(() => {
             if (orderStatus) {
-                orderStatus.classList.remove('active', 'success');
+                orderStatus.classList.remove("active", "success");
             }
         }, 1200);
-    }, 600);
+    }, 1200);
 }
 
 // Close cart when clicking outside

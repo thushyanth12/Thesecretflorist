@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon"  href="favicon.ico" >
 </head>
 
 <body>
@@ -112,7 +113,11 @@
                     <label for="message-input">Add message</label>
                     <textarea id="message-input" rows="3" placeholder="Write something sweet..."></textarea>
 
-                    <button id="customize-btn" class="cta-button ripple">Add Custom Bouquet</button>
+                    <button onclick="checkout()" class="cta-button">
+                        <i class="fa-brands fa-whatsapp wa-icon"></i>
+                        Add Custom Bouquet
+                      </button>
+                      
                 </div>
                 
                     </div>
@@ -146,7 +151,7 @@
                 <span id="cart-total">INR 0</span>
             </div>
             <button class="checkout-btn" onclick="checkout()">
-                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
             </button>
             <div class="order-status" id="order-status">
                 <span class="spinner"></span>
