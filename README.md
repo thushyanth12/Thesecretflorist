@@ -16,7 +16,7 @@ Since this is a simple static website (HTML, CSS, JS), deploying it is very easy
 2.  Push your code to it.
 3.  Go to **Settings** > **Pages** and select the `main` branch.
 
-## Getting a Custom Domain (e.g., www.fleurverze.com)
+## Getting a Custom Domain (e.g., www.thesecretflorist.com)
 1.  **Buy the Domain**: You need to purchase your desired name from a registrar like **GoDaddy**, **Namecheap**, or **Google Domains**.
 2.  **Connect it**:
     *   On Netlify/Vercel: Go to "Domain Settings".
