@@ -1,7 +1,7 @@
 ﻿const products = [
     {
         id: 1,
-        name: "Rose Royal Indeulgence",
+        name: "Rose Royal indulgence",
         price: 1499,
         image: "assets/1.webp", // Path relative to public folder
         description: "A premium bouquet of roses paired with chocolates for a rich, heartfelt surprise.",
@@ -11,7 +11,7 @@
     {
         id: 2,
         name: "Blush Harmony Box",
-        price: 1899,
+        price: 3000,
         image: "assets/2.webp",
         description: "Soft pastel blooms and sweet treats arranged for elegant celebrations.",
         category: "Birthday"
@@ -19,7 +19,7 @@
     {
         id: 3,
         name: "Midnight Bloom Luxe",
-        price: 2499,
+        price: 1500,
         image: "assets/3.webp",
         description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
         category: "Elegant"
@@ -27,7 +27,7 @@
     {
         id: 4,
         name: "Healer’s Honor Bouquet",
-        price: 1299,
+        price: 2300,
         image: "assets/4.webp",
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
         category: "Birthday"
@@ -43,7 +43,7 @@
     {
         id: 6,
         name: "Ivory Spring Vase",
-        price: 1699,
+        price: 1800,
         image: "assets/6.webp",
         description: "A refreshing mix of white blooms and buds arranged for natural elegance.",
         category: "Casual"
@@ -100,7 +100,7 @@
     {
         id: 13,
         name: "Ballooned Blossom Surprise",
-        price: 1699,
+        price: 2800,
         image: "assets/13.webp",
         description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
         category: "Casual"
@@ -108,7 +108,7 @@
     {
         id: 14,
         name: "Azure Romantic Crate",
-        price: 1699,
+        price: 1500,
         image: "assets/14.webp",
         description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
         category: "Casual"
@@ -116,7 +116,7 @@
     {
         id: 15,
         name: "Heirloom Petal Mandala",
-        price: 1699,
+        price: 700,
         image: "assets/15.webp",
         description: "An intricate circular floral design crafted as a timeless showpiece..",
         category: "Casual"
@@ -124,7 +124,7 @@
     {
         id: 16,
         name: "Money Bouquet",
-        price: 1699,
+        price: 3500,
         image: "assets/16.webp",
         description: "A bouqeut full of Rupees.",
         category: "romantic"
@@ -133,7 +133,7 @@
     {
         id: 18,
         name: "Forever us Boquet ",
-        price: 1699,
+        price: 3800,
         image: "assets/18.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
         category: "Casual"
@@ -145,14 +145,6 @@
         image: "assets/19.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
         category: "romantic"
-    },
-    {
-        id: 20,
-        name: "Love Chronicle Bouquet",
-        price: 1699,
-        image: "assets/20.webp",
-        description: "A heartfelt arrangement combining roses and photo memories for meaningful celebrations..",
-        category: "Casual"
     },
     {
         id: 21,
