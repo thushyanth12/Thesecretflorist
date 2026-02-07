@@ -1,132 +1,132 @@
 ﻿const products = [
     {
         id: 1,
-        name: "Crimson Passion",
+        name: "Rose Royal Indeulgence",
         price: 1499,
         image: "assets/1.webp", // Path relative to public folder
-        description: "A classic arrangement of 20 premium red roses suitable for expressing deep love.",
+        description: "A premium bouquet of roses paired with chocolates for a rich, heartfelt surprise.",
         category: "Romantic"
         
     },
     {
         id: 2,
-        name: "Pastel Dreams",
+        name: "Blush Harmony Box",
         price: 1899,
         image: "assets/2.webp",
-        description: "A mix of seasonal wildflowers in soft pastel hues, perfect for birthdays and cheer.",
+        description: "Soft pastel blooms and sweet treats arranged for elegant celebrations.",
         category: "Birthday"
     },
     {
         id: 3,
-        name: "Pure Elegance",
+        name: "Midnight Bloom Luxe",
         price: 2499,
         image: "assets/3.webp",
-        description: "Stunning white lilies paired with exotic orchids for a sophisticated statement.",
+        description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
         category: "Elegant"
     },
     {
         id: 4,
-        name: "Sunny Delight",
+        name: "Healer’s Honor Bouquet",
         price: 1299,
         image: "assets/4.webp",
-        description: "Bright and cheerful bouquet with sunflowers and daisies.",
+        description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
         category: "Birthday"
     },
     {
         id: 5,
-        name: "Mystic Purple",
+        name: "Orchid Bliss Surprise",
         price: 1999,
         image: "assets/5.webp",
-        description: "Enchanting purple roses for a mysterious and romantic touch.",
+        description: "Delicate pink orchids paired with chocolates and gifts for a charming celebration.",
         category: "Romantic"
     },
     {
         id: 6,
-        name: "Garden Fresh",
+        name: "Ivory Spring Vase",
         price: 1699,
         image: "assets/6.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A refreshing mix of white blooms and buds arranged for natural elegance.",
         category: "Casual"
     },
     {
         id: 7,
-        name: "golden moments",
+        name: "Scarlet Signature Wrap",
         price: 1699,
         image: "assets/7.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Hand-wrapped red roses crafted to mark unforgettable moments of love..",
         category: "Casual"
 
     },
     {
         id: 8,
-        name: "blushing beauty",
+        name: "Heart of a hundred roses",
         price: 1699,
         image: "assets/8.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A grand heart-shaped arrangement of red roses, made to express deep devotion.",
         category: "Casual"
     },
     {
         id: 9,
-        name: "radiant charm",
+        name: "Hot Wheels Fire",
         price: 1699,
         image: "assets/9.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
         category: "Casual"
     },
     {
         id: 10,
-        name: "elegant embrace",
+        name: "Speed & Sparkle Delight",
         price: 1699,
         image: "assets/10.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "An exciting fusion of Hot Wheels fun and colorful floral charm.",
         category: "Casual"
     },
     {
         id: 11,
-        name: "serene splendor",
+        name: "Serene Blue Bliss",
         price: 1699,
         image: "assets/11.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
         category: "Casual"
     },
     {
         id: 12,
-        name: "vibrant vogue",
+        name: "Blush celebration box",
         price: 1699,
         image: "assets/12.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
         category: "Casual"
     },
     {
         id: 13,
-        name: "charming cascade",
+        name: "Ballooned Blossom Surprise",
         price: 1699,
         image: "assets/13.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
         category: "Casual"
     },
     {
         id: 14,
-        name: "blissful bloom",
+        name: "Azure Romantic Crate",
         price: 1699,
         image: "assets/14.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
         category: "Casual"
     },
     {
         id: 15,
-        name: "radiant romance",
+        name: "Heirloom Petal Mandala",
         price: 1699,
         image: "assets/15.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "An intricate circular floral design crafted as a timeless showpiece..",
         category: "Casual"
     },
     {
         id: 16,
-        name: "timeless treasure",
+        name: "Money Bouquet",
         price: 1699,
         image: "assets/16.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A bouqeut full of Rupees.",
         category: "romantic"
     },
     {
@@ -139,106 +139,106 @@
     },
     {
         id: 18,
-        name: "whimsical wonder",
+        name: "Forever us Boquet ",
         price: 1699,
         image: "assets/18.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
         category: "Casual"
     },
     {
         id: 19,
-        name: "floral fantasy",
+        name: "Memories in bloom",
         price: 1699,
         image: "assets/19.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
         category: "romantic"
     },
     {
         id: 20,
-        name: "garden gala",
+        name: "Love Chronicle Bouquet",
         price: 1699,
         image: "assets/20.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A heartfelt arrangement combining roses and photo memories for meaningful celebrations..",
         category: "Casual"
     },
     {
         id: 21,
-        name: "blooming bliss",
+        name: "Golden Heart Indulgence",
         price: 1699,
         image: "assets/21.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A luxurious heart-shaped arrangement of red roses and Ferrero Rocher chocolates.",
         category: "Casual"
     },
     {
         id: 22,
-        name: "petal perfection",
+        name: "Velvet Rose Noir",
         price: 1699,
         image: "assets/22.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Classic red roses wrapped in elegant black for a bold, timeless expression of love.",
         category: "Elegant"
     },
     {
         id: 23,
-        name: "serenade of scents",
+        name: "Purple Sweet Symphony",
         price: 1699,
         image: "assets/23.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
         category: "Casual"        
     },
     {
         id: 24,
-        name: "floral fiesta",
+        name: "Kinder Joy Celebration Wrap",
         price: 1699,
         image: "assets/24.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A fun and delightful bouquet filled with Kinder Joy treats, perfect for cheerful gifting..",
         category: "Birthday"
     },
     {
         id: 25,
-        name: "lavish lavender",
+        name: "Blush Tulip Whisper",
         price: 1699,
         image: "assets/25.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture..",
         category: "Elegant"     
     },
     {
         id: 26,
-        name: "daisy delight",
+        name: "Cuddle Carnival Bouquet",
         price: 1699,
         image: "assets/26.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth..",
         category: "Birthday"   
     },
     {
         id: 27,
-        name: "rose radiance",
+        name: "Crimson Chocolate Charm",
         price: 1699,
         image: "assets/27.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Red roses paired with chocolate sticks for a rich and romantic surprise..",
         category: "Romantic"
     },
     {
         id: 28,
-        name: "tulip treasure",
+        name: "Lily & Rose Symphony",
         price: 1699,
         image: "assets/28.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
         category: "Elegant"
     },
     {
         id: 29,
-        name: "orchid opulence",
+        name: "Chocolate Rose Indulgence",
         price: 1699,
         image: "assets/29.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments..",
         category: "Elegant"
     },
     {
         id: 30,
-        name: "sunset serenade",
+        name: "Pink Princess Pamper Box",
         price: 1699,
         image: "assets/30.webp",
-        description: "Fresh wildflowers straight from the garden.",
+        description: "A charming pink-themed gift bouquet with beauty treats and floral accents..",
         category: "Romantic"
     }
 
@@ -357,7 +357,7 @@ function setupProductInteractions() {
 }
 
 function setupCustomizer() {
-    if (!flowerSelect || !wrapSelect || !previewFlower || !previewWrap || !previewMessage || !previewPrice) {
+    if (!flowerSelect || !wrapSelect || !previewFlower || !previewWrap || !previewMessage) {
         return;
     }
 
@@ -375,7 +375,9 @@ function setupCustomizer() {
         previewMessage.textContent = messageInput && messageInput.value
             ? `Message: \"${messageInput.value}\"`
             : 'Message: \"Write something sweet...\"';
-        previewPrice.textContent = `INR ${total}`;
+        if (previewPrice) {
+            previewPrice.textContent = `INR ${total}`;
+        }
     };
 
     flowerSelect.addEventListener('change', updatePreview);
