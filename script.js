@@ -129,14 +129,7 @@
         description: "A bouqeut full of Rupees.",
         category: "romantic"
     },
-    {
-        id: 17,
-        name: "enchanting elegance",
-        price: 1699,
-        image: "assets/17.webp",
-        description: "Fresh wildflowers straight from the garden.",
-        category: "Elegant"
-    },
+
     {
         id: 18,
         name: "Forever us Boquet ",
