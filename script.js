@@ -32,14 +32,7 @@
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
         category: "Birthday"
     },
-    {
-        id: 5,
-        name: "Orchid Bliss Surprise",
-        price: 1999,
-        image: "assets/5.webp",
-        description: "Delicate pink orchids paired with chocolates and gifts for a charming celebration.",
-        category: "Romantic"
-    },
+
     {
         id: 6,
         name: "Ivory Spring Vase",
@@ -51,7 +44,7 @@
     {
         id: 7,
         name: "Scarlet Signature Wrap",
-        price: 1699,
+        price: 2800,
         image: "assets/7.webp",
         description: "Hand-wrapped red roses crafted to mark unforgettable moments of love..",
         category: "Casual"
@@ -59,8 +52,8 @@
     },
     {
         id: 8,
-        name: "Heart of a hundred roses",
-        price: 1699,
+        name: "Heart of a three hundred roses",
+        price: 80000,
         image: "assets/8.webp",
         description: "A grand heart-shaped arrangement of red roses, made to express deep devotion.",
         category: "Casual"
@@ -68,23 +61,16 @@
     {
         id: 9,
         name: "Hot Wheels Fire",
-        price: 1699,
+        price: 2800,
         image: "assets/9.webp",
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
         category: "Casual"
     },
-    {
-        id: 10,
-        name: "Speed & Sparkle Delight",
-        price: 1699,
-        image: "assets/10.webp",
-        description: "An exciting fusion of Hot Wheels fun and colorful floral charm.",
-        category: "Casual"
-    },
+  
     {
         id: 11,
         name: "Serene Blue Bliss",
-        price: 1699,
+        price: 1200,
         image: "assets/11.webp",
         description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
         category: "Casual"
@@ -92,7 +78,7 @@
     {
         id: 12,
         name: "Blush celebration box",
-        price: 1699,
+        price: 1600,
         image: "assets/12.webp",
         description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
         category: "Casual"
@@ -134,14 +120,14 @@
         id: 18,
         name: "Forever us Boquet ",
         price: 3800,
-        image: "assets/18.webp",
+        image: "assets/fore.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
         category: "Casual"
     },
     {
         id: 19,
         name: "Memories in bloom",
-        price: 1699,
+        price: 1000,
         image: "assets/19.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
         category: "romantic"
@@ -149,7 +135,7 @@
     {
         id: 21,
         name: "Golden Heart Indulgence",
-        price: 1699,
+        price: 4200,
         image: "assets/21.webp",
         description: "A luxurious heart-shaped arrangement of red roses and Ferrero Rocher chocolates.",
         category: "Casual"
@@ -157,7 +143,7 @@
     {
         id: 22,
         name: "Velvet Rose Noir",
-        price: 1699,
+        price: 1200,
         image: "assets/22.webp",
         description: "Classic red roses wrapped in elegant black for a bold, timeless expression of love.",
         category: "Elegant"
@@ -165,7 +151,7 @@
     {
         id: 23,
         name: "Purple Sweet Symphony",
-        price: 1699,
+        price: 2500,
         image: "assets/23.webp",
         description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
         category: "Casual"        
@@ -173,7 +159,7 @@
     {
         id: 24,
         name: "Kinder Joy Celebration Wrap",
-        price: 1699,
+        price: 1200,
         image: "assets/24.webp",
         description: "A fun and delightful bouquet filled with Kinder Joy treats, perfect for cheerful gifting..",
         category: "Birthday"
@@ -189,7 +175,7 @@
     {
         id: 26,
         name: "Cuddle Carnival Bouquet",
-        price: 1699,
+        price: 3800,
         image: "assets/26.webp",
         description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth..",
         category: "Birthday"   
@@ -197,7 +183,7 @@
     {
         id: 27,
         name: "Crimson Chocolate Charm",
-        price: 1699,
+        price: 3800,
         image: "assets/27.webp",
         description: "Red roses paired with chocolate sticks for a rich and romantic surprise..",
         category: "Romantic"
@@ -205,7 +191,7 @@
     {
         id: 28,
         name: "Lily & Rose Symphony",
-        price: 1699,
+        price: 4500,
         image: "assets/28.webp",
         description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
         category: "Elegant"
@@ -213,7 +199,7 @@
     {
         id: 29,
         name: "Chocolate Rose Indulgence",
-        price: 1699,
+        price: 1300,
         image: "assets/29.webp",
         description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments..",
         category: "Elegant"
@@ -221,7 +207,7 @@
     {
         id: 30,
         name: "Pink Princess Pamper Box",
-        price: 1699,
+        price: 2200,
         image: "assets/30.webp",
         description: "A charming pink-themed gift bouquet with beauty treats and floral accents..",
         category: "Romantic"
