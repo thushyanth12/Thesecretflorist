@@ -1,26 +1,26 @@
 ﻿const products = [
     {
         id: 1,
-        name: "Rose Royal indulgence",
-        price: 1499,
-        image: "assets/1.webp", // Path relative to public folder
-        description: "A premium bouquet of roses paired with chocolates for a rich, heartfelt surprise.",
-        category: "Romantic"
+        name: "The First step",
+        price: 1800,
+        image: "assets/child.webp", // Path relative to public folder
+        description: "A bouquet for your baby's birthday.",
+        category: "Birthday"
         
     },
     {
         id: 2,
         name: "Blush Harmony Box",
         price: 3000,
-        image: "assets/2.webp",
+        image: "assets/one.webp",
         description: "Soft pastel blooms and sweet treats arranged for elegant celebrations.",
-        category: "Birthday"
+        category: "Casual"
     },
     {
         id: 3,
         name: "Midnight Bloom Luxe",
         price: 1500,
-        image: "assets/3.webp",
+        image: "assets/three.webp",
         description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
         category: "Elegant"
     },
@@ -28,7 +28,7 @@
         id: 4,
         name: "Healer’s Honor Bouquet",
         price: 2300,
-        image: "assets/4.webp",
+        image: "assets/four.webp",
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
         category: "Birthday"
     },
@@ -62,7 +62,7 @@
         id: 9,
         name: "Hot Wheels Fire",
         price: 2800,
-        image: "assets/9.webp",
+        image: "assets/nine.webp",
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
         category: "Casual"
     },
@@ -71,7 +71,7 @@
         id: 11,
         name: "Serene Blue Bliss",
         price: 1200,
-        image: "assets/11.webp",
+        image: "assets/eleven.webp",
         description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
         category: "Casual"
     },
@@ -79,15 +79,16 @@
         id: 12,
         name: "Blush celebration box",
         price: 1600,
-        image: "assets/12.webp",
+        image: "assets/twelve.webp",
         description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
         category: "Casual"
     },
+    
     {
         id: 13,
         name: "Ballooned Blossom Surprise",
         price: 2800,
-        image: "assets/13.webp",
+        image: "assets/thirteen.webp",
         description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
         category: "Casual"
     },
@@ -95,7 +96,7 @@
         id: 14,
         name: "Azure Romantic Crate",
         price: 1500,
-        image: "assets/14.webp",
+        image: "assets/fourteen.webp",
         description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
         category: "Casual"
     },
@@ -103,7 +104,7 @@
         id: 15,
         name: "Heirloom Petal Mandala",
         price: 700,
-        image: "assets/15.webp",
+        image: "assets/fifteen.webp",
         description: "An intricate circular floral design crafted as a timeless showpiece..",
         category: "Casual"
     },
@@ -111,7 +112,7 @@
         id: 16,
         name: "Money Bouquet",
         price: 3500,
-        image: "assets/16.webp",
+        image: "assets/sixteen.webp",
         description: "A bouqeut full of Rupees.",
         category: "romantic"
     },
@@ -120,7 +121,7 @@
         id: 18,
         name: "Forever us Boquet ",
         price: 3800,
-        image: "assets/fore.webp",
+        image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
         category: "Casual"
     },
@@ -128,7 +129,7 @@
         id: 19,
         name: "Memories in bloom",
         price: 1000,
-        image: "assets/19.webp",
+        image: "assets/nineteen.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
         category: "romantic"
     },
@@ -136,7 +137,7 @@
         id: 20,
         name: "Ethereal Pastel Garden",
         price: 3200,
-        image: "assets/20.webp",
+        image: "assets/twenty.webp",
         description: "A dreamlike collection of soft-hued blooms, perfect for expressing pure affection.",
         category: "Elegant"
     },
@@ -227,6 +228,14 @@
         image:"assets/31.webp",
         description:"A bouquet of strong and powerful women",
         category:"Elegant"
+    },
+    {
+        id:32,
+        name:"Chocolate Bouquet",
+        price:2500,
+        image:"assets/BS.webp",
+        description:"A bouquet of chocolates",
+        category:"Casual"
     }
 
 
