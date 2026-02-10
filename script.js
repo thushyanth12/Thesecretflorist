@@ -70,7 +70,7 @@
     {
         id: 11,
         name: "Serene Blue Bliss",
-        price: 1200,
+        price: 700,
         image: "assets/eleven.webp",
         description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
         category: "Casual"
@@ -78,7 +78,7 @@
     {
         id: 12,
         name: "Blush celebration box",
-        price: 1600,
+        price: 700,
         image: "assets/twelve.webp",
         description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
         category: "Casual"
@@ -87,7 +87,7 @@
     {
         id: 13,
         name: "Ballooned Blossom Surprise",
-        price: 2800,
+        price: 1400,
         image: "assets/thirteen.webp",
         description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
         category: "Casual"
