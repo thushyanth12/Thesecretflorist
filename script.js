@@ -133,6 +133,14 @@
         category: "romantic"
     },
     {
+        id: 20,
+        name: "Ethereal Pastel Garden",
+        price: 3200,
+        image: "assets/20.webp",
+        description: "A dreamlike collection of soft-hued blooms, perfect for expressing pure affection.",
+        category: "Elegant"
+    },
+    {
         id: 21,
         name: "Golden Heart Indulgence",
         price: 4200,
@@ -211,6 +219,14 @@
         image: "assets/30.webp",
         description: "A charming pink-themed gift bouquet with beauty treats and floral accents..",
         category: "Romantic"
+    },
+    {
+        id:31,
+        name:"The Bouquet of Strong",
+        price:1500,
+        image:"assets/31.webp",
+        description:"A bouquet of strong and powerful women",
+        category:"Elegant"
     }
 
 
@@ -220,7 +236,7 @@
 let cart = [];
 let currentCategory = 'all';
 let searchTerm = '';
-let maxPrice = 2500;
+let maxPrice = 100000;
 let occasionFilter = 'all';
 let wishlist = new Set();
 
@@ -254,8 +270,20 @@ function init() {
     setupLightbox();
     setupScrollAnimations();
     setupRipple();
+    setupNavbarScroll();
     renderProducts();
     updateCartUI();
+}
+
+function setupNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 }
 
 function setupCategoryFilters() {
