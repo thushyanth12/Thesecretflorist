@@ -601,8 +601,10 @@ function toggleCart(forceOpen = null) {
 }
 
 function checkout() {
-    if (cart.length === 0) {
-        alert("Your cart is empty!");
+    const customMessage = messageInput ? messageInput.value.trim() : '';
+
+    if (cart.length === 0 && !customMessage) {
+        alert("Your cart is empty! Please add a bouquet or write a custom message.");
         return;
     }
 
@@ -611,30 +613,36 @@ function checkout() {
         orderStatus.classList.remove('success');
     }
 
-    let message = "Hello The Secret Florist! I would like to order the following:-sunset serenade (x1) - INR 1699 ,Total price: INR 1699 ,please confirm my order";
+    let message = "Hello The Secret Florist!\n\n";
     
+    if (customMessage) {
+        message += `*Custom Message/Request:* ${customMessage}\n\n`;
+    }
 
-    // Group items for cleaner message
-    const itemMap = new Map();
-    cart.forEach(item => {
-        if (itemMap.has(item.name)) {
-            itemMap.set(item.name, { ...item, count: itemMap.get(item.name).count + 1 });
-        } else {
-            itemMap.set(item.name, { ...item, count: 1 });
-        }
-    });
-    
-    let total = 0;
-    itemMap.forEach((details, name) => {
-        const itemTotal = details.price * details.count;
-        total += itemTotal;
-        message += `- ${name} (x${details.count}) - INR ${itemTotal}`;
-    });
+    if (cart.length > 0) {
+        message += "*Order Details:*\n";
+        // Group items for cleaner message
+        const itemMap = new Map();
+        cart.forEach(item => {
+            if (itemMap.has(item.name)) {
+                itemMap.set(item.name, { ...item, count: itemMap.get(item.name).count + 1 });
+            } else {
+                itemMap.set(item.name, { ...item, count: 1 });
+            }
+        });
+        
+        let total = 0;
+        itemMap.forEach((details, name) => {
+            const itemTotal = details.price * details.count;
+            total += itemTotal;
+            message += `- ${name} (x${details.count}) - INR ${itemTotal}\n`;
+        });
 
-    message += `Total Price: INR ${total}`;
-    message += "Please confirm my order.";
+        message += `\n*Total Price: INR ${total}*\n`;
+    }
 
-    // Replace with the actual business number. Using a dummy number for now.
+    message += "\nPlease confirm my order. Thank you!";
+
     const phoneNumber = "919994588076";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
