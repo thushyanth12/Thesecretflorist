@@ -231,11 +231,27 @@
     },
     {
         id:32,
-        name:"Chocolate Bouquet",
-        price:2500,
-        image:"assets/BS.webp",
-        description:"A bouquet of chocolates",
-        category:"Casual"
+        name:"Bouquet of Beda",
+        price:700,
+        image:"assets/beda.webp",
+        description:"A bouquet  contains Milk Beda",
+        category:"Casual"   
+    },
+    {
+        id:33,
+        name:"Red Rose Bouquet",
+        price:1200,
+        image:"assets/flo.webp",
+        description:"A timeless arrangement of deep red roses, perfect for love and special moments.",
+        category:"Casual"   
+    },
+    {
+        id:34,
+        name:"Red Rose Bouquet with cake",
+        price:1800,
+        image:"assets/combo.webp",
+        description:"Fresh red roses paired with a delicious cake to make celebrations extra special.",
+        category:"Casual"   
     }
 
 
