@@ -652,8 +652,9 @@ img {
 }
 
 .add-btn:hover {
-    background: var(--accent-color);
+    background: #33b4a7;
     color: white;
+    
 }
 
 /* Cart Sidebar */
