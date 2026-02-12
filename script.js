@@ -264,6 +264,7 @@ let searchTerm = '';
 let maxPrice = 100000;
 let occasionFilter = 'all';
 let wishlist = new Set();
+let selectedProductForModal = null;
 
 const productGrid = document.getElementById('product-grid');
 const cartItemsContainer = document.getElementById('cart-items');
@@ -278,6 +279,8 @@ const occasionSelect = document.getElementById('occasion-filter');
 const flowerSelect = document.getElementById('flower-select');
 const wrapSelect = document.getElementById('wrap-select');
 const messageInput = document.getElementById('message-input');
+const productModal = document.getElementById('product-modal');
+const productModalOverlay = document.getElementById('product-modal-overlay');
 const previewFlower = document.getElementById('preview-flower');
 const previewWrap = document.getElementById('preview-wrap');
 const previewMessage = document.getElementById('preview-message');
@@ -293,6 +296,7 @@ function init() {
     setupProductInteractions();
     setupCustomizer();
     setupLightbox();
+    setupProductModal();
     setupScrollAnimations();
     setupRipple();
     setupNavbarScroll();
@@ -464,6 +468,26 @@ function setupLightbox() {
     });
 }
 
+function setupProductModal() {
+    // Close modal with ESC key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeProductModal();
+        }
+    });
+
+    // Close modal if clicking on overlay
+    if (productModalOverlay) {
+        productModalOverlay.addEventListener('click', (event) => {
+            if (event.target === productModalOverlay) {
+                closeProductModal();
+            }
+        });
+    }
+}
+
+
+
 function setupScrollAnimations() {
     const revealElements = document.querySelectorAll('.reveal, .slide-in');
     if (!('IntersectionObserver' in window) || revealElements.length === 0) {
@@ -553,8 +577,42 @@ function renderProducts() {
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
-        cart.push(product);
+        selectedProductForModal = product;
+        showProductModal(product);
+    }
+}
+
+function showProductModal(product) {
+    const modalProductImage = document.getElementById('modal-product-image');
+    const modalProductName = document.getElementById('modal-product-name');
+    const modalProductDescription = document.getElementById('modal-product-description');
+    const modalProductPrice = document.getElementById('modal-product-price');
+
+    modalProductImage.src = product.image;
+    modalProductImage.alt = product.name;
+    modalProductName.textContent = product.name;
+    modalProductDescription.textContent = product.description;
+    modalProductPrice.textContent = `INR ${product.price}`;
+
+    if (productModal && productModalOverlay) {
+        productModal.classList.add('active');
+        productModalOverlay.classList.add('active');
+    }
+}
+
+function closeProductModal() {
+    if (productModal && productModalOverlay) {
+        productModal.classList.remove('active');
+        productModalOverlay.classList.remove('active');
+    }
+    selectedProductForModal = null;
+}
+
+function confirmAddToCart() {
+    if (selectedProductForModal) {
+        cart.push(selectedProductForModal);
         updateCartUI();
+        closeProductModal();
         toggleCart(true); // Open cart when item added
     }
 }
@@ -667,6 +725,11 @@ if (cartOverlay) {
     cartOverlay.addEventListener('click', () => toggleCart(false));
 }
 
-init();
+// Ensure DOM is fully loaded before initializing
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
 
 
