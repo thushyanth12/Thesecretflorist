@@ -444,11 +444,13 @@ function setupLightbox() {
         return;
     }
 
-    document.querySelectorAll('.gallery-image').forEach(image => {
-        image.addEventListener('click', () => {
-            lightboxImage.src = image.src;
+    // Use event delegation for dynamic images
+    document.addEventListener('click', (event) => {
+        const target = event.target.closest('.gallery-image, .product-image');
+        if (target && target.tagName === 'IMG') {
+            lightboxImage.src = target.src;
             lightbox.classList.add('active');
-        });
+        }
     });
 
     const closeLightbox = () => {
@@ -531,7 +533,7 @@ function renderProducts() {
             <button class="wishlist-btn ${wishlist.has(product.id) ? 'active' : ''}" data-id="${product.id}">
                 <i class="fas fa-heart"></i>
             </button>
-            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image">
             <div class="product-info">
                 <div class="product-meta">
                     <h3 class="product-title">${product.name}</h3>
