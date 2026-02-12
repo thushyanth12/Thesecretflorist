@@ -384,6 +384,8 @@ img {
 }
 
 .ghost-button:hover {
+    color: white;
+    background-color: #2eb7ad;
     transform: translateY(-3px);
     border-color: var(--accent-color);
 }
