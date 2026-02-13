@@ -26,7 +26,7 @@
     },
     {
         id: 4,
-        name: "Healer’s Honor Bouquet",
+        name: "Healer's Honor Bouquet",
         price: 2300,
         image: "assets/four.webp",
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
@@ -258,6 +258,7 @@
 ];
 
 
+// Cart is now an array of { product, quantity } objects
 let cart = [];
 let currentCategory = 'all';
 let searchTerm = '';
@@ -265,6 +266,7 @@ let maxPrice = 100000;
 let occasionFilter = 'all';
 let wishlist = new Set();
 let selectedProductForModal = null;
+let modalQuantity = 1;
 
 const productGrid = document.getElementById('product-grid');
 const cartItemsContainer = document.getElementById('cart-items');
@@ -291,6 +293,7 @@ const lightboxImage = document.getElementById('lightbox-image');
 const orderStatus = document.getElementById('order-status');
 
 function init() {
+    setupPageLoader();
     setupCategoryFilters();
     setupSearchFilters();
     setupProductInteractions();
@@ -300,8 +303,89 @@ function init() {
     setupScrollAnimations();
     setupRipple();
     setupNavbarScroll();
+    setupScrollToTop();
+    createToastContainer();
     renderProducts();
     updateCartUI();
+}
+
+// ================== TOAST NOTIFICATION ==================
+function createToastContainer() {
+    if (document.getElementById('toast-container')) return;
+    const container = document.createElement('div');
+    container.id = 'toast-container';
+    document.body.appendChild(container);
+}
+
+function showToast(productName, productImage) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'cart-toast';
+    toast.innerHTML = `
+        <div class="toast-icon">
+            <img src="${productImage}" alt="${productName}">
+        </div>
+        <div class="toast-body">
+            <span class="toast-check"><i class="fas fa-check-circle"></i></span>
+            <span class="toast-text"><strong>${productName}</strong> added to cart</span>
+        </div>
+        <button class="toast-view-cart" onclick="toggleCart(true); this.closest('.cart-toast').remove();">
+            View Cart
+        </button>
+        <button class="toast-close" onclick="this.closest('.cart-toast').remove();">&times;</button>
+    `;
+    container.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // Auto-remove after 3.5 seconds
+    setTimeout(() => {
+        toast.classList.add('hiding');
+        setTimeout(() => toast.remove(), 400);
+    }, 3500);
+}
+
+// ================== PAGE LOADER ==================
+function setupPageLoader() {
+    const loader = document.getElementById('page-loader');
+    if (!loader) return;
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 800);
+    });
+    
+    // Fallback: hide loader after 3 seconds max
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 3000);
+}
+
+// ================== SCROLL TO TOP ==================
+function setupScrollToTop() {
+    const scrollTopBtn = document.getElementById('scroll-top');
+    if (!scrollTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }
 
 function setupNavbarScroll() {
@@ -434,9 +518,8 @@ function setupCustomizer() {
                 category: "custom"
             };
 
-            cart.push(customProduct);
-            updateCartUI();
-            toggleCart(true);
+            addProductToCart(customProduct, 1);
+            showToast(customProduct.name, customProduct.image);
         });
     }
 
@@ -501,7 +584,7 @@ function setupScrollAnimations() {
                 entry.target.classList.add('in-view');
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.15 });
 
     revealElements.forEach(el => observer.observe(el));
 }
@@ -512,6 +595,12 @@ function setupRipple() {
         if (!target) {
             return;
         }
+        
+        // Don't apply ripple to quantity buttons
+        if (event.target.closest('.qty-btn')) {
+            return;
+        }
+        
         const circle = document.createElement('span');
         const diameter = Math.max(target.clientWidth, target.clientHeight);
         const radius = diameter / 2;
@@ -548,24 +637,28 @@ function renderProducts() {
     });
 
     if (filteredProducts.length === 0) {
-        productGrid.innerHTML = '<div class="empty-state">No bouquets match your filters.</div>';
+        productGrid.innerHTML = `
+            <div class="empty-state">
+                <i class="fas fa-search" style="font-size: 2rem; opacity: 0.3; margin-bottom: 0.5rem; color: var(--accent-color);"></i>
+                <p>No bouquets match your filters.</p>
+            </div>`;
         return;
     }
 
-    productGrid.innerHTML = filteredProducts.map(product => `
-        <div class="product-card reveal">
+    productGrid.innerHTML = filteredProducts.map((product, index) => `
+        <div class="product-card reveal" style="--card-index: ${index}">
             <button class="wishlist-btn ${wishlist.has(product.id) ? 'active' : ''}" data-id="${product.id}">
                 <i class="fas fa-heart"></i>
             </button>
-            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image">
+            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image" loading="lazy">
             <div class="product-info">
                 <div class="product-meta">
                     <h3 class="product-title">${product.name}</h3>
                 </div>
                 <p class="product-desc">${product.description}</p>
-                <div class="product-price">INR ${product.price}</div>
+                <div class="product-price">INR ${product.price.toLocaleString('en-IN')}</div>
                 <button class="add-btn ripple" data-id="${product.id}">
-                    Add to Cart
+                    <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
         </div>
@@ -578,6 +671,7 @@ function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
         selectedProductForModal = product;
+        modalQuantity = 1; // Reset quantity for new modal
         showProductModal(product);
     }
 }
@@ -592,7 +686,11 @@ function showProductModal(product) {
     modalProductImage.alt = product.name;
     modalProductName.textContent = product.name;
     modalProductDescription.textContent = product.description;
-    modalProductPrice.textContent = `INR ${product.price}`;
+    modalProductPrice.textContent = `INR ${product.price.toLocaleString('en-IN')}`;
+
+    // Update quantity display
+    const qtyDisplay = document.getElementById('modal-qty-value');
+    if (qtyDisplay) qtyDisplay.textContent = modalQuantity;
 
     if (productModal && productModalOverlay) {
         productModal.classList.add('active');
@@ -606,14 +704,46 @@ function closeProductModal() {
         productModalOverlay.classList.remove('active');
     }
     selectedProductForModal = null;
+    modalQuantity = 1;
+}
+
+// Modal quantity controls
+function modalQtyMinus() {
+    if (modalQuantity > 1) {
+        modalQuantity--;
+        const qtyDisplay = document.getElementById('modal-qty-value');
+        if (qtyDisplay) qtyDisplay.textContent = modalQuantity;
+    }
+}
+
+function modalQtyPlus() {
+    if (modalQuantity < 99) {
+        modalQuantity++;
+        const qtyDisplay = document.getElementById('modal-qty-value');
+        if (qtyDisplay) qtyDisplay.textContent = modalQuantity;
+    }
+}
+
+// Add product to cart with quantity support
+function addProductToCart(product, quantity) {
+    const existingIndex = cart.findIndex(item => item.product.id === product.id);
+    if (existingIndex !== -1) {
+        cart[existingIndex].quantity += quantity;
+    } else {
+        cart.push({ product: product, quantity: quantity });
+    }
+    updateCartUI();
+
+    // Bump animation on cart count
+    cartCountElement.classList.add('bump');
+    setTimeout(() => cartCountElement.classList.remove('bump'), 400);
 }
 
 function confirmAddToCart() {
     if (selectedProductForModal) {
-        cart.push(selectedProductForModal);
-        updateCartUI();
+        addProductToCart(selectedProductForModal, modalQuantity);
+        showToast(selectedProductForModal.name, selectedProductForModal.image);
         closeProductModal();
-        toggleCart(true); // Open cart when item added
     }
 }
 
@@ -622,29 +752,75 @@ function removeFromCart(index) {
     updateCartUI();
 }
 
+function updateCartQty(index, delta) {
+    if (!cart[index]) return;
+    cart[index].quantity += delta;
+
+    // If quantity reaches 0, remove the item and do a full re-render
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+        updateCartUI();
+        return;
+    }
+
+    // --- Targeted in-place update (no flicker) ---
+    const cartItem = cartItemsContainer.querySelector(`.cart-item[data-index="${index}"]`);
+    if (cartItem) {
+        // Update only the quantity number
+        const qtySpan = cartItem.querySelector('.qty-value');
+        if (qtySpan) qtySpan.textContent = cart[index].quantity;
+
+        // Update the item price
+        const priceSpan = cartItem.querySelector('.item-price');
+        if (priceSpan) priceSpan.textContent = `INR ${(cart[index].product.price * cart[index].quantity).toLocaleString('en-IN')}`;
+    }
+
+    // Update cart count badge and total
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
+    const total = cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+    cartTotalElement.textContent = `INR ${total.toLocaleString('en-IN')}`;
+}
+
 function updateCartUI() {
-    // Update count
-    cartCountElement.textContent = cart.length;
+    // Update count — total number of items
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
 
     // Update items list
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<div class="empty-cart-msg">Your cart is empty</div>';
+        cartItemsContainer.innerHTML = `
+            <div class="empty-cart-msg">
+                <i class="fas fa-basket-shopping"></i>
+                <p>Your cart is empty</p>
+            </div>`;
     } else {
-        cartItemsContainer.innerHTML = cart.map((item, index) => `
-            <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}">
+        cartItemsContainer.innerHTML = cart.map((entry, index) => `
+            <div class="cart-item" data-index="${index}">
+                <img src="${entry.product.image}" alt="${entry.product.name}">
                 <div class="item-details">
-                    <span class="item-title">${item.name}</span>
-                    <span class="item-price">INR ${item.price}</span>
-                    <button class="item-remove" onclick="removeFromCart(${index})">Remove</button>
+                    <span class="item-title">${entry.product.name}</span>
+                    <span class="item-price">INR ${(entry.product.price * entry.quantity).toLocaleString('en-IN')}</span>
+                    <div class="cart-qty-controls">
+                        <button class="qty-btn" onclick="updateCartQty(${index}, -1)" aria-label="Decrease quantity">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="qty-value">${entry.quantity}</span>
+                        <button class="qty-btn" onclick="updateCartQty(${index}, 1)" aria-label="Increase quantity">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="item-remove" onclick="removeFromCart(${index})">
+                            <i class="fas fa-trash-alt"></i> Remove
+                        </button>
+                    </div>
                 </div>
             </div>
         `).join('');
     }
 
     // Update total
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    cartTotalElement.textContent = `INR ${total}`;
+    const total = cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+    cartTotalElement.textContent = `INR ${total.toLocaleString('en-IN')}`;
 }
 
 function toggleCart(forceOpen = null) {
@@ -681,24 +857,14 @@ function checkout() {
 
     if (cart.length > 0) {
         message += "*Order Details:*\n";
-        // Group items for cleaner message
-        const itemMap = new Map();
-        cart.forEach(item => {
-            if (itemMap.has(item.name)) {
-                itemMap.set(item.name, { ...item, count: itemMap.get(item.name).count + 1 });
-            } else {
-                itemMap.set(item.name, { ...item, count: 1 });
-            }
-        });
-        
         let total = 0;
-        itemMap.forEach((details, name) => {
-            const itemTotal = details.price * details.count;
+        cart.forEach(entry => {
+            const itemTotal = entry.product.price * entry.quantity;
             total += itemTotal;
-            message += `- ${name} (x${details.count}) - INR ${itemTotal}\n`;
+            message += `- ${entry.product.name} (x${entry.quantity}) - INR ${itemTotal.toLocaleString('en-IN')}\n`;
         });
 
-        message += `\n*Total Price: INR ${total}*\n`;
+        message += `\n*Total Price: INR ${total.toLocaleString('en-IN')}*\n`;
     }
 
     message += "\nPlease confirm my order. Thank you!";
@@ -731,5 +897,3 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
-
-

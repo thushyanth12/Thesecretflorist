@@ -4,19 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Secret Florist</title>
-    <link rel="icon" type="image/png"  href="assets/FAVICONS_512X512.png">
+    <meta name="description" content="The Secret Florist — Hand-crafted bouquets for life's most beautiful moments. Fresh flowers, same-day delivery.">
+    <title>The Secret Florist — Artistry in Bloom</title>
+    <link rel="icon" type="image/png" href="assets/FAVICONS_512X512.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Outfit:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon"  href="favicon.ico" >
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <div class="loader-flower">
+                <div class="loader-petal lp-1"></div>
+                <div class="loader-petal lp-2"></div>
+                <div class="loader-petal lp-3"></div>
+                <div class="loader-petal lp-4"></div>
+                <div class="loader-petal lp-5"></div>
+                <div class="loader-center"></div>
+            </div>
+            <p class="loader-text">The Secret Florist</p>
+        </div>
+    </div>
+
     <!-- Aesthetic Background Ornaments -->
     <div class="bg-ornaments">
         <div class="blob blob-1"></div>
@@ -27,22 +43,22 @@
             <div class="petal petal-2"></div>
             <div class="petal petal-3"></div>
             <div class="petal petal-4"></div>
+            <div class="petal petal-5"></div>
+            <div class="petal petal-6"></div>
         </div>
         <div class="bg-noise"></div>
     </div>
 
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/png logo.PNG"  alt="png logo" class="brand-logo">
-            <img src="assets/logo1.png"  alt="The Secret Florist Logo">
+            <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
+            <img src="assets/logo1.png" alt="The Secret Florist Logo">
         </div>
-
 
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#shop">Collection</a>
             <a href="#customize">Customize</a>
-          
         </div>
         <div class="cart-icon" onclick="toggleCart()">
             <i class="fas fa-shopping-bag"></i>
@@ -52,23 +68,40 @@
 
     <header id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Fresh - Handcrafted - Same-Day</div>
-            <h1>Artistry in Bloom</h1>
-            <p>Hand-crafted bouquets for life's most beautiful moments. Soft pastels, luxe wraps, and a gentle glow in every petal.</p>
+            <div class="hero-badge">
+                <i class="fas fa-leaf"></i>
+                Fresh — Handcrafted — Same-Day
+            </div>
+            <h1>Artistry in <span class="text-gradient">Bloom</span></h1>
+            <p>Hand-crafted bouquets for life's most beautiful moments. Soft pastels, luxe wraps, and a gentle glow in
+                every petal.</p>
             <div class="hero-actions">
-                <a href="#shop" class="cta-button ripple">Explore Collection</a>
-                <a href="#customize" class="ghost-button ripple">Create Your Bouquet</a>
-            
+                <a href="#shop" class="cta-button ripple">
+                    <i class="fas fa-spa"></i> Explore Collection
+                </a>
+                <a href="#customize" class="ghost-button ripple">
+                    <i class="fas fa-wand-magic-sparkles"></i> Create Your Bouquet
+                </a>
             </div>
         </div>
         <div class="hero-image-container">
-            <img src="assets/hero.png"  alt="Hero Bouquet" class="hero-image">
-        
+            <div class="hero-image-glow"></div>
+            <img src="assets/hero.png" alt="Hero Bouquet" class="hero-image">
         </div>
     </header>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="var(--secondary-color)"></path>
+        </svg>
+    </div>
+
     <section id="shop" class="shop-section">
-        <h2 class="section-title reveal">Curated Selection</h2>
+        <div class="section-header">
+            <h2 class="section-title reveal">Curated Selection</h2>
+            <p class="section-subtitle reveal">Each bouquet is handcrafted with love, using the finest seasonal blooms.</p>
+        </div>
         <div class="shop-controls">
             <label class="search-bar" for="search-input">
                 <i class="fas fa-search"></i>
@@ -76,48 +109,103 @@
             </label>
         </div>
         <div class="category-filter">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="romantic">Romantic</button>
-            <button class="category-btn" data-category="birthday">Birthday</button>
-            <button class="category-btn" data-category="elegant">Elegant</button>
-            <button class="category-btn" data-category="casual">Casual</button>
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-border-all"></i> All
+            </button>
+            <button class="category-btn" data-category="romantic">
+                <i class="fas fa-heart"></i> Romantic
+            </button>
+            <button class="category-btn" data-category="birthday">
+                <i class="fas fa-cake-candles"></i> Birthday
+            </button>
+            <button class="category-btn" data-category="elegant">
+                <i class="fas fa-gem"></i> Elegant
+            </button>
+            <button class="category-btn" data-category="casual">
+                <i class="fas fa-sun"></i> Casual
+            </button>
         </div>
         <div class="product-grid" id="product-grid">
             <!-- Products will be injected here by JS -->
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider flip">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="var(--secondary-color)"></path>
+        </svg>
+    </div>
+
     <section id="customize" class="customizer-section reveal">
         <div class="customizer-content">
-            <h2 class="section-title reveal">Custom Requests</h2>
-            <p class="section-subtitle slide-in">Need something special? Tell us what you're looking for, or add a personal note to your order.</p>
+            <div class="section-header">
+                <h2 class="section-title reveal">Custom Requests</h2>
+                <p class="section-subtitle slide-in">Need something special? Tell us what you're looking for, or add a
+                    personal note to your order.</p>
+            </div>
             <div class="customizer-grid">
                 <div class="customizer-form glass-card">
+                    <div class="form-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
                     <label for="message-input">Add Message</label>
-                    <textarea id="message-input" rows="4" placeholder="Write your custom bouquet message here..."></textarea>
-
-                    <button onclick="checkout()" class="cta-button">
+                    <textarea id="message-input" rows="4"
+                        placeholder="Write your custom bouquet message here..."></textarea>
+                    <button onclick="checkout()" class="cta-button whatsapp-btn">
                         <i class="fa-brands fa-whatsapp wa-icon"></i>
                         Send via WhatsApp
-                      </button>
-                      
-                
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/png logo.PNG" alt="The Secret Florist" class="footer-logo">
+                <p class="footer-tagline">Hand-crafted bouquets for life's most beautiful moments</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#shop">Collection</a>
+                <a href="#customize">Customize</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/the_secret_florist?igsh=MWhwODA3M3JhZnI2Mw==" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919994588076" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Secret Florist. Crafted with <i class="fas fa-heart" style="color: var(--accent-color);"></i></p>
+        </div>
+    </footer>
 
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Cart Sidebar -->
     <div class="cart-overlay" onclick="toggleCart()"></div>
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
-            <h3>Your Bouquet</h3>
+            <h3><i class="fas fa-shopping-bag"></i> Your Bouquet</h3>
             <button class="close-cart" onclick="toggleCart()">&times;</button>
         </div>
         <div class="cart-items" id="cart-items">
             <!-- Cart items will be here -->
-            <div class="empty-cart-msg">Your cart is empty</div>
+            <div class="empty-cart-msg">
+                <i class="fas fa-basket-shopping"></i>
+                <p>Your cart is empty</p>
+            </div>
         </div>
         <div class="cart-footer">
             <div class="total-row">
@@ -152,19 +240,29 @@
             <div class="modal-info">
                 <h2 id="modal-product-name"></h2>
                 <p id="modal-product-description"></p>
+                <div class="modal-qty-selector">
+                    <span class="modal-qty-label">Quantity:</span>
+                    <div class="modal-qty-controls">
+                        <button class="qty-btn" onclick="modalQtyMinus()" aria-label="Decrease quantity">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="qty-value" id="modal-qty-value">1</span>
+                        <button class="qty-btn" onclick="modalQtyPlus()" aria-label="Increase quantity">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="modal-price-action">
                     <div id="modal-product-price" class="modal-product-price"></div>
                     <button class="modal-add-btn ripple" onclick="confirmAddToCart()">
-                        Add to Cart
+                        <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
         </div>
     </div>
-   
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
