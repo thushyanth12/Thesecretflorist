@@ -559,16 +559,17 @@ img {
 }
 
 .hero-image {
-    max-width: 100%;
+    max-width: 550px;
     height: auto;
     border-radius: var(--radius-xl);
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     opacity: 0;
-    animation: slideIn 1.2s var(--ease-out-expo) forwards 0.5s;
+    animation: slideIn 1s var(--ease-out-expo) forwards 0.1s;
     transform: translateX(50px);
     box-shadow: 0 25px 60px rgba(212, 132, 156, 0.25);
     position: relative;
     z-index: 1;
+    margin-top: 50px;
 }
 
 /* ================== SECTION DIVIDER ================== */
@@ -1675,6 +1676,7 @@ img {
     .hero-image {
         transform: translateX(0);
         margin-bottom: 1rem;
+        margin-top: 0;
         max-height: 350px;
         width: 100%;
         object-fit: cover;
