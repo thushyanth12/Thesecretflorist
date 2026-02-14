@@ -41,6 +41,9 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 /* ================== PAGE LOADER ================== */
@@ -1816,6 +1819,113 @@ img {
     .category-btn {
         padding: 0.45rem 0.85rem;
         font-size: 0.72rem;
+    }
+}
+
+/* ================== MOBILE PERFORMANCE ================== */
+/* Disable GPU-heavy effects on mobile for smooth scrolling */
+@media (max-width: 768px) {
+    /* Kill all backdrop-filter — the #1 mobile perf killer */
+    .navbar,
+    .navbar.scrolled,
+    .hero-badge,
+    .ghost-button,
+    .search-bar,
+    .category-btn,
+    .product-card,
+    .cart-overlay,
+    .cart-sidebar,
+    .glass-card,
+    .lightbox,
+    .product-modal-overlay,
+    .cart-toast {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    /* Solid navbar background instead of blur */
+    .navbar.scrolled {
+        background: rgba(255, 247, 249, 0.97);
+    }
+
+    /* Disable animated background ornaments */
+    .bg-ornaments .blob,
+    .bg-ornaments .petal,
+    .bg-ornaments .petal-container,
+    .bg-ornaments .bg-noise,
+    .bg-ornaments::before {
+        display: none !important;
+    }
+
+    /* Disable hero glow animation */
+    .hero-image-glow {
+        animation: none !important;
+        filter: none !important;
+        display: none;
+    }
+
+    /* Simplify box-shadows on mobile */
+    .product-card {
+        box-shadow: 0 2px 8px rgba(212, 132, 156, 0.08);
+    }
+
+    .product-card:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(212, 132, 156, 0.08);
+    }
+
+    /* GPU-accelerate scrolling containers */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cart-items {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Promote key layers for smoother compositing */
+    .navbar {
+        will-change: background;
+        transform: translateZ(0);
+    }
+
+    .hero-image {
+        will-change: opacity;
+        transform: translateZ(0);
+    }
+
+    /* Reduce transition complexity on mobile */
+    .product-card {
+        transition: none;
+    }
+
+    .product-card .product-image {
+        transition: none;
+    }
+
+    .product-card:hover .product-image {
+        transform: none;
+    }
+
+    /* Simplify cart overlay */
+    .cart-overlay {
+        background: rgba(44, 36, 40, 0.4);
+    }
+
+    /* Remove gradient top bar animation from cards */
+    .product-card::before {
+        display: none;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

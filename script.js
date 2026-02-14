@@ -358,13 +358,13 @@ function setupPageLoader() {
     window.addEventListener('load', () => {
         setTimeout(() => {
             loader.classList.add('hidden');
-        }, 800);
+        }, 300);
     });
     
-    // Fallback: hide loader after 3 seconds max
+    // Fallback: hide loader after 1.5 seconds max
     setTimeout(() => {
         loader.classList.add('hidden');
-    }, 3000);
+    }, 1500);
 }
 
 // ================== SCROLL TO TOP ==================
@@ -650,7 +650,7 @@ function renderProducts() {
             <button class="wishlist-btn ${wishlist.has(product.id) ? 'active' : ''}" data-id="${product.id}">
                 <i class="fas fa-heart"></i>
             </button>
-            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image" loading="lazy">
+            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image" loading="lazy" decoding="async">
             <div class="product-info">
                 <div class="product-meta">
                     <h3 class="product-title">${product.name}</h3>
