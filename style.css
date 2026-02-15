@@ -2257,42 +2257,46 @@ img {
 
 .modal-qty-controls,
 .cart-qty-controls {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    contain: layout;
 }
 
 .qty-btn {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1.5px solid rgba(212, 132, 156, 0.25);
-    background: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid rgba(212, 132, 156, 0.3);
+    background: #fff;
     color: var(--accent-strong);
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 0.7rem;
-    transition: all 0.25s ease;
     user-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    position: relative;
-    overflow: visible;
+    touch-action: manipulation;
+    flex-shrink: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    /* No transitions, no hover effects, no glow — fully static */
+    transition: none;
 }
 
-.qty-btn:active {
-    transform: scale(0.95);
-}
-
-.qty-btn:hover {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
-    color: white;
-    border-color: transparent;
-    transform: scale(1.08);
-    box-shadow: 0 4px 12px rgba(212, 132, 156, 0.3);
+.qty-btn:hover,
+.qty-btn:active,
+.qty-btn:focus {
+    /* Keep it exactly the same — no visual change */
+    background: #fff;
+    color: var(--accent-strong);
+    border-color: rgba(212, 132, 156, 0.3);
+    transform: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .qty-value {
