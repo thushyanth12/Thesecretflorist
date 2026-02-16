@@ -702,10 +702,23 @@ img {
 
 .category-filter {
     display: flex;
-    justify-content: center;
-    gap: 0.6rem;
+    justify-content: flex-start;
+    gap: 1rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* Extra bottom padding for scrollbar space if needed, though hidden */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Fade out only the right side to indicate more content */
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.category-filter::-webkit-scrollbar {
+    display: none;
 }
 
 .category-btn {
@@ -723,6 +736,8 @@ img {
     align-items: center;
     gap: 0.4rem;
     backdrop-filter: blur(5px);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .category-btn i {

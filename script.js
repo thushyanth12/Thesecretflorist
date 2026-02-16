@@ -64,7 +64,7 @@
         price: 2800,
         image: "assets/nine.webp",
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
-        category: "Casual"
+        category: "Hot wheels"
     },
   
     {
@@ -114,7 +114,7 @@
         price: 3500,
         image: "assets/sixteen.webp",
         description: "A bouqeut full of Rupees.",
-        category: "romantic"
+        category: "Money Bouquet"
     },
 
     {
@@ -123,7 +123,7 @@
         price: 3800,
         image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
-        category: "Casual"
+        category: "Polaroids bouquet"
     },
     {
         id: 19,
@@ -131,7 +131,7 @@
         price: 1000,
         image: "assets/nineteen.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
-        category: "romantic"
+        category: "Polaroids bouquet"
     },
     {
         id: 20,
@@ -147,7 +147,7 @@
         price: 4200,
         image: "assets/21.webp",
         description: "A luxurious heart-shaped arrangement of red roses and Ferrero Rocher chocolates.",
-        category: "Casual"
+        category: "Chocolate Bouquet"
     },
     {
         id: 22,
@@ -163,7 +163,7 @@
         price: 2500,
         image: "assets/23.webp",
         description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
-        category: "Casual"        
+        category: "Chocolate Bouquet"        
     },
     {
         id: 24,
@@ -195,7 +195,7 @@
         price: 3800,
         image: "assets/27.webp",
         description: "Red roses paired with chocolate sticks for a rich and romantic surprise..",
-        category: "Romantic"
+        category: "Chocolate Bouquet"
     },
     {
         id: 28,
@@ -211,7 +211,7 @@
         price: 1300,
         image: "assets/29.webp",
         description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments..",
-        category: "Elegant"
+        category: "Chocolate Bouquet"
     },
     {
         id: 30,
@@ -408,7 +408,7 @@ function setupCategoryFilters() {
             // Add active class to clicked button
             button.classList.add('active');
             // Update current category
-            currentCategory = button.dataset.category;
+            currentCategory = button.dataset.category.toLowerCase();
             // Re-render products
             renderProducts();
         });
