@@ -269,6 +269,7 @@
         description:"A timeless arrangement of 20 rs note for special moments.",
         category:"money-bouquet"
     },
+    
     {
         id:38,
         name:"Kitkat Bouquet",
@@ -300,7 +301,31 @@
         image:"assets/HW.webp",
         description:" A Bouquet contains hotwheels collections.",
         category:"Hot wheels"
-    }
+    },
+    {
+        id:42,
+        name:"100Rs Bouquet",
+        price:3500,
+        image:"assets/100rs.webp",
+        description:"A Bouquet made up of 100rs note.",
+        category:"Money Bouquet"
+    },
+    {
+        id:43,
+        name:"Black polaroid Bouquet",
+        price:3500,
+        image:"assets/black.webp",
+        description:"A Bouquet made up of polaroids.",
+        category:"Polaroid Bouquet"
+    },
+    {
+        id:44,
+        name:"Red polaroid Bouquet",
+        price:1200,
+        image:"assets/red.webp",
+        description:"A Bouquet made up of polaroids.",
+        category:"Polaroid Bouquet"
+    },
 
 
 
