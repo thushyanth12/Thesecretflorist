@@ -5,7 +5,7 @@
         price: 1800,
         image: "assets/child.webp", // Path relative to public folder
         description: "A bouquet for your baby's birthday.",
-        category: "Birthday"
+        category: "birthday"
         
     },
     {
@@ -14,7 +14,7 @@
         price: 3000,
         image: "assets/one.webp",
         description: "Soft pastel blooms and sweet treats arranged for elegant celebrations.",
-        category: "Casual"
+        category: "customized"
     },
     {
         id: 3,
@@ -22,7 +22,7 @@
         price: 1500,
         image: "assets/three.webp",
         description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
-        category: "Elegant"
+        category: "polaroids-bouquet"
     },
     {
         id: 4,
@@ -30,7 +30,7 @@
         price: 2300,
         image: "assets/four.webp",
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
-        category: "Birthday"
+        category: "birthday"
     },
 
     {
@@ -39,7 +39,7 @@
         price: 1800,
         image: "assets/6.webp",
         description: "A refreshing mix of white blooms and buds arranged for natural elegance.",
-        category: "Casual"
+        category: "elegant"
     },
     {
         id: 7,
@@ -47,7 +47,7 @@
         price: 2800,
         image: "assets/7.webp",
         description: "Hand-wrapped red roses crafted to mark unforgettable moments of love..",
-        category: "Casual"
+        category: ["elegant", "romantic"]
 
     },
     {
@@ -56,7 +56,7 @@
         price: 80000,
         image: "assets/8.webp",
         description: "A grand heart-shaped arrangement of red roses, made to express deep devotion.",
-        category: "Casual"
+        category: "luxury"
     },
     {
         id: 9,
@@ -64,7 +64,7 @@
         price: 2800,
         image: "assets/nine.webp",
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
-        category: "Hot wheels"
+        category: "hot-wheels"
     },
   
     {
@@ -73,7 +73,7 @@
         price: 700,
         image: "assets/eleven.webp",
         description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
-        category: "Casual"
+        category: ["customized", "budget-friendly"]
     },
     {
         id: 12,
@@ -81,7 +81,7 @@
         price: 700,
         image: "assets/twelve.webp",
         description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
-        category: "Casual"
+        category: ["customized", "budget-friendly"]
     },
     
     {
@@ -90,7 +90,7 @@
         price: 1400,
         image: "assets/thirteen.webp",
         description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
-        category: "Casual"
+        category: "customized"
     },
     {
         id: 14,
@@ -98,7 +98,7 @@
         price: 1500,
         image: "assets/fourteen.webp",
         description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
-        category: "Casual"
+        category: "romantic"
     },
     {
         id: 15,
@@ -106,7 +106,7 @@
         price: 700,
         image: "assets/fifteen.webp",
         description: "An intricate circular floral design crafted as a timeless showpiece..",
-        category: "Casual"
+        category: ["customized", "budget-friendly"]
     },
     {
         id: 16,
@@ -114,7 +114,7 @@
         price: 3500,
         image: "assets/sixteen.webp",
         description: "A bouqeut full of Rupees.",
-        category: "Money Bouquet"
+        category: "money-bouquet"
     },
 
     {
@@ -123,7 +123,7 @@
         price: 3800,
         image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
-        category: "Polaroids bouquet"
+        category: "polaroids-bouquet"
     },
     {
         id: 19,
@@ -131,16 +131,9 @@
         price: 1000,
         image: "assets/nineteen.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
-        category: "Polaroids bouquet"
+        category: ["polaroids-bouquet", "romantic"]
     },
-    {
-        id: 20,
-        name: "Ethereal Pastel Garden",
-        price: 3200,
-        image: "assets/twenty.webp",
-        description: "A dreamlike collection of soft-hued blooms, perfect for expressing pure affection.",
-        category: "Elegant"
-    },
+   
     {
         id: 21,
         name: "Golden Heart Indulgence",
@@ -155,7 +148,7 @@
         price: 1200,
         image: "assets/22.webp",
         description: "Classic red roses wrapped in elegant black for a bold, timeless expression of love.",
-        category: "Elegant"
+        category: "elegant"
     },
     {
         id: 23,
@@ -163,7 +156,7 @@
         price: 2500,
         image: "assets/23.webp",
         description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
-        category: "Chocolate Bouquet"        
+        category: "chocolate-bouquet"        
     },
     {
         id: 24,
@@ -171,7 +164,7 @@
         price: 1200,
         image: "assets/24.webp",
         description: "A fun and delightful bouquet filled with Kinder Joy treats, perfect for cheerful gifting..",
-        category: "Birthday"
+        category: "chocolate-bouquet"
     },
     {
         id: 25,
@@ -179,7 +172,7 @@
         price: 1699,
         image: "assets/25.webp",
         description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture..",
-        category: "Elegant"     
+        category: "elegant"     
     },
     {
         id: 26,
@@ -187,7 +180,7 @@
         price: 3800,
         image: "assets/26.webp",
         description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth..",
-        category: "Birthday"   
+        category: "birthday"   
     },
     {
         id: 27,
@@ -203,7 +196,7 @@
         price: 4500,
         image: "assets/28.webp",
         description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
-        category: "Elegant"
+        category: "elegant"
     },
     {
         id: 29,
@@ -219,7 +212,7 @@
         price: 2200,
         image: "assets/30.webp",
         description: "A charming pink-themed gift bouquet with beauty treats and floral accents..",
-        category: "Romantic"
+        category: "romantic"
     },
     {
         id:31,
@@ -227,7 +220,7 @@
         price:1500,
         image:"assets/31.webp",
         description:"A bouquet of strong and powerful women",
-        category:"Elegant"
+        category: "polaroids-bouquet"
     },
     {
         id:32,
@@ -235,7 +228,7 @@
         price:700,
         image:"assets/beda.webp",
         description:"A bouquet  contains Milk Beda",
-        category:"Casual"   
+        category: "budget-friendly"   
     },
     {
         id:33,
@@ -243,7 +236,7 @@
         price:1200,
         image:"assets/flo.webp",
         description:"A timeless arrangement of deep red roses, perfect for love and special moments.",
-        category:"Casual"   
+        category:"Customized"   
     },
     {
         id:34,
@@ -251,8 +244,65 @@
         price:1800,
         image:"assets/combo.webp",
         description:"Fresh red roses paired with a delicious cake to make celebrations extra special.",
-        category:"Casual"   
+        category:"Customized"   
+    },{
+        id:35,
+        name:"50Rs Bouquet",
+        price:2000,
+        image:"assets/50rs.webp",
+        description:"A timeless arrangement of 50 rs note special moments.",
+        category:"Money Bouquet"
+    },
+    {
+        id:36,
+        name:"500Rs Bouquet",
+        price:1500,
+        image:"assets/500rs.webp",
+        description:"A timeless arrangement of 500 rs note special moments.",
+        category:"Money Bouquet"
+    },
+    {
+        id:37,
+        name:"20Rs Bouquet",
+        price:2500,
+        image:"assets/20rs.webp",
+        description:"A timeless arrangement of 20 rs note for special moments.",
+        category:"Money Bouquet"
+    },
+    {
+        id:38,
+        name:"Kitkat Bouquet",
+        price:1200,
+        image:"assets/kitkat.webp",
+        description:"A timeless arrangement of Kitkat for special moments.",
+        category:"Chocolate Bouquet"
+    },
+    {
+        id:39,
+        name:"Gold choco Bouquet",
+        price:3500,
+        image:"assets/gold.webp",
+        description:"A timeless arrangement of gold chocolates for special moments.",
+        category:"Chocolate Bouquet"
+    },
+    {
+        id:40,
+        name:"Bouquet of dark fantasy",
+        price:1000,
+        image:"assets/dfant.webp",
+        description:"A timeless arrangement of dark fantasy cookies for special moments.",
+        category:"Chocolate Bouquet"
+    },
+    {
+        id:41,
+        name:"Hot wheels with rose",
+        price:2200,
+        image:"assets/HW.webp",
+        description:" A Bouquet contains hotwheels collections.",
+        category:"Hot wheels"
     }
+
+
 
 
 ];
@@ -408,7 +458,7 @@ function setupCategoryFilters() {
             // Add active class to clicked button
             button.classList.add('active');
             // Update current category
-            currentCategory = button.dataset.category.toLowerCase();
+            currentCategory = button.dataset.category.toLowerCase().trim();
             // Re-render products
             renderProducts();
         });
@@ -618,9 +668,13 @@ function setupRipple() {
     });
 }
 
+
 function normalizeCategory(product) {
     const rawCategory = product.category || product.cartegory || '';
-    return String(rawCategory).toLowerCase();
+    if (Array.isArray(rawCategory)) {
+        return rawCategory.map(c => String(c).toLowerCase().trim());
+    }
+    return [String(rawCategory).toLowerCase().trim()];
 }
 
 function renderProducts() {
@@ -628,9 +682,9 @@ function renderProducts() {
         return;
     }
     const filteredProducts = products.filter(product => {
-        const productCategory = normalizeCategory(product);
-        const matchesCategory = currentCategory === 'all' || productCategory === currentCategory;
-        const matchesOccasion = occasionFilter === 'all' || productCategory === occasionFilter;
+        const productCategories = normalizeCategory(product);
+        const matchesCategory = currentCategory === 'all' || productCategories.includes(currentCategory);
+        const matchesOccasion = occasionFilter === 'all' || productCategories.includes(occasionFilter);
         const matchesSearch = !searchTerm || product.name.toLowerCase().includes(searchTerm) || product.description.toLowerCase().includes(searchTerm);
         const matchesPrice = product.price <= maxPrice;
         return matchesCategory && matchesOccasion && matchesSearch && matchesPrice;
