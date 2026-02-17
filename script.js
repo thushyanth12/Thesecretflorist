@@ -22,7 +22,7 @@
         price: 1500,
         image: "assets/three.webp",
         description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
-        category: "polaroids-bouquet"
+        category: ["polaroids-bouquet","Wedding"]
     },
     {
         id: 4,
@@ -123,7 +123,7 @@
         price: 3800,
         image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
-        category: "polaroids-bouquet"
+        category: ["polaroids-bouquet","Wedding"]
     },
     {
         id: 19,
@@ -172,7 +172,7 @@
         price: 1699,
         image: "assets/25.webp",
         description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture..",
-        category: "elegant"     
+        category: ["elegant" ,"Wedding"]    
     },
     {
         id: 26,
@@ -196,7 +196,7 @@
         price: 4500,
         image: "assets/28.webp",
         description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
-        category: "elegant"
+        category: ["elegant","Wedding"]
     },
     {
         id: 29,
@@ -251,7 +251,7 @@
         price:2000,
         image:"assets/50rs.webp",
         description:"A timeless arrangement of 50 rs note special moments.",
-        category:"Money Bouquet"
+        category:"money-bouquet"
     },
     {
         id:36,
@@ -259,7 +259,7 @@
         price:1500,
         image:"assets/500rs.webp",
         description:"A timeless arrangement of 500 rs note special moments.",
-        category:"Money Bouquet"
+        category:"money-bouquet"
     },
     {
         id:37,
@@ -267,7 +267,7 @@
         price:2500,
         image:"assets/20rs.webp",
         description:"A timeless arrangement of 20 rs note for special moments.",
-        category:"Money Bouquet"
+        category:"money-bouquet"
     },
     {
         id:38,
