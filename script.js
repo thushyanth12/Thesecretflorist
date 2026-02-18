@@ -22,7 +22,7 @@
         price: 1500,
         image: "assets/three.webp",
         description: "Bold florals with premium accents, designed for a modern and sophisticated gift.",
-        category: ["polaroids-bouquet","Wedding"]
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 4,
@@ -123,7 +123,7 @@
         price: 3800,
         image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
-        category: ["polaroids-bouquet","Wedding"]
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 19,
@@ -140,7 +140,7 @@
         price: 4200,
         image: "assets/21.webp",
         description: "A luxurious heart-shaped arrangement of red roses and Ferrero Rocher chocolates.",
-        category: "Chocolate Bouquet"
+        category: ["chocolate-bouquet","luxury"]
     },
     {
         id: 22,
@@ -156,7 +156,7 @@
         price: 2500,
         image: "assets/23.webp",
         description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
-        category: "chocolate-bouquet"        
+        category: "chocolate-bouquet"       
     },
     {
         id: 24,
@@ -172,7 +172,7 @@
         price: 1699,
         image: "assets/25.webp",
         description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture..",
-        category: ["elegant" ,"Wedding"]    
+        category: ["elegant" ,"wedding"]    
     },
     {
         id: 26,
@@ -188,7 +188,7 @@
         price: 3800,
         image: "assets/27.webp",
         description: "Red roses paired with chocolate sticks for a rich and romantic surprise..",
-        category: "Chocolate Bouquet"
+        category: "chocolate-bouquet"
     },
     {
         id: 28,
@@ -196,7 +196,7 @@
         price: 4500,
         image: "assets/28.webp",
         description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
-        category: ["elegant","Wedding"]
+        category: ["wedding","luxury"]
     },
     {
         id: 29,
@@ -204,7 +204,7 @@
         price: 1300,
         image: "assets/29.webp",
         description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments..",
-        category: "Chocolate Bouquet"
+        category: "chocolate-bouquet"
     },
     {
         id: 30,
@@ -220,7 +220,7 @@
         price:1500,
         image:"assets/31.webp",
         description:"A bouquet of strong and powerful women",
-        category: "polaroids-bouquet"
+        category: ["polaroids-bouquet","birthday"]
     },
     {
         id:32,
@@ -236,7 +236,7 @@
         price:1200,
         image:"assets/flo.webp",
         description:"A timeless arrangement of deep red roses, perfect for love and special moments.",
-        category:"Customized"   
+        category:"customized"   
     },
     {
         id:34,
@@ -244,7 +244,7 @@
         price:1800,
         image:"assets/combo.webp",
         description:"Fresh red roses paired with a delicious cake to make celebrations extra special.",
-        category:"Customized"   
+        category:"customized"   
     },{
         id:35,
         name:"50Rs Bouquet",
@@ -253,14 +253,7 @@
         description:"A timeless arrangement of 50 rs note special moments.",
         category:"money-bouquet"
     },
-    {
-        id:36,
-        name:"500Rs Bouquet",
-        price:1500,
-        image:"assets/500rs.webp",
-        description:"A timeless arrangement of 500 rs note special moments.",
-        category:"money-bouquet"
-    },
+    
     {
         id:37,
         name:"20Rs Bouquet",
@@ -270,37 +263,23 @@
         category:"money-bouquet"
     },
     
-    {
-        id:38,
-        name:"Kitkat Bouquet",
-        price:1200,
-        image:"assets/kitkat.webp",
-        description:"A timeless arrangement of Kitkat for special moments.",
-        category:"Chocolate Bouquet"
-    },
+    
     {
         id:39,
         name:"Gold choco Bouquet",
         price:3500,
         image:"assets/gold.webp",
         description:"A timeless arrangement of gold chocolates for special moments.",
-        category:"Chocolate Bouquet"
+        category:"chocolate-bouquet"
     },
-    {
-        id:40,
-        name:"Bouquet of dark fantasy",
-        price:1000,
-        image:"assets/dfant.webp",
-        description:"A timeless arrangement of dark fantasy cookies for special moments.",
-        category:"Chocolate Bouquet"
-    },
+ 
     {
         id:41,
         name:"Hot wheels with rose",
         price:2200,
         image:"assets/HW.webp",
         description:" A Bouquet contains hotwheels collections.",
-        category:"Hot wheels"
+        category:"hot-wheels"
     },
     {
         id:42,
@@ -308,15 +287,15 @@
         price:3500,
         image:"assets/100rs.webp",
         description:"A Bouquet made up of 100rs note.",
-        category:"Money Bouquet"
+        category:["money-bouquet","luxury"]
     },
     {
         id:43,
-        name:"Black polaroid Bouquet",
-        price:3500,
-        image:"assets/black.webp",
+        name:"Beige polaroid Bouquet",
+        price:1200,
+        image:"assets/beige.webp",
         description:"A Bouquet made up of polaroids.",
-        category:"Polaroid Bouquet"
+        category:"polaroids-bouquet"
     },
     {
         id:44,
@@ -324,8 +303,97 @@
         price:1200,
         image:"assets/red.webp",
         description:"A Bouquet made up of polaroids.",
-        category:"Polaroid Bouquet"
+        category:"polaroids-bouquet"
     },
+    {
+        id:45,
+        name:"Forever in Bloom",
+        price:1200,
+        image:"assets/onnu.webp",
+        description: "A timeless rose bouquet capturing your love story in every frame.",
+        category: ["polaroids-bouquet", "wedding"]
+    },
+    {
+        id:46,
+        name:"Pure Moments",
+        price:2500,
+        image:"assets/rendu.webp",
+        description:"Elegant whites and heartfelt memories woven into one bouquet.",
+        category: ["polaroids-bouquet", "wedding"]
+    },
+    {
+        id:47,
+        name:"Sweetheart Surprise",
+        price:3200,
+        image:"assets/moonu.webp",
+        description:"Chocolates, cuddles, and captured moments of love.",
+        category: ["polaroids-bouquet", "wedding"]
+    },
+    {
+        id:48,
+        name:"Our Beautiful Journey",
+        price:1900,
+        image:"assets/naalu.webp",
+        description:"A floral celebration of family, love, and togetherness.",
+        category: ["polaroids-bouquet", "wedding"]
+    },
+    {
+        id:49,
+        name:"Break for Love",
+        price:4500,
+        image:"assets/anju.webp",
+        description:"A playful bouquet packed with sweetness and smiles",
+        category: ["chocolate-bouquet", "birthday"]
+    },
+    {
+        id:50,
+        name:"Luxury Celebration Bouquet",
+        price:7000,
+        image:"assets/wine.webp",
+        description:"A premium floral arrangement blending elegant roses,and wine to create a memorable experience.",
+        category: ["Elegant", "Luxury"]
+    },
+    {
+        id:51,
+        name:"Hot wheels pack of 4",
+        price:3800,
+        image:"assets/hotw.webp",
+        description:"A bouquet especially made for hot wheels lovers",
+        category:"hot-wheels"
+    },
+    {
+        id:52,
+        name:"Mini kitkat delight",
+        price:250,
+        image:"assets/chocor.webp",
+        description:"A small&cute bouquet of kitkat",
+        category:["chocolate-bouquet","budget-friendly"]
+    },
+    {
+        id:53,
+        name:"Mini hot wheels pack",
+        price:800,
+        image:"assets/swheels.webp",
+        description:"A bouquet with single hotwheels ",
+        category:["hot-wheels","budget-friendly"]
+    },
+    {
+        id:54,
+        name:"Single rose bouquet",
+        price:100,
+        image:"assets/rose.webp",
+        description:"A bouquet made by a single rose",
+        category:"Budget-friendly"
+    },
+    {
+        id:55,
+        name:"Mini batman surprise",
+        price:900,
+        image:"assets/bat.webp",
+        description:"A bouqet of a single batman",
+        category:["Hot-wheels","budget-friendly"]
+    }
+    
 
 
 
@@ -697,9 +765,9 @@ function setupRipple() {
 function normalizeCategory(product) {
     const rawCategory = product.category || product.cartegory || '';
     if (Array.isArray(rawCategory)) {
-        return rawCategory.map(c => String(c).toLowerCase().trim());
+        return rawCategory.map(c => String(c).toLowerCase().trim().replace(/\s+/g, '-'));
     }
-    return [String(rawCategory).toLowerCase().trim()];
+    return [String(rawCategory).toLowerCase().trim().replace(/\s+/g, '-')];
 }
 
 function renderProducts() {

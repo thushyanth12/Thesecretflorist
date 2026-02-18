@@ -708,13 +708,11 @@ img {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* Extra bottom padding for scrollbar space if needed, though hidden */
+    padding: 0.5rem 5% 1.5rem 0.5rem; /* Added 5% right padding for breathing room at the end */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* Fade out only the right side to indicate more content */
-    mask-image: linear-gradient(to right, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    /* Removed mask-image as it was making the last items invisible */
 }
 
 .category-filter::-webkit-scrollbar {
