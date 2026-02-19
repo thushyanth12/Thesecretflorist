@@ -392,6 +392,22 @@
         image:"assets/bat.webp",
         description:"A bouqet of a single batman",
         category:["Hot-wheels","budget-friendly"]
+    },
+    {
+        id:56,
+        name:"Golden Sunflower Delight",
+        price:500,
+        image:"assets/sun.webp",
+        description:"A radiant sunflower bouquet , perfect for spreading warmth and happiness.",
+        category:["budget-friendly","Elegant" ]
+    },
+    {
+        id:57,
+        name:"Crimson Rose Harmony",
+        price:500,
+        image:"assets/violet.webp",
+        description:"A romantic blend of deep red roses and soft violet blooms, crafted for heartfelt moments .",
+        category:["budget-friendly","Elegant"]
     }
     
 
