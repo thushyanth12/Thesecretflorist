@@ -457,6 +457,146 @@
         description:"Photo framed with flowers",
         category:"polaroids-bouquet"   
     },
+    {
+        id:64,
+        name:"Red rose",
+        price:500,
+        image:"assets/red-rose.webp",
+        description:"A bouquet made up of chocolates and red roses",
+        category:"budget-friendly"
+    },
+    {
+        id:65,
+        name:"Artificial Rose Bouquet",
+        price:500,
+        image:"assets/Artificial-Rose.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:66,
+        name:"Blue Flower Bouquet",
+        price:500,
+        image:"assets/Blue-flower.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:67,
+        name:"Kitkat & galaxy Bouquet",
+        price:500,
+        image:"assets/Chocolate-bout.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:68,
+        name:"Artificial Blue Rose Bouquet",
+        price:500,
+        image:"assets/art-blue.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:69,
+        name:"Redish Pink Rose Bouquet",
+        price:500,
+        image:"assets/5-rose.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:70,
+        name:"Elegant Rose Bouquet",
+        price:500,
+        image:"assets/Elegant-Rose.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:71,
+        name:"Purple blue Rose Bouquet",
+        price:500,
+        image:"assets/ench-blue.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:72,
+        name:"White theme Rose Bouquet",
+        price:500,
+        image:"assets/white-backrose.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:73,
+        name:"Eternal Rose Bouquet",
+        price:500,
+        image:"assets/Eternal-Rose.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:74,
+        name:"Earing Bouquet",
+        price:500,
+        image:"assets/Grab.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:75,
+        name:"Pure Love Bouquet",
+        price:500,
+        image:"assets/pec.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:76,
+        name:"Kinder Joy Bouquet",
+        price:500,
+        image:"assets/Kinder-joy.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:77,
+        name:"Mini Flower Bouquet",
+        price:500,
+        image:"assets/Mini-flower.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:78,
+        name:"Sunflower Bouquet",
+        price:500,
+        image:"assets/Simple-sun.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:79,
+        name:"Lays snack Bouquet",
+        price:500,
+        image:"assets/Snack-attack.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    {
+        id:80,
+        name:"Pink Sunflower Bouquet",
+        price:500,
+        image:"assets/pink-sunflower.webp",
+        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category:"budget-friendly"
+    },
+    
+
+
+
     
 
 
