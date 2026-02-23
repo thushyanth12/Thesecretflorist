@@ -408,7 +408,55 @@
         image:"assets/violet.webp",
         description:"A romantic blend of deep red roses and soft violet blooms, crafted for heartfelt moments .",
         category:["budget-friendly","Elegant"]
-    }
+    },
+    {
+        id:58,
+        name:"Pikachu Surprise",
+        price:900,
+        image:"assets/pika.webp",
+        description:"Chocolates with a cute pikachu",
+        category:["Hot-wheels","budget-friendly","chocolate-bouquet"]
+    },
+    {
+        id:59,
+        name:"Golden Memory Bouquet",
+        price:1200,
+        image:"assets/ggold.webp",
+        description:"A bouquet made up of gold chocolates and polaroids",
+        category:["chocolate-bouquet","polaroids-bouquet"]   
+    },
+    {
+        id:60,
+        name:"Sunshine Bloom Bouquet",
+        price:1200,
+        image:"assets/mary.webp",
+        description:"A bouquet made up of Bright flowers for happy moments",
+        category:["chocolate-bouquet","polaroids-bouquet"]   
+    },
+    {
+        id:61,
+        name:"Blush Chocolate Bloom",
+        price:1200,
+        image:"assets/full.webp",
+        description:"Rose wrapped in sweetness",
+        category:["chocolate-bouquet","polaroids-bouquet"]   
+    },
+    {
+        id:62,
+        name:"Munch bouquet delight",
+        price:1200,
+        image:"assets/munch.webp",
+        description:"Crunchy chocolates with blooms",
+        category:["chocolate-bouquet","polaroids-bouquet"]   
+    },
+    {
+        id:63,
+        name:"Personalized Photo Flower Bouquet",
+        price:1200,
+        image:"assets/polar.webp",
+        description:"Photo framed with flowers",
+        category:"polaroids-bouquet"   
+    },
     
 
 
