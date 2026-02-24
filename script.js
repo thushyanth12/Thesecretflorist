@@ -593,6 +593,94 @@
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
         category:"budget-friendly"
     },
+    {
+        id:81,
+        name:"Royal Red Anniversary Bouquet",
+        price:500,
+        image:"assets/anniversary.webp",
+        description:"A luxurious heart of premium red roses crowned with elegance — crafted to celebrate timeless love.",
+        category:"luxury"
+    },
+    {
+        id:82,
+        name:"Blush Romance Box",
+        price:500,
+        image:"assets/cake.webp",
+        description:"A stunning gradient of red, pink, and white roses arranged in a luxury round box.",
+        category:"luxury"
+    },
+    {
+        id:83,
+        name:"Scarlet Birthday Bloom",
+        price:500,
+        image:"assets/custom.webp",
+        description:"Deep red roses wrapped in elegance",
+        category:"luxury"
+    },
+    {
+        id:84,
+        name:"Golden Heart Delight",
+        price:500,
+        image:"assets/chocorose.webp",
+        description:"Premium red roses surrounding a heart of Ferrero delights",
+        category:"luxury"
+    },
+    {
+        id:85,
+        name:"Pastel Garden Symphony",
+        price:500,
+        image:"assets/enchant.webp",
+        description:"A vibrant harmony of roses and seasonal blooms",
+        category:"luxury"
+    },
+    {
+        id:86,
+        name:"Midnight Glow Elegance",
+        price:500,
+        image:"assets/lflow.webp",
+        description:"Soft ivory roses wrapped in black luxury paper and illuminated with warm fairy lights",
+        category:"luxury"
+    },
+    {
+        id:87,
+        name:"Heart Within Heart",
+        price:500,
+        image:"assets/yrose.webp",
+        description:"A bold sea of red roses embracing a white heart — designed to say “You are my everything.”",
+        category:"luxury"
+    },
+    {
+        id:88,
+        name:"Blushing Grace",
+        price:500,
+        image:"assets/pinkr.webp",
+        description:"Delicate pink roses wrapped in pastel elegance",
+        category:"luxury"
+    },
+    {
+        id:89,
+        name:"Crimson Celebration Wrap",
+        price:500,
+        image:"assets/brose.webp",
+        description:"A dramatic black wrap filled with premium red roses",
+        category:"luxury"
+    },
+    {
+        id:90,
+        name:"The Grand Passion Dome",
+        price:500,
+        image:"assets/arab.webp",
+        description:"An extravagant dome of handpicked red roses",
+        category:"luxury"
+    },
+    {
+        id:91,
+        name:"Blush pink delight",
+        price:500,
+        image:"assets/pink.webp",
+        description:"An extravagant working of blush rose",
+        category:"luxury"
+    }
     
 
 
