@@ -351,7 +351,7 @@
         price:7000,
         image:"assets/wine.webp",
         description:"A premium floral arrangement blending elegant roses,and wine to create a memorable experience.",
-        category: ["Elegant", "Luxury"]
+        category: ["Elegant", "Luxury","customized"]
     },
     {
         id:51,
@@ -415,7 +415,7 @@
         price:900,
         image:"assets/pika.webp",
         description:"Chocolates with a cute pikachu",
-        category:["Hot-wheels","budget-friendly","chocolate-bouquet"]
+        category:["customized","budget-friendly","chocolate-bouquet"]
     },
     {
         id:59,
@@ -439,7 +439,7 @@
         price:1200,
         image:"assets/full.webp",
         description:"Rose wrapped in sweetness",
-        category:["chocolate-bouquet","polaroids-bouquet"]   
+        category:["chocolate-bouquet","polaroids-bouquet","customized"]   
     },
     {
         id:62,
@@ -447,7 +447,7 @@
         price:1200,
         image:"assets/munch.webp",
         description:"Crunchy chocolates with blooms",
-        category:["chocolate-bouquet","polaroids-bouquet"]   
+        category:["chocolate-bouquet","polaroids-bouquet","customized"]   
     },
     {
         id:63,
