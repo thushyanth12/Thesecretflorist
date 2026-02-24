@@ -423,7 +423,7 @@
         price:1200,
         image:"assets/ggold.webp",
         description:"A bouquet made up of gold chocolates and polaroids",
-        category:["chocolate-bouquet","polaroids-bouquet"]   
+        category:["chocolate-bouquet","polaroids-bouquet","birthday"]   
     },
     {
         id:60,
@@ -487,7 +487,7 @@
         price:500,
         image:"assets/Chocolate-bout.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        category:["chocolate-bouquet","budget-friendly"]
     },
     {
         id:68,
