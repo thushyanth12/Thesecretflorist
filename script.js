@@ -763,10 +763,10 @@
     },
     {
         id: 102,
-        name: "Power Bloom",
+        name: "Sunshine Bloom",
         price: 300,
         image: "assets/ybutter.webp",
-        description: "Iconic anime figure with bold rose design.",
+        description: "Bright yellow roses with butterfly highlights.",
         category: "budget-friendly"
     },
     {
