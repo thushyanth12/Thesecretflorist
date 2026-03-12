@@ -832,8 +832,66 @@
         image: "assets/perfume.webp",
         description: "Beautiful blooms paired with luxury fragrances, creating the perfect gift for any special moment.",
         category: "perfume-bouquet"
-    }
+    },
+    {
+        id: 111,
+        name: "Classic White Rose Wedding Bouquet",
+        price: 2500,
+        image: "assets/wed1.png",
+        description: "A beautiful classic white rose wedding bouquet beautifully wrapped.",
+        category: "wedding"
+    },
+    
+
+    {
+        id: 114,
+        name: "Rustic Autumn Rose Bouquet",
+        price: 7500,
+        image: "assets/wed4.png",
+        description: "A rustic autumn wedding bouquet with dried wheat and orange roses.",
+        category: ["wedding","Luxury"]
+    },
    
+    {
+        id: 116,
+        name: "Blue Hydrangea Maska Bouquet",
+        price: 8500,
+        image: "assets/wed6.png",
+        description: "A classic wedding bouquet featuring large blue hydrangeas and white roses.",
+        category: "wedding"
+    },
+    {
+        id: 117,
+        name: "Boho Pampas Grass Bouquet",
+        price: 2400,
+        image: "assets/wed7.png",
+        description: "A trendy boho wedding bouquet with dried pampas grass and bleached ferns.",
+        category: "wedding"
+    },
+    {
+        id: 118,
+        name: "Tropical Orchid Bouquet",
+        price: 3100,
+        image: "assets/wed8.png",
+        description: "A vibrant tropical wedding bouquet with pink and orange orchids.",
+        category: "wedding"
+    },
+    {
+        id: 119,
+        name: "Burgundy Dahlia Bouquet",
+        price: 3300,
+        image: "assets/wed9.png",
+        description: "A rich and moody wedding bouquet with dark burgundy dahlias and blush pink roses.",
+        category: "wedding"
+    },
+    {
+        id: 120,
+        name: "Fresh Eucalyptus & Lily Bouquet",
+        price: 2700,
+        image: "assets/wed10.png",
+        description: "A fresh wedding bouquet featuring silver dollar eucalyptus and large white lilies.",
+        category: "wedding"
+    }
 ];
 
 
