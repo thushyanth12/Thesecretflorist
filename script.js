@@ -1,4 +1,4 @@
-﻿const products = [
+const products = [
     {
         id: 1,
         name: "The First step",
@@ -98,7 +98,7 @@
         price: 1500,
         image: "assets/fourteen.webp",
         description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
-        category: "birthday"
+        category: ["birthday","Chocolate Bouquet"]
     },
     {
         id: 15,
@@ -343,7 +343,7 @@
         price:4500,
         image:"assets/anju.webp",
         description:"A playful bouquet packed with sweetness and smiles",
-        category: ["chocolate-bouquet", "birthday"]
+        category: ["chocolate-bouquet", "birthday", "luxury"]
     },
     {
         id:50,
@@ -559,7 +559,7 @@
         price:500,
         image:"assets/Kinder-joy.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        category:["budget-friendly","Chocolate Bouquet"]
     },
     {
         id:77,
@@ -623,7 +623,7 @@
         price:3000,
         image:"assets/chocorose.webp",
         description:"Premium red roses surrounding a heart of Ferrero delights",
-        category:["luxury","birthday"]
+        category:["luxury","birthday","Chocolate Bouquet"]
     },
     {
         id:85,
@@ -747,11 +747,11 @@
     },
     {
         id: 100,
-        name: "Rosy Chocolate Deligh",
+        name: "Rosy Chocolate Delight",
         price: 500,
         image: "assets/pinkrose.webp",
         description: "Fresh pink roses paired with premium chocolates.",
-        category: "budget-friendly"
+        category: ["budget-friendly","Chocolate Bouquet"]
     },
     {
         id: 101,
@@ -831,12 +831,12 @@
         price: 4500,
         image: "assets/perfume.webp",
         description: "Beautiful blooms paired with luxury fragrances, creating the perfect gift for any special moment.",
-        category: "perfume-bouquet"
+        category: ["perfume-bouquet", "luxury"]
     },
     {
         id: 111,
         name: "Classic White Rose Wedding Bouquet",
-        price: 2500,
+        price: 3500,
         image: "assets/wed1.png",
         description: "A beautiful classic white rose wedding bouquet beautifully wrapped.",
         category: "wedding"
@@ -858,40 +858,34 @@
         price: 8500,
         image: "assets/wed6.png",
         description: "A classic wedding bouquet featuring large blue hydrangeas and white roses.",
-        category: "wedding"
+        category: ["wedding", "luxury"]
     },
     {
         id: 117,
         name: "Boho Pampas Grass Bouquet",
-        price: 2400,
+        price: 7500,
         image: "assets/wed7.png",
         description: "A trendy boho wedding bouquet with dried pampas grass and bleached ferns.",
-        category: "wedding"
+        category: ["wedding", "luxury"]
     },
     {
         id: 118,
         name: "Tropical Orchid Bouquet",
-        price: 3100,
-        image: "assets/wed8.png",
+        price: 5500,
+        image: "assets/orchid.webp",
         description: "A vibrant tropical wedding bouquet with pink and orange orchids.",
-        category: "wedding"
+        category: ["wedding", "luxury"]
     },
     {
-        id: 119,
-        name: "Burgundy Dahlia Bouquet",
-        price: 3300,
-        image: "assets/wed9.png",
-        description: "A rich and moody wedding bouquet with dark burgundy dahlias and blush pink roses.",
-        category: "wedding"
-    },
-    {
-        id: 120,
-        name: "Fresh Eucalyptus & Lily Bouquet",
-        price: 2700,
-        image: "assets/wed10.png",
-        description: "A fresh wedding bouquet featuring silver dollar eucalyptus and large white lilies.",
-        category: "wedding"
+        id:119,
+        name:"Ramzan Themed Bouquet",
+        price:3200,
+        image:"assets/ramzan.webp",
+        description:"A fantabulous money bouquet for ramzan",
+        category:["money bouquet","birthday"]
     }
+   
+  
 ];
 
 
