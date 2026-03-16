@@ -837,7 +837,7 @@ const products = [
         id: 111,
         name: "Classic White Rose Wedding Bouquet",
         price: 3500,
-        image: "assets/wed1.png",
+        image: "assets/wed1.webp",
         description: "A beautiful classic white rose wedding bouquet beautifully wrapped.",
         category: "wedding"
     },
@@ -847,7 +847,7 @@ const products = [
         id: 114,
         name: "Rustic Autumn Rose Bouquet",
         price: 7500,
-        image: "assets/wed4.png",
+        image: "assets/wed4.webp",
         description: "A rustic autumn wedding bouquet with dried wheat and orange roses.",
         category: ["wedding","Luxury"]
     },
@@ -856,7 +856,7 @@ const products = [
         id: 116,
         name: "Blue Hydrangea Maska Bouquet",
         price: 8500,
-        image: "assets/wed6.png",
+        image: "assets/wed6.webp",
         description: "A classic wedding bouquet featuring large blue hydrangeas and white roses.",
         category: ["wedding", "luxury"]
     },
@@ -864,7 +864,7 @@ const products = [
         id: 117,
         name: "Boho Pampas Grass Bouquet",
         price: 7500,
-        image: "assets/wed7.png",
+        image: "assets/wed7.webp",
         description: "A trendy boho wedding bouquet with dried pampas grass and bleached ferns.",
         category: ["wedding", "luxury"]
     },
