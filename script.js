@@ -1020,6 +1020,30 @@ const products = [
         description:"A simple bouquet of dairy milk chocolates",
         category:["budget friendly", "chocolate bouquet", "birthday"]
     },
+    {
+        id:137,
+        name:"50 rs heart design bouquet",
+        price:500,
+        image:"assets/50rs heart design.webp",
+        description:"A bouquet made up of 50 rs notes in heart design",
+        category:["money bouquet"]
+    },
+    {
+        id:138,
+        name:"50 rs red rose bouquet",
+        price:500,
+        image:"assets/50rs_with red rose.webp",
+        description:"A bouquet made up of 50 rs notes with red roses",
+        category:["money bouquet"]
+    },
+    {
+        id:139,
+        name:"all ind currency bouquet",
+        price:500,
+        image:"assets/All rs whiteflower.webp",
+        description:"A bouquet made up of all Indian currency notes with white flowers",
+        category:["money bouquet",]
+    }
 ];
 
 
