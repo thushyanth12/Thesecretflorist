@@ -886,55 +886,55 @@ const products = [
     },
     {
         id:120,
-        name:"hotwheels Bouquet",
+        name:"Midnight Racer's Dream",
         price:3800,
         image:"assets/hotw1.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"A stunning black-wrapped bouquet featuring delicate baby's breath and a collection of classic Hot Wheels cars.",
         category:["hot wheels"]
     },
     {
         id:121,
-        name:"hotwheels Bouquet",
+        name:"Azure Porsche Elegance",
         price:2000,
         image:"assets/hotw2.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"Vibrant blue roses paired with a sleek Porsche model, wrapped in elegant translucent layers with a butterfly accent.",
         category:["hot wheels"]
     },
     {
         id:122,
-        name:"hotwheels Bouquet",
+        name:"Romantic Speedway Memories",
         price:1800,
         image:"assets/hotw3.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"Beautiful red roses combined with custom Polaroid memories and fast Hot Wheels cars, perfect for your loved one.",
         category:["hot wheels"]
     },
     {
         id:123,
-        name:"hotwheels Bouquet",
+        name:"Royal Blue Crowned Racer",
         price:1800,
         image:"assets/hotw4.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"An impressive arrangement of deep blue roses starring a golden crown and exclusive white/silver Hot Wheels models.",
         category:["hot wheels"]
     },
     {
         id:124,
-        name:"hotwheels Bouquet",
+        name:"Skyline Track Bouquet",
         price:4500,
         image:"assets/hot5.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"A large sky-blue presentation featuring an exciting collection of Hot Wheels cars nestled among white and blue premium roses.",
         category:["hot wheels"]
     },
     {
         id:125,
-        name:"hotwheels Bouquet",
+        name:"Sweet Speed Chocolate Mix",
         price:1800,
         image:"assets/hot6.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"The ultimate combo of popular chocolate bars (Snickers, M&Ms) and colorful Hot Wheels cars in a lovely mint wrap.",
         category:["hot wheels"]
     },
     {
         id:126,
-        name:"hotwheels Bouquet",
+        name:"hotwheels in Blue Rose",
         price:2800,
         image:"assets/hot7.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
@@ -942,7 +942,7 @@ const products = [
     },
     {
         id:127,
-        name:"hotwheels bouquet",
+        name:"Fast&Furious Special",
         price:3800,
         image:"assets/hot8.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
@@ -950,7 +950,7 @@ const products = [
     },
     {
         id:128,
-        name:"hotwheels bouquet",
+        name:"Black themed hotwheels",
         price:1200,
         image:"assets/hot9.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
@@ -958,15 +958,15 @@ const products = [
     },
     {
         id:129,
-        name:"hotwheels bouquet",
+        name:"Retro Gold Speedway",
         price:1200,
         image:"assets/hot10.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        description:"Retro-style Hot Wheels cars gracefully paired with bright blue roses and wrapped in luxurious gold-accented paper.",
         category:["hot wheels"]
     },
     {
         id:130,
-        name:"hotwheels bouquet",
+        name:"hotwheels with rose special",
         price:2500,
         image:"assets/hot11.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
@@ -982,7 +982,7 @@ const products = [
     },
     {
         id:132,
-        name:"All chocolates bouquet",
+        name:"Choco Delight bouquet",
         price:3500,
         image:"assets/allcho2.jpeg",
         description:"All chocolates with love",
