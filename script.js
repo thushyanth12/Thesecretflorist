@@ -1023,7 +1023,7 @@ const products = [
     {
         id:137,
         name:"50 rs heart design bouquet",
-        price:500,
+        price:1200,
         image:"assets/50rs heart design.webp",
         description:"A bouquet made up of 50 rs notes in heart design",
         category:["money bouquet"]
@@ -1039,7 +1039,7 @@ const products = [
     {
         id:139,
         name:"all ind currency bouquet",
-        price:500,
+        price:1200,
         image:"assets/All rs whiteflower.webp",
         description:"A bouquet made up of all Indian currency notes with white flowers",
         category:["money bouquet",]
