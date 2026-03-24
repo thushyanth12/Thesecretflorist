@@ -1684,6 +1684,28 @@ if (cartOverlay) {
     cartOverlay.addEventListener('click', () => toggleCart(false));
 }
 
+// ================== HAMBURGER MENU ==================
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
 // Ensure DOM is fully loaded before initializing
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
