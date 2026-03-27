@@ -1083,6 +1083,102 @@ const products = [
         image:"assets/money5.webp",
         description:"everyone is deponds on love ",
         category:["money bouquet"]
+    },
+    {
+        id:145,
+        name:"Trending 100rs bouquet",
+        price:200,
+        image:"assets/trending 100rs bouquet.webp",
+        description:"a bouquet made up of 100 rs notes",
+        category:["money bouquet"]
+    },
+    {
+        id:146,
+        name:"500 rs bouquet",
+        price:100,
+        image:"assets/500rs money bouquet.webp",
+        description:"a bouquet made up of 500 rs notes",
+        category:["money bouquet"]
+    },
+    {
+        id:147,
+        name:"Hotwheel cap bouquet",
+        price:200,
+        image:"assets/hotwheel cap.webp",
+        description:"a bouquet made up of hotwheel with a caps",
+        category:["hot wheels"]
+    },
+    {
+        id:148,
+        name:"Hotwheel sunflower bouquet",
+        price:200,
+        image:"assets/hotwheels sun.webp",
+        description:"a bouquet made up of hotwheel with a sunflower",
+        category:["hot wheels"]
+    },
+    {
+        id:149,
+        name:"Nike gift bouquet",
+        price:200,
+        image:"assets/nick gift bouquet.webp",
+        description:"nick gift bouquet for all the nike lovers",
+        category:["birthday"]
+    },
+    {
+        id:150,
+        name:"hw hersheys bouquet",
+        price:200,
+        image:"assets/hw hersheys.webp",
+        description:"a bouquet made up of hotwheel with a hersheys chocolates",
+        category:["hot wheels"]
+    },
+    {
+        id:151,
+        name:"All rs bouquet",
+        price:200,
+        image:"assets/all rs.webp",
+        description:"All Indian currency notes with flowers",
+        category:["money bouquet"]
+    },
+    {
+        id:152,
+        name:"500 rs bouquet",
+        price:200,
+        image:"assets/500 only.webp",
+        description:"500 rs bouquet with flowers",
+        category:["money bouquet",]
+    },
+    {
+        id:153,
+        name:"Couple bouquet",
+        price:200,
+        image:"assets/couple bouquet.webp",
+        description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
+        category:["hot wheels","chocolate bouquet"]
+    },
+    {
+        id:154,
+        name:"Bike bouquet",
+        price:200,
+        image:"assets/bike bouquet.webp",
+        description:"a bouquet whit a bike in the middle for bike lovers",
+        category:["birthday"]
+    },
+    {
+        id:155,
+        name:"red hotwheel bouquet",
+        price:200,
+        image:"assets/red hw.webp",
+        description:"a bouquet made up of red hotwheels",
+        category:["hot wheels"]
+    },
+    {
+        id:156,
+        name:"spiderman hotwheel bouquet",
+        price:200,
+        image:"assets/hw with spiderman.webp",
+        description:"a bouquet made up of hotwheels with spiderman",
+        category:["hot wheels"]
     }
 ];
 
