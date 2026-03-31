@@ -1047,7 +1047,7 @@ const products = [
     {
         id:140,
         name:"50 rs note bouquet",
-        price:500,
+        price:1500,
         image:"assets/money1.webp",
         description:"money gives you happyness",
         category:["money-bouquet"]
@@ -1055,7 +1055,7 @@ const products = [
     {
         id:141,
         name:"money flowerish",
-        price:1200,
+        price:5500,
         image:"assets/money2.webp",
         description:"love is blind",
         category:["money-bouquet"]
@@ -1063,7 +1063,7 @@ const products = [
     {
         id:142,
         name:"mega king flowerish",
-        price:1200,
+        price:6300,
         image:"assets/money3.webp",
         description:"always you are my favourite",
         category:["money bouquet","chocolate bouquet"]
@@ -1071,7 +1071,7 @@ const products = [
     {
         id:143,
         name:"blowish flower",
-        price:1200,
+        price:2300,
         image:"assets/money4.webp",
         description:"always want more flowers",
         category:["money-bouquet"]
@@ -1079,7 +1079,7 @@ const products = [
     {
         id:144,
         name:"stunning flower",
-        price:1200,
+        price:4800,
         image:"assets/money5.webp",
         description:"everyone is deponds on love ",
         category:["money-bouquet","luxury"]
@@ -1087,7 +1087,7 @@ const products = [
     {
         id:145,
         name:"Trending 100rs bouquet",
-        price:200,
+        price:800,
         image:"assets/trending 100rs bouquet.webp",
         description:"a bouquet made up of 100 rs notes",
         category:["money-bouquet"]
@@ -1095,7 +1095,7 @@ const products = [
     {
         id:146,
         name:"500 rs bouquet",
-        price:100,
+        price:1000,
         image:"assets/500rs money bouquet.webp",
         description:"a bouquet made up of 500 rs notes",
         category:["money-bouquet"]
@@ -1103,7 +1103,7 @@ const products = [
     {
         id:147,
         name:"Hotwheel cap bouquet",
-        price:200,
+        price:3800,
         image:"assets/hotwheel cap.webp",
         description:"a bouquet made up of hotwheel with a caps",
         category:["hot-wheels"]
@@ -1111,7 +1111,7 @@ const products = [
     {
         id:148,
         name:"Hotwheel sunflower bouquet",
-        price:200,
+        price:2200,
         image:"assets/hotwheels sun.webp",
         description:"a bouquet made up of hotwheel with a sunflower",
         category:["hot-wheels"]
@@ -1119,7 +1119,7 @@ const products = [
     {
         id:149,
         name:"Nike gift bouquet",
-        price:200,
+        price:1900,
         image:"assets/nick gift bouquet.webp",
         description:"nike gift bouquet for all the nike lovers",
         category:["birthday"]
@@ -1127,7 +1127,7 @@ const products = [
     {
         id:150,
         name:"hw hersheys bouquet",
-        price:200,
+        price:3500,
         image:"assets/hw hersheys.webp",
         description:"a bouquet made up of hotwheel with a hersheys chocolates",
         category:["hot-wheels"]
@@ -1135,7 +1135,7 @@ const products = [
     {
         id:151,
         name:"All rs bouquet",
-        price:200,
+        price:3500,
         image:"assets/all rs.webp",
         description:"All Indian currency notes with flowers",
         category:["money-bouquet"]
@@ -1143,7 +1143,7 @@ const products = [
     {
         id:152,
         name:"500 rs bouquet",
-        price:200,
+        price:3500,
         image:"assets/500 only.webp",
         description:"500 rs bouquet with flowers",
         category:["money-bouquet"]
@@ -1151,7 +1151,7 @@ const products = [
     {
         id:153,
         name:"Couple bouquet",
-        price:200,
+        price:800,
         image:"assets/couple bouquet.webp",
         description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
         category:["hot-wheels","chocolate-bouquet","budget-friendly"]
@@ -1159,7 +1159,7 @@ const products = [
     {
         id:154,
         name:"Bike bouquet",
-        price:200,
+        price:5200,
         image:"assets/bike bouquet.webp",
         description:"a bouquet whit a bike in the middle for bike lovers",
         category:["birthday"]
@@ -1167,7 +1167,7 @@ const products = [
     {
         id:155,
         name:"red hotwheel bouquet",
-        price:200,
+        price:3800,
         image:"assets/red hw.webp",
         description:"a bouquet made up of red hotwheels",
         category:["hot-wheels"]
@@ -1175,7 +1175,7 @@ const products = [
     {
         id:156,
         name:"spiderman hotwheel bouquet",
-        price:200,
+        price:4200,
         image:"assets/hw with spiderman.webp",
         description:"a bouquet made up of hotwheels with spiderman",
         category:["hot-wheels"]
