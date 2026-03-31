@@ -98,7 +98,7 @@ const products = [
         price: 1500,
         image: "assets/fourteen.webp",
         description: "Elegant blue and white blooms styled with gourmet treats in a rustic box.",
-        category: ["birthday","Chocolate Bouquet"]
+        category: ["birthday","chocolate-bouquet"]
     },
     {
         id: 15,
@@ -559,7 +559,7 @@ const products = [
         price:500,
         image:"assets/Kinder-joy.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:["budget-friendly","Chocolate Bouquet"]
+        category:["budget-friendly","chocolate-bouquet"]
     },
     {
         id:77,
@@ -623,7 +623,7 @@ const products = [
         price:3000,
         image:"assets/chocorose.webp",
         description:"Premium red roses surrounding a heart of Ferrero delights",
-        category:["luxury","birthday","Chocolate Bouquet"]
+        category:["luxury","birthday","chocolate-bouquet"]
     },
     {
         id:85,
@@ -751,7 +751,7 @@ const products = [
         price: 500,
         image: "assets/pinkrose.webp",
         description: "Fresh pink roses paired with premium chocolates.",
-        category: ["budget-friendly","Chocolate Bouquet"]
+        category: ["budget-friendly","chocolate-bouquet"]
     },
     {
         id: 101,
@@ -849,7 +849,7 @@ const products = [
         price: 7500,
         image: "assets/wed4.webp",
         description: "A rustic autumn wedding bouquet with dried wheat and orange roses.",
-        category: ["wedding","Luxury"]
+        category: ["wedding","luxury"]
     },
    
     {
@@ -882,7 +882,7 @@ const products = [
         price:3200,
         image:"assets/ramzan.webp",
         description:"A fantabulous money bouquet for ramzan",
-        category:["money bouquet","birthday"]
+        category:["money-bouquet","birthday"]
     },
     {
         id:120,
@@ -890,7 +890,7 @@ const products = [
         price:3800,
         image:"assets/hotw1.webp",
         description:"A stunning black-wrapped bouquet featuring delicate baby's breath and a collection of classic Hot Wheels cars.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:121,
@@ -898,7 +898,7 @@ const products = [
         price:2000,
         image:"assets/hotw2.webp",
         description:"Vibrant blue roses paired with a sleek Porsche model, wrapped in elegant translucent layers with a butterfly accent.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:122,
@@ -906,7 +906,7 @@ const products = [
         price:1800,
         image:"assets/hotw3.webp",
         description:"Beautiful red roses combined with custom Polaroid memories and fast Hot Wheels cars, perfect for your loved one.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:123,
@@ -914,7 +914,7 @@ const products = [
         price:1800,
         image:"assets/hotw4.webp",
         description:"An impressive arrangement of deep blue roses starring a golden crown and exclusive white/silver Hot Wheels models.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:124,
@@ -922,7 +922,7 @@ const products = [
         price:4500,
         image:"assets/hot5.webp",
         description:"A large sky-blue presentation featuring an exciting collection of Hot Wheels cars nestled among white and blue premium roses.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:125,
@@ -930,7 +930,7 @@ const products = [
         price:1800,
         image:"assets/hot6.webp",
         description:"The ultimate combo of popular chocolate bars (Snickers, M&Ms) and colorful Hot Wheels cars in a lovely mint wrap.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:126,
@@ -938,7 +938,7 @@ const products = [
         price:2800,
         image:"assets/hot7.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:["hot wheels"] 
+        category:["hot-wheels"]
     },
     {
         id:127,
@@ -978,7 +978,7 @@ const products = [
         price:2800,
         image:"assets/100rsblue.jpeg",
         description:"A money bouquet made up of 100rs notes",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:132,
@@ -986,7 +986,7 @@ const products = [
         price:3500,
         image:"assets/allcho2.jpeg",
         description:"All chocolates with love",
-        category:["chocolate bouquet", "birthday"]
+        category:["chocolate-bouquet", "birthday"]
     },
     {
         id:133,
@@ -994,7 +994,7 @@ const products = [
         price:2800,
         image:"assets/allchocolate.jpeg",
         description:"All chocolates with love",
-        category:["chocolate bouquet", "birthday"]
+        category:["chocolate-bouquet", "birthday"]
     },
     {
         id:134,
@@ -1002,7 +1002,7 @@ const products = [
         price:2000,
         image:"assets/choco_pie.jpeg",
         description:"Soft and delicious choco pie bouquet",
-        category:["chocolate bouquet", "birthday"]
+        category:["chocolate-bouquet", "birthday"]
     },
     {
         id:135,
@@ -1010,7 +1010,7 @@ const products = [
         price:3000,
         image:"assets/kitkat&silk.jpeg",
         description:"A bouquet of kitkat and silk chocolates",
-        category:["chocolate bouquet", "birthday"]
+        category:["chocolate-bouquet", "birthday"]
     },
     {
         id:136,
@@ -1018,7 +1018,7 @@ const products = [
         price:250,
         image:"assets/ruba.jpeg",
         description:"A simple bouquet of dairy milk chocolates",
-        category:["budget friendly", "chocolate bouquet", "birthday"]
+        category:["budget-friendly", "chocolate-bouquet", "birthday"]
     },
     {
         id:137,
@@ -1026,7 +1026,7 @@ const products = [
         price:1200,
         image:"assets/50rs heart design.webp",
         description:"A bouquet made up of 50 rs notes in heart design",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:138,
@@ -1034,7 +1034,7 @@ const products = [
         price:500,
         image:"assets/50rs_with red rose.webp",
         description:"A bouquet made up of 50 rs notes with red roses",
-        category:["money bouquet","Budget friendly"]
+        category:["money-bouquet","budget-friendly"]
     },
     {
         id:139,
@@ -1042,7 +1042,7 @@ const products = [
         price:1200,
         image:"assets/All rs whiteflower.webp",
         description:"A bouquet made up of all Indian currency notes with white flowers",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:140,
@@ -1050,7 +1050,7 @@ const products = [
         price:500,
         image:"assets/money1.webp",
         description:"money gives you happyness",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:141,
@@ -1058,7 +1058,7 @@ const products = [
         price:1200,
         image:"assets/money2.webp",
         description:"love is blind",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:142,
@@ -1074,7 +1074,7 @@ const products = [
         price:1200,
         image:"assets/money4.webp",
         description:"always want more flowers",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:144,
@@ -1082,7 +1082,7 @@ const products = [
         price:1200,
         image:"assets/money5.webp",
         description:"everyone is deponds on love ",
-        category:["money bouquet","luxury"]
+        category:["money-bouquet","luxury"]
     },
     {
         id:145,
@@ -1090,7 +1090,7 @@ const products = [
         price:200,
         image:"assets/trending 100rs bouquet.webp",
         description:"a bouquet made up of 100 rs notes",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:146,
@@ -1098,7 +1098,7 @@ const products = [
         price:100,
         image:"assets/500rs money bouquet.webp",
         description:"a bouquet made up of 500 rs notes",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:147,
@@ -1106,7 +1106,7 @@ const products = [
         price:200,
         image:"assets/hotwheel cap.webp",
         description:"a bouquet made up of hotwheel with a caps",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:148,
@@ -1114,14 +1114,14 @@ const products = [
         price:200,
         image:"assets/hotwheels sun.webp",
         description:"a bouquet made up of hotwheel with a sunflower",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:149,
         name:"Nike gift bouquet",
         price:200,
         image:"assets/nick gift bouquet.webp",
-        description:"nick gift bouquet for all the nike lovers",
+        description:"nike gift bouquet for all the nike lovers",
         category:["birthday"]
     },
     {
@@ -1130,7 +1130,7 @@ const products = [
         price:200,
         image:"assets/hw hersheys.webp",
         description:"a bouquet made up of hotwheel with a hersheys chocolates",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:151,
@@ -1138,7 +1138,7 @@ const products = [
         price:200,
         image:"assets/all rs.webp",
         description:"All Indian currency notes with flowers",
-        category:["money bouquet"]
+        category:["money-bouquet"]
     },
     {
         id:152,
@@ -1146,7 +1146,7 @@ const products = [
         price:200,
         image:"assets/500 only.webp",
         description:"500 rs bouquet with flowers",
-        category:["money bouquet",]
+        category:["money-bouquet"]
     },
     {
         id:153,
@@ -1154,7 +1154,7 @@ const products = [
         price:200,
         image:"assets/couple bouquet.webp",
         description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
-        category:["hot wheels","chocolate bouquet","Budget Friendly"]
+        category:["hot-wheels","chocolate-bouquet","budget-friendly"]
     },
     {
         id:154,
@@ -1170,7 +1170,7 @@ const products = [
         price:200,
         image:"assets/red hw.webp",
         description:"a bouquet made up of red hotwheels",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:156,
@@ -1178,115 +1178,115 @@ const products = [
         price:200,
         image:"assets/hw with spiderman.webp",
         description:"a bouquet made up of hotwheels with spiderman",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:157,
-        name:"polaized bouquet",
+        name:"polaroid bouquet",
         price:500,
         image:"assets/pola1.webp",
         description:"a bouquet made up of family photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
     },
     {
         id:158,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola2.webp",
         description:"a bouquet made up of family photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
      },
      {
         id:159,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola3.webp",
         description:"a bouquet made up of  love photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
      },
      {
         id:160,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola4.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
      },
      {
         id:161,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:1000,
         image:"assets/pola5.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
      },
      {
         id:162,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola6.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
 
      },
      {
         id:163,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola7.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
 
      },
      {
         id:164,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola8.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
 
      },
      {
         id:165,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola9.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
      },
     {
         id:166,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:1000,
         image:"assets/pola10.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
     },
     {
         id:167,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:1000,
         image:"assets/pola11.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
     },
     {
         id:168,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:1000,
         image:"assets/pola12.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
 
     },
     {
         id:169,
-        name:"polaized bouquet with photos",
+        name:"polaroid bouquet with photos",
         price:500,
         image:"assets/pola13.webp",
         description:"a bouquet made up of friends photos with flowers",
-        category:["polaroids bouquet"]
+        category:["polaroids-bouquet"]
 
     }
 ];
