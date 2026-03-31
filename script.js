@@ -1179,6 +1179,115 @@ const products = [
         image:"assets/hw with spiderman.webp",
         description:"a bouquet made up of hotwheels with spiderman",
         category:["hot wheels"]
+    },
+    {
+        id:157,
+        name:"polaized bouquet",
+        price:500,
+        image:"assets/pola1.webp",
+        description:"a bouquet made up of family photos with flowers",
+        category:["polaroids bouquet"]
+    },
+    {
+        id:158,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola2.webp",
+        description:"a bouquet made up of family photos with flowers",
+        category:["polaroids bouquet"]
+     },
+     {
+        id:159,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola3.webp",
+        description:"a bouquet made up of  love photos with flowers",
+        category:["polaroids bouquet"]
+     },
+     {
+        id:160,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola4.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+     },
+     {
+        id:161,
+        name:"polaized bouquet with photos",
+        price:1000,
+        image:"assets/pola5.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+     },
+     {
+        id:162,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola6.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+
+     },
+     {
+        id:163,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola7.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+
+     },
+     {
+        id:164,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola8.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+
+     },
+     {
+        id:165,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola9.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+     },
+    {
+        id:166,
+        name:"polaized bouquet with photos",
+        price:1000,
+        image:"assets/pola10.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+    },
+    {
+        id:167,
+        name:"polaized bouquet with photos",
+        price:1000,
+        image:"assets/pola11.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+    },
+    {
+        id:168,
+        name:"polaized bouquet with photos",
+        price:1000,
+        image:"assets/pola12.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+
+    },
+    {
+        id:169,
+        name:"polaized bouquet with photos",
+        price:500,
+        image:"assets/pola13.webp",
+        description:"a bouquet made up of friends photos with flowers",
+        category:["polaroids bouquet"]
+
     }
 ];
 
