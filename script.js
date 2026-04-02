@@ -1555,6 +1555,46 @@ const products = [
         image: "assets/img7.webp",
         description: "A dreamy, iridescent holographic wrap bouquet featuring a Coco Milia perfume, Godiva chocolate box, Lindt Lindor truffle, a sparkly bookmark, acrylic butterfly decorations, a heart-shaped candle, and warm fairy lights tied with a pink satin bow.",
         category: ["perfume-bouquet", "luxury", "chocolate-bouquet", "customized"]
+    },
+    {
+        id:203,
+        name:  "money bouquet with chocolate and roses",
+        price: 2000,
+        image: "assets/nirma1.webp",
+        description: "A unique bouquet combining the beauty of fresh roses, the sweetness of chocolates, and the practicality of money. This bouquet features a mix of red and pink roses, assorted chocolates, and neatly folded currency notes, all wrapped in elegant paper and tied with a satin ribbon for a perfect blend of love, indulgence, and thoughtfulness.",
+        category: ["money-bouquet", "chocolate-bouquet", "customized"]
+    },
+    {
+        id:204,
+        name:  "perfume bouquet",
+        price: 2000,
+        image: "assets/nirma2.webp",
+        description: " A luxurious bouquet that combines the elegance of fresh flowers with the allure of premium perfumes.",
+        category: ["perfume-bouquet", "luxury", "customized"]
+    },
+    {
+        id:205,
+        name:  "kit kat loved and blessed bouquet",
+        price: 2000,
+        image: "assets/nirma3.webp",
+        description: " kit kat bouquet with a romantic twist.",
+        category: ["chocolate-bouquet", "customized"]
+    },
+    {
+        id:206,
+        name:  "polaroids bouquet",
+        price: 2000,
+        image: "assets/nirma4.webp",
+        description: "A customized polaroids bouquet for friends and loved ones.",
+        category: ["polaroids-bouquet", "customized"]
+    },
+    {
+        id:207,
+        name:  "kit kat bouquet",
+        price: 2000,
+        image: "assets/nirma5.webp",
+        description: "kit kat bouquet with a romantic twist.",
+        category: ["chocolate-bouquet", "customized"]
     }
 ];
 
