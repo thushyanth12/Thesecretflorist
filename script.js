@@ -1058,7 +1058,7 @@ const products = [
         price:5500,
         image:"assets/money2.webp",
         description:"love is blind",
-        category:["money-bouquet"]
+        category:["money-bouquet", "luxury"]
     },
     {
         id:142,
@@ -1066,7 +1066,7 @@ const products = [
         price:6300,
         image:"assets/money3.webp",
         description:"always you are my favourite",
-        category:["money bouquet","chocolate bouquet"]
+        category:["money bouquet","chocolate bouquet", "luxury"]
     },
     {
         id:143,
@@ -1162,7 +1162,7 @@ const products = [
         price:5200,
         image:"assets/bike bouquet.webp",
         description:"a bouquet whit a bike in the middle for bike lovers",
-        category:["birthday"]
+        category:["birthday", "luxury"]
     },
     {
         id:155,
@@ -1210,7 +1210,7 @@ const products = [
         price:500,
         image:"assets/pola4.webp",
         description:"A minimal yet stylish black wrap bouquet with neatly arranged memories for a modern look.",
-        category:["polaroids-bouquet"]
+        category:["polaroids-bouquet","Budget-friendly"]
      },
      {
         id:161,
@@ -1285,7 +1285,7 @@ const products = [
         name:"Cute Mini Memory Bouquet",
         price:1000,
         image:"assets/pola13.webp",
-        description:"A compact and adorable bouquet with soft pink tones, perfect for small surprises and sweet gestures.",
+        description:"Adorable mini bouquet in soft pink, perfect for sweet surprises.",
         category:["polaroids-bouquet"]
 
     },
@@ -1294,7 +1294,7 @@ const products = [
         name:"Memory Lane Photo Bouquet",
         price:1500,
         image:"assets/nira1.webp",
-        description:"A beautifully wrapped bouquet filled with cherished memories, combining printed photos and elegant floral touches. Perfect for birthdays and surprises.",
+        description:"Printed photos and elegant floral touches for birthdays and surprises.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1302,7 +1302,7 @@ const products = [
         name:"Royal black Deluxe Bouquet",
         price:2000,
         image:"assets/nira2.webp",
-        description:"A luxurious pink-themed bouquet with rich wrapping and elegant arrangement of photos and flowers.",
+        description:"Luxurious pink-themed bouquet with elegant photos and flowers.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1310,7 +1310,7 @@ const products = [
         name:"Classic Cream Polaroid Bouquet",
         price:2000,
         image:"assets/nira3.webp",
-        description:"Soft cream wrapping with neatly arranged polaroid pictures, giving a premium and aesthetic look for special occasions.",
+        description:"Cream wrap with polaroid pictures for a premium aesthetic look.",
         category:["polaroids-bouquet"]
 
     },
@@ -1319,7 +1319,7 @@ const products = [
         name:"Royal Red Memory Bouquet",
         price:2000,
         image:"assets/nira4.webp",
-        description:"A vibrant red-themed bouquet featuring a mix of photos and roses, symbolizing love and unforgettable moments.",
+        description:"Red-themed bouquet with photos and roses for unforgettable moments.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1327,7 +1327,7 @@ const products = [
         name:"Elegant Black Luxe Bouquet",
         price:2000,
         image:"assets/nira5.webp",
-        description:"A stylish black wrap bouquet with a luxurious feel, combining modern design and personalized photos.",
+        description:"Stylish black wrap with modern design and personalized photos.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1335,7 +1335,7 @@ const products = [
         name:"Pastel Dream Photo Bouquet",
         price:2000,
         image:"assets/nira6.webp",
-        description:"Soft pastel tones with a gentle arrangement of photos, perfect for gifting your loved ones with a calm and elegant vibe.",
+        description:"Soft pastel tones with photos for a calm and elegant vibe.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1343,7 +1343,7 @@ const products = [
         name:"Pink Fantasy Memory Bouquet",
         price:2000,
         image:"assets/nira7.webp",
-        description:"A vibrant pink bouquet filled with joyful memories and decorative wrapping, ideal for celebrations and friendships.",
+        description:"Vibrant pink bouquet with joyful memories for celebrations.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1351,7 +1351,7 @@ const products = [
         name:"Sky Blue Love Bouquet",
         price:2000,
         image:"assets/nira8.webp",
-        description:"A refreshing blue-themed bouquet with a mix of photos and flowers, representing peace and beautiful memories.",
+        description:"Blue-themed bouquet with photos and flowers for beautiful memories.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1359,7 +1359,7 @@ const products = [
         name:"Rustic Love Photo Bouquet",
         price:2000,
         image:"assets/nira9.webp",
-        description:"A natural brown wrap bouquet with roses and photos, giving a warm and heartfelt gifting experience.",
+        description:"Rustic brown wrap with roses and photos for heartfelt gifting.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1367,7 +1367,7 @@ const products = [
         name:"Golden Moments Photo Bouquet",
         price:2000,
         image:"assets/nira10.webp",
-        description:"A premium bouquet wrapped in golden-toned paper, featuring your most precious memories along with elegant floral accents. Perfect for anniversaries and special celebrations.",
+        description:"Golden-toned wrap with precious memories and elegant floral accents.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1375,7 +1375,7 @@ const products = [
         name:"Royal Romance Perfume Bouquet",
         price:4200,
         image:"assets/niran1.webp",
-        description:"A luxurious arrangement of fresh blooms paired with a premium fragrance, wrapped in rich maroon tones. Designed for unforgettable romantic moments.",
+        description:"Fresh blooms paired with premium fragrance in rich maroon tones.",
         category:["perfume-bouquet"]
     },
     {
@@ -1384,7 +1384,7 @@ const products = [
         name:"premium nail polish bouquet",
         price:3500,
         image:"assets/niran2.webp",
-        description:"A chic bouquet combining elegant flowers with a selection of high-end nail polishes, wrapped in soft pink paper for a stylish and thoughtful gift.",
+        description:"Elegant flowers with premium nail polishes in soft pink wrap.",
         category:["all-bouquet"]
     },
     {
@@ -1392,15 +1392,15 @@ const products = [
         name:"Choco delight box bouquet",
         price:5500,
         image:"assets/niran4.webp",
-        description:"A decadent bouquet combining a selection of gourmet chocolates with fresh flowers, wrapped in rich red paper. A perfect gift for chocolate lovers and romantic celebrations.",
-        category:["chocolate-bouquet"]
+        description:"Gourmet chocolates with fresh flowers in rich red wrap.",
+        category:["chocolate-bouquet", "luxury"]
     },
     {
         id:184,
         name:"Memory Bloom premium Box",
         price:3200,
         image:"assets/niran5.webp",
-        description:"An elegant floral box filled with soft roses and personalized photo prints. A heartfelt combination of memories and beauty, perfect for special occasions.",
+        description:"Soft roses and personalized photos in an elegant floral box.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1408,15 +1408,15 @@ const products = [
         name:"exclusive permium perfume bouquet",
         price:25000,
         image:"assets/niran6.webp",
-        description:"a luxurious perfume wrapped with  pink , white roses and a  black box, creating an elegant and unforgettable gift for fragrance lovers.",
-        category:["perfume-bouquet"]
+        description:"Luxurious perfume with pink and white roses in a black box.",
+        category:["perfume-bouquet", "luxury"]
     },
     {
         id:186,
         name:"Blush Bloom Luxury Box- Bouquet",
         price:25000,
         image:"assets/niran7.webp",
-        description:"A luxurious blush pink bouquet arranged in an elegant box, featuring a mix of fresh flowers and personalized photos for a truly special gift.",
+        description:"Blush pink flowers and photos arranged in a luxury box.",
         category:["perfume-bouquet"]
     },
     {
@@ -1424,7 +1424,7 @@ const products = [
         name:"Personalized Floral Dome Bouquet",
         price:3800,
         image:"assets/niran8.webp",
-        description:"A stunning transparent dome filled with soft pink roses and customized with your name. A timeless keepsake for someone truly special.",
+        description:"Personalized dome with soft pink roses — a timeless keepsake.",
         category:["perfume-bouquet"]
     },
     {
@@ -1432,31 +1432,31 @@ const products = [
         name:"Glam Beauty Bouquet",
         price:35000,
         image:"assets/niran9.webp",
-        description:"A unique bouquet combining roses with beauty essentials. Perfect for makeup lovers who enjoy both style and surprise.",
-        category:["perfume-bouquet"]
+        description:"Roses with beauty essentials for makeup lovers.",
+        category:["perfume-bouquet", "luxury"]
     },
     {
         id:189,
         name:"Sweetheart Pink Surprise Bouquet",
         price:5500,
         image:"assets/niran10.webp",
-        description:"A charming mix of pink roses and thoughtful add-ons, wrapped beautifully to express love, care, and affection.",
-        category:["perfume-bouquet"]
+        description:"Pink roses with thoughtful add-ons to express love and care.",
+        category:["perfume-bouquet", "luxury"]
     },
     {
         id:190,
         name:"Passion Gift Hamper Bouquet",
         price:7200,
         image:"assets/niran11.webp",
-        description:"Deep red roses paired with chocolates and gifts, crafted to express intense love and celebration in one perfect bundle.",
-        category:["perfume-bouquet"]
+        description:"Red roses with chocolates and gifts in one perfect bundle.",
+        category:["perfume-bouquet", "luxury"]
     },
     {
         id:191,
         name:"Forever Moments Bouquet",
         price:2500,
         image:"assets/niran12.webp",
-        description:"A romantic arrangement of red and white roses paired with your precious photos. Crafted to celebrate love, memories, and meaningful connections.",
+        description:"Red and white roses paired with your precious photo memories.",
         category:["polaroids-bouquet"]
     },
     {
@@ -1464,7 +1464,7 @@ const products = [
         name:"Yardley Delight Chocolate Bouquet",
         price:3200,
         image:"assets/niran13.webp",
-        description:"This elegant bouquet features a soft lavender and pastel theme, giving it a calm and premium look. It is beautifully arranged with a combination of chocolates, decorative flowers, and gift items, wrapped in stylish printed paper with heart patterns.",
+        description:"Lavender-themed bouquet with chocolates and decorative flowers.",
         category:["customized"],
     },
     {
@@ -1472,7 +1472,7 @@ const products = [
         name:"Blush Beauty Surprise Bouq",
         price:4200,
         image:"assets/niran14.webp",
-        description:"This bouquet features a soft pink (blush) theme, giving it a romantic and elegant appearance. It is thoughtfully arranged with a mix of beauty products, chocolates, and cute gift items, all wrapped in stylish pastel paper with neat folds and a ribbon finish.",
+        description:"Blush pink bouquet with beauty products, chocolates, and cute gifts.",
         category:["customized"]
     },
     {
@@ -1480,7 +1480,7 @@ const products = [
         name:"Golden Moments Premium Bouquet",
         price:2500,
         image:"assets/niran15.webp",
-        description:"This bouquet features a luxurious gold and blush pink theme, giving it a rich and personalized feel. It is uniquely designed with a combination of photos, chocolates, flowers, and customized elements, making it more than just a gift—it's a memory collection.",
+        description:"Gold and blush pink bouquet with photos, chocolates, and flowers.",
         category:["customized"]
     },
     {
@@ -1488,7 +1488,7 @@ const products = [
         name:"Classic Love Wrap Bouquet",
         price:3800,
         image:"assets/niran17.webp",
-        description:"A timeless arrangement of fresh roses wrapped in elegant red paper, symbolizing love, passion, and heartfelt emotions.",
+        description:"Fresh roses in elegant red wrap, symbolizing love and passion.",
         category:["perfume-bouquet"]
     },
     {
@@ -1496,7 +1496,7 @@ const products = [
         name: "Happy Married Life Bouquet",
         price: 2000,
         image: "assets/img1.webp",
-        description: "A classic romantic black matte paper bouquet featuring six deep red roses, a perfume bottle, Ferrero Rocher chocolates, a Cadbury Dairy Milk bar, and a black Happy Married Life greeting card, elegantly tied with a rich gold satin ribbon.",
+        description: "Red roses, perfume, and chocolates in black matte wrap for newlyweds.",
         category: ["wedding", "luxury","perfume-bouquet"]
     },
     {
@@ -1504,7 +1504,7 @@ const products = [
         name: "Fitness Fuel Bouquet",
         price: 2000,
         image: "assets/img2.webp",
-        description: "A sporty, health-conscious black and gold bouquet filled with colorful Yoga Bar protein bars in multiple flavors, surrounded by purple asters, white chrysanthemums, and baby's breath, tied with a shimmery gold bow.",
+        description: "Protein bars with flowers in a sporty black and gold wrap.",
         category: ["birthday", "customized","chocolate-bouquet"]
     },
     {
@@ -1512,7 +1512,7 @@ const products = [
         name: "Nivea Men's Power Bouquet",
         price: 2000,
         image: "assets/img3.webp",
-        description: "A bold royal blue bouquet packed with Nivea Men grooming products (shaving foam, deodorant, face wash, cream), Milky Way chocolate bars, Roshen wafers, and Golden Nut snack bars, decorated with a decorative wooden text piece and silver ribbon.",
+        description: "Nivea Men grooming products with chocolates in royal blue wrap.",
         category: ["birthday", "customized","perfume-bouquet"]
     },
     {
@@ -1520,7 +1520,7 @@ const products = [
         name: "Gentleman's Grooming Bouquet",
         price: 2000,
         image: "assets/img4.webp",
-        description: "A structured white and gold geometric-wrapped bouquet for men, containing Follow Me hair care products (shampoo, conditioner, hair clay, and spray), accented with lavender, blue peonies, and tied with a navy blue satin ribbon.",
+        description: "Men's hair care products with flowers in white and gold wrap.",
         category: ["birthday", "customized"]
 
     },
@@ -1529,7 +1529,7 @@ const products = [
         name:  "Chanel Luxe Bouquet",
         price: 2000,
         image: "assets/img5.webp",
-        description: "A sophisticated black and gold bouquet featuring Coco Mademoiselle Chanel perfume, Chanel No.5 skincare products, Rouge Allure Velvet lipstick, Chanel mascara, red silk roses, and baby's breath flowers with a butterfly brooch accent.",
+        description: "Chanel luxury products with silk roses in black and gold wrap.",
         category: ["perfume-bouquet", "luxury", "customized"]
     },
     {
@@ -1537,7 +1537,7 @@ const products = [
         name:  "Golden Bloom Bouquet",
         price: 2000,
         image: "assets/img6.webp",
-        description: "An elegant kraft paper bouquet with four Ferrero Rocher chocolates on stems, a Gucci Bloom perfume bottle, pink acrylic butterflies, and glittery heart-shaped picks, finished with a blush pink satin ribbon bow.",
+        description: "Ferrero Rocher and Gucci Bloom perfume in elegant kraft wrap.",
         category: ["perfume-bouquet", "luxury", "chocolate-bouquet", "customized"]
     },
     {
@@ -1545,7 +1545,7 @@ const products = [
         name:  "Butterfly Glow Bouquet",
         price: 2000,
         image: "assets/img7.webp",
-        description: "A dreamy, iridescent holographic wrap bouquet featuring a Coco Milia perfume, Godiva chocolate box, Lindt Lindor truffle, a sparkly bookmark, acrylic butterfly decorations, a heart-shaped candle, and warm fairy lights tied with a pink satin bow.",
+        description: "Dreamy holographic bouquet with perfume, Godiva, and fairy lights.",
         category: ["perfume-bouquet", "luxury", "chocolate-bouquet", "customized"]
     },
     {
@@ -1553,7 +1553,7 @@ const products = [
         name:  "money bouquet with chocolate and roses",
         price: 2000,
         image: "assets/nirma1.webp",
-        description: "A unique bouquet combining the beauty of fresh roses, the sweetness of chocolates, and the practicality of money.",
+        description: "Fresh roses, chocolates, and money in one unique bouquet.",
         category: ["money-bouquet", "chocolate-bouquet", "customized"]
     },
     {
