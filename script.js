@@ -1842,6 +1842,134 @@ const products = [
         image:"assets/masca.webp",
         description: "A gentle blend of colors blooming in perfect balance",
         category: ["wedding"]
+    },
+    {
+        id:240,
+        name:  "dairy milk bouquet",
+        price:6200,
+        image:"assets/patr16.webp",
+        description: "a delightful bouquet of dairy milk chocolates wrapped in elegant paper.",
+        category: ["chocolate-bouquet", "customized"]
+    },
+    {
+        id:241,
+        name:  "cosmetic bouquet",
+        price:7500,
+        image:"assets/patr17.webp",
+        description: "A curated selection of premium cosmetic products, beautifully arranged in a elegant bouquet.",
+        category: ["customized", "perfume-bouquet", "luxury"]
+    },
+    {
+        id:242,
+        name:  "cosmetic bouquet",
+        price:8500,
+        image:"assets/patr18.webp",
+        description: "A curated selection of premium cosmetic products, beautifully arranged in a elegant bouquet.",
+        category: ["customized", "perfume-bouquet", "luxury"]
+    },
+    {
+        id:243,
+        name:  "cosmetic bouquet",
+        price:9500,
+        image:"assets/patr19.webp",
+        description: "A curated selection of premium cosmetic products, beautifully arranged in a elegant bouquet.",
+        category: ["customized", "perfume-bouquet", "luxury"]
+    },
+    {
+        id:244,
+        name:  "cosmetic bouquet",
+        price:10500,
+        image:"assets/patrr20.webp",
+        description: "A curated selection of premium cosmetic products, beautifully arranged in a elegant bouquet.",
+        category: ["customized", "perfume-bouquet", "luxury"]
+    },
+    {
+        id:245,
+        name:  "cosmetic bouquet",
+        price:11500,
+        image:"assets/patr21.webp",
+        description: "A curated selection of premium cosmetic products, beautifully arranged in a elegant bouquet.",
+        category: ["customized", "perfume-bouquet", "luxury"]
+    },
+    {
+        id:246,
+        name:  "flower bouquet",
+        price:12500,
+        image:"assets/thus2.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:247,
+        name:  "flower bouquet",
+        price:13500,
+        image:"assets/thus3.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:248,
+        name:  "flower bouquet",
+        price:14500,
+        image:"assets/thush4.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:249,
+        name:  "flower bouquet",
+        price:15500,
+        image:"assets/thush5.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:250,
+        name:  "flower bouquet",
+        price:16500,
+        image:"assets/thush6.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:251,
+        name:  "flower bouquet",
+        price:17500,
+        image:"assets/thush7.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:252,
+        name:  "flower bouquet",
+        price:18500,
+        image:"assets/thush8.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:253,
+        name:  "flower bouquet",
+        price:19500,
+        image:"assets/thusd9.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:254,
+        name:  "flower bouquet",
+        price:20500,
+        image:"assets/thush10.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:255,
+        name:  "flower bouquet",
+        price:21500,
+        image:"assets/thush11.webp",
+        description: "A elegant flower bouquet.",
+        category: ["customized", "birthday", "wedding"]
     }
 ];
 
