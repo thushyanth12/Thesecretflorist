@@ -1560,7 +1560,7 @@ const products = [
     {
         id:205,
         name:  "KitKat Romantic Twist Bouquet",
-        price: 2000,
+        price: 1000,
         image: "assets/nirma3.webp",
         description: " kit kat bouquet with a romantic twist.",
         category: ["chocolate-bouquet", "customized"]
@@ -1568,7 +1568,7 @@ const products = [
     {
         id:206,
         name:  "Custom Friends Polaroid Bouquet",
-        price: 2000,
+        price: 2800,
         image: "assets/nirma4.webp",
         description: "A customized polaroids bouquet for friends and loved ones.",
         category: ["polaroids-bouquet", "customized"]
@@ -1576,7 +1576,7 @@ const products = [
     {
         id:207,
         name:  "KitKat Sweet Romance Bouquet",
-        price: 2000,
+        price: 800,
         image: "assets/nirma5.webp",
         description: "kit kat bouquet with a romantic twist.",
         category: ["chocolate-bouquet", "customized"]
@@ -1584,7 +1584,7 @@ const products = [
         {
         id:208,
         name:"Black Wrap Roses & Chocolates"  ,
-        price: 2000,
+        price: 3200,
         image: "assets/t1.webp",
         description: "Black-wrapped bouquet with red roses, baby's breath, and chocolates.",
         category: ["chocolate-bouquet"]
@@ -1734,7 +1734,7 @@ const products = [
     {
         id:226,
         name:  "Ferrero Rocher Peach Bloom Bouquet",
-        price:2000,
+        price:1800,
         image:"assets/patr3.webp",
         description: "Peach and cream bouquet overflowing with ~18 Ferrero Rocher chocolates, baby's breath, and fern leaves.",
         category: ["birthday", "chocolate-bouquet"]
@@ -1742,7 +1742,7 @@ const products = [
     {
         id:227,
         name:  "Happy Birthday Ferrero Mini Bouquet",
-        price:2000,
+        price:1500,
         image:"assets/patr4.webp",
         description: "Petite sage green bouquet with Ferrero Rocher chocolates, a sparkly Happy Birthday topper, and a lace bow ribbon.",
         category: ["birthday", "chocolate-bouquet"]
@@ -1830,7 +1830,7 @@ const products = [
     {
         id:238,
         name:  "Cadbury Rose Bouquet",
-        price:2000,
+        price:2800,
         image:"assets/patr15.webp",
         description: "Soft pink bouquet with fresh pink roses and Cadbury chocolates — sweet, charming, and perfect for gifting.",
         category: ["chocolate-bouquet"]
@@ -1970,6 +1970,63 @@ const products = [
         image:"assets/thush11.webp",
         description: "Elegant ivory and white blossoms arranged with grace — perfect for weddings and celebrations.",
         category: ["customized", "birthday", "wedding"]
+    },
+    {
+        id:256,
+        name:  "hotwheels bouquet with flowers",
+        price:200,
+        image:"assets/box.webp",
+        description: "A fun and unique gift for car enthusiasts of all ages.",
+        category: ["birthday", "hot-wheels"]
+    },
+    {
+        id:257,
+        name:  "Hot Wheels & Floral Surprise",
+        price:500,
+        image:"assets/box1.webp",
+        description: "A delightful combination of Hot Wheels and fresh floral arrangements for a unique gift experience.",
+        category: ["birthday", "hot-wheels"]
+
+    },
+    {
+        id:258,
+        name:  "Hot Wheels & Flowers Extravaganza",
+        price:800,
+        image:"assets/box2.webp",
+        description: "An extravagant gift featuring a variety of Hot Wheels cars and a stunning floral bouquet for a memorable celebration.",
+        category: ["birthday", "hot-wheels"]
+    },
+    {
+        id:259,
+        name:  "Hot Wheels & Floral Delight",
+        price:1200,
+        image:"assets/box6.webp",
+        description: "A delightful gift set combining the excitement of Hot Wheels with the beauty of fresh flowers for a perfect birthday surprise.",
+        category: ["birthday", "hot-wheels"]
+    },
+    {
+        id:260,
+        name:  "Hot Wheels fantasy car bouquet",
+        price:1500,
+        image:"assets/box7.webp",
+        description: "A whimsical bouquet featuring fantasy Hot Wheels cars and vibrant floral arrangements for a fun and imaginative gift.",
+        category: ["birthday", "hot-wheels"]
+    },
+    {
+        id:261,
+        name:  "Hot Wheels red car collection bouquet",
+        price:2000,
+        image:"assets/box8.webp",
+        description: "A striking bouquet showcasing a collection of red Hot Wheels cars paired with elegant floral accents for a bold and memorable gift.",
+        category: ["birthday", "hot-wheels"]
+    },
+    {
+        id:262,
+        name:  "Hot Wheels with batman funko pop bouquet",
+        price:2500,
+        image:"assets/box9.webp",
+        description: "A unique bouquet featuring a selection of Hot Wheels cars and a stylish Batman FUNKO POP for a fun and exciting gift.",
+        category: ["birthday", "hot-wheels"]
     }
 ];
 
