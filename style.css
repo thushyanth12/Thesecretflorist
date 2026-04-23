@@ -1,16 +1,16 @@
 :root {
-    --bg-color: #fdf6f2;
-    --text-color: #2c2a2a;
-    --accent-color: #d4849c;
-    --accent-strong: #c06a85;
-    --accent-light: #f5d0dc;
-    --secondary-color: #fff7f9;
-    --navbar-bg: rgba(255, 247, 249, 0.92);
-    --glass-bg: rgba(255, 255, 255, 0.55);
-    --glass-border: rgba(255, 255, 255, 0.75);
-    --shadow-color: rgba(175, 122, 141, 0.15);
-    --gold: #c4a265;
-    --gold-light: #e8d5b0;
+    --bg-color: #fdf2f5;
+    --text-color: #4a2c35;
+    --accent-color: #e58aa8;
+    --accent-strong: #c7567b;
+    --accent-light: #fce1e8;
+    --secondary-color: #fef6f8;
+    --navbar-bg: rgba(254, 246, 248, 0.92);
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.85);
+    --shadow-color: rgba(204, 92, 131, 0.2);
+    --gold: #d4afb9;
+    --gold-light: #ebcdd4;
     --font-heading: 'Cinzel', serif;
     --font-body: 'Outfit', sans-serif;
     --font-accent: 'Cormorant Garamond', serif;
@@ -33,7 +33,7 @@ html {
 }
 
 body {
-    background: #fffcf9;
+    background: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -50,7 +50,7 @@ body {
 .page-loader {
     position: fixed;
     inset: 0;
-    background: linear-gradient(135deg, #fff7f9, #fdf6f2, #fff0f3);
+    background: linear-gradient(135deg, #fef6f8, #fdf2f5, #fce1e8);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -138,17 +138,17 @@ body {
     overflow: hidden;
     pointer-events: none;
     background:
-        radial-gradient(circle at 0% 0%, rgba(212, 132, 156, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, rgba(196, 162, 101, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(245, 208, 220, 0.04) 0%, transparent 60%);
+        radial-gradient(circle at 0% 0%, rgba(229, 138, 168, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(212, 175, 185, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(252, 225, 232, 0.08) 0%, transparent 60%);
 }
 
 .bg-ornaments::before {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.03;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 60c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-40-30c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm80 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z' fill='%23d4849c' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm0 60c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm-40-30c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10zm80 0c-5 0-10 5-10 10s5 10 10 10 10-5 10-10-5-10-10-10z' fill='%23e58aa8' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-size: 150px 150px;
 }
 
@@ -173,7 +173,7 @@ body {
 .blob-1 {
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    background: linear-gradient(135deg, #fce1e8, #f5b3c8);
     top: -10%;
     right: -5%;
     animation-delay: 0s;
@@ -182,7 +182,7 @@ body {
 .blob-2 {
     width: 600px;
     height: 600px;
-    background: linear-gradient(135deg, #fff0f3, #fce4ec);
+    background: linear-gradient(135deg, #fef5f7, #fce1e8);
     bottom: -10%;
     left: -10%;
     animation-delay: -5s;
@@ -192,10 +192,10 @@ body {
 .blob-3 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #fdf2f5, #f8e8ed);
+    background: linear-gradient(135deg, #fdf2f5, #fce1e8);
     top: 40%;
     left: 20%;
-    opacity: 0.25;
+    opacity: 0.35;
     animation-delay: -10s;
 }
 
@@ -217,10 +217,11 @@ body {
     position: absolute;
     width: 16px;
     height: 24px;
-    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    background: linear-gradient(135deg, #fce1e8, #f5b3c8);
     border-radius: 150% 0 150% 0;
-    opacity: 0.2;
+    opacity: 0.35;
     animation: petalFalling 15s linear infinite;
+    box-shadow: 0 4px 8px rgba(229, 138, 168, 0.2);
 }
 
 .petal-1 { top: -10%; left: 8%; animation-duration: 14s; }
@@ -264,40 +265,65 @@ img {
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid transparent;
+    border-bottom: none;
     transition: all 0.5s var(--ease-out-expo);
 }
 
 .navbar.scrolled {
     background: var(--navbar-bg);
     backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(212, 132, 156, 0.12);
-    box-shadow: 0 8px 32px rgba(212, 132, 156, 0.1);
+    border-bottom: none;
+    box-shadow: 0 4px 24px rgba(229, 138, 168, 0.12), 0 1px 0 rgba(253, 242, 245, 0.95);
 }
 
 .logo .brand-logo {
-    height: 80px;
+    height: 70px;
     width: auto;
-    margin-right: 15px;
+    flex-shrink: 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
     height: 100%;
+    overflow: visible;
+    flex-shrink: 0;
+    /* Limit how much width logo can eat so nav links always have room */
+    max-width: 55%;
+    margin-left: -18px;
 }
 
-.logo img {
-    height: 450px;
-    width: 300px;
+/* logo1.png — the cursive text logo (2nd img inside .logo) */
+.logo img:nth-child(2) {
+    /* Scale relative to navbar height. overflow:visible lets it appear larger */
+    max-height: 260px;
+    width: auto;
+    max-width: 280px;
     position: relative;
-    right: 35px;
     object-fit: contain;
     transition: transform 0.4s var(--ease-out-back);
+    flex-shrink: 1;
+    /* ~0.5cm gap between brand icon and text logo */
+    margin-left: 8px;
 }
 
-.logo img:hover {
+.logo img:nth-child(2):hover {
     transform: scale(1.05);
+}
+
+/* ---- Desktop: bigger logo ---- */
+@media (min-width: 1025px) {
+    .logo {
+        max-width: 50%;
+    }
+    .logo img:nth-child(2) {
+        max-height: 320px;
+        max-width: 340px;
+        margin-left: 8px;
+    }
+    .logo .brand-logo {
+        height: 80px;
+    }
 }
 
 /* Hamburger Menu Button */
@@ -407,7 +433,7 @@ img {
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    box-shadow: 0 4px 12px rgba(212, 132, 156, 0.4);
+    box-shadow: 0 4px 12px var(--shadow-color);
     transition: transform 0.3s var(--ease-out-back);
 }
 
@@ -443,17 +469,18 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.4rem 1.2rem;
+    padding: 0.5rem 1.4rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(212, 132, 156, 0.15);
-    font-size: 0.75rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    font-size: 0.8rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--accent-strong);
-    box-shadow: 0 8px 24px rgba(212, 132, 156, 0.12);
+    box-shadow: 0 8px 24px var(--shadow-color);
     margin-bottom: 1.5rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    font-weight: 600;
 }
 
 .hero-badge i {
@@ -470,20 +497,21 @@ img {
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
     line-height: 1.15;
     margin-bottom: 1.2rem;
-    color: #2f2b2d;
+    color: var(--text-color);
     letter-spacing: -0.5px;
+    text-shadow: 0 4px 12px rgba(204, 92, 131, 0.1);
 }
 
 .hero p {
-    font-size: 1.15rem;
-    color: #7d6a72;
-    margin-bottom: 2.2rem;
-    max-width: 520px;
-    line-height: 1.7;
-    font-weight: 300;
+    font-size: 1.2rem;
+    color: #6a4a55;
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .hero-actions {
@@ -496,18 +524,18 @@ img {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2.2rem;
+    gap: 0.6rem;
+    padding: 1.1rem 2.4rem;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     transition: all 0.4s var(--ease-out-expo);
-    box-shadow: 0 8px 24px rgba(212, 132, 156, 0.3);
+    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.4);
     position: relative;
     overflow: hidden;
     border: none;
@@ -519,14 +547,14 @@ img {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 32px rgba(212, 132, 156, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(229, 138, 168, 0.5);
 }
 
 .cta-button:hover::before {
@@ -536,29 +564,30 @@ img {
 .ghost-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
+    gap: 0.6rem;
+    padding: 1.1rem 2.4rem;
     border-radius: 50px;
-    border: 1.5px solid rgba(212, 132, 156, 0.3);
+    border: 2px solid var(--accent-color);
     color: var(--accent-strong);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    background: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1.5px;
+    background: var(--glass-bg);
     transition: all 0.4s var(--ease-out-expo);
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.15);
 }
 
 .ghost-button:hover {
     color: white;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     border-color: transparent;
-    box-shadow: 0 12px 28px rgba(212, 132, 156, 0.35);
+    box-shadow: 0 16px 36px rgba(229, 138, 168, 0.4);
 }
 
 .hero-image-container {
@@ -570,13 +599,13 @@ img {
 
 .hero-image-glow {
     position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    background: radial-gradient(circle, rgba(245, 208, 220, 0.4) 0%, transparent 70%);
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background: radial-gradient(circle, rgba(229, 138, 168, 0.4) 0%, transparent 70%);
     border-radius: 50%;
-    filter: blur(60px);
+    filter: blur(70px);
     animation: glowPulse 4s ease-in-out infinite;
 }
 
@@ -586,17 +615,21 @@ img {
 }
 
 .hero-image {
-    max-width: 550px;
+    max-width: 580px;
     height: auto;
     border-radius: var(--radius-xl);
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     opacity: 0;
     animation: slideIn 1s var(--ease-out-expo) forwards 0.1s;
     transform: translateX(50px);
-    box-shadow: 0 25px 60px rgba(212, 132, 156, 0.25);
+    box-shadow: 0 30px 70px rgba(204, 92, 131, 0.3);
     position: relative;
     z-index: 1;
     margin-top: 50px;
+    transition: transform 0.5s var(--ease-out-back);
+}
+.hero-image:hover {
+    transform: translateY(-10px) translateX(0);
 }
 
 /* ================== SECTION DIVIDER ================== */
@@ -687,10 +720,10 @@ img {
     align-items: center;
     gap: 0.8rem;
     background: rgba(255, 255, 255, 0.75);
-    border: 1.5px solid rgba(212, 132, 156, 0.12);
+    border: 1.5px solid rgba(229, 138, 168, 0.12);
     padding: 0.75rem 1.4rem;
     border-radius: 999px;
-    box-shadow: 0 4px 16px rgba(212, 132, 156, 0.08);
+    box-shadow: 0 4px 16px rgba(229, 138, 168, 0.08);
     cursor: text;
     transition: all 0.4s var(--ease-out-expo);
     backdrop-filter: blur(10px);
@@ -698,7 +731,7 @@ img {
 
 .search-bar:focus-within {
     border-color: var(--accent-color);
-    box-shadow: 0 8px 24px rgba(212, 132, 156, 0.15);
+    box-shadow: 0 8px 24px rgba(229, 138, 168, 0.15);
     background: #fff;
     transform: translateY(-1px);
 }
@@ -745,7 +778,7 @@ img {
 
 .category-btn {
     background: rgba(255, 255, 255, 0.7);
-    border: 1.5px solid rgba(212, 132, 156, 0.12);
+    border: 1.5px solid rgba(229, 138, 168, 0.12);
     color: #6a5a62;
     padding: 0.55rem 1.2rem;
     border-radius: 999px;
@@ -778,7 +811,7 @@ img {
     background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 4px 16px rgba(212, 132, 156, 0.3);
+    box-shadow: 0 4px 16px rgba(229, 138, 168, 0.3);
 }
 
 .category-btn.active i {
@@ -816,7 +849,7 @@ img {
 /* ================== PRODUCT CARDS ================== */
 .product-card {
     background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(212, 132, 156, 0.08);
+    border: 1px solid rgba(229, 138, 168, 0.08);
     border-radius: var(--radius-lg);
     padding: 1rem;
     transition: all 0.5s var(--ease-out-expo);
@@ -824,7 +857,7 @@ img {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 20px rgba(212, 132, 156, 0.08);
+    box-shadow: 0 4px 20px rgba(229, 138, 168, 0.08);
     backdrop-filter: blur(10px);
 }
 
@@ -842,8 +875,8 @@ img {
 
 .product-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(212, 132, 156, 0.15);
-    box-shadow: 0 20px 50px rgba(212, 132, 156, 0.2);
+    border-color: rgba(229, 138, 168, 0.15);
+    box-shadow: 0 20px 50px rgba(229, 138, 168, 0.2);
 }
 
 .product-card:hover::before {
@@ -893,7 +926,7 @@ img {
     width: 100%;
     padding: 0.75rem;
     background: transparent;
-    border: 1.5px solid rgba(212, 132, 156, 0.25);
+    border: 1.5px solid rgba(229, 138, 168, 0.25);
     color: var(--accent-strong);
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -911,7 +944,7 @@ img {
     color: white;
     border-color: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(212, 132, 156, 0.3);
+    box-shadow: 0 6px 18px rgba(229, 138, 168, 0.3);
 }
 
 /* WhatsApp Customize Bouquet button — product card */
@@ -974,9 +1007,9 @@ img {
     transition: right 0.5s var(--ease-out-expo);
     display: flex;
     flex-direction: column;
-    border-left: 1px solid rgba(212, 132, 156, 0.1);
+    border-left: 1px solid rgba(229, 138, 168, 0.1);
     padding: 2rem;
-    box-shadow: -8px 0 40px rgba(212, 132, 156, 0.15);
+    box-shadow: -8px 0 40px rgba(229, 138, 168, 0.15);
 }
 
 .cart-sidebar.active {
@@ -988,7 +1021,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(212, 132, 156, 0.1);
+    border-bottom: 1px solid rgba(229, 138, 168, 0.1);
     padding-bottom: 1rem;
 }
 
@@ -1022,7 +1055,7 @@ img {
 }
 
 .close-cart:hover {
-    background: rgba(212, 132, 156, 0.1);
+    background: rgba(229, 138, 168, 0.1);
     color: var(--accent-color);
 }
 
@@ -1038,13 +1071,13 @@ img {
     background: rgba(255, 255, 255, 0.8);
     padding: 1rem;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(212, 132, 156, 0.08);
-    box-shadow: 0 4px 12px rgba(212, 132, 156, 0.06);
+    border: 1px solid rgba(229, 138, 168, 0.08);
+    box-shadow: 0 4px 12px rgba(229, 138, 168, 0.06);
     transition: all 0.3s;
 }
 
 .cart-item:hover {
-    box-shadow: 0 6px 20px rgba(212, 132, 156, 0.12);
+    box-shadow: 0 6px 20px rgba(229, 138, 168, 0.12);
 }
 
 .cart-item img {
@@ -1089,7 +1122,7 @@ img {
 }
 
 .cart-footer {
-    border-top: 1px solid rgba(212, 132, 156, 0.1);
+    border-top: 1px solid rgba(229, 138, 168, 0.1);
     padding-top: 1.5rem;
 }
 
@@ -1165,7 +1198,7 @@ img {
 .spinner {
     width: 18px;
     height: 18px;
-    border: 2px solid rgba(212, 132, 156, 0.2);
+    border: 2px solid rgba(229, 138, 168, 0.2);
     border-top-color: var(--accent-strong);
     border-radius: 50%;
     animation: spin 0.9s linear infinite;
@@ -1191,9 +1224,9 @@ img {
 /* ================== CUSTOMIZER ================== */
 .glass-card {
     background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(212, 132, 156, 0.1);
+    border: 1px solid rgba(229, 138, 168, 0.1);
     border-radius: var(--radius-lg);
-    box-shadow: 0 8px 32px rgba(212, 132, 156, 0.1);
+    box-shadow: 0 8px 32px rgba(229, 138, 168, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -1237,7 +1270,7 @@ img {
 .customizer-form textarea {
     padding: 0.9rem 1.2rem;
     border-radius: var(--radius-sm);
-    border: 1.5px solid rgba(212, 132, 156, 0.15);
+    border: 1.5px solid rgba(229, 138, 168, 0.15);
     background: rgba(255, 255, 255, 0.85);
     font-family: var(--font-body);
     outline: none;
@@ -1248,7 +1281,7 @@ img {
 
 .customizer-form textarea:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 16px rgba(212, 132, 156, 0.12);
+    box-shadow: 0 4px 16px rgba(229, 138, 168, 0.12);
 }
 
 .whatsapp-btn {
@@ -1364,7 +1397,7 @@ img {
     border-color: var(--accent-color);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(212, 132, 156, 0.4);
+    box-shadow: 0 6px 20px rgba(229, 138, 168, 0.4);
 }
 
 .footer-bottom {
@@ -1417,7 +1450,7 @@ img {
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.4s var(--ease-out-expo);
-    box-shadow: 0 6px 20px rgba(212, 132, 156, 0.35);
+    box-shadow: 0 6px 20px rgba(229, 138, 168, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1431,7 +1464,7 @@ img {
 
 .scroll-top:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(212, 132, 156, 0.45);
+    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.45);
 }
 
 /* ================== LIGHTBOX ================== */
@@ -1482,7 +1515,7 @@ img {
 
 .wishlist-btn {
     background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(212, 132, 156, 0.15);
+    border: 1px solid rgba(229, 138, 168, 0.15);
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -1508,7 +1541,7 @@ img {
     background: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(212, 132, 156, 0.35);
+    box-shadow: 0 4px 12px rgba(229, 138, 168, 0.35);
 }
 
 .product-desc {
@@ -1525,7 +1558,7 @@ img {
     padding: 3rem 2rem;
     color: #b8a5ad;
     background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(212, 132, 156, 0.1);
+    border: 1px solid rgba(229, 138, 168, 0.1);
     border-radius: var(--radius-lg);
     font-size: 1rem;
 }
@@ -1635,9 +1668,14 @@ img {
         max-width: 420px;
     }
 
-    .logo img {
-        width: 240px;
-        right: 20px;
+    .logo {
+        max-width: 52%;
+    }
+
+    .logo img:nth-child(2) {
+        max-height: 280px;
+        max-width: 270px;
+        margin-left: 8px;
     }
 
     .logo .brand-logo {
@@ -1663,7 +1701,7 @@ img {
 @media (max-width: 768px) {
     .navbar {
         height: 65px;
-        padding: 0 4%;
+        padding: 0 3%;
     }
 
     .section-title {
@@ -1677,31 +1715,38 @@ img {
 
     .nav-links {
         display: flex;
-        margin-left: 1rem;
+        margin-left: 0.5rem;
+        flex-shrink: 0;
     }
 
     .nav-links a {
-        margin-left: 0.75rem;
-        font-size: 0.7rem;
-        letter-spacing: 1px;
+        margin-left: 0.6rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.8px;
         left: 0;
     }
 
     .cart-icon {
-        margin-left: auto;
-        margin-right: 12px;
-        font-size: 1.15rem;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .logo {
+        max-width: 44%;
+        overflow: visible;
     }
 
     .logo .brand-logo {
-        height: 45px;
-        margin-right: 8px;
+        height: 42px;
+        flex-shrink: 0;
     }
 
-    .logo img {
-        width: 180px;
-        right: 15px;
-        height: auto;
+    .logo img:nth-child(2) {
+        max-height: 190px;
+        max-width: 180px;
+        margin-left: 8px;
     }
 
     .hero {
@@ -1848,18 +1893,23 @@ img {
 /* ---- LARGE PHONES (max-width: 480px) ---- */
 @media (max-width: 480px) {
     .navbar {
-        height: 60px;
+        height: 58px;
         padding: 0 3%;
     }
 
-    .logo .brand-logo {
-        height: 35px;
-        margin-right: 5px;
+    .logo {
+        max-width: 42%;
     }
 
-    .logo img {
-        width: 140px;
-        right: 10px;
+    .logo .brand-logo {
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    .logo img:nth-child(2) {
+        max-height: 160px;
+        max-width: 150px;
+        margin-left: 8px;
     }
 
     .nav-links {
@@ -1867,16 +1917,16 @@ img {
     }
 
     .nav-links a {
-        margin-left: 0.4rem;
-        font-size: 0.58rem;
-        letter-spacing: 0px;
+        margin-left: 0.35rem;
+        font-size: 0.56rem;
+        letter-spacing: 0;
         left: 0;
     }
 
     .cart-icon {
-        margin-left: auto;
-        margin-right: 10px;
-        font-size: 1rem;
+        margin-left: 0.3rem;
+        margin-right: 0;
+        font-size: 0.95rem;
     }
 
     .hero {
@@ -2065,12 +2115,18 @@ img {
         font-size: 0.75rem;
     }
 
-    .logo img {
-        width: 140px;
+    .logo {
+        max-width: 40%;
+    }
+
+    .logo img:nth-child(2) {
+        max-height: 140px;
+        max-width: 130px;
+        margin-left: 6px;
     }
 
     .logo .brand-logo {
-        height: 35px;
+        height: 30px;
     }
 
     .category-btn {
@@ -2156,12 +2212,12 @@ img {
 
     /* Simplify box-shadows on mobile */
     .product-card {
-        box-shadow: 0 2px 8px rgba(212, 132, 156, 0.08);
+        box-shadow: 0 2px 8px rgba(229, 138, 168, 0.08);
     }
 
     .product-card:hover {
         transform: none;
-        box-shadow: 0 2px 8px rgba(212, 132, 156, 0.08);
+        box-shadow: 0 2px 8px rgba(229, 138, 168, 0.08);
     }
 
     /* GPU-accelerate scrolling containers */
@@ -2349,7 +2405,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #fdf6f2 0%, #fff7f9 100%);
+    background: linear-gradient(135deg, #fdf6f2 0%, #fef6f8 100%);
 }
 
 .modal-product-image {
@@ -2391,7 +2447,7 @@ img {
     gap: 1.5rem;
     margin-top: 0.5rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(212, 132, 156, 0.1);
+    border-top: 1px solid rgba(229, 138, 168, 0.1);
 }
 
 .modal-product-price {
@@ -2422,7 +2478,7 @@ img {
 
 .modal-add-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(212, 132, 156, 0.35);
+    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -2471,10 +2527,10 @@ img {
     align-items: center;
     gap: 0.75rem;
     background: rgba(255, 255, 255, 0.97);
-    border: 1px solid rgba(212, 132, 156, 0.15);
+    border: 1px solid rgba(229, 138, 168, 0.15);
     border-radius: var(--radius-md);
     padding: 0.85rem 1rem;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(212, 132, 156, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(229, 138, 168, 0.15);
     backdrop-filter: blur(12px);
     pointer-events: auto;
     transform: translateX(120%);
@@ -2503,7 +2559,7 @@ img {
     height: 48px;
     border-radius: var(--radius-sm);
     object-fit: cover;
-    border: 1px solid rgba(212, 132, 156, 0.1);
+    border: 1px solid rgba(229, 138, 168, 0.1);
 }
 
 .toast-body {
@@ -2551,7 +2607,7 @@ img {
 
 .toast-view-cart:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(212, 132, 156, 0.35);
+    box-shadow: 0 4px 12px rgba(229, 138, 168, 0.35);
 }
 
 .toast-close {
@@ -2597,7 +2653,7 @@ img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1.5px solid rgba(212, 132, 156, 0.3);
+    border: 1.5px solid rgba(229, 138, 168, 0.3);
     background: #fff;
     color: var(--accent-strong);
     cursor: pointer;
@@ -2623,7 +2679,7 @@ img {
     /* Keep it exactly the same — no visual change */
     background: #fff;
     color: var(--accent-strong);
-    border-color: rgba(212, 132, 156, 0.3);
+    border-color: rgba(229, 138, 168, 0.3);
     transform: none;
     box-shadow: none;
     outline: none;
