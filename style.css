@@ -1914,17 +1914,19 @@ img {
     }
 
     .logo {
-        max-width: 42%;
+        max-width: 70%;
     }
 
     .logo .brand-logo {
-        height: 34px;
+        height: 54px;
         flex-shrink: 0;
     }
+    
+        
 
     .logo img:nth-child(2) {
-        max-height: 160px;
-        max-width: 150px;
+        height: 140px;
+        width: 200px 
         margin-left: 8px;
     }
 
@@ -1941,8 +1943,8 @@ img {
 
     .cart-icon {
         margin-left: 0.3rem;
-        margin-right: 0;
-        font-size: 0.95rem;
+        margin-right: 0.8rem;
+        font-size: 1.4rem;
     }
 
     .hero {
