@@ -46,7 +46,7 @@ const products = [
         name: "Scarlet Signature Wrap",
         price: 2800,
         image: "assets/7.webp",
-        description: "Hand-wrapped red roses crafted to mark unforgettable moments of love..",
+        description: "Hand-wrapped red roses crafted to mark unforgettable moments of love.",
         category:"wedding"
 
     },
@@ -72,7 +72,7 @@ const products = [
         name: "Serene Blue Bliss",
         price: 700,
         image: "assets/eleven.webp",
-        description: "Elegant blue florals paired with balloons for a calm, graceful surprise..",
+        description: "Elegant blue florals paired with balloons for a calm, graceful surprise.",
         category: ["customized", "budget-friendly"]
     },
     {
@@ -89,7 +89,7 @@ const products = [
         name: "Ballooned Blossom Surprise",
         price: 1400,
         image: "assets/thirteen.webp",
-        description: "A cheerful floral box accented with balloons, perfect for joyful celebrations..",
+        description: "A cheerful floral box accented with balloons, perfect for joyful celebrations.",
         category: "customized"
     },
     {
@@ -105,15 +105,15 @@ const products = [
         name: "Heirloom Petal Mandala",
         price: 700,
         image: "assets/fifteen.webp",
-        description: "An intricate circular floral design crafted as a timeless showpiece..",
+        description: "An intricate circular floral design crafted as a timeless showpiece.",
         category: ["customized", "budget-friendly"]
     },
     {
         id: 16,
-        name: "Money Bouquet",
+name: "Money Bouquet",
         price: 3500,
         image: "assets/sixteen.webp",
-        description: "A bouqeut full of Rupees.",
+        description: "A bouquet full of Rupees.",
         category: "money-bouquet"
     },
 
@@ -122,7 +122,7 @@ const products = [
         name: "Forever us Boquet ",
         price: 3800,
         image: "assets/forever.webp",
-        description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories..",
+        description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories.",
         category: ["polaroids-bouquet","wedding"]
     },
     {
@@ -130,7 +130,7 @@ const products = [
         name: "Memories in bloom",
         price: 1000,
         image: "assets/nineteen.webp",
-        description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments..",
+        description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments.",
         category: ["polaroids-bouquet", "birthday", "budget-friendly"]
     },
    
@@ -155,7 +155,7 @@ const products = [
         name: "Purple Sweet Symphony",
         price: 2500,
         image: "assets/23.webp",
-        description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise..",
+        description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise.",
         category: "chocolate-bouquet"       
     },
     {
@@ -163,7 +163,7 @@ const products = [
         name: "Kinder Joy Celebration Wrap",
         price: 1200,
         image: "assets/24.webp",
-        description: "A fun and delightful bouquet filled with Kinder Joy treats, perfect for cheerful gifting..",
+        description: "A fun and delightful bouquet filled with Kinder Joy treats, perfect for cheerful gifting.",
         category: "chocolate-bouquet"
     },
     {
@@ -171,7 +171,7 @@ const products = [
         name: "Blush Tulip Whisper",
         price: 1699,
         image: "assets/25.webp",
-        description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture..",
+        description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture.",
         category: ["birthday" ,"wedding"]    
     },
     {
@@ -179,7 +179,7 @@ const products = [
         name: "Cuddle Carnival Bouquet",
         price: 3800,
         image: "assets/26.webp",
-        description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth..",
+        description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth.",
         category: "birthday"   
     },
     {
@@ -187,7 +187,7 @@ const products = [
         name: "Crimson Chocolate Charm",
         price: 3800,
         image: "assets/27.webp",
-        description: "Red roses paired with chocolate sticks for a rich and romantic surprise..",
+        description: "Red roses paired with chocolate sticks for a rich and romantic surprise.",
         category: "chocolate-bouquet"
     },
     {
@@ -195,7 +195,7 @@ const products = [
         name: "Lily & Rose Symphony",
         price: 4500,
         image: "assets/28.webp",
-        description: "Elegant white lilies and roses arranged for timeless beauty and celebration..",
+        description: "Elegant white lilies and roses arranged for timeless beauty and celebration.",
         category: ["wedding","luxury"]
     },
     {
@@ -203,7 +203,7 @@ const products = [
         name: "Chocolate Rose Indulgence",
         price: 1300,
         image: "assets/29.webp",
-        description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments..",
+        description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments.",
         category: "chocolate-bouquet"
     },
     {
@@ -211,7 +211,7 @@ const products = [
         name: "Pink Princess Pamper Box",
         price: 2200,
         image: "assets/30.webp",
-        description: "A charming pink-themed gift bouquet with beauty treats and floral accents..",
+        description: "A charming pink-themed gift bouquet with beauty treats and floral accents.",
         category: "birthday"
     },
     {
@@ -224,7 +224,7 @@ const products = [
     },
     {
         id:32,
-        name:"Bouquet of Beda",
+        name:"Bouquet of Milk Beda",
         price:700,
         image:"assets/beda.webp",
         description:"A bouquet  contains Milk Beda",
@@ -278,7 +278,7 @@ const products = [
         name:"Hot wheels with rose",
         price:2200,
         image:"assets/HW.webp",
-        description:" A Bouquet contains hotwheels collections.",
+        description:"A Bouquet contains hotwheels collections.",
         category:"hot-wheels"
     },
     {
@@ -386,11 +386,11 @@ const products = [
         category:"budget-friendly"
     },
     {
-        id:55,
-        name:"Mini batman surprise",
+        id: 55,
+name:"Mini batman surprise",
         price:900,
         image:"assets/bat.webp",
-        description:"A bouqet of a single batman",
+        description:"A bouquet of a single batman",
         category:["hot-wheels","budget-friendly"]
     },
     {
@@ -742,7 +742,7 @@ const products = [
         name: "Naruto Love Bundle",
         price: 500,
         image: "assets/naruto.webp",
-        description: "Fan-favorite plushies with floral styling..",
+        description: "Fan-favorite plushies with floral styling.",
         category: "budget-friendly"
     },
     {
@@ -2047,19 +2047,9 @@ const cartCountElement = document.getElementById('cart-count');
 const cartSidebar = document.getElementById('cart-sidebar');
 const cartOverlay = document.querySelector('.cart-overlay');
 const searchInput = document.getElementById('search-input');
-const priceRange = document.getElementById('price-range');
-const priceOutput = document.getElementById('price-output');
-const occasionSelect = document.getElementById('occasion-filter');
-const flowerSelect = document.getElementById('flower-select');
-const wrapSelect = document.getElementById('wrap-select');
 const messageInput = document.getElementById('message-input');
 const productModal = document.getElementById('product-modal');
 const productModalOverlay = document.getElementById('product-modal-overlay');
-const previewFlower = document.getElementById('preview-flower');
-const previewWrap = document.getElementById('preview-wrap');
-const previewMessage = document.getElementById('preview-message');
-const previewPrice = document.getElementById('preview-price');
-const customizeBtn = document.getElementById('customize-btn');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 const orderStatus = document.getElementById('order-status');
@@ -2069,7 +2059,6 @@ function init() {
     setupCategoryFilters();
     setupSearchFilters();
     setupProductInteractions();
-    setupCustomizer();
     setupLightbox();
     setupProductModal();
     setupScrollAnimations();
@@ -2195,22 +2184,7 @@ function setupSearchFilters() {
         });
     }
 
-    if (priceRange && priceOutput) {
-        maxPrice = Number(priceRange.value);
-        priceOutput.textContent = `INR ${maxPrice}`;
-        priceRange.addEventListener('input', (event) => {
-            maxPrice = Number(event.target.value);
-            priceOutput.textContent = `INR ${maxPrice}`;
-            renderProducts();
-        });
-    }
 
-    if (occasionSelect) {
-        occasionSelect.addEventListener('change', (event) => {
-            occasionFilter = event.target.value;
-            renderProducts();
-        });
-    }
 }
 
 function setupProductInteractions() {
@@ -2240,63 +2214,6 @@ function setupProductInteractions() {
     });
 }
 
-function setupCustomizer() {
-    if (!flowerSelect || !wrapSelect || !previewFlower || !previewWrap || !previewMessage) {
-        return;
-    }
-
-    const updatePreview = () => {
-        const flowerOption = flowerSelect.options[flowerSelect.selectedIndex];
-        const wrapOption = wrapSelect.options[wrapSelect.selectedIndex];
-        const flowerName = flowerOption.value;
-        const wrapName = wrapOption.value;
-        const flowerPrice = Number(flowerOption.dataset.price || 0);
-        const wrapPrice = Number(wrapOption.dataset.price || 0);
-        const total = flowerPrice + wrapPrice;
-
-        previewFlower.textContent = flowerName;
-        previewWrap.textContent = `Wrap: ${wrapName}`;
-        previewMessage.textContent = messageInput && messageInput.value
-            ? `Message: \"${messageInput.value}\"`
-            : 'Message: \"Write something sweet...\"';
-        if (previewPrice) {
-            previewPrice.textContent = `INR ${total}`;
-        }
-    };
-
-    flowerSelect.addEventListener('change', updatePreview);
-    wrapSelect.addEventListener('change', updatePreview);
-    if (messageInput) {
-        messageInput.addEventListener('input', updatePreview);
-    }
-
-    if (customizeBtn) {
-        customizeBtn.addEventListener('click', () => {
-            const flowerOption = flowerSelect.options[flowerSelect.selectedIndex];
-            const wrapOption = wrapSelect.options[wrapSelect.selectedIndex];
-            const flowerName = flowerOption.value;
-            const wrapName = wrapOption.value;
-            const flowerPrice = Number(flowerOption.dataset.price || 0);
-            const wrapPrice = Number(wrapOption.dataset.price || 0);
-            const total = flowerPrice + wrapPrice;
-            const note = messageInput ? messageInput.value.trim() : '';
-
-            const customProduct = {
-                id: Date.now(),
-                name: `Custom: ${flowerName}`,
-                price: total,
-                image: "assets/hero.png",
-                description: note ? `Wrap: ${wrapName}. Note: ${note}` : `Wrap: ${wrapName}.`,
-                category: "custom"
-            };
-
-            addProductToCart(customProduct, 1);
-            showToast(customProduct.name, customProduct.image);
-        });
-    }
-
-    updatePreview();
-}
 
 function setupLightbox() {
     if (!lightbox || !lightboxImage) {
@@ -2426,7 +2343,7 @@ function renderProducts() {
         const priceHTML = isPerfume ? '' : `<div class="product-price">INR ${product.price.toLocaleString('en-IN')}</div>`;
         const actionBtn = isPerfume
             ? `<button class="add-btn customize-wa-btn ripple" data-id="${product.id}" data-name="${product.name.replace(/"/g, '&quot;')}" onclick="openPerfumeWhatsApp('${product.name.replace(/'/g, "\\'")}')"><i class="fa-brands fa-whatsapp"></i> Customize Bouquet</button>`
-            : `<button class="add-btn ripple" data-id="${product.id}"><i class="fas fa-cart-plus"></i> Add to Cart</button>`;
+            : `<button class="add-btn ripple" data-id="${product.id}" aria-label="Add ${product.name.replace(/\"/g, '&quot;')} to cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>`;
         return `
         <div class="product-card reveal" style="--card-index: ${index}">
             <button class="wishlist-btn ${wishlist.has(product.id) ? 'active' : ''}" data-id="${product.id}">

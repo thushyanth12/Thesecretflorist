@@ -15,7 +15,10 @@
     <link rel="preload" as="image" href="assets/hero.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="The Secret Florist — Artistry in Bloom">
+    <meta property="og:description" content="Hand-crafted bouquets for life's most beautiful moments. Fresh flowers, same-day delivery.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:url" content="https://thesecretflorist.com/">
 </head>
 
 <body>
@@ -61,10 +64,13 @@
             <a href="#shop">Collection</a>
             <a href="#customize">Customize</a>
         </div>
-        <div class="cart-icon" onclick="toggleCart()">
+        <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
             <i class="fas fa-shopping-bag"></i>
             <span id="cart-count">0</span>
-        </div>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
     <header id="home" class="hero">
@@ -111,7 +117,7 @@
         </div>
         <div class="category-filter">
             <button class="category-btn active" data-category="all">
-                <i class="fas fa-border-all"></i> 
+                <i class="fas fa-border-all"></i> All
             </button>
             <button class="category-btn" data-category="money-bouquet">
                 <i class="fas fa-sack-dollar"></i> Money Bouquet
