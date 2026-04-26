@@ -2342,7 +2342,7 @@ function renderProducts() {
         const isPerfume = normalizeCategory(product).includes('perfume-bouquet');
         const priceHTML = isPerfume ? '' : `<div class="product-price">INR ${product.price.toLocaleString('en-IN')}</div>`;
         const actionBtn = isPerfume
-            ? `<button class="add-btn customize-wa-btn ripple" data-id="${product.id}" data-name="${product.name.replace(/"/g, '&quot;')}" onclick="openPerfumeWhatsApp('${product.name.replace(/'/g, "\\'")}')"><i class="fa-brands fa-whatsapp"></i> Customize Bouquet</button>`
+            ? `<button class="add-btn customize-wa-btn ripple" data-id="${product.id}" data-name="${product.name.replace(/"/g, '&quot;')}" onclick="openPerfumeWhatsApp('${product.name.replace(/'/g, "\\'")}', '${product.image}')"><i class="fa-brands fa-whatsapp"></i> Customize Bouquet</button>`
             : `<button class="add-btn ripple" data-id="${product.id}" aria-label="Add ${product.name.replace(/\"/g, '&quot;')} to cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>`;
         return `
         <div class="product-card reveal" style="--card-index: ${index}">
@@ -2396,7 +2396,7 @@ function showProductModal(product) {
         if (modalAddBtn) {
             modalAddBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Customize Bouquet';
             modalAddBtn.className = 'modal-add-btn ripple customize-wa-modal-btn';
-            modalAddBtn.onclick = () => { openPerfumeWhatsApp(product.name); closeProductModal(); };
+            modalAddBtn.onclick = () => { openPerfumeWhatsApp(product.name, product.image); closeProductModal(); };
         }
     } else {
         // Normal product — show price, qty, add-to-cart
@@ -2609,9 +2609,11 @@ function checkout() {
 }
 
 // ================== PERFUME BOUQUET WHATSAPP ==================
-function openPerfumeWhatsApp(productName) {
+function openPerfumeWhatsApp(productName, productImage) {
     const phoneNumber = "919994588076";
-    const message = `Hey The Secret Florist! 🌸 I need a customized perfume bouquet like the *"${productName}"* that I saw on your website. Could you please provide more details and pricing? Thank you!`;
+    // If the image path is relative, construct the full absolute URL so it creates a preview on WhatsApp
+    const imageUrl = new URL(productImage, window.location.href).href;
+    const message = `Hey The Secret Florist! 🌸 I need a customized perfume bouquet like the *"${productName}"* that I saw on your website.\n\nHere is the reference image: ${imageUrl}\n\nCould you please provide more details and pricing? Thank you!`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
