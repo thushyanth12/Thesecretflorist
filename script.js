@@ -2583,7 +2583,9 @@ function checkout() {
         cart.forEach(entry => {
             const itemTotal = entry.product.price * entry.quantity;
             total += itemTotal;
+            const imageUrl = new URL(entry.product.image, window.location.href).href;
             message += `- ${entry.product.name} (x${entry.quantity}) - INR ${itemTotal.toLocaleString('en-IN')}\n`;
+            message += `  Preview: ${imageUrl}\n`;
         });
 
         message += `\n*Total Price: INR ${total.toLocaleString('en-IN')}*\n`;
