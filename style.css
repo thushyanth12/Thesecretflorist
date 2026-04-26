@@ -1925,6 +1925,8 @@ img {
         
 
     .logo img:nth-child(2) {
+        position: relative;
+        left: -10px;
         height: 140px;
         width: 200px 
         margin-left: 8px;
@@ -2110,7 +2112,7 @@ img {
 }
 
 /* ---- SMALL PHONES (max-width: 380px) ---- */
-@media (max-width: 380px) {
+@media (max-width: 390px) {
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -2138,13 +2140,15 @@ img {
     }
 
     .logo img:nth-child(2) {
+        position: relative;
+        left: -10px;
         max-height: 140px;
-        max-width: 130px;
+        width: 110px;
         margin-left: 6px;
     }
 
     .logo .brand-logo {
-        height: 30px;
+        height: 40px;
     }
 
     .category-btn {
