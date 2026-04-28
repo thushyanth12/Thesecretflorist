@@ -364,7 +364,7 @@ name: "Money Bouquet",
     {
         id:52,
         name:"Mini kitkat delight",
-        price:250,
+        price:300,
         image:"assets/chocor.webp",
         description:"A small&cute bouquet of kitkat",
         category:["chocolate-bouquet","budget-friendly"]
@@ -412,7 +412,7 @@ name:"Mini batman surprise",
     {
         id:58,
         name:"Pikachu Surprise",
-        price:900,
+        price:1200,
         image:"assets/pika.webp",
         description:"Chocolates with a cute pikachu",
         category:["customized","budget-friendly","chocolate-bouquet"]
@@ -420,7 +420,7 @@ name:"Mini batman surprise",
     {
         id:59,
         name:"Golden Memory Bouquet",
-        price:1200,
+        price:3800,
         image:"assets/ggold.webp",
         description:"A bouquet made up of gold chocolates and polaroids",
         category:["chocolate-bouquet","polaroids-bouquet","birthday"]   
@@ -428,7 +428,7 @@ name:"Mini batman surprise",
     {
         id:60,
         name:"Sunshine Bloom Bouquet",
-        price:1200,
+        price:2500,
         image:"assets/mary.webp",
         description:"A bouquet made up of Bright flowers for happy moments",
         category:["chocolate-bouquet","polaroids-bouquet"]   
@@ -436,7 +436,7 @@ name:"Mini batman surprise",
     {
         id:61,
         name:"Blush Chocolate Bloom",
-        price:1200,
+        price:5000,
         image:"assets/full.webp",
         description:"Rose wrapped in sweetness",
         category:["chocolate-bouquet","polaroids-bouquet","customized"]   
@@ -484,7 +484,7 @@ name:"Mini batman surprise",
     {
         id:67,
         name:"Kitkat & galaxy Bouquet",
-        price:500,
+        price:1500,
         image:"assets/Chocolate-bout.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
         category:["chocolate-bouquet","budget-friendly"]
@@ -556,7 +556,7 @@ name:"Mini batman surprise",
     {
         id:76,
         name:"Kinder Joy Bouquet",
-        price:500,
+        price:180,
         image:"assets/Kinder-joy.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
         category:["budget-friendly","chocolate-bouquet"]
@@ -620,7 +620,7 @@ name:"Mini batman surprise",
     {
         id:84,
         name:"Golden Heart Delight",
-        price:3000,
+        price:30000,
         image:"assets/chocorose.webp",
         description:"Premium red roses surrounding a heart of Ferrero delights",
         category:["luxury","birthday","chocolate-bouquet"]
@@ -748,7 +748,7 @@ name:"Mini batman surprise",
     {
         id: 100,
         name: "Rosy Chocolate Delight",
-        price: 500,
+        price: 1200,
         image: "assets/pinkrose.webp",
         description: "Fresh pink roses paired with premium chocolates.",
         category: ["budget-friendly","chocolate-bouquet"]
@@ -1151,7 +1151,7 @@ name:"Mini batman surprise",
     {
         id:153,
         name:"Couples Hot Wheels & Kinder Joy",
-        price:800,
+        price:1800,
         image:"assets/couple bouquet.webp",
         description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
         category:["hot-wheels","chocolate-bouquet","budget-friendly"]
@@ -1531,7 +1531,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/img6.webp",
         description: "Ferrero Rocher and Gucci Bloom perfume in elegant kraft wrap.",
-        category: ["perfume-bouquet", "luxury", "chocolate-bouquet", "customized"]
+        category: ["perfume-bouquet", "luxury"]
     },
     {
         id:202,
@@ -1539,7 +1539,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/img7.webp",
         description: "Dreamy holographic bouquet with perfume, Godiva, and fairy lights.",
-        category: ["perfume-bouquet", "luxury", "chocolate-bouquet", "customized"]
+        category: ["perfume-bouquet", "luxury",  "customized"]
     },
     {
         id:203,
@@ -1974,7 +1974,7 @@ name:"Mini batman surprise",
     {
         id:256,
         name:  "hotwheels bouquet with flowers",
-        price:200,
+        price:4000,
         image:"assets/box.webp",
         description: "A fun and unique gift for car enthusiasts of all ages.",
         category: ["birthday", "hot-wheels"]
@@ -1982,7 +1982,7 @@ name:"Mini batman surprise",
     {
         id:257,
         name:  "Hot Wheels & Floral Surprise",
-        price:500,
+        price:600,
         image:"assets/box1.webp",
         description: "A delightful combination of Hot Wheels and fresh floral arrangements for a unique gift experience.",
         category: ["birthday", "hot-wheels"]
