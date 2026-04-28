@@ -1031,7 +1031,7 @@ name:"Mini batman surprise",
     {
         id:138,
         name:"50 rs red rose bouquet",
-        price:500,
+        price:600,
         image:"assets/50rs_with red rose.webp",
         description:"A bouquet made up of 50 rs notes with red roses",
         category:["money-bouquet","budget-friendly"]
@@ -1047,7 +1047,7 @@ name:"Mini batman surprise",
     {
         id:140,
         name:"Apt 50 Rupees Cash Bouquet",
-        price:1500,
+        price:900,
         image:"assets/money1.webp",
         description:"money gives you happyness",
         category:["money-bouquet"]
@@ -1055,7 +1055,7 @@ name:"Mini batman surprise",
     {
         id:141,
         name:"Luxury Currency & Rose Arrangement",
-        price:5500,
+        price:3500,
         image:"assets/money2.webp",
         description:"love is blind",
         category:["money-bouquet", "luxury"]
@@ -1610,7 +1610,7 @@ name:"Mini batman surprise",
         
         id:211,
         name:"Black Wrap Bears & Heart Balloons",
-        price: 2000,
+        price: 4500,
         image: "assets/t4.webp",
         description: "Black bouquet with red heart balloons, teddy bear, roses, and chocolates.",
         category: ["chocolate-bouquet"]
@@ -1618,7 +1618,7 @@ name:"Mini batman surprise",
     {
         id:212,
         name:"Grand Black Wrap Red Roses" ,
-        price: 2000,
+        price: 6200,
         image: "assets/t5.webp",
         description: "Large black bouquet of red roses and assorted chocolates.",
         category: ["chocolate-bouquet"]
@@ -1676,7 +1676,7 @@ name:"Mini batman surprise",
 
         id:219,
         name: "All-Black Coca-Cola & Candy Bouquet" ,
-        price:2000,
+        price:3800,
         image:"assets/t12.webp",
         description: "All-black bouquet with Coca-Cola bottles, KitKat, Snickers, and chocolates.",
         category: ["chocolate-bouquet","luxury"]
@@ -1684,7 +1684,7 @@ name:"Mini batman surprise",
     {
         id:220,
         name:  "Kinder Joy & KitKat Photo Bouquet",
-        price:2000,
+        price:2800,
         image:"assets/t13.webp",
         description: "Personalized birthday bouquet with photos, Kinder Joy, KitKat, and roses.",
         category:["birthday","chocolate-bouquet","polaroids-bouquet"]
@@ -1846,7 +1846,7 @@ name:"Mini batman surprise",
     {
         id:240,
         name:  "dairy milk bouquet",
-        price:6200,
+        price:3800,
         image:"assets/patr16.webp",
         description: "a delightful bouquet of dairy milk chocolates wrapped in elegant paper.",
         category: ["chocolate-bouquet", "customized", "luxury"]
