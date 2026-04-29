@@ -644,7 +644,7 @@ name:"Mini batman surprise",
     {
         id:87,
         name:"Heart Within Heart",
-        price:4800,
+        price:60000,
         image:"assets/yrose.webp",
         description:"A bold sea of red roses embracing a white heart — designed to say “You are my everything.”",
         category:"luxury"
@@ -668,7 +668,7 @@ name:"Mini batman surprise",
     {
         id:90,
         name:"The Grand Passion Dome",
-        price:4000,
+        price:60000,
         image:"assets/arab.webp",
         description:"An extravagant dome of handpicked red roses",
         category:"luxury"
@@ -676,7 +676,7 @@ name:"Mini batman surprise",
     {
         id:91,
         name:"Blush pink delight",
-        price:3000,
+        price:3500,
         image:"assets/pink.webp",
         description:"An extravagant working of blush rose",
         category:"luxury"
