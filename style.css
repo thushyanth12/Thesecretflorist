@@ -1,26 +1,47 @@
 :root {
-    --bg-color: #fdf2f5;
-    --text-color: #4a2c35;
-    --accent-color: #e58aa8;
-    --accent-strong: #c7567b;
-    --accent-light: #fce1e8;
-    --secondary-color: #fef6f8;
-    --navbar-bg: rgba(254, 246, 248, 0.92);
-    --glass-bg: rgba(255, 255, 255, 0.65);
-    --glass-border: rgba(255, 255, 255, 0.85);
-    --shadow-color: rgba(204, 92, 131, 0.2);
-    --gold: #d4afb9;
-    --gold-light: #ebcdd4;
+    /* ─── NEW DESIGN TOKENS ─── */
+    --blush-white:   #FCE1E8;
+    --petal-soft:    #FFE0E9;
+    --rose-mist:     #F4B8CB;
+    --romantic-pink: #E0527A;
+    --deep-rose:     #B8294E;
+    --bloom-magenta: #C4185C;
+    --gold-whisper:  #D4A96A;
+    --petal-text:    #3D1A26;
+    --muted-bloom:   #9C5A6D;
+
+    /* ─── BACKWARD-COMPAT ALIASES ─── */
+    --bg-color:         var(--blush-white);
+    --text-color:       var(--petal-text);
+    --accent-color:     var(--romantic-pink);
+    --accent-strong:    var(--deep-rose);
+    --accent-light:     var(--petal-soft);
+    --secondary-color:  var(--blush-white);
+    --gold:             var(--gold-whisper);
+    --gold-light:       rgba(212,169,106,0.25);
+
+    /* ─── SURFACES ─── */
+    --navbar-bg:     rgba(255,245,247,0.85);
+    --glass-bg:      rgba(255,255,255,0.55);
+    --glass-border:  rgba(212,169,106,0.3);
+    --shadow-color:  rgba(184,41,78,0.15);
+
+    /* ─── TYPOGRAPHY ─── */
     --font-heading: 'Cinzel', serif;
-    --font-body: 'Outfit', sans-serif;
-    --font-accent: 'Cormorant Garamond', serif;
+    --font-body:    'Outfit', sans-serif;
+    --font-accent:  'Cormorant Garamond', serif;
+
+    /* ─── RADII ─── */
     --radius-sm: 12px;
     --radius-md: 18px;
     --radius-lg: 24px;
     --radius-xl: 32px;
+
+    /* ─── EASINGS ─── */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
 
 * {
     margin: 0;
@@ -33,8 +54,9 @@ html {
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--blush-white);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 8c-3 0-6 4-6 8s3 8 6 8 6-4 6-8-3-8-6-8z' fill='%23F4B8CB' fill-opacity='0.03'/%3E%3Cpath d='M30 36c-3 0-6 4-6 8s3 8 6 8 6-4 6-8-3-8-6-8z' fill='%23F4B8CB' fill-opacity='0.03'/%3E%3C/svg%3E");
+    color: var(--petal-text);
     font-family: var(--font-body);
     overflow-x: hidden;
     position: relative;
@@ -44,6 +66,7 @@ body {
     touch-action: manipulation;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    box-shadow: inset 0 0 150px rgba(180,40,78,0.06);
 }
 
 /* ================== PAGE LOADER ================== */
@@ -258,14 +281,15 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: transparent;
-    backdrop-filter: blur(0px);
+    background: rgba(252, 225, 232, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     position: fixed;
     height: 80px;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(212,169,106,0.3);
     transition: all 0.5s var(--ease-out-expo);
 }
 
@@ -278,10 +302,11 @@ img {
 }
 
 .navbar.scrolled {
-    background: var(--navbar-bg);
-    backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: none;
-    box-shadow: 0 4px 24px rgba(229, 138, 168, 0.12), 0 1px 0 rgba(253, 242, 245, 0.95);
+    background: rgba(252, 225, 232, 0.92);
+    backdrop-filter: blur(22px) saturate(180%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    border-bottom: 1px solid rgba(212,169,106,0.3);
+    box-shadow: 0 4px 30px rgba(180,40,78,0.1);
 }
 
 .logo .brand-logo {
@@ -377,7 +402,7 @@ img {
 }
 
 .nav-links a {
-    color: var(--text-color);
+    color: var(--petal-text);
     text-decoration: none;
     margin-left: 2.5rem;
     font-size: 0.82rem;
@@ -395,20 +420,22 @@ img {
     position: absolute;
     bottom: -6px;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-color), var(--gold));
-    transition: width 0.4s var(--ease-out-expo);
+    background: linear-gradient(90deg, var(--romantic-pink), var(--gold-whisper));
     border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-expo);
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    color: var(--romantic-pink);
     opacity: 1;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 .cart-icon {
@@ -431,13 +458,13 @@ img {
 
 #cart-count {
     position: absolute;
-    top: -8px;
-    right: -10px;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+    top: -10px;
+    right: -12px;
+    background: #db7691;
     color: white;
-    font-size: 0.6rem;
-    width: 20px;
-    height: 20px;
+    font-size: 0.8rem;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -488,11 +515,11 @@ img {
     padding: 0.5rem 1.4rem;
     border-radius: 999px;
     background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    border: 1px solid var(--gold-whisper);
     font-size: 0.8rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--accent-strong);
+    color: var(--muted-bloom);
     box-shadow: 0 8px 24px var(--shadow-color);
     margin-bottom: 1.5rem;
     backdrop-filter: blur(12px);
@@ -501,14 +528,16 @@ img {
 
 .hero-badge i {
     font-size: 0.7rem;
-    color: var(--gold);
+    color: var(--gold-whisper);
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--accent-color), var(--gold), var(--accent-strong));
+    background: linear-gradient(135deg, var(--romantic-pink), var(--gold-whisper), var(--deep-rose));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 40px rgba(196,24,92,0.2));
 }
 
 .hero h1 {
@@ -516,18 +545,18 @@ img {
     font-size: clamp(2.8rem, 5vw, 5.5rem);
     line-height: 1.15;
     margin-bottom: 1.2rem;
-    color: var(--text-color);
+    color: var(--bloom-magenta);
     letter-spacing: -0.5px;
-    text-shadow: 0 4px 12px rgba(204, 92, 131, 0.1);
+    text-shadow: 0 4px 12px rgba(196, 24, 92, 0.1);
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #6a4a55;
+    font-weight: 400;
+    color: var(--muted-bloom);
     margin-bottom: 2.5rem;
     max-width: 540px;
     line-height: 1.8;
-    font-weight: 400;
 }
 
 .hero-actions {
@@ -542,16 +571,16 @@ img {
     align-items: center;
     gap: 0.6rem;
     padding: 1.1rem 2.4rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+    background: linear-gradient(135deg, #E0527A, #B8294E);
     color: white;
     text-decoration: none;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: all 0.4s var(--ease-out-expo);
-    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.4);
+    letter-spacing: 0.12em;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(184,41,78,0.35);
     position: relative;
     overflow: hidden;
     border: none;
@@ -569,8 +598,8 @@ img {
 }
 
 .cta-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 36px rgba(229, 138, 168, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(184,41,78,0.45);
 }
 
 .cta-button:hover::before {
@@ -583,27 +612,27 @@ img {
     gap: 0.6rem;
     padding: 1.1rem 2.4rem;
     border-radius: 50px;
-    border: 2px solid var(--accent-color);
-    color: var(--accent-strong);
+    border: 2px solid var(--romantic-pink);
+    color: var(--romantic-pink);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    background: var(--glass-bg);
-    transition: all 0.4s var(--ease-out-expo);
+    letter-spacing: 0.12em;
+    background: transparent;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 28px rgba(229, 138, 168, 0.15);
+    box-shadow: none;
 }
 
 .ghost-button:hover {
     color: white;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
-    transform: translateY(-4px);
-    border-color: transparent;
-    box-shadow: 0 16px 36px rgba(229, 138, 168, 0.4);
+    background: var(--romantic-pink);
+    transform: translateY(-2px);
+    border-color: var(--romantic-pink);
+    box-shadow: 0 8px 30px rgba(184,41,78,0.35);
 }
 
 .hero-image-container {
@@ -619,7 +648,7 @@ img {
     height: 90%;
     top: 5%;
     left: 5%;
-    background: radial-gradient(circle, rgba(229, 138, 168, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(196,24,92,0.25) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(70px);
     animation: glowPulse 4s ease-in-out infinite;
@@ -633,27 +662,55 @@ img {
 .hero-image {
     max-width: 580px;
     height: auto;
-    border-radius: var(--radius-xl);
+    border-radius: 24px;
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     opacity: 0;
     animation: slideIn 1s var(--ease-out-expo) forwards 0.1s;
     transform: translateX(50px);
-    box-shadow: 0 30px 70px rgba(204, 92, 131, 0.3);
+    box-shadow: 0 30px 70px rgba(184,41,78,0.2);
     position: relative;
     z-index: 1;
     margin-top: 50px;
     transition: transform 0.5s var(--ease-out-back);
 }
 .hero-image:hover {
-    transform: translateY(-10px) translateX(0);
+    transform: scale(1.02) translateX(0);
+}
+
+/* ================== HERO FLOATING PETALS ================== */
+.hero-petal {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: var(--rose-mist);
+    border-radius: 150% 0 150% 0;
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+    animation: heroPetalFloat 4s ease-in-out infinite alternate;
+}
+
+.hero-petal-1 { top: 15%; left: 5%;  animation-delay: 0s;   opacity: 0.3; }
+.hero-petal-2 { top: 35%; left: 12%; animation-delay: 0.5s; opacity: 0.25; }
+.hero-petal-3 { top: 55%; left: 8%;  animation-delay: 1s;   opacity: 0.35; }
+.hero-petal-4 { top: 25%; left: 22%; animation-delay: 1.5s; opacity: 0.2; }
+.hero-petal-5 { top: 65%; left: 18%; animation-delay: 2s;   opacity: 0.3; }
+.hero-petal-6 { top: 45%; left: 3%;  animation-delay: 2.5s; opacity: 0.25; }
+
+@keyframes heroPetalFloat {
+    0%   { transform: translateY(0)    rotate(0deg);   }
+    100% { transform: translateY(-20px) rotate(15deg); }
 }
 
 /* ================== SECTION DIVIDER ================== */
 .section-divider {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     line-height: 0;
     margin-top: -2px;
+    text-align: center;
+    position: relative;
+    padding: 1rem 0;
 }
 
 .section-divider svg {
@@ -670,8 +727,8 @@ img {
 
 /* ================== SHOP SECTION ================== */
 .shop-section {
-    padding: 4rem 5% 5rem;
-    background-color: var(--secondary-color);
+    padding: 80px 5%;
+    background-color: var(--blush-white);
     position: relative;
 }
 
@@ -703,14 +760,14 @@ img {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 0.8rem;
-    color: #3a3236;
+    color: var(--petal-text);
     letter-spacing: 1px;
 }
 
 .section-subtitle {
     text-align: center;
     margin: 0 auto 2.5rem;
-    color: #8d7a82;
+    color: var(--muted-bloom);
     max-width: 580px;
     font-size: 1rem;
     line-height: 1.6;
@@ -838,7 +895,7 @@ img {
     opacity: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
+    gap: 28px;
     padding: 0;
 }
 
@@ -864,17 +921,18 @@ img {
 
 /* ================== PRODUCT CARDS ================== */
 .product-card {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(229, 138, 168, 0.08);
-    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(252, 225, 232, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212,169,106,0.2);
+    border-radius: 20px;
     padding: 1rem;
-    transition: all 0.5s var(--ease-out-expo);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 20px rgba(229, 138, 168, 0.08);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(228,130,160,0.1);
 }
 
 .product-card::before {
@@ -884,15 +942,15 @@ img {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent-color), var(--gold), var(--accent-color));
+    background: linear-gradient(90deg, var(--romantic-pink), var(--gold-whisper), var(--romantic-pink));
     opacity: 0;
-    transition: opacity 0.4s;
+    transition: opacity 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(229, 138, 168, 0.15);
-    box-shadow: 0 20px 50px rgba(229, 138, 168, 0.2);
+    transform: translateY(-6px);
+    border-color: rgba(212,169,106,0.5);
+    box-shadow: 0 16px 40px rgba(184,41,78,0.15);
 }
 
 .product-card:hover::before {
@@ -900,7 +958,7 @@ img {
 }
 
 .product-card:hover .product-image {
-    transform: scale(1.06);
+    transform: scale(1.08);
 }
 
 .product-image {
@@ -923,12 +981,12 @@ img {
     margin-bottom: 0.5rem;
     font-family: var(--font-heading);
     line-height: 1.3;
-    color: #3a3236;
+    color: var(--petal-text);
 }
 
 .product-price {
     font-size: 1.05rem;
-    color: var(--gold);
+    color: #d4afb9;
     font-weight: 600;
     margin-bottom: 1rem;
     font-family: var(--font-body);
@@ -936,31 +994,31 @@ img {
 }
 
 
-
 .add-btn {
     margin-top: auto;
     width: 100%;
     padding: 0.75rem;
     background: transparent;
-    border: 1.5px solid rgba(229, 138, 168, 0.25);
-    color: var(--accent-strong);
+    border: 1.5px solid rgba(212,169,106,0.3);
+    color: var(--muted-bloom);
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.4s var(--ease-out-expo);
+    transition: all 0.3s ease;
     font-family: var(--font-body);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.85rem;
     position: relative;
     overflow: hidden;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .add-btn:hover {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+    background: linear-gradient(135deg, #E0527A, #B8294E);
     color: white;
     border-color: transparent;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(229, 138, 168, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(184,41,78,0.3);
 }
 
 /* WhatsApp Customize Bouquet button — product card */
@@ -1247,7 +1305,7 @@ img {
 }
 
 .customizer-section {
-    padding: 5rem 5%;
+    padding: 80px 5%;
     position: relative;
 }
 
@@ -1530,17 +1588,19 @@ img {
 }
 
 .wishlist-btn {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(229, 138, 168, 0.15);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212,169,106,0.2);
     width: 34px;
     height: 34px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #c97a95;
+    color: var(--muted-bloom);
     cursor: pointer;
-    transition: all 0.3s var(--ease-out-back);
+    transition: all 0.3s ease;
     position: absolute;
     top: 18px;
     right: 18px;
@@ -1550,13 +1610,16 @@ img {
 }
 
 .wishlist-btn:hover {
-    transform: scale(1.15);
+    background: var(--romantic-pink);
+    color: white;
+    border-color: var(--romantic-pink);
+    transform: scale(1.1);
 }
 
 .wishlist-btn.active {
-    background: var(--accent-color);
+    background: var(--romantic-pink);
     color: white;
-    border-color: var(--accent-color);
+    border-color: var(--romantic-pink);
     box-shadow: 0 4px 12px rgba(229, 138, 168, 0.35);
 }
 
