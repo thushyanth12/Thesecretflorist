@@ -27,8 +27,8 @@
     --shadow-color:  rgba(184,41,78,0.15);
 
     /* ─── TYPOGRAPHY ─── */
-    --font-heading: 'Cinzel', serif;
-    --font-body:    'Outfit', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body:    'Plus Jakarta Sans', sans-serif;
     --font-accent:  'Cormorant Garamond', serif;
 
     /* ─── RADII ─── */
@@ -50,7 +50,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* Disabled for Lenis smooth scroll */
 }
 
 body {
@@ -859,7 +859,7 @@ img {
     transition: all 0.35s var(--ease-out-expo);
     font-family: var(--font-body);
     font-size: 0.82rem;
-    font-weight: 500;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -982,12 +982,14 @@ img {
     font-family: var(--font-heading);
     line-height: 1.3;
     color: var(--petal-text);
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .product-price {
     font-size: 1.05rem;
-    color: #d4afb9;
-    font-weight: 600;
+    color: #CAA67D;
+    font-weight: 800;
     margin-bottom: 1rem;
     font-family: var(--font-body);
     letter-spacing: 0.5px;
@@ -998,27 +1000,27 @@ img {
     margin-top: auto;
     width: 100%;
     padding: 0.75rem;
-    background: transparent;
-    border: 1.5px solid rgba(212,169,106,0.3);
+    background: #ffffff;
+    border: 1px solid rgba(156, 90, 109, 0.3);
     color: var(--muted-bloom);
-    border-radius: var(--radius-sm);
+    border-radius: 24px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 0.95rem;
     position: relative;
     overflow: hidden;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: capitalize;
 }
 
 .add-btn:hover {
-    background: linear-gradient(135deg, #E0527A, #B8294E);
-    color: white;
-    border-color: transparent;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(184,41,78,0.3);
+    background: #fdf5f7;
+    color: var(--muted-bloom);
+    border-color: var(--muted-bloom);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(156, 90, 109, 0.15);
 }
 
 /* WhatsApp Customize Bouquet button — product card */
@@ -1026,7 +1028,8 @@ img {
     background: linear-gradient(135deg, #25d366, #20b858) !important;
     color: #fff !important;
     border-color: transparent !important;
-    font-weight: 700 !important;
+    font-family: 'Arial Black', Arial, sans-serif !important;
+    font-weight: 900 !important;
 }
 
 .customize-wa-btn:hover {
@@ -1040,7 +1043,8 @@ img {
     background: linear-gradient(135deg, #25d366, #20b858) !important;
     color: #fff !important;
     border-color: transparent !important;
-    font-weight: 700 !important;
+    font-family: 'Arial Black', Arial, sans-serif !important;
+    font-weight: 900 !important;
 }
 
 .customize-wa-modal-btn:hover {
@@ -1217,7 +1221,7 @@ img {
     border: none;
     border-radius: var(--radius-sm);
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 900;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1226,7 +1230,7 @@ img {
     transition: all 0.4s var(--ease-out-expo);
     position: relative;
     overflow: hidden;
-    font-family: var(--font-body);
+    font-family: 'Arial Black', Arial, sans-serif;
     letter-spacing: 0.5px;
 }
 
@@ -1361,6 +1365,8 @@ img {
 .whatsapp-btn {
     background: linear-gradient(135deg, #25d366, #20b858) !important;
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25) !important;
+    font-family: 'Arial Black', Arial, sans-serif !important;
+    font-weight: 900 !important;
 }
 
 .whatsapp-btn:hover {
@@ -1628,7 +1634,7 @@ img {
     color: #8d7a82;
     margin-bottom: 1rem;
     line-height: 1.55;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .empty-state {
