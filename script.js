@@ -2029,6 +2029,24 @@ name:"Mini batman surprise",
         category: ["birthday", "hot-wheels"]
     }
 ];
+const counters = document.querySelectorAll(".trust-card h3");
+
+counters.forEach(counter => {
+  let target = counter.innerText;
+  let count = 0;
+
+  let update = () => {
+    if (count < parseInt(target)) {
+      count += Math.ceil(parseInt(target) / 50);
+      counter.innerText = count + "+";
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
 
 // Cart is noidw an array of { product, quantity } objects
 let cart = [];
