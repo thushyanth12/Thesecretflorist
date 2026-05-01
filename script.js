@@ -2215,19 +2215,7 @@ function setupProductInteractions() {
     }
 
     productGrid.addEventListener('click', (event) => {
-        const wishlistButton = event.target.closest('.wishlist-btn');
         const addButton = event.target.closest('.add-btn');
-
-        if (wishlistButton) {
-            const id = Number(wishlistButton.dataset.id);
-            if (wishlist.has(id)) {
-                wishlist.delete(id);
-            } else {
-                wishlist.add(id);
-            }
-            renderProducts();
-            return;
-        }
 
         if (addButton) {
             const id = Number(addButton.dataset.id);
@@ -2368,9 +2356,6 @@ function renderProducts() {
             : `<button class="add-btn ripple" data-id="${product.id}" aria-label="Add ${product.name.replace(/\"/g, '&quot;')} to cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>`;
         return `
         <div class="product-card reveal" style="--card-index: ${index}">
-            <button class="wishlist-btn ${wishlist.has(product.id) ? 'active' : ''}" data-id="${product.id}">
-                <i class="fas fa-heart"></i>
-            </button>
             <img src="${product.image}" alt="${product.name}" class="product-image gallery-image" loading="lazy" decoding="async">
             <div class="product-info">
                 <div class="product-meta">
@@ -2671,13 +2656,13 @@ if (hamburgerBtn && navLinks) {
 
 // ================== SMOOTH SCROLLING (LENIS) ==================
 const lenis = new Lenis({
-    duration: 1.2,
+    duration: 0.8,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: 'vertical',
     gestureDirection: 'vertical',
     smooth: true,
-    mouseMultiplier: 1,
-    smoothTouch: false,
+    mouseMultiplier: 1.5,
+    smoothTouch: true,
     touchMultiplier: 2,
     infinite: false,
 });
