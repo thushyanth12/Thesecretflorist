@@ -2656,14 +2656,14 @@ if (hamburgerBtn && navLinks) {
 
 // ================== SMOOTH SCROLLING (LENIS) ==================
 const lenis = new Lenis({
-    duration: 0.8,
+    duration: 0.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: 'vertical',
     gestureDirection: 'vertical',
     smooth: true,
-    mouseMultiplier: 1.5,
+    mouseMultiplier: 3,
     smoothTouch: true,
-    touchMultiplier: 2,
+    touchMultiplier: 4,
     infinite: false,
 });
 
