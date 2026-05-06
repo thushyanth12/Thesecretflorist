@@ -5,7 +5,7 @@ const products = [
         price: 1800,
         image: "assets/child.webp", // Path relative to public folder
         description: "A bouquet for your baby's birthday.",
-        category: "birthday"
+        category: ["birthday","polaroids-bouquet"]
         
     },
     {
@@ -110,11 +110,11 @@ const products = [
     },
     {
         id: 16,
-name: "Money Bouquet",
+        name: "Money Bouquet",
         price: 3500,
         image: "assets/sixteen.webp",
         description: "A bouquet full of Rupees.",
-        category: "money-bouquet"
+        category: ["customized"]
     },
 
     {
@@ -131,21 +131,21 @@ name: "Money Bouquet",
         price: 1000,
         image: "assets/nineteen.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments.",
-        category: ["polaroids-bouquet", "birthday", "budget-friendly"]
+        category: ["polaroids-bouquet", "budget-friendly"]
     },
    
     {
         id: 21,
         name: "Golden Heart Indulgence",
-        price: 4200,
+        price: 6000,
         image: "assets/21.webp",
         description: "A luxurious heart-shaped arrangement of red roses and Ferrero Rocher chocolates.",
-        category: ["chocolate-bouquet","luxury"]
+        category: ["chocolate-bouquet"]
     },
     {
         id: 22,
         name: "Velvet Rose Noir",
-        price: 1200,
+        price: 2500,
         image: "assets/22.webp",
         description: "Classic red roses wrapped in elegant black for a bold, timeless expression of love.",
         category: ["birthday","wedding"]
@@ -196,12 +196,12 @@ name: "Money Bouquet",
         price: 4500,
         image: "assets/28.webp",
         description: "Elegant white lilies and roses arranged for timeless beauty and celebration.",
-        category: ["wedding","luxury"]
+        category: ["wedding"]
     },
     {
         id: 29,
         name: "Chocolate Rose Indulgence",
-        price: 1300,
+        price: 2800,
         image: "assets/29.webp",
         description: "A rich bouquet of chocolates and red roses crafted for sweet, romantic moments.",
         category: "chocolate-bouquet"
@@ -212,7 +212,7 @@ name: "Money Bouquet",
         price: 2200,
         image: "assets/30.webp",
         description: "A charming pink-themed gift bouquet with beauty treats and floral accents.",
-        category: "birthday"
+        category: ['perfume-bouquet']
     },
     {
         id:31,
@@ -247,8 +247,8 @@ name: "Money Bouquet",
         category:"customized"   
     },{
         id:35,
-        name:"50Rs Bouquet",
-        price:2000,
+        name:"50Rs Bouquet (x100) ",
+        price:3500,
         image:"assets/50rs.webp",
         description:"A timeless arrangement of 50 rs note special moments.",
         category:"money-bouquet"
@@ -256,8 +256,8 @@ name: "Money Bouquet",
     
     {
         id:37,
-        name:"20Rs Bouquet",
-        price:2500,
+        name:"20Rs Bouquet (x100) ",
+        price:3500,
         image:"assets/20rs.webp",
         description:"A timeless arrangement of 20 rs note for special moments.",
         category:"money-bouquet"
@@ -267,7 +267,7 @@ name: "Money Bouquet",
     {
         id:39,
         name:"Gold choco Bouquet",
-        price:3500,
+        price:5000,
         image:"assets/gold.webp",
         description:"A timeless arrangement of gold chocolates for special moments.",
         category:"chocolate-bouquet"
@@ -283,11 +283,11 @@ name: "Money Bouquet",
     },
     {
         id:42,
-        name:"100Rs Bouquet",
-        price:3500,
+        name:"100Rs Bouquet (x100 with chocolates)",
+        price:4000,
         image:"assets/100rs.webp",
         description:"A Bouquet made up of 100rs note.",
-        category:["money-bouquet","luxury"]
+        category:["money-bouquet"]
     },
     {
         id:43,
@@ -343,7 +343,7 @@ name: "Money Bouquet",
         price:4500,
         image:"assets/anju.webp",
         description:"A playful bouquet packed with sweetness and smiles",
-        category: ["chocolate-bouquet", "birthday", "luxury"]
+        category: ["chocolate-bouquet", "birthday"]
     },
     {
         id:50,
@@ -351,7 +351,7 @@ name: "Money Bouquet",
         price:7000,
         image:"assets/wine.webp",
         description:"A premium floral arrangement blending elegant roses,and wine to create a memorable experience.",
-        category: ["birthday", "luxury","customized"]
+        category: ["birthday","customized"]
     },
     {
         id:51,
@@ -411,11 +411,11 @@ name:"Mini batman surprise",
     },
     {
         id:58,
-        name:"Pikachu Surprise",
-        price:1200,
+        name:"multi chocolates bouquet",
+        price:2000,
         image:"assets/pika.webp",
         description:"Chocolates with a cute pikachu",
-        category:["customized","budget-friendly","chocolate-bouquet"]
+        category:["customized","chocolate-bouquet"]
     },
     {
         id:59,
@@ -431,7 +431,7 @@ name:"Mini batman surprise",
         price:2500,
         image:"assets/mary.webp",
         description:"A bouquet made up of Bright flowers for happy moments",
-        category:["chocolate-bouquet","polaroids-bouquet"]   
+        category:["birthday"]   
     },
     {
         id:61,
@@ -487,7 +487,7 @@ name:"Mini batman surprise",
         price:1500,
         image:"assets/Chocolate-bout.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:["chocolate-bouquet","budget-friendly"]
+        category:["chocolate-bouquet"]
     },
     {
         id:68,
@@ -599,31 +599,31 @@ name:"Mini batman surprise",
         price:3500,
         image:"assets/anniversary.webp",
         description:"A luxurious heart of premium red roses crowned with elegance — crafted to celebrate timeless love.",
-        category:["luxury","wedding"]
+        category:["wedding"]
     },
     {
         id:82,
         name:"Blush Romance Box",
-        price:500,
+        price:50000,
         image:"assets/cake.webp",
         description:"A stunning gradient of red, pink, and white roses arranged in a luxury round box.",
-        category: ["luxury", "birthday", "wedding", "budget-friendly"]
+        category: ["luxury"]
     },
     {
         id:83,
         name:"Scarlet Birthday Bloom",
-        price:500,
+        price:3500,
         image:"assets/custom.webp",
         description:"Deep red roses wrapped in elegance",
-        category: ["luxury", "birthday", "budget-friendly"]
+        category: ["birthday"]
     },
     {
         id:84,
         name:"Golden Heart Delight",
-        price:30000,
+        price:60000,
         image:"assets/chocorose.webp",
         description:"Premium red roses surrounding a heart of Ferrero delights",
-        category:["luxury","birthday","chocolate-bouquet"]
+        category:["luxury","chocolate-bouquet"]
     },
     {
         id:85,
@@ -631,7 +631,7 @@ name:"Mini batman surprise",
         price:2500,
         image:"assets/enchant.webp",
         description:"A vibrant harmony of roses and seasonal blooms",
-        category:"luxury"
+        category:"birthday"
     },
     {
         id:86,
@@ -639,7 +639,7 @@ name:"Mini batman surprise",
         price:4500,
         image:"assets/lflow.webp",
         description:"Soft ivory roses wrapped in black luxury paper and illuminated with warm fairy lights",
-        category:"luxury"
+        category:"birthday"
     },
     {
         id:87,
@@ -655,12 +655,12 @@ name:"Mini batman surprise",
         price:3500,
         image:"assets/pinkr.webp",
         description:"Delicate pink roses wrapped in pastel elegance",
-        category:["luxury","birthday","wedding"]
+        category:["birthday","wedding"]
     },
     {
         id:89,
         name:"Crimson Celebration Wrap",
-        price:2500,
+        price:10500,
         image:"assets/brose.webp",
         description:"A dramatic black wrap filled with premium red roses",
         category:["luxury","birthday"]
@@ -679,7 +679,7 @@ name:"Mini batman surprise",
         price:3500,
         image:"assets/pink.webp",
         description:"An extravagant working of blush rose",
-        category:"luxury"
+        category:"birthday"
     },
     {
         id: 92,
@@ -748,10 +748,10 @@ name:"Mini batman surprise",
     {
         id: 100,
         name: "Rosy Chocolate Delight",
-        price: 1200,
+        price: 1500,
         image: "assets/pinkrose.webp",
         description: "Fresh pink roses paired with premium chocolates.",
-        category: ["budget-friendly","chocolate-bouquet"]
+        category: ["chocolate-bouquet"]
     },
     {
         id: 101,
@@ -831,7 +831,7 @@ name:"Mini batman surprise",
         price: 4500,
         image: "assets/perfume.webp",
         description: "Beautiful blooms paired with luxury fragrances, creating the perfect gift for any special moment.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id: 111,
@@ -849,7 +849,7 @@ name:"Mini batman surprise",
         price: 7500,
         image: "assets/wed4.webp",
         description: "A rustic autumn wedding bouquet with dried wheat and orange roses.",
-        category: ["wedding","luxury"]
+        category: ["wedding"]
     },
    
     {
@@ -858,7 +858,7 @@ name:"Mini batman surprise",
         price: 8500,
         image: "assets/wed6.webp",
         description: "A classic wedding bouquet featuring large blue hydrangeas and white roses.",
-        category: ["wedding", "luxury"]
+        category: ["wedding"]
     },
     {
         id: 117,
@@ -866,7 +866,7 @@ name:"Mini batman surprise",
         price: 7500,
         image: "assets/wed7.webp",
         description: "A trendy boho wedding bouquet with dried pampas grass and bleached ferns.",
-        category: ["wedding", "luxury"]
+        category: ["wedding"]
     },
     {
         id: 118,
@@ -874,7 +874,7 @@ name:"Mini batman surprise",
         price: 5500,
         image: "assets/orchid.webp",
         description: "A vibrant tropical wedding bouquet with pink and orange orchids.",
-        category: ["wedding", "luxury"]
+        category: ["wedding"]
     },
     {
         id:119,
@@ -882,7 +882,7 @@ name:"Mini batman surprise",
         price:3200,
         image:"assets/ramzan.webp",
         description:"A fantabulous money bouquet for ramzan",
-        category:["money-bouquet","birthday"]
+        category:["money-bouquet"]
     },
     {
         id:120,
@@ -962,7 +962,7 @@ name:"Mini batman surprise",
         price:1200,
         image:"assets/hot10.webp",
         description:"Retro-style Hot Wheels cars gracefully paired with bright blue roses and wrapped in luxurious gold-accented paper.",
-        category:["hot wheels"]
+        category:["hot-wheels"]
     },
     {
         id:130,
@@ -974,9 +974,9 @@ name:"Mini batman surprise",
     },
     {
         id:131,
-        name:"Money bouquet with 100rs note",
+        name:"Money bouquet with 100rs note (x50 blue rose)",
         price:2800,
-        image:"assets/100rsblue.jpeg",
+        image:"assets/100rupeeblue.webp",
         description:"A money bouquet made up of 100rs notes",
         category:["money-bouquet"]
     },
@@ -986,7 +986,7 @@ name:"Mini batman surprise",
         price:3500,
         image:"assets/allcho2.jpeg",
         description:"All chocolates with love",
-        category:["chocolate-bouquet", "birthday"]
+        category:["chocolate-bouquet"]
     },
     {
         id:133,
@@ -994,7 +994,7 @@ name:"Mini batman surprise",
         price:2800,
         image:"assets/allchocolate.jpeg",
         description:"All chocolates with love",
-        category:["chocolate-bouquet", "birthday"]
+        category:["chocolate-bouquet"]
     },
     {
         id:134,
@@ -1002,7 +1002,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/choco_pie.jpeg",
         description:"Soft and delicious choco pie bouquet",
-        category:["chocolate-bouquet", "birthday"]
+        category:["chocolate-bouquet"]
     },
     {
         id:135,
@@ -1010,7 +1010,7 @@ name:"Mini batman surprise",
         price:3000,
         image:"assets/kitkat&silk.jpeg",
         description:"A bouquet of kitkat and silk chocolates",
-        category:["chocolate-bouquet", "birthday"]
+        category:["chocolate-bouquet"]
     },
     {
         id:136,
@@ -1018,12 +1018,12 @@ name:"Mini batman surprise",
         price:250,
         image:"assets/ruba.jpeg",
         description:"A simple bouquet of dairy milk chocolates",
-        category:["budget-friendly", "chocolate-bouquet", "birthday"]
+        category:["budget-friendly", "chocolate-bouquet"]
     },
     {
         id:137,
-        name:"50 rs heart design bouquet",
-        price:1200,
+        name:"50 rs heart design bouquet (x50)",
+        price:2800,
         image:"assets/50rs heart design.webp",
         description:"A bouquet made up of 50 rs notes in heart design",
         category:["money-bouquet"]
@@ -1031,10 +1031,10 @@ name:"Mini batman surprise",
     {
         id:138,
         name:"50 rs red rose bouquet",
-        price:600,
+        price:1400,
         image:"assets/50rs_with red rose.webp",
         description:"A bouquet made up of 50 rs notes with red roses",
-        category:["money-bouquet","budget-friendly"]
+        category:["money-bouquet"]
     },
     {
         id:139,
@@ -1050,7 +1050,7 @@ name:"Mini batman surprise",
         price:900,
         image:"assets/money1.webp",
         description:"money gives you happyness",
-        category:["money-bouquet"]
+        category:["money-bouquet", "budget-friendly"]
     },
     {
         id:141,
@@ -1058,7 +1058,7 @@ name:"Mini batman surprise",
         price:3500,
         image:"assets/money2.webp",
         description:"love is blind",
-        category:["money-bouquet", "luxury"]
+        category:["money-bouquet"]
     },
     {
         id:142,
@@ -1066,7 +1066,7 @@ name:"Mini batman surprise",
         price:6300,
         image:"assets/money3.webp",
         description:"always you are my favourite",
-        category:["money bouquet","chocolate bouquet", "luxury"]
+        category:["money-bouquet","chocolate-bouquet"]
     },
     {
         id:143,
@@ -1078,15 +1078,15 @@ name:"Mini batman surprise",
     },
     {
         id:144,
-        name:"Stunning Cash & Floral Surprise",
-        price:4800,
+        name:"Stunning Cash & Floral Surprise (x100)",
+        price:4000,
         image:"assets/money5.webp",
         description:"everyone is deponds on love ",
-        category:["money-bouquet","luxury"]
+        category:["money-bouquet"]
     },
     {
         id:145,
-        name:"Trending 100 Rupees Cash Bouquet",
+        name:"Trending 100 Rupees Cash Bouquet(x20) ",
         price:800,
         image:"assets/trending 100rs bouquet.webp",
         description:"a bouquet made up of 100 rs notes",
@@ -1094,7 +1094,7 @@ name:"Mini batman surprise",
     },
     {
         id:146,
-        name:"Premium 500 Rupees Money Bouquet",
+        name:"Premium 500 Rupees Money Bouquet(x20)",
         price:1000,
         image:"assets/500rs money bouquet.webp",
         description:"a bouquet made up of 500 rs notes",
@@ -1154,7 +1154,7 @@ name:"Mini batman surprise",
         price:1800,
         image:"assets/couple bouquet.webp",
         description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
-        category:["hot-wheels","chocolate-bouquet","budget-friendly"]
+        category:["hot-wheels","chocolate-bouquet"]
     },
     {
         id:154,
@@ -1162,7 +1162,7 @@ name:"Mini batman surprise",
         price:5200,
         image:"assets/bike bouquet.webp",
         description:"a bouquet whit a bike in the middle for bike lovers",
-        category:["birthday", "luxury"]
+        category:["birthday"]
     },
     {
         id:155,
@@ -1210,7 +1210,7 @@ name:"Mini batman surprise",
         price:500,
         image:"assets/pola4.webp",
         description:"A minimal yet stylish black wrap bouquet with neatly arranged memories for a modern look.",
-        category: ["polaroids-bouquet", "Budget-friendly", "budget-friendly"]
+        category: ["polaroids-bouquet", "budget-friendly"]
      },
      {
         id:161,
@@ -1390,10 +1390,10 @@ name:"Mini batman surprise",
     {
         id:183,
         name:"Gourmet Chocolates & Red Roses Box",
-        price:5500,
+        price:7000,
         image:"assets/niran4.webp",
         description:"Gourmet chocolates with fresh flowers in rich red wrap.",
-        category:["chocolate-bouquet", "luxury"]
+        category:["chocolate-bouquet"]
     },
     {
         id:184,
@@ -1441,7 +1441,7 @@ name:"Mini batman surprise",
         price:5500,
         image:"assets/niran10.webp",
         description:"Pink roses with thoughtful add-ons to express love and care.",
-        category:["perfume-bouquet", "luxury"]
+        category:["perfume-bouquet"]
     },
     {
         id:190,
@@ -1449,7 +1449,7 @@ name:"Mini batman surprise",
         price:7200,
         image:"assets/niran11.webp",
         description:"Red roses with chocolates and gifts in one perfect bundle.",
-        category:["perfume-bouquet", "luxury"]
+        category:["perfume-bouquet"]
     },
     {
         id:191,
@@ -1491,15 +1491,6 @@ name:"Mini batman surprise",
         description:"Fresh roses in elegant red wrap, symbolizing love and passion.",
         category:["perfume-bouquet"]
     },
-    
-    {
-        id:197,
-        name: "Sporty Protein Bar Bouquet",
-        price: 2800,
-        image: "assets/img2.webp",
-        description: "Protein bars with flowers in a sporty black and gold wrap.",
-        category: ["birthday", "customized","chocolate-bouquet"]
-    },
     {
         id:198,
         name: "Royal Blue Nivea Grooming Bouquet",
@@ -1523,7 +1514,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/img5.webp",
         description: "Chanel luxury products with silk roses in black and gold wrap.",
-        category: ["perfume-bouquet", "luxury", "customized"]
+        category: ["perfume-bouquet", "customized"]
     },
     {
         id:201,
@@ -1531,7 +1522,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/img6.webp",
         description: "Ferrero Rocher and Gucci Bloom perfume in elegant kraft wrap.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id:202,
@@ -1539,7 +1530,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/img7.webp",
         description: "Dreamy holographic bouquet with perfume, Godiva, and fairy lights.",
-        category: ["perfume-bouquet", "luxury",  "customized"]
+        category: ["perfume-bouquet", "customized"]
     },
     {
         id:203,
@@ -1555,7 +1546,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/nirma2.webp",
         description: " A luxurious bouquet that combines the elegance of fresh flowers with the allure of premium perfumes.",
-        category: ["perfume-bouquet", "luxury", "customized"]
+        category: ["perfume-bouquet", "customized"]
     },
     {
         id:205,
@@ -1563,7 +1554,7 @@ name:"Mini batman surprise",
         price: 1000,
         image: "assets/nirma3.webp",
         description: " kit kat bouquet with a romantic twist.",
-        category: ["chocolate-bouquet", "customized"]
+        category: ["chocolate-bouquet", "budget-friendly"]
     },
     {
         id:206,
@@ -1576,10 +1567,10 @@ name:"Mini batman surprise",
     {
         id:207,
         name:  "KitKat Sweet Romance Bouquet",
-        price: 800,
+        price: 1000,
         image: "assets/nirma5.webp",
         description: "kit kat bouquet with a romantic twist.",
-        category: ["chocolate-bouquet", "customized"]
+        category: ["chocolate-bouquet", "budget-friendly"]
     },
         {
         id:208,
@@ -1595,13 +1586,13 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/t2.webp",
         description: "Beige bouquet with cream roses, Chanel items, and gold cosmetics.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
 
         id:210,
         name:"Milka & Milky Way Purple Bouquet" ,
-        price: 2000,
+        price: 3000,
         image: "assets/t3.webp",
         description: "Purple-pink bouquet with Milka and Milky Way chocolates.",
         category: ["chocolate-bouquet"]
@@ -1610,7 +1601,7 @@ name:"Mini batman surprise",
         
         id:211,
         name:"Black Wrap Bears & Heart Balloons",
-        price: 4500,
+        price: 6000,
         image: "assets/t4.webp",
         description: "Black bouquet with red heart balloons, teddy bear, roses, and chocolates.",
         category: ["chocolate-bouquet"]
@@ -1618,7 +1609,7 @@ name:"Mini batman surprise",
     {
         id:212,
         name:"Grand Black Wrap Red Roses" ,
-        price: 6200,
+        price: 6500,
         image: "assets/t5.webp",
         description: "Large black bouquet of red roses and assorted chocolates.",
         category: ["chocolate-bouquet"]
@@ -1630,7 +1621,7 @@ name:"Mini batman surprise",
         price: 2000,
         image: "assets/t6.webp",
         description: "Luxury black box with Gucci, Burberry fragrances, chocolates, and white flowers.",
-        category: [" perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id:214,
@@ -1654,7 +1645,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/t9.webp",
         description: "Purple teddy bear with gifts, snow globe, jewelry, chocolates, and flowers.",
-        category: ["perfume-bouquet","luxury"]
+        category: ["perfume-bouquet"]
      },
      {
         id:217,
@@ -1662,7 +1653,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/t10.webp",
         description: "Red roses with luxury skincare and makeup in dramatic black paper.",
-        category: ["perfume-bouquet","luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id:218,
@@ -1670,24 +1661,24 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/t11.webp",
         description: "Bouquet with Dior, luxury beauty items, roses, and chocolates in soft pink.",
-        category: ["perfume-bouquet","luxury"]
+        category: ["perfume-bouquet"]
     },
     {
 
         id:219,
         name: "All-Black Coca-Cola & Candy Bouquet" ,
-        price:3800,
+        price:4500,
         image:"assets/t12.webp",
         description: "All-black bouquet with Coca-Cola bottles, KitKat, Snickers, and chocolates.",
-        category: ["chocolate-bouquet","luxury"]
+        category: ["chocolate-bouquet"]
     },
     {
         id:220,
         name:  "Kinder Joy & KitKat Photo Bouquet",
-        price:2800,
+        price:3000,
         image:"assets/t13.webp",
         description: "Personalized birthday bouquet with photos, Kinder Joy, KitKat, and roses.",
-        category:["birthday","chocolate-bouquet","polaroids-bouquet"]
+        category:["chocolate-bouquet","polaroids-bouquet"]
     },
 
     {
@@ -1696,7 +1687,7 @@ name:"Mini batman surprise",
         price:5500,
         image:"assets/a1.webp",
         description: "Premium navy bouquet with 10+ Hot Wheels cars, KitKat bars, snacks & money notes — the ultimate gift for car enthusiasts.",
-        category: ["hot-wheels", "luxury"]
+        category: ["hot-wheels"]
     },
     
     {
@@ -1718,26 +1709,18 @@ name:"Mini batman surprise",
     {
         id:224,
         name:   "Red Rose Noir Bouquet",
-        price:2000,
+        price:2500,
         image:"assets/patr1.webp",
         description: "Deep red roses with white baby's breath, wrapped in black matte paper and finished with a bold red satin ribbon.",
         category: ["birthday"]
     },
     {
-        id:225,
-        name: "Lavender Crochet Dream Bouquet",
-        price:2000,
-        image:"assets/patr2.webp",
-        description: "Handcrafted knitted lavender and white yarn flowers in sheer organza wrap — a one-of-a-kind keepsake bouquet.",
-        category: ["birthday"]
-    },
-    {
         id:226,
         name:  "Ferrero Rocher Peach Bloom Bouquet",
-        price:1800,
+        price:2500,
         image:"assets/patr3.webp",
         description: "Peach and cream bouquet overflowing with ~18 Ferrero Rocher chocolates, baby's breath, and fern leaves.",
-        category: ["birthday", "chocolate-bouquet"]
+        category: [ "chocolate-bouquet"]
     },
     {
         id:227,
@@ -1745,7 +1728,7 @@ name:"Mini batman surprise",
         price:1500,
         image:"assets/patr4.webp",
         description: "Petite sage green bouquet with Ferrero Rocher chocolates, a sparkly Happy Birthday topper, and a lace bow ribbon.",
-        category: ["birthday", "chocolate-bouquet"]
+        category: [ "chocolate-bouquet"]
     },
     {
         id:228,
@@ -1753,7 +1736,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/patr5.webp",
         description: "Black linen-wrapped bouquet featuring Make Over lipstick, gloss, foundation & spray with peach daisies and a heart balloon.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id:229,
@@ -1761,11 +1744,12 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/patr6.webp",
         description: "Tall black matte fan bouquet with blush roses and Ferrero Rocher chocolates, finished with a gold satin bow.",
-        category: ["chocolate-bouquet", "perfume-bouquet", "luxury"]
+        category: ["chocolate-bouquet"]
     },
     {
         id:230,
         name:   "Teddy Bear Rose & Ferrero Bouquet",
+        price: 2500,
         image: "assets/patr7.webp",
         description: "Pink and gold bouquet with dusty pink silk roses, Ferrero Rocher chocolates, and a white plush teddy bear.",
         category: ["chocolate-bouquet"]
@@ -1773,10 +1757,10 @@ name:"Mini batman surprise",
     {
         id:231,
         name:    "Just For You Ferrero Noir Bouquet",
-        price:2000,
+        price:2800,
         image:"assets/patr8.webp",
         description: "Black matte bouquet with blush pink silk roses and a Gucci Bloom perfume bottle at center — sleek and sophisticated.",
-        category: ["chocolate-bouquet", "luxury"]
+        category: ["chocolate-bouquet"]
     },
     {
         id:232,
@@ -1801,7 +1785,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/patr11.webp",
         description: "Nude-toned bouquet with luxury beauty products, cake pops, and blush pink silk roses in a soft pink ribbon.",
-        category: ["polaroids-bouquet", "luxury"]
+        category: ["polaroids-bouquet"]
     } ,
     {
         id:235,
@@ -1809,7 +1793,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/patr12.webp",
         description: "Soft pink bouquet with luxury beauty products and blush silk roses, finished with a delicate pink satin ribbon.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
         id:236,
@@ -1817,7 +1801,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/b13.webp", 
         description: "Black matte bouquet with gourmet chocolates and luxury beauty products, accented with blush roses and a black ribbon.",
-        category: ["perfume-bouquet", "luxury"]
+        category: ["perfume-bouquet"]
     },
     {
        id:237,
@@ -1825,7 +1809,7 @@ name:"Mini batman surprise",
        price:2000,
        image:"assets/patr14.webp",
        description: "A high-end bouquet wrapped in luxurious black matte paper, featuring a curated selection of Huda Beauty and Gucci products,",
-       category: ["perfume-bouquet", "luxury"]
+       category: ["perfume-bouquet"]
     },
     {
         id:238,
@@ -1841,7 +1825,7 @@ name:"Mini batman surprise",
         price:5800,
         image:"assets/masca.webp",
         description: "A gentle blend of colors blooming in perfect balance",
-        category: ["wedding", "luxury"]
+        category: ["wedding"]
     },
     {
         id:240,
@@ -1849,7 +1833,7 @@ name:"Mini batman surprise",
         price:3800,
         image:"assets/patr16.webp",
         description: "a delightful bouquet of dairy milk chocolates wrapped in elegant paper.",
-        category: ["chocolate-bouquet", "customized", "luxury"]
+        category: ["chocolate-bouquet", "customized"]
     },
     {
         id:241,
@@ -1857,7 +1841,7 @@ name:"Mini batman surprise",
         price:7500,
         image:"assets/patr17.webp",
         description: "Premium cosmetics elegantly arranged with blooms — a glamorous gift for beauty lovers.",
-        category: ["customized", "perfume-bouquet", "luxury"]
+        category: ["customized", "perfume-bouquet"]
     },
     {
         id:242,
@@ -1865,7 +1849,7 @@ name:"Mini batman surprise",
         price:8500,
         image:"assets/patr18.webp",
         description: "High-end cosmetic brands beautifully arranged with fresh florals for the ultimate glam gift.",
-        category: ["customized", "perfume-bouquet", "luxury"]
+        category: ["customized", "perfume-bouquet"]
     },
     {
         id:243,
@@ -1873,7 +1857,7 @@ name:"Mini batman surprise",
         price:9500,
         image:"assets/patr19.webp",
         description: "A curated signature cosmetic bouquet blending beauty essentials with elegant floral styling.",
-        category: ["customized", "perfume-bouquet", "luxury"]
+        category: ["customized", "perfume-bouquet"]
     },
     {
         id:244,
@@ -1910,54 +1894,14 @@ name:"Mini batman surprise",
     {
         id:248,
         name:  "Classic Floral Wrap",
-        price:4200,
+        price:5000,
         image:"assets/thush4.webp",
         description: "A classic, beautifully wrapped floral bouquet perfect for any celebration or heartfelt gift.",
         category: ["customized", "birthday", "wedding"]
     },
     {
-        id:249,
-        name:  "Wildflower Charm Bouquet",
-        price:3800,
-        image:"assets/thush5.webp",
-        description: "A lively mix of wildflowers and seasonal blooms arranged in an effortlessly charming style.",
-        category: ["customized", "birthday", "wedding"]
-    },
-    {
-        id:250,
-        name:  "Romantic Petal Bouquet",
-        price:3800,
-        image:"assets/thush6.webp",
-        description: "Romantic florals lovingly arranged — an ideal gift for anniversaries and special moments.",
-        category: ["customized", "birthday", "wedding"]
-    },
-    {
-        id:251,
-        name:  "Gentle Blooms Bouquet",
-        price:2900,
-        image:"assets/thush7.webp",
-        description: "Soft and delicate blooms thoughtfully arranged to express care and sweetness.",
-        category: ["customized", "birthday", "wedding"]
-    },
-    {
-        id:252,
-        name:  "Vibrant Floral Burst",
-        price:3500,
-        image:"assets/thush8.webp",
-        description: "A burst of vibrant, colorful florals crafted for joyful celebrations and heartfelt surprises.",
-        category: ["customized", "birthday", "wedding"]
-    },
-    {
-        id:253,
-        name:  "Sunrise Garden Bouquet",
-        price:4500,
-        image:"assets/thusd9.webp",
-        description: "Bright and uplifting florals inspired by a sunrise garden — fresh, cheerful, and elegant.",
-        category: ["customized", "birthday", "wedding"]
-    },
-    {
         id:254,
-        name:  "Grand Luxury Floral Centrepiece",
+        name:  "Grand Luxury Floral Centrepiece (Only Pre-Booking)",
         price:12000,
         image:"assets/thush10.webp",
         description: "An exquisite large-scale luxury floral centrepiece — the pinnacle of gifting elegance.",
@@ -1985,24 +1929,24 @@ name:"Mini batman surprise",
         price:600,
         image:"assets/box1.webp",
         description: "A delightful combination of Hot Wheels and fresh floral arrangements for a unique gift experience.",
-        category: ["birthday", "hot-wheels"]
+        category: ["budget-friendly", "hot-wheels"]
 
     },
     {
         id:258,
         name:  "Hot Wheels & Flowers Extravaganza",
-        price:800,
+        price:2000,
         image:"assets/box2.webp",
         description: "An extravagant gift featuring a variety of Hot Wheels cars and a stunning floral bouquet for a memorable celebration.",
-        category: ["birthday", "hot-wheels"]
+        category: [ "hot-wheels"]
     },
     {
         id:259,
         name:  "Hot Wheels & Floral Delight",
-        price:1200,
+        price:1500,
         image:"assets/box6.webp",
         description: "A delightful gift set combining the excitement of Hot Wheels with the beauty of fresh flowers for a perfect birthday surprise.",
-        category: ["birthday", "hot-wheels"]
+        category: [ "hot-wheels"]
     },
     {
         id:260,
@@ -2010,7 +1954,7 @@ name:"Mini batman surprise",
         price:1500,
         image:"assets/box7.webp",
         description: "A whimsical bouquet featuring fantasy Hot Wheels cars and vibrant floral arrangements for a fun and imaginative gift.",
-        category: ["birthday", "hot-wheels"]
+        category: [ "hot-wheels"]
     },
     {
         id:261,
@@ -2018,7 +1962,7 @@ name:"Mini batman surprise",
         price:2000,
         image:"assets/box8.webp",
         description: "A striking bouquet showcasing a collection of red Hot Wheels cars paired with elegant floral accents for a bold and memorable gift.",
-        category: ["birthday", "hot-wheels"]
+        category: ["hot-wheels"]
     },
     {
         id:262,
@@ -2026,7 +1970,7 @@ name:"Mini batman surprise",
         price:2500,
         image:"assets/box9.webp",
         description: "A unique bouquet featuring a selection of Hot Wheels cars and a stylish Batman FUNKO POP for a fun and exciting gift.",
-        category: ["birthday", "hot-wheels"]
+        category: ["customized" , "hot-wheels"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
@@ -2655,38 +2599,42 @@ if (hamburgerBtn && navLinks) {
 }
 
 // ================== SMOOTH SCROLLING (LENIS) ==================
-const lenis = new Lenis({
-    duration: 0.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    mouseMultiplier: 3,
-    smoothTouch: true,
-    touchMultiplier: 4,
-    infinite: false,
-});
-
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId && targetId !== '#') {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                lenis.scrollTo(targetElement);
-            }
-        }
+if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+        duration: 0.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 3,
+        smoothTouch: true,
+        touchMultiplier: 4,
+        infinite: false,
     });
-});
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    lenis.scrollTo(targetElement);
+                }
+            }
+        });
+    });
+} else {
+    console.warn("Lenis library not loaded. Smooth scrolling disabled.");
+}
 
 // Ensure DOM is fully loaded before initializing
 if (document.readyState === 'loading') {
