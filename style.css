@@ -2391,3 +2391,35 @@ img {
     #toast-container { top: 80px; right: 10px; left: 10px; }
     .cart-toast { max-width: 100%; min-width: 0; }
 }
+/* ================== PREBOOK BUTTON STYLES ================== */
+.prebook-btn {
+    background: linear-gradient(135deg, var(--gold-whisper), #b8860b) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3) !important;
+    border: none;
+    font-weight: 600;
+}
+
+.prebook-btn:hover {
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4) !important;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #b8860b, var(--gold-whisper)) !important;
+}
+
+.prebook-modal-btn {
+    background: linear-gradient(135deg, var(--gold-whisper), #b8860b) !important;
+    color: white !important;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.prebook-modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.4);
+}
