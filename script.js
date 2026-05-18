@@ -589,7 +589,7 @@ const products = [
     },
     {
         id: 73,
-        name: "073 - Jariwara Pink  Bouquet",
+        name: "073 - Gerbera daisy bouquet",
         price:500,
         image:"assets/pink-sunflower.webp",
         description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
