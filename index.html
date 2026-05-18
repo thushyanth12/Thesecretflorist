@@ -147,43 +147,51 @@
                 <input id="search-input" type="text" placeholder="Search bouquet...">
             </label>
         </div>
-        <div class="category-filter">
-            <button class="category-btn active" data-category="all">
-                <i class="fas fa-border-all"></i> All
+        <div class="category-scroll-container">
+            <button class="category-scroll-btn scroll-left" id="scroll-left-btn" aria-label="Scroll categories left">
+                <i class="fas fa-chevron-left"></i>
             </button>
-            <button class="category-btn" data-category="money-bouquet">
-                <i class="fas fa-sack-dollar"></i> Money Bouquet
-            </button>
-            <button class="category-btn" data-category="perfume-bouquet">
-                <i class="fas fa-spray-can-sparkles"></i> Perfume Bouquet
-            </button>
-            <button class="category-btn" data-category="birthday">
-                <i class="fas fa-cake-candles"></i> Birthday
-            </button>
+            <div class="category-filter" id="category-filter">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-border-all"></i> All
+                </button>
+                <button class="category-btn" data-category="money-bouquet">
+                    <i class="fas fa-sack-dollar"></i> Money Bouquet
+                </button>
+                <button class="category-btn" data-category="perfume-bouquet">
+                    <i class="fas fa-spray-can-sparkles"></i> Perfume Bouquet
+                </button>
+                <button class="category-btn" data-category="birthday">
+                    <i class="fas fa-cake-candles"></i> Birthday
+                </button>
 
-            <button class="category-btn" data-category="chocolate-bouquet">
-                <i class="fas fa-cookie-bite"></i> Chocolate Bouquet
-            </button>
-            <button class="category-btn" data-category="polaroids-bouquet">
-                <i class="fas fa-camera"></i> Polaroids bouquet
-            </button>
-            <button class="category-btn" data-category="hot-wheels">
-                <i class="fas fa-car-side"></i> Hot wheels
-            </button>
-            <button class="category-btn" data-category="teddy-bouquet">
-                <i class="fas fa-paw"></i> Teddy bouquet
-            </button>
-            <button class="category-btn" data-category="customized">
-                <i class="fas fa-wand-magic-sparkles"></i> Customized
-            </button>
-            <button class="category-btn" data-category="luxury">
-                <i class="fas fa-crown"></i> Luxury
-            </button>
-            <button class="category-btn" data-category="budget-friendly">
-                <i class="fas fa-piggy-bank"></i> Budget friendly
-            </button>
-            <button class="category-btn" data-category="wedding">
-                <i class="fas fa-dove"></i> Wedding
+                <button class="category-btn" data-category="chocolate-bouquet">
+                    <i class="fas fa-cookie-bite"></i> Chocolate Bouquet
+                </button>
+                <button class="category-btn" data-category="polaroids-bouquet">
+                    <i class="fas fa-camera"></i> Polaroids bouquet
+                </button>
+                <button class="category-btn" data-category="hot-wheels">
+                    <i class="fas fa-car-side"></i> Hot wheels
+                </button>
+                <button class="category-btn" data-category="teddy-bouquet">
+                    <i class="fas fa-paw"></i> Teddy bouquet
+                </button>
+                <button class="category-btn" data-category="customized">
+                    <i class="fas fa-wand-magic-sparkles"></i> Customized
+                </button>
+                <button class="category-btn" data-category="luxury">
+                    <i class="fas fa-crown"></i> Luxury
+                </button>
+                <button class="category-btn" data-category="budget-friendly">
+                    <i class="fas fa-piggy-bank"></i> Budget friendly
+                </button>
+                <button class="category-btn" data-category="wedding">
+                    <i class="fas fa-dove"></i> Wedding
+                </button>
+            </div>
+            <button class="category-scroll-btn scroll-right" id="scroll-right-btn" aria-label="Scroll categories right">
+                <i class="fas fa-chevron-right"></i>
             </button>
         </div>
         <div class="product-grid" id="product-grid">

@@ -2061,6 +2061,7 @@ const orderStatus = document.getElementById('order-status');
 function init() {
     setupPageLoader();
     setupCategoryFilters();
+    setupCategoryScrollButtons();
     setupSearchFilters();
     setupProductInteractions();
     setupLightbox();
@@ -2182,6 +2183,54 @@ function setupCategoryFilters() {
             renderProducts();
         });
     });
+}
+
+function setupCategoryScrollButtons() {
+    const categoryFilter = document.getElementById('category-filter');
+    const scrollLeftBtn = document.getElementById('scroll-left-btn');
+    const scrollRightBtn = document.getElementById('scroll-right-btn');
+
+    if (!categoryFilter || !scrollLeftBtn || !scrollRightBtn) return;
+
+    const scrollAmount = 200; // pixels to scroll per click
+
+    // Function to update button states
+    function updateButtonStates() {
+        const isAtStart = categoryFilter.scrollLeft === 0;
+        const isAtEnd = categoryFilter.scrollLeft + categoryFilter.clientWidth >= categoryFilter.scrollWidth - 5;
+
+        scrollLeftBtn.disabled = isAtStart;
+        scrollRightBtn.disabled = isAtEnd;
+    }
+
+    // Scroll left
+    scrollLeftBtn.addEventListener('click', () => {
+        categoryFilter.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+        // Update button states after scroll
+        setTimeout(updateButtonStates, 300);
+    });
+
+    // Scroll right
+    scrollRightBtn.addEventListener('click', () => {
+        categoryFilter.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        // Update button states after scroll
+        setTimeout(updateButtonStates, 300);
+    });
+
+    // Update button states on scroll
+    categoryFilter.addEventListener('scroll', updateButtonStates);
+
+    // Update button states on window resize
+    window.addEventListener('resize', updateButtonStates);
+
+    // Initial state
+    updateButtonStates();
 }
 
 function setupSearchFilters() {

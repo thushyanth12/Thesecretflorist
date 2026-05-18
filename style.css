@@ -955,18 +955,63 @@ img {
     color: #b8a5ad;
 }
 
+.category-scroll-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.category-scroll-btn {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(224, 82, 122, 0.25);
+    font-size: 0.9rem;
+}
+
+.category-scroll-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(224, 82, 122, 0.35);
+}
+
+.category-scroll-btn:active {
+    transform: scale(0.95);
+}
+
+.category-scroll-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: 0 2px 8px rgba(224, 82, 122, 0.1);
+}
+
+.category-scroll-btn:disabled:hover {
+    transform: none;
+}
+
 .category-filter {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
-    margin-bottom: 3rem;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0.5rem 5% 1.5rem 0.5rem;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    flex: 1;
+    scroll-behavior: smooth;
 }
 
 .category-filter::-webkit-scrollbar {
@@ -1850,7 +1895,9 @@ img {
     .shop-section { padding: 3rem 4% 4rem; }
     .section-subtitle { font-size: 0.92rem; padding: 0 1rem; }
     .search-bar { min-width: 200px; padding: 0.7rem 1.2rem; }
-    .category-filter { gap: 0.5rem; margin-bottom: 2rem; padding: 0.5rem 4% 1rem; -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%); mask-image: linear-gradient(to right, black 90%, transparent 100%); }
+    .category-scroll-container { gap: 0.5rem; margin-bottom: 2rem; }
+    .category-scroll-btn { width: 36px; height: 36px; font-size: 0.8rem; }
+    .category-filter { gap: 0.5rem; padding: 0; }
     .category-btn { padding: 0.5rem 1rem; font-size: 0.78rem; }
     .product-grid { gap: 0.9rem; }
     .product-card { padding: 0.8rem; }
@@ -1915,7 +1962,9 @@ img {
     .section-subtitle { font-size: 0.88rem; }
 
     .shop-section { padding: 2.5rem 3% 3.5rem; }
-    .category-filter { gap: 0.4rem; padding: 0.5rem 3% 1rem; }
+    .category-scroll-container { gap: 0.3rem; margin-bottom: 1.5rem; }
+    .category-scroll-btn { width: 32px; height: 32px; font-size: 0.75rem; }
+    .category-filter { gap: 0.4rem; padding: 0; }
     .category-btn { padding: 0.45rem 0.9rem; font-size: 0.75rem; }
 
     .product-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
