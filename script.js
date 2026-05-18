@@ -181,7 +181,7 @@ const products = [
         price: 3800,
         image: "assets/26.webp",
         description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth.",
-        category: ["birthday","customized", "teddy"]
+        category: ["birthday","customized", "teddy-bouquet"]
     },
     {
         id: 23,
@@ -344,7 +344,7 @@ const products = [
         price:4500,
         image:"assets/anju.webp",
         description:"A playful bouquet packed with sweetness and smiles",
-        category: ["chocolate-bouquet", "birthday", "teddy"]
+        category: ["chocolate-bouquet", "birthday", "teddy-bouquet"]
     },
     {
         id: 43,
@@ -705,7 +705,7 @@ const products = [
         price: 2200,
         image: "assets/teddywheel.webp",
         description: "Cute teddy with Hot Wheels and blue roses.",
-        category: ["hot-wheels", "teddy"]
+        category: ["hot-wheels", "teddy-bouquet"]
     },
     {
         id: 93,
@@ -1917,6 +1917,102 @@ const products = [
         image:"assets/box9.webp",
         description: "A unique bouquet featuring a selection of Hot Wheels cars and a stylish Batman FUNKO POP for a fun and exciting gift.",
         category: ["customized" , "hot-wheels"]
+    },
+    {
+        id: 244,
+        name: "244 - Teddy Bloom Delight Bouquet",
+        price:3800,
+        image:"assets/tedd1.webp",
+        description: "A cute mix of teddy, pastel roses, and chocolates wrapped with love.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 245,
+        name: "245 - Sweet Love Surprise",
+        price:4500,
+        image:"assets/tedd2.webp",
+        description: "Roses, chocolates, and a cuddly teddy packed into one adorable bouquet.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 246,
+        name: "246 - Choco Teddy Bliss Bouquet",
+        price:5000,
+        image:"assets/tedd3.webp",
+        description: "A dreamy bouquet filled with chocolates, soft blooms, and teddy charm.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 247,
+        name: "247 - Blue Hug Bouquet",
+        price:6000,
+        image:"assets/tedd4.webp",
+        description: "A soft blue teddy bouquet with chocolates and floral elegance.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 248,
+        name: "248 - Pastel Love Bear Bouquet",
+        price:7000,
+        image:"assets/tedd5.webp",
+        description: "A dreamy pastel bouquet with a cute teddy and sweet chocolate touch.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 249,
+        name: "249 -Choco Teddy Bliss Bouquet",
+        price:8000,
+        image:"assets/tedd6.webp",
+        description: "Cute teddy bouquet paired with chocolates and red roses for sweet surprise moments.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 250,
+        name: "250 - Lavender Teddy Bloom",
+        price:9000,
+        image:"assets/tedd7.webp",
+        description: "ASoft pastel floral bouquet with a cuddly teddy for elegant gifting.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 251,
+        name: "251 Blush Bear Bouquet",
+        price:10000,
+        image:"assets/tedd8.webp",
+        description: "Pink roses and teddy arranged in a dreamy bouquet design.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 252,
+        name: "252 - Royal Love Teddy Bouquet",
+        price:11000,
+        image:"assets/tedd9.webp",
+        description: "Red roses with a crowned teddy and heart accent for romantic occasions.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 253,
+        name: "253 - Graduation Teddy Bouquet",
+        price:12000,
+        image:"assets/tedd10.webp",
+        description: "Graduation-themed teddy bouquet with elegant white floral touches.",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 254,
+        name: "254 - Peach Teddy Charm Bouquet",
+        price:13000,
+        image:"assets/tedd11.webp",
+        description: "Soft peach wrap bouquet featuring a teddy and delicate floral accents",
+        category: ["teddy-bouquet"]
+    },
+    {
+        id: 255,
+        name: "255 - Chocolate Teddy Treat Bouquet",
+        price:15000,
+        image:"assets/tedd12.webp",
+        description: "Chocolate-filled bouquet with a pink teddy for the perfect sweet gift.",
+        category: ["teddy-bouquet"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
