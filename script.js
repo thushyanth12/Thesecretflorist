@@ -169,7 +169,6 @@ const products = [
     {
         id: 21,
         name: "021 - Blush Tulip Whisper",
-        price: 1699,
         image: "assets/25.webp",
         description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture.",
         category: ["birthday" ,"wedding"],
@@ -2370,7 +2369,7 @@ function renderProducts() {
         const matchesCategory = currentCategory === 'all' || productCategories.includes(currentCategory);
         const matchesOccasion = occasionFilter === 'all' || productCategories.includes(occasionFilter);
         const matchesSearch = !searchTerm || product.name.toLowerCase().includes(searchTerm) || product.description.toLowerCase().includes(searchTerm);
-        const matchesPrice = product.price <= maxPrice;
+        const matchesPrice = product.price === undefined || product.price === null || product.price <= maxPrice;
         return matchesCategory && matchesOccasion && matchesSearch && matchesPrice;
     });
 
@@ -2385,7 +2384,8 @@ function renderProducts() {
 
     productGrid.innerHTML = filteredProducts.map((product, index) => {
         const isCustomizable = normalizeCategory(product).some(cat => ['perfume-bouquet', 'customized'].includes(cat));
-        const priceHTML = isCustomizable ? '' : `<div class="product-price">INR ${product.price.toLocaleString('en-IN')}</div>`;
+        const hasNoPrice = product.price === undefined || product.price === null;
+        const priceHTML = (isCustomizable || hasNoPrice) ? '' : `<div class="product-price">INR ${product.price.toLocaleString('en-IN')}</div>`;
         
         let actionBtn;
         if (isCustomizable) {
@@ -2449,8 +2449,12 @@ function showProductModal(product) {
         }
     } else if (product.prebook) {
         // Prebook product
-        modalProductPrice.style.display = '';
-        modalProductPrice.textContent = `INR ${product.price.toLocaleString('en-IN')}`;
+        if (product.price === undefined || product.price === null) {
+            modalProductPrice.style.display = 'none';
+        } else {
+            modalProductPrice.style.display = '';
+            modalProductPrice.textContent = `INR ${product.price.toLocaleString('en-IN')}`;
+        }
         if (modalQtySelector) modalQtySelector.style.display = 'none'; // Hide quantity for prebook?
         if (modalAddBtn) {
             modalAddBtn.innerHTML = '<i class="fas fa-calendar-check"></i> Prebook 1 week before';
