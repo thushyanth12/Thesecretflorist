@@ -2020,6 +2020,27 @@ img {
 
     .lightbox { padding: 1rem; }
     .lightbox-close { top: 15px; right: 20px; font-size: 2rem; }
+
+    /* Toast notification alignment on mobile */
+    #toast-container {
+        top: 70px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        align-items: center;
+    }
+    .cart-toast {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        transform: translateY(-20px);
+    }
+    .cart-toast.show {
+        transform: translateY(0);
+    }
+    .cart-toast.hiding {
+        transform: translateY(-20px);
+    }
 }
 
 /* ---- SMALL PHONES (390px) ---- */
@@ -2066,10 +2087,10 @@ img {
         left: 5px;
      }
     .cart-icon { 
-        margin-left: 0.3rem; 
-        margin-right: 0.8rem; 
+        margin-left: auto; 
+        margin-right: 0; 
         font-size: 1.4rem; 
-        left: 5px;
+        position: static;
      }
 
     .category-btn { padding: 0.4rem 0.75rem; font-size: 0.7rem; }
