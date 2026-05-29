@@ -2059,8 +2059,10 @@ const orderStatus = document.getElementById('order-status');
 
 function init() {
     setupPageLoader();
+    setupMobileMenu();
     setupCategoryFilters();
     setupCategoryScrollButtons();
+    setupCategoryPillsFlow();
     setupSearchFilters();
     setupProductInteractions();
     setupLightbox();
@@ -2070,8 +2072,11 @@ function init() {
     setupNavbarScroll();
     setupScrollToTop();
     createToastContainer();
+    detectLandingPageFilter();
     renderProducts();
     updateCartUI();
+    setupFAQ();
+    injectProductSchema();
 }
 
 // ================== TOAST NOTIFICATION ==================
@@ -2398,7 +2403,7 @@ function renderProducts() {
 
         return `
         <div class="product-card reveal" style="--card-index: ${index}">
-            <img src="${product.image}" alt="${product.name}" class="product-image gallery-image" loading="lazy" decoding="async">
+            <img src="${product.image}" alt="${getProductSEOAlt(product)}" class="product-image gallery-image" loading="lazy" decoding="async">
             <div class="product-info">
                 <div class="product-meta">
                     <h3 class="product-title">${product.name}</h3>
@@ -2433,7 +2438,7 @@ function showProductModal(product) {
     const isCustomizable = normalizeCategory(product).some(cat => ['perfume-bouquet', 'customized'].includes(cat));
 
     modalProductImage.src = product.image;
-    modalProductImage.alt = product.name;
+    modalProductImage.alt = getProductSEOAlt(product);
     modalProductName.textContent = product.name;
     modalProductDescription.textContent = product.description;
 
@@ -2481,6 +2486,9 @@ function showProductModal(product) {
         productModal.classList.add('active');
         productModalOverlay.classList.add('active');
     }
+
+    // Inject dynamic product schema
+    injectSingleProductSchema(product);
 }
 
 function closeProductModal() {
@@ -2490,6 +2498,12 @@ function closeProductModal() {
     }
     selectedProductForModal = null;
     modalQuantity = 1;
+
+    // Clean up single product schema
+    const existingSchema = document.getElementById('single-product-schema');
+    if (existingSchema) {
+        existingSchema.remove();
+    }
 }
 
 // Modal quantity controls
@@ -2761,4 +2775,238 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
+}
+
+// ================== LOCAL SEO HELPER FUNCTIONS ==================
+
+function getProductSEOAlt(product) {
+    if (product.alt) return product.alt;
+    
+    const nameClean = product.name.replace(/^\d+\s*-\s*/, ''); // strip number prefix e.g. "001 - "
+    const categories = normalizeCategory(product);
+    
+    if (categories.includes('chocolate-bouquet')) {
+        return `${nameClean} - Chocolate bouquet delivery in Pondicherry`;
+    } else if (categories.includes('money-bouquet')) {
+        return `${nameClean} - Money bouquet order online Pondicherry`;
+    } else if (categories.includes('birthday')) {
+        return `${nameClean} - Birthday flower bouquet online Pondicherry`;
+    } else if (categories.includes('wedding')) {
+        return `${nameClean} - Wedding/Anniversary flowers delivery Pondicherry`;
+    } else if (categories.includes('luxury')) {
+        return `${nameClean} - Premium bouquet order Pondicherry`;
+    } else if (nameClean.toLowerCase().includes('rose')) {
+        return `${nameClean} - Red rose bouquet delivery in Pondicherry`;
+    } else {
+        return `${nameClean} - Bouquet order online Pondicherry`;
+    }
+}
+
+function detectLandingPageFilter() {
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('birthday-bouquet-pondicherry')) {
+        currentCategory = 'birthday';
+        setActiveCategoryButton('birthday');
+    } else if (path.includes('anniversary-flowers-pondicherry')) {
+        currentCategory = 'wedding';
+        setActiveCategoryButton('wedding');
+    } else if (path.includes('rose-bouquet-pondicherry')) {
+        currentCategory = 'all';
+        searchTerm = 'rose';
+        const sInput = document.getElementById('search-input');
+        if (sInput) sInput.value = 'rose';
+    } else if (path.includes('bouquet-delivery-pondicherry')) {
+        currentCategory = 'all';
+        setActiveCategoryButton('all');
+    }
+}
+
+function setActiveCategoryButton(categoryName) {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(btn => {
+        if (btn.dataset.category.toLowerCase().trim() === categoryName) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+}
+
+function setupFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const icon = question.querySelector('i');
+            
+            // Toggle active class on item
+            faqItem.classList.toggle('active');
+            
+            // Toggle aria-expanded
+            const isExpanded = faqItem.classList.contains('active');
+            question.setAttribute('aria-expanded', isExpanded);
+            
+            // Toggle icon & active height
+            if (isExpanded) {
+                icon.className = 'fas fa-minus';
+                faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+            } else {
+                icon.className = 'fas fa-plus';
+                faqAnswer.style.maxHeight = '0px';
+            }
+        });
+    });
+}
+
+function injectProductSchema() {
+    const existingSchema = document.getElementById('dynamic-product-schema');
+    if (existingSchema) {
+        existingSchema.remove();
+    }
+    
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": products.map(product => {
+            const categories = normalizeCategory(product);
+            const isCustomizable = categories.some(cat => ['perfume-bouquet', 'customized'].includes(cat));
+            const availability = product.prebook ? "https://schema.org/PreOrder" : "https://schema.org/InStock";
+            const absoluteImageUrl = new URL(product.image, window.location.href).href;
+            
+            return {
+                "@type": "Product",
+                "name": product.name,
+                "image": absoluteImageUrl,
+                "description": product.description || `Handcrafted bouquet by The Secret Florist in Pondicherry.`,
+                "brand": {
+                    "@type": "Brand",
+                    "name": "The Secret Florist"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": product.price || 1500,
+                    "availability": availability,
+                    "url": window.location.href
+                }
+            };
+        })
+    };
+    
+    const script = document.createElement('script');
+    script.id = 'dynamic-product-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+}
+
+function injectSingleProductSchema(product) {
+    const existingSchema = document.getElementById('single-product-schema');
+    if (existingSchema) {
+        existingSchema.remove();
+    }
+    
+    const absoluteImageUrl = new URL(product.image, window.location.href).href;
+    const availability = product.prebook ? "https://schema.org/PreOrder" : "https://schema.org/InStock";
+    
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": product.name,
+        "image": absoluteImageUrl,
+        "description": product.description || `Handcrafted bouquet by The Secret Florist in Pondicherry.`,
+        "brand": {
+            "@type": "Brand",
+            "name": "The Secret Florist"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "price": product.price || 1500,
+            "availability": availability,
+            "url": window.location.href
+        }
+    };
+    
+    const script = document.createElement('script');
+    script.id = 'single-product-schema';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+}
+
+function setupCategoryPillsFlow() {
+    const container = document.getElementById('category-filter');
+    if (!container) return;
+
+    function updateFlow() {
+        const containerRect = container.getBoundingClientRect();
+        const containerLeft = containerRect.left;
+        const containerRight = containerRect.right;
+        const pills = container.querySelectorAll('.category-btn');
+
+        pills.forEach(pill => {
+            const rect = pill.getBoundingClientRect();
+            const pillWidth = rect.width;
+            
+            let ratio = 1;
+            
+            if (rect.right <= containerLeft) {
+                ratio = 0;
+            } else if (rect.left >= containerRight) {
+                ratio = 0;
+            } else if (rect.left < containerLeft) {
+                const visibleWidth = rect.right - containerLeft;
+                ratio = Math.max(0, Math.min(1, visibleWidth / pillWidth));
+            } else if (rect.right > containerRight) {
+                const visibleWidth = containerRight - rect.left;
+                ratio = Math.max(0, Math.min(1, visibleWidth / pillWidth));
+            }
+
+            const opacity = 0.35 + 0.65 * ratio;
+            const scale = 0.86 + 0.14 * ratio;
+            
+            pill.style.opacity = opacity;
+            pill.style.transform = `scale(${scale})`;
+            pill.style.transition = 'opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)';
+        });
+    }
+
+    container.addEventListener('scroll', updateFlow);
+    window.addEventListener('resize', updateFlow);
+    
+    updateFlow();
+    
+    setTimeout(updateFlow, 200);
+    setTimeout(updateFlow, 800);
+}
+
+function setupMobileMenu() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburgerBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                hamburgerBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
 }

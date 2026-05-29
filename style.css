@@ -1006,7 +1006,7 @@ img {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0.5rem 5% 1.5rem 0.5rem;
+    padding: 0.6rem 5% 0.6rem 0.5rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -1866,15 +1866,41 @@ img {
 
 /* ---- TABLET PORTRAIT (768px) ---- */
 @media (max-width: 768px) {
-    .navbar { height: 65px; padding: 0 3%; }
+    .navbar { height: 65px; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; }
     .section-title { font-size: 2rem; }
-    .hamburger { display: none; }
-    .nav-links { display: flex; margin-left: 0.5rem; flex-shrink: 0; }
-    .nav-links a { margin-left: 0.6rem; font-size: 0.68rem; letter-spacing: 0.8px; left: 0; }
-    .cart-icon { margin-left: 0.5rem; margin-right: 0; font-size: 1.1rem; flex-shrink: 0; }
-    .logo { max-width: 44%; overflow: visible; }
-    .logo .brand-logo { height: 42px; flex-shrink: 0; }
-    .logo img:nth-child(2) { max-height: 190px; max-width: 180px; margin-left: 8px; }
+    .hamburger { display: flex; margin-left: 1.5rem; }
+    .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 65px; 
+        left: 0; 
+        width: 100%; 
+        background: rgba(255, 245, 247, 0.98); 
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 1.5rem 0; 
+        border-bottom: 1px solid rgba(212,169,106,0.25);
+        box-shadow: 0 10px 30px rgba(180,40,78,0.1);
+        z-index: 999;
+        margin-left: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a { 
+        margin: 0.8rem 0; 
+        font-size: 0.95rem; 
+        letter-spacing: 1.5px; 
+        left: 0; 
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .cart-icon { margin-left: auto; font-size: 1.25rem; flex-shrink: 0; }
+    .logo { max-width: 60%; overflow: visible; display: flex; align-items: center; gap: 4px; }
+    .logo .brand-logo { height: 44px; flex-shrink: 0; }
+    .logo img:nth-child(2) { max-height: 54px; width: auto; max-width: 180px; margin-left: 4px; }
 
     .hero {
         flex-direction: column-reverse;
@@ -1897,7 +1923,7 @@ img {
     .search-bar { min-width: 200px; padding: 0.7rem 1.2rem; }
     .category-scroll-container { gap: 0.5rem; margin-bottom: 2rem; }
     .category-scroll-btn { width: 36px; height: 36px; font-size: 0.8rem; }
-    .category-filter { gap: 0.5rem;  padding: 0.5rem 4% 1rem;}
+    .category-filter { gap: 0.5rem;  padding: 0.6rem 4%;}
     .category-btn { padding: 0.5rem 1rem; font-size: 0.78rem; }
     .product-grid { gap: 0.9rem; }
     .product-card { padding: 0.8rem; }
@@ -1919,39 +1945,36 @@ img {
 @media (max-width: 480px) {
     .navbar { 
         height: 58px;
-        padding: 0 3%;
+        padding: 0 4%;
      }
     .logo { 
-        max-width: 70%;
+        max-width: 65%;
      }
     .logo .brand-logo {
-         position: relative;
-          left: -10px; 
-          height: 54px;
-           flex-shrink: 0; 
+         position: static;
+         height: 38px;
+         flex-shrink: 0; 
         }
     .logo img:nth-child(2) {
-         position: relative; 
-         left: -40px;
-          height: 140px;
-           width: 200px; 
-           margin-left: 8px;
-         }
-    .nav-links {
-         margin-left: 0.2rem;
+         position: static; 
+         height: 46px;
+         width: auto;
+         margin-left: 4px;
          }
     .nav-links a { 
-        margin-left: 0.35rem;
-        font-size: 0.56rem;
-        letter-spacing: 0;
-        left: -40px;  
+        margin: 0.7rem 0;
+        font-size: 0.9rem;
+        left: 0;  
     }
     .cart-icon { 
-        margin-left: 0.3rem; 
-        margin-right: 0.8rem; 
-        font-size: 1.4rem; 
-        left: -40px;
-     }
+        margin-left: auto; 
+        margin-right: 0; 
+        font-size: 1.2rem;
+        position: static;
+    }
+    .hamburger {
+        margin-left: 1rem;
+    }
 
     .hero { padding: 80px 5% 2rem; }
     .hero h1 { font-size: 2.1rem; }
@@ -1964,7 +1987,7 @@ img {
     .shop-section { padding: 2.5rem 3% 3.5rem; }
     .category-scroll-container { gap: 0.3rem; margin-bottom: 1.5rem; }
     .category-scroll-btn { width: 32px; height: 32px; font-size: 0.75rem; }
-    .category-filter { gap: 0.4rem; padding: 0.5rem 3% 1rem; }
+    .category-filter { gap: 0.4rem; padding: 0.6rem 3%; }
     .category-btn { padding: 0.45rem 0.9rem; font-size: 0.75rem; }
 
     .product-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
@@ -2471,4 +2494,141 @@ img {
 .prebook-modal-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(184, 134, 11, 0.4);
+}
+
+/* ================== LOCAL SEO STYLING ADDITIONS ================== */
+
+/* SEO Intro Section */
+.seo-intro-section {
+    padding: 35px 40px;
+    margin: 20px auto 40px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+}
+
+.seo-intro-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--muted-bloom);
+    font-family: var(--font-body);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.seo-intro-text strong {
+    color: var(--bloom-magenta);
+    font-weight: 600;
+}
+
+/* FAQ Accordion Section */
+.faq-section {
+    padding: 80px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.faq-item {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--shadow-color);
+    border-color: var(--romantic-pink);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--bloom-magenta);
+    cursor: pointer;
+    transition: color 0.3s;
+    outline: none;
+}
+
+.faq-question span {
+    padding-right: 20px;
+}
+
+.faq-question i {
+    font-size: 0.95rem;
+    color: var(--gold-whisper);
+    transition: transform 0.4s var(--ease-out-expo);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out-expo);
+    padding: 0 30px;
+}
+
+.faq-item.active .faq-answer {
+    padding-bottom: 24px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--romantic-pink);
+}
+
+.faq-answer p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--petal-text);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 50px 0;
+    }
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 1.1rem;
+    }
+    .faq-answer {
+        padding: 0 20px;
+    }
+    .faq-item.active .faq-answer {
+        padding-bottom: 18px;
+    }
+    .seo-intro-section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+    .seo-intro-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
