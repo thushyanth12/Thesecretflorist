@@ -1948,18 +1948,21 @@ img {
         padding: 0 4%;
      }
     .logo { 
-        max-width: 65%;
+        max-width:70%;
+        
      }
     .logo .brand-logo {
          position: static;
-         height: 38px;
+         height: 48px;
          flex-shrink: 0; 
         }
     .logo img:nth-child(2) {
          position: static; 
-         height: 46px;
+         height:100px;
+        max-height:none;
          width: auto;
-         margin-left: 4px;
+         margin-left:4px;
+         
          }
     .nav-links a { 
         margin: 0.7rem 0;
