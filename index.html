@@ -15,8 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
-    <link rel="preload" as="image" href="assets/hero.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="assets/hero_bouquet.png">
+    <link rel="stylesheet" href="style.css?v=3.6">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -160,6 +160,8 @@
 
     <!-- Aesthetic Background Ornaments -->
     <div class="bg-ornaments">
+        <img src="assets/left_floral_border.png" class="floral-border floral-border-left" alt="">
+        <img src="assets/right_floral_border.png" class="floral-border floral-border-right" alt="">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
@@ -176,8 +178,29 @@
 
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
-            <img src="assets/logo1.png" alt="The Secret Florist Logo" >
+            <div class="logo-image-container">
+                <!-- Curved leaf branches (SVG) -->
+                <svg class="logo-leaves" viewBox="0 0 200 200">
+                    <!-- Left branch -->
+                    <path d="M 60,150 C 40,110 50,70 80,50" fill="none" stroke="#7d966d" stroke-width="1.5" />
+                    <path d="M 50,130 C 35,125 35,115 50,115 C 55,120 55,125 50,130 Z" fill="#7d966d" />
+                    <path d="M 45,100 C 30,95 30,85 45,85 C 50,90 50,95 45,100 Z" fill="#7d966d" />
+                    <path d="M 55,75 C 45,68 48,58 60,65 C 62,70 60,73 55,75 Z" fill="#7d966d" />
+                    <path d="M 70,55 C 65,45 72,40 78,50 C 76,53 74,55 70,55 Z" fill="#7d966d" />
+                    
+                    <!-- Right branch -->
+                    <path d="M 140,150 C 160,110 150,70 120,50" fill="none" stroke="#7d966d" stroke-width="1.5" />
+                    <path d="M 150,130 C 165,125 165,115 150,115 C 145,120 145,125 150,130 Z" fill="#7d966d" />
+                    <path d="M 155,100 C 170,95 170,85 155,85 C 150,90 150,95 155,100 Z" fill="#7d966d" />
+                    <path d="M 145,75 C 155,68 152,58 140,65 C 138,70 140,73 145,75 Z" fill="#7d966d" />
+                    <path d="M 130,55 C 135,45 128,40 122,50 C 124,53 126,55 130,55 Z" fill="#7d966d" />
+                    
+                    <!-- Gold circle line -->
+                    <circle cx="100" cy="100" r="55" fill="none" stroke="rgba(212, 169, 106, 0.6)" stroke-width="1" />
+                </svg>
+                <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
+            </div>
+            <img src="assets/logo1.png" alt="The Secret Florist Logo" class="brand-text-logo">
         </div>
 
         <div class="nav-links">
@@ -202,14 +225,56 @@
         <span class="hero-petal hero-petal-4"></span>
         <span class="hero-petal hero-petal-5"></span>
         <span class="hero-petal hero-petal-6"></span>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-leaf"></i>
-                Fresh — Handcrafted — Same-Day
+        
+        <div class="hero-inner-container">
+            <!-- Bouquet in blob frame -->
+            <div class="blob-frame-container">
+                <div class="blob-frame">
+                    <img src="assets/hero_bouquet.png" alt="Fresh flower bouquet delivery in Pondicherry and Qatar - The Secret Florist" class="hero-blob-image" fetchpriority="high">
+                </div>
+                <!-- Stamp badge -->
+                <div class="stamp-badge">
+                    <svg viewBox="0 0 100 100" class="stamp-svg">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text class="stamp-text">
+                            <textPath href="#circlePath" startOffset="0%">
+                                CRAFTED FRESH • WITH LOVE • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="stamp-center">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                </div>
             </div>
-            <h1>Best Florist <span class="text-gradient">in Pondicherry</span></h1>
-            <p>Beautiful handcrafted bouquets for birthdays, anniversaries, love, surprises, and special moments with delivery across Pondicherry.</p>
-            <div class="hero-actions">
+            
+            <!-- Pill badge -->
+            <div class="hero-pill-badge">
+                <i class="fas fa-leaf"></i>
+                Fresh • Handcrafted • Same-Day
+            </div>
+            
+            <!-- Heading -->
+            <h1 class="hero-title">
+                The Best Florist <br>
+                in Pondicherry <br>
+                <span class="qatar-text">(Qatar)</span>
+            </h1>
+            
+            <!-- Heart divider -->
+            <div class="heart-divider">
+                <span class="line"></span>
+                <i class="fas fa-heart"></i>
+                <span class="line"></span>
+            </div>
+            
+            <!-- Description -->
+            <p class="hero-desc">
+                Beautiful handcrafted bouquets for birthdays, anniversaries, love, surprises, and special moments with delivery across Qatar.
+            </p>
+            
+            <!-- Actions -->
+            <div class="hero-actions-container">
                 <a href="#shop" class="cta-button ripple">
                     <i class="fas fa-spa"></i> Explore Collection
                 </a>
@@ -217,42 +282,36 @@
                     <i class="fas fa-wand-magic-sparkles"></i> Create Your Bouquet
                 </a>
             </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-image-glow"></div>
-            <img src="assets/hero.png" alt="Fresh flower bouquet delivery in Pondicherry - The Secret Florist" class="hero-image" fetchpriority="high">
+            
+            <!-- Trust strip -->
+            <section class="trust-strip">
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>Fresh Everyday</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-hands-holding-heart"></i>
+                    </div>
+                    <h4>Handcrafted With Love</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h4>Same-Day Delivery</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Premium Quality</h4>
+                </div>
+            </section>
         </div>
     </header>
-
-    <!-- Section Divider -->
-   
-    <div class="container">
-    <section class="trust-strip">
-        <div class="trust-card">
-          <div class="icon-circle">🌸</div>
-          <h3>1k</h3>
-          <p>Bouquets Delivered</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🌷</div>
-          <h3>100%</h3>
-          <p>Fresh Blooms</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🚚</div>
-          <h3>500+</h3>
-          <p>Same-day Delivery</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">✏️</div>
-          <h3>800+</h3>
-          <p>Custom Orders</p>
-        </div>
-      </section>
-      </div>
     
       <!-- SEO Local Introduction -->
       <div class="container">

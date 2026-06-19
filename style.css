@@ -66,7 +66,6 @@ body {
     touch-action: manipulation;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    box-shadow: inset 0 0 150px rgba(180,40,78,0.06);
 }
 
 /* ================== CONTAINER + TRUST STRIP ================== */
@@ -296,7 +295,8 @@ body {
     z-index: -1;
     overflow: hidden;
     pointer-events: none;
-    background:
+    background-color: #FFEBF0; /* Warm pastel blush pink backdrop for child mix-blend-mode multiply */
+    background-image:
         radial-gradient(circle at 0% 0%, rgba(229, 138, 168, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 100% 100%, rgba(212, 175, 185, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(252, 225, 232, 0.08) 0%, transparent 60%);
@@ -415,15 +415,12 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: rgba(252, 225, 232, 0.85);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: transparent;
     position: fixed;
     height: 80px;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(212,169,106,0.3);
     transition: all 0.5s var(--ease-out-expo);
 }
 
@@ -435,11 +432,7 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(252, 225, 232, 0.92);
-    backdrop-filter: blur(22px) saturate(180%);
-    -webkit-backdrop-filter: blur(22px) saturate(180%);
-    border-bottom: 1px solid rgba(212,169,106,0.3);
-    box-shadow: 0 4px 30px rgba(180,40,78,0.1);
+    background: transparent;
 }
 
 .logo .brand-logo {
@@ -2651,5 +2644,537 @@ img {
     .seo-intro-text {
         font-size: 1rem;
         line-height: 1.6;
+    }
+}
+
+/* ==========================================================================
+   REDESIGNED HERO SECTION (CENTRALIZED / APP-STYLE LAYOUT OVERRIDES)
+   ========================================================================== */
+
+/* Background tweaks */
+body {
+    background-color: #FFEBF0; /* Warm pastel blush pink matching the target image */
+}
+
+/* Floral Borders */
+.floral-border {
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+.floral-border-left {
+    left: 0;
+}
+.floral-border-right {
+    right: 0;
+}
+
+@media (max-width: 1200px) {
+    .floral-border {
+        width: 220px;
+    }
+}
+@media (max-width: 768px) {
+    .floral-border {
+        width: 130px;
+        opacity: 0.8;
+    }
+}
+@media (max-width: 480px) {
+    .floral-border {
+        width: 90px;
+        opacity: 0.75;
+    }
+}
+
+/* Centered Header / Navbar */
+.navbar {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px !important;
+    z-index: 1000 !important;
+}
+
+.logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+
+.logo-image-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.brand-logo {
+    position: relative;
+    height: 95px !important;
+    width: auto !important;
+    z-index: 2;
+    object-fit: contain;
+    margin: 0 !important;
+}
+
+.brand-text-logo {
+    height: 38px !important;
+    width: auto !important;
+    margin-top: -12px !important;
+    z-index: 3;
+    object-fit: contain;
+}
+
+/* Floating Actions: Cart & Hamburger */
+.cart-icon {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    width: 52px !important;
+    height: 52px !important;
+    background: var(--romantic-pink) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2000 !important;
+    box-shadow: 0 8px 24px rgba(184, 41, 78, 0.25) !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    transition: all 0.3s var(--ease-out-back) !important;
+}
+
+.cart-icon:hover {
+    transform: scale(1.08) rotate(-3deg) !important;
+    background: var(--deep-rose) !important;
+}
+
+#cart-count {
+    position: absolute !important;
+    top: -4px !important;
+    right: -4px !important;
+    background: #ffffff !important;
+    color: var(--romantic-pink) !important;
+    font-size: 0.72rem !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-weight: 700 !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+    border: 1.5px solid var(--romantic-pink) !important;
+}
+
+.hamburger {
+    position: fixed !important;
+    top: 90px !important;
+    right: 25px !important;
+    width: 52px !important;
+    height: 52px !important;
+    background: var(--romantic-pink) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2000 !important;
+    box-shadow: 0 8px 24px rgba(184, 41, 78, 0.25) !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    gap: 4px !important;
+    transition: all 0.3s var(--ease-out-back) !important;
+}
+
+.hamburger:hover {
+    transform: scale(1.08) !important;
+    background: var(--deep-rose) !important;
+}
+
+.hamburger span {
+    background-color: white !important;
+    width: 18px !important;
+    height: 2px !important;
+    border-radius: 2px !important;
+}
+
+/* Hide desktop horizontal menu links as they are now in hamburger */
+.nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background: rgba(255, 245, 247, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    padding: 120px 0 2rem 0 !important;
+    z-index: 1500 !important;
+    margin: 0 !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease-out-expo) !important;
+}
+
+.nav-links.active {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.nav-links a {
+    margin: 1.2rem 0 !important;
+    font-size: 1.2rem !important;
+    color: var(--petal-text) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+}
+
+/* Responsive adjustments for fixed menu elements */
+@media (max-width: 768px) {
+    .cart-icon {
+        top: 20px !important;
+        right: 20px !important;
+        width: 46px !important;
+        height: 46px !important;
+    }
+    .hamburger {
+        top: 76px !important;
+        right: 20px !important;
+        width: 46px !important;
+        height: 46px !important;
+    }
+    .logo-image-container {
+        width: 100px;
+        height: 100px;
+    }
+    .brand-logo {
+        height: 75px !important;
+    }
+    .brand-text-logo {
+        height: 30px !important;
+        margin-top: -8px !important;
+    }
+}
+
+/* Centered & Vertical Hero Section */
+.hero {
+    height: auto !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 160px 20px 60px 20px !important;
+    text-align: center !important;
+    overflow: visible !important;
+}
+
+.hero-inner-container {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Blob frame bouquet styling */
+.blob-frame-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 10px auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .blob-frame-container {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 380px) {
+    .blob-frame-container {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+.blob-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border: 3.5px solid #d4a96a; /* Thicker solid gold border ensures clean shape rendering */
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(184, 41, 78, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-blob-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Explicitly apply border-radius to crop the image in WebKit/Blink */
+}
+
+/* Stamp Badge */
+.stamp-badge {
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    width: 90px;
+    height: 90px;
+    background-color: #E0527A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(184, 41, 78, 0.25);
+    z-index: 10;
+    border: 2px dashed rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 480px) {
+    .stamp-badge {
+        width: 76px;
+        height: 76px;
+        top: 2%;
+        left: -2%;
+    }
+}
+
+.stamp-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateStamp 25s linear infinite;
+}
+
+.stamp-text {
+    font-size: 8.5px;
+    font-weight: 700;
+    fill: #ffffff;
+    letter-spacing: 2px;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+}
+
+.stamp-center {
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+@media (max-width: 480px) {
+    .stamp-center {
+        font-size: 1rem;
+    }
+}
+
+@keyframes rotateStamp {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Pill badge override */
+.hero-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: #ffffff;
+    border: 1px solid rgba(212, 169, 106, 0.4);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9C5A6D;
+    box-shadow: 0 6px 20px rgba(184, 41, 78, 0.04);
+    margin: 25px auto 18px auto;
+}
+
+.hero-pill-badge i {
+    color: #7d966d;
+    font-size: 0.78rem;
+}
+
+/* Centered Title */
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.4rem) !important;
+    line-height: 1.25 !important;
+    color: #4C1A27 !important;
+    margin: 0 auto 12px auto !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+    letter-spacing: -0.5px !important;
+}
+
+.hero-title span.qatar-text {
+    color: var(--romantic-pink) !important;
+    display: inline-block;
+}
+
+/* Heart divider styling */
+.heart-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: 15px auto;
+}
+
+.heart-divider .line {
+    flex: 1;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(212, 169, 106, 0.6), transparent);
+}
+
+.heart-divider i {
+    color: var(--romantic-pink);
+    font-size: 0.8rem;
+}
+
+/* Description styling */
+.hero-desc {
+    font-family: var(--font-body);
+    font-size: 1.05rem !important;
+    line-height: 1.75 !important;
+    color: #6b5a62 !important;
+    max-width: 580px !important;
+    margin: 0 auto 30px auto !important;
+    font-weight: 500 !important;
+}
+
+/* Actions Container */
+.hero-actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.hero-actions-container a {
+    min-width: 240px;
+    justify-content: center;
+}
+
+@media (max-width: 520px) {
+    .hero-actions-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-actions-container a {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Trust Strip inside Hero */
+.hero .trust-strip {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+    background: rgba(255, 235, 240, 0.4) !important;
+    border: 1.5px solid rgba(229, 138, 168, 0.25) !important;
+    border-radius: 20px !important;
+    padding: 22px 15px !important;
+    margin-top: 30px !important;
+    width: 100% !important;
+    box-shadow: 0 12px 30px rgba(184, 41, 78, 0.03) !important;
+    box-sizing: border-box !important;
+}
+
+.hero .trust-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.hero .trust-icon-img {
+    font-size: 1.6rem !important;
+    color: var(--romantic-pink) !important;
+    margin-bottom: 2px !important;
+}
+
+.hero .trust-card h4 {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: #9C5A6D !important;
+    letter-spacing: 0.8px !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+}
+
+@media (max-width: 768px) {
+    .hero .trust-strip {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px 10px !important;
+        padding: 18px 12px !important;
+    }
+    .hero .trust-icon-img {
+        font-size: 1.4rem !important;
+    }
+    .hero .trust-card h4 {
+        font-size: 0.68rem !important;
     }
 }
