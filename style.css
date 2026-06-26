@@ -3403,37 +3403,44 @@ body {
 .floral-border {
     position: absolute;
     top: 0;
-    width: 320px;
-    height: auto;
+    height: 100%;
     z-index: 1;
     pointer-events: none;
+    object-fit: cover;
 }
 
-.floral-border-left {
-    left: 0;
-}
-
-.floral-border-right {
-    right: 0;
-}
-
-@media (max-width: 1200px) {
-    .floral-border {
-        width: 220px;
+/* Portrait / Mobile View */
+@media (orientation: portrait) {
+    .floral-border-left {
+        top: -5vh;
+        left: -12vh;
+        width: 40vh;
+        height: 60vh;
+        object-position: left top;
+    }
+    .floral-border-right {
+        bottom: -5vh;
+        right: -12vh;
+        width: 40vh;
+        height: 60vh;
+        object-position: right bottom;
+        top: auto; /* Overrides default top: 0 */
     }
 }
 
-@media (max-width: 768px) {
-    .floral-border {
-        width: 130px;
-        opacity: 0.8;
+/* Landscape / Desktop View */
+@media (orientation: landscape) {
+    .floral-border-left {
+        left: 0;
+        object-position: left center;
+        width: 45vh;
+        max-width: 25vw;
     }
-}
-
-@media (max-width: 480px) {
-    .floral-border {
-        width: 90px;
-        opacity: 0.75;
+    .floral-border-right {
+        right: 0;
+        object-position: right center;
+        width: 45vh;
+        max-width: 25vw;
     }
 }
 
