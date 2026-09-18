@@ -1,0 +1,64 @@
+name: SEO Health Check
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "seo-automation/**"
+      - "llms.txt"
+      - ".github/workflows/seo-health.yml"
+
+jobs:
+  seo-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: seo-automation/package-lock.json
+
+      - name: Install dependencies
+        working-directory: seo-automation
+        run: |
+          npm install
+          npm install -g vercel-seo-audit || true
+
+      - name: Run Technical + On-page Audit
+        working-directory: seo-automation
+        env:
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://thesecretflorist.in' }}
+        run: npm run audit
+
+      - name: Run Lighthouse
+        working-directory: seo-automation
+        env:
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://thesecretflorist.in' }}
+        run: npm run lighthouse
+        continue-on-error: true
+
+      - name: Keyword Tracking
+        working-directory: seo-automation
+        env:
+          SITE_URL: ${{ vars.SITE_URL || secrets.SITE_URL || 'https://thesecretflorist.in' }}
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+          GSC_PROPERTY: ${{ vars.GSC_PROPERTY || secrets.GSC_PROPERTY }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: npm run keywords
+        continue-on-error: true
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-reports-${{ github.run_number }}
+          path: seo-automation/reports/
+          retention-days: 30
