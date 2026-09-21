@@ -1,12 +1,11 @@
 const products = [
     {
         id: 1,
-        name: "001 - The First step",
+        name: "001 - The First Step",
         price: 1800,
-        image: "assets/child.webp", // Path relative to public folder
-        description: "A bouquet for your baby's birthday.",
+        image: "assets/child.webp",
+        description: "A gentle pastel floral bouquet crafted specially for a baby's first birthday celebration.",
         category: ["birthday","polaroids-bouquet"]
-        
     },
     {
         id: 2,
@@ -32,7 +31,6 @@ const products = [
         description: "A thoughtful floral arrangement crafted especially to appreciate and celebrate doctors.",
         category: "birthday"
     },
-
     {
         id: 5,
         name: "005 - Ivory Spring Vase",
@@ -47,15 +45,14 @@ const products = [
         price: 3500,
         image: "assets/7.webp",
         description: "Hand-wrapped red roses crafted to mark unforgettable moments of love.",
-        category:"wedding"
-
+        category: "wedding"
     },
     {
         id: 7,
-        name: "007 - Heart of a three hundred roses",
+        name: "007 - Heart of Three Hundred Roses",
         price: 80000,
         image: "assets/8.webp",
-        description: "A grand heart-shaped arrangement of red roses, made to express deep devotion.",
+        description: "A grand heart-shaped arrangement of 300 red roses, crafted to express deep devotion.",
         category: "luxury"
     },
     {
@@ -66,24 +63,22 @@ const products = [
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
         category: "hot-wheels"
     },
-  
     {
         id: 9,
         name: "009 - Serene Blue Bliss",
         price: 700,
         image: "assets/eleven.webp",
         description: "Elegant blue florals paired with balloons for a calm, graceful surprise.",
-        category: ["customized", "budget-friendly"]
+        category: ["customized","budget-friendly"]
     },
     {
         id: 10,
-        name: "010 - Blush celebration box",
+        name: "010 - Blush Celebration Box",
         price: 700,
         image: "assets/twelve.webp",
         description: "Soft pink florals and balloons crafted for joyful, heartfelt moments.",
-        category: ["customized", "budget-friendly"]
+        category: ["customized","budget-friendly"]
     },
-    
     {
         id: 11,
         name: "011 - Ballooned Blossom Surprise",
@@ -106,20 +101,19 @@ const products = [
         price: 700,
         image: "assets/fifteen.webp",
         description: "An intricate circular floral design crafted as a timeless showpiece.",
-        category: ["customized", "budget-friendly"]
+        category: ["customized","budget-friendly"]
     },
     {
         id: 14,
-        name: "014 - Money Bouquet",
+        name: "014 - Crisp Rupees Money Bouquet",
         price: 3500,
         image: "assets/sixteen.webp",
-        description: "A bouquet full of Rupees.",
+        description: "An impressive presentation bouquet artistically arranged with Indian rupee notes.",
         category: ["customized"]
     },
-
     {
         id: 15,
-        name: "015 - Forever us Boquet ",
+        name: "015 - Forever Us Bouquet",
         price: 3800,
         image: "assets/forever.webp",
         description: "Romantic red roses blended with photos, chocolates, and a soft keepsake for lasting memories.",
@@ -127,13 +121,12 @@ const products = [
     },
     {
         id: 16,
-        name: "016 - Memories in bloom",
+        name: "016 - Memories in Bloom",
         price: 1800,
         image: "assets/nineteen.webp",
         description: "A personalized photo bouquet woven with fresh florals to celebrate cherished moments.",
-        category: ["polaroids-bouquet", "budget-friendly"]
+        category: ["polaroids-bouquet","budget-friendly"]
     },
-   
     {
         id: 17,
         name: "017 - Golden Heart Indulgence",
@@ -156,7 +149,7 @@ const products = [
         price: 2500,
         image: "assets/23.webp",
         description: "Soft florals paired with Cadbury Dairy Milk chocolates for a sweet and charming surprise.",
-        category: "chocolate-bouquet"       
+        category: "chocolate-bouquet"
     },
     {
         id: 20,
@@ -169,9 +162,10 @@ const products = [
     {
         id: 21,
         name: "021 - Blush Tulip Whisper",
+        price: undefined,
         image: "assets/25.webp",
         description: "Soft pink and white tulips wrapped in elegance for a gentle, graceful gesture.",
-        category: ["birthday" ,"wedding"],
+        category: ["birthday","wedding"],
         prebook: true
     },
     {
@@ -180,7 +174,7 @@ const products = [
         price: 3800,
         image: "assets/26.webp",
         description: "An adorable arrangement of plush teddies crafted to spread smiles and warmth.",
-        category: ["birthday","customized", "teddy-bouquet"]
+        category: ["birthday","customized","teddy-bouquet"]
     },
     {
         id: 23,
@@ -216,486 +210,483 @@ const products = [
     },
     {
         id: 27,
-        name: "027 - The Bouquet of Strong",
-        price:1500,
-        image:"assets/31.webp",
-        description:"A bouquet of strong and powerful women",
+        name: "027 - Strength & Grace Tribute Bouquet",
+        price: 1500,
+        image: "assets/31.webp",
+        description: "A heartfelt tribute bouquet celebrating inspiring women with personalized photos, chocolates, and radiant blooms.",
         category: ["polaroids-bouquet","birthday"]
     },
     {
         id: 28,
-        name: "028 - Bouquet of Milk Beda",
-        price:700,
-        image:"assets/beda.webp",
-        description:"A bouquet  contains Milk Beda",
-        category: "budget-friendly"   
+        name: "028 - Sweet Milk Peda Bouquet",
+        price: 700,
+        image: "assets/beda.webp",
+        description: "A delightful sweet-treat bouquet featuring traditional milk pedas and wafers paired with cheerful yellow roses.",
+        category: "budget-friendly"
     },
     {
         id: 29,
         name: "029 - Red Rose Bouquet",
-        price:1200,
-        image:"assets/flo.webp",
-        description:"A timeless arrangement of deep red roses, perfect for love and special moments.",
-        category:"customized"   
+        price: 1200,
+        image: "assets/flo.webp",
+        description: "A timeless arrangement of deep red roses, perfect for love and special moments.",
+        category: "customized"
     },
     {
         id: 30,
-        name: "030 - Red Rose Bouquet with cake",
-        price:1800,
-        image:"assets/combo.webp",
-        description:"Fresh red roses paired with a delicious cake to make celebrations extra special.",
-        category:"customized"   
-    },{
-        id: 31,
-        name: "031 - 50Rs Bouquet (x100) ",
-        price:3500,
-        image:"assets/50rs.webp",
-        description:"A timeless arrangement of 50 rs note special moments.",
-        category:"money-bouquet"
+        name: "030 - Red Rose Bouquet with Cake",
+        price: 1800,
+        image: "assets/combo.webp",
+        description: "Fresh red roses paired with a delicious cake to make celebrations extra special.",
+        category: "customized"
     },
-    
+    {
+        id: 31,
+        name: "031 - 50 Rs Money Bouquet (x100)",
+        price: 3500,
+        image: "assets/50rs.webp",
+        description: "A grand arrangement featuring one hundred crisp 50-rupee notes, perfect for celebrating special moments.",
+        category: "money-bouquet"
+    },
     {
         id: 32,
-        name: "032 - 20Rs Bouquet (x100) ",
-        price:3500,
-        image:"assets/20rs.webp",
-        description:"A timeless arrangement of 20 rs note for special moments.",
-        category:"money-bouquet"
+        name: "032 - 20 Rs Money Bouquet (x100)",
+        price: 3500,
+        image: "assets/20rs.webp",
+        description: "An eye-catching arrangement featuring one hundred crisp 20-rupee notes for memorable gifting.",
+        category: "money-bouquet"
     },
-    
-    
     {
         id: 33,
-        name: "033 - Gold choco Bouquet",
-        price:5000,
-        image:"assets/gold.webp",
-        description:"A timeless arrangement of gold chocolates for special moments.",
-        category:"chocolate-bouquet"
+        name: "033 - Golden Chocolate Bouquet",
+        price: 5000,
+        image: "assets/gold.webp",
+        description: "A luxurious arrangement of premium gold-wrapped chocolates crafted for sweet celebrations.",
+        category: "chocolate-bouquet"
     },
- 
     {
         id: 34,
-        name: "034 - Hot wheels with rose",
-        price:2200,
-        image:"assets/HW.webp",
-        description:"A Bouquet contains hotwheels collections.",
-        category:"hot-wheels"
+        name: "034 - Hot Wheels & Rose Bouquet",
+        price: 2200,
+        image: "assets/HW.webp",
+        description: "A dynamic gift bouquet combining collectible Hot Wheels cars with vibrant red roses.",
+        category: "hot-wheels"
     },
     {
         id: 35,
-        name: "035 - 100Rs Bouquet (x100 with chocolates)",
-        price:4000,
-        image:"assets/100rs.webp",
-        description:"A Bouquet made up of 100rs note.",
-        category:["money-bouquet"]
+        name: "035 - 100 Rs Money Bouquet (x100 with Chocolates)",
+        price: 4000,
+        image: "assets/100rs.webp",
+        description: "An extravagant bouquet combining one hundred crisp 100-rupee notes with delicious chocolates.",
+        category: ["money-bouquet"]
     },
     {
         id: 36,
-        name: "036 - Beige polaroid Bouquet",
-        price:1200,
-        image:"assets/beige.webp",
-        description:"A Bouquet made up of polaroids.",
-        category:"polaroids-bouquet"
+        name: "036 - Beige Polaroid Memory Bouquet",
+        price: 1200,
+        image: "assets/beige.webp",
+        description: "A stylish beige-wrapped bouquet showcasing your cherished Polaroid photos amidst floral accents.",
+        category: "polaroids-bouquet"
     },
     {
         id: 37,
-        name: "037 - Red polaroid Bouquet",
-        price:1200,
-        image:"assets/red.webp",
-        description:"A Bouquet made up of polaroids.",
-        category:"polaroids-bouquet"
+        name: "037 - Red Polaroid Memory Bouquet",
+        price: 1200,
+        image: "assets/red.webp",
+        description: "A romantic red-wrapped bouquet showcasing your favorite Polaroid memories with elegant blooms.",
+        category: "polaroids-bouquet"
     },
     {
         id: 38,
         name: "038 - Forever in Bloom",
-        price:1800,
-        image:"assets/onnu.webp",
+        price: 1800,
+        image: "assets/onnu.webp",
         description: "A timeless rose bouquet capturing your love story in every frame.",
-        category: ["polaroids-bouquet", "wedding"]
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 39,
         name: "039 - Pure Moments",
-        price:2500,
-        image:"assets/rendu.webp",
-        description:"Elegant whites and heartfelt memories woven into one bouquet.",
-        category: ["polaroids-bouquet", "wedding"]
+        price: 2500,
+        image: "assets/rendu.webp",
+        description: "Elegant whites and heartfelt memories woven into one bouquet.",
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 40,
         name: "040 - Sweetheart Surprise",
-        price:3200,
-        image:"assets/moonu.webp",
-        description:"Chocolates, cuddles, and captured moments of love.",
-        category: ["polaroids-bouquet", "wedding"]
+        price: 3200,
+        image: "assets/moonu.webp",
+        description: "Chocolates, cuddles, and captured moments of love.",
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 41,
         name: "041 - Our Beautiful Journey",
-        price:1900,
-        image:"assets/naalu.webp",
-        description:"A floral celebration of family, love, and togetherness.",
-        category: ["polaroids-bouquet", "wedding"]
+        price: 1900,
+        image: "assets/naalu.webp",
+        description: "A floral celebration of family, love, and togetherness.",
+        category: ["polaroids-bouquet","wedding"]
     },
     {
         id: 42,
         name: "042 - Break for Love",
-        price:4500,
-        image:"assets/anju.webp",
-        description:"A playful bouquet packed with sweetness and smiles",
-        category: ["chocolate-bouquet", "birthday", "teddy-bouquet"]
+        price: 4500,
+        image: "assets/anju.webp",
+        description: "A playful bouquet packed with sweetness and smiles.",
+        category: ["chocolate-bouquet","birthday","teddy-bouquet"]
     },
     {
         id: 43,
         name: "043 - Luxury Celebration Bouquet",
-        price:7000,
-        image:"assets/wine.webp",
-        description:"A premium floral arrangement blending elegant roses,and wine to create a memorable experience.",
+        price: 7000,
+        image: "assets/wine.webp",
+        description: "A premium floral arrangement blending elegant roses and wine to create a memorable experience.",
         category: ["birthday","customized"]
     },
     {
         id: 44,
-        name: "044 - Hot wheels pack of 4",
-        price:3800,
-        image:"assets/hotw.webp",
-        description:"A bouquet especially made for hot wheels lovers",
-        category:"hot-wheels"
+        name: "044 - Hot Wheels Pack of 4",
+        price: 3800,
+        image: "assets/hotw.webp",
+        description: "A thrilling bouquet specially crafted for Hot Wheels fans featuring four collectible cars.",
+        category: "hot-wheels"
     },
     {
         id: 45,
-        name: "045 - Mini kitkat delight",
-        price:300,
-        image:"assets/chocor.webp",
-        description:"A small&cute bouquet of kitkat",
-        category:["chocolate-bouquet","budget-friendly"]
+        name: "045 - Mini KitKat Delight",
+        price: 300,
+        image: "assets/chocor.webp",
+        description: "A sweet, compact bouquet featuring crispy KitKat chocolate bars.",
+        category: ["chocolate-bouquet","budget-friendly"]
     },
     {
         id: 46,
-        name: "046 - Mini hot wheels pack",
-        price:800,
-        image:"assets/swheels.webp",
-        description:"A bouquet with single hotwheels ",
-        category:["hot-wheels","budget-friendly"]
+        name: "046 - Mini Hot Wheels Racer Pack",
+        price: 800,
+        image: "assets/swheels.webp",
+        description: "A charming gift bouquet featuring a collectible Hot Wheels die-cast car and floral accents.",
+        category: ["hot-wheels","budget-friendly"]
     },
     {
         id: 47,
-        name: "047 - Single rose bouquet",
-        price:100,
-        image:"assets/rose.webp",
-        description:"A bouquet made by a single rose",
-        category:"budget-friendly"
+        name: "047 - Single Rose Elegance",
+        price: 100,
+        image: "assets/rose.webp",
+        description: "A timeless, minimalist bouquet crafted with a single pristine red rose.",
+        category: "budget-friendly"
     },
     {
         id: 48,
-        name: "048 - Mini batman surprise",
-        price:900,
-        image:"assets/bat.webp",
-        description:"A bouquet of a single batman",
-        category:["hot-wheels","budget-friendly"]
+        name: "048 - Mini Batman Surprise Bouquet",
+        price: 900,
+        image: "assets/bat.webp",
+        description: "A thrilling themed bouquet featuring an authentic Batman collectible figurine.",
+        category: ["hot-wheels","budget-friendly"]
     },
     {
         id: 49,
         name: "049 - Golden Sunflower Delight",
-        price:500,
-        image:"assets/sun.webp",
-        description:"A radiant sunflower bouquet , perfect for spreading warmth and happiness.",
-        category:"budget-friendly"
+        price: 500,
+        image: "assets/sun.webp",
+        description: "A radiant sunflower bouquet, perfect for spreading warmth and happiness.",
+        category: "budget-friendly"
     },
     {
         id: 50,
         name: "050 - Crimson Rose Harmony",
-        price:500,
-        image:"assets/violet.webp",
-        description:"A romantic blend of deep red roses and soft violet blooms, crafted for heartfelt moments .",
-        category:["budget-friendly"]
+        price: 500,
+        image: "assets/violet.webp",
+        description: "A romantic blend of deep red roses and soft violet blooms, crafted for heartfelt moments.",
+        category: ["budget-friendly"]
     },
     {
         id: 51,
-        name: "051 - multi chocolates bouquet",
-        price:2000,
-        image:"assets/pika.webp",
-        description:"Chocolates with a cute pikachu",
-        category:["chocolate-bouquet"]
+        name: "051 - Multi Chocolates & Pikachu Bouquet",
+        price: 2000,
+        image: "assets/pika.webp",
+        description: "Delicious assorted chocolates paired with an adorable plush Pikachu.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 52,
-        name: "052 - Golden Memory Bouquet",
-        price:3800,
-        image:"assets/ggold.webp",
-        description:"A bouquet made up of gold chocolates and polaroids",
-        category:["chocolate-bouquet","polaroids-bouquet","birthday"]   
+        name: "052 - Golden Memory & Chocolate Bouquet",
+        price: 3800,
+        image: "assets/ggold.webp",
+        description: "A luxurious bouquet featuring golden chocolates and custom Polaroid memories.",
+        category: ["chocolate-bouquet","polaroids-bouquet","birthday"]
     },
     {
         id: 53,
         name: "053 - Sunshine Bloom Bouquet",
-        price:2500,
-        image:"assets/mary.webp",
-        description:"A bouquet made up of Bright flowers for happy moments",
-        category:["birthday"]   
+        price: 2500,
+        image: "assets/mary.webp",
+        description: "A radiant bouquet of cheerful, bright blossoms crafted for happy moments.",
+        category: ["birthday"]
     },
     {
         id: 54,
         name: "054 - Blush Chocolate Bloom",
-        price:5000,
-        image:"assets/full.webp",
-        description:"Rose wrapped in sweetness",
-        category:["chocolate-bouquet","polaroids-bouquet","customized"]   
+        price: 5000,
+        image: "assets/full.webp",
+        description: "Velvety fresh roses paired with sweet chocolates in an elegant presentation wrap.",
+        category: ["chocolate-bouquet","polaroids-bouquet","customized"]
     },
     {
         id: 55,
-        name: "055 - Munch bouquet delight",
-        price:1800,
-        image:"assets/munch.webp",
-        description:"Crunchy chocolates with blooms",
-        category:["chocolate-bouquet"]   
+        name: "055 - Munch Crunchy Delight Bouquet",
+        price: 1800,
+        image: "assets/munch.webp",
+        description: "Crunchy Nestlé Munch chocolate bars paired with delightful floral accents.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 56,
         name: "056 - Personalized Photo Flower Bouquet",
-        price:3200,
-        image:"assets/polar.webp",
-        description:"Photo framed with flowers",
-        category: ["polaroids-bouquet", "customized"]   
+        price: 3200,
+        image: "assets/polar.webp",
+        description: "A personalized floral bouquet beautifully framing your treasured photo memories.",
+        category: ["polaroids-bouquet","customized"]
     },
     {
         id: 57,
-        name: "057 - Red rose",
-        price:200,
-        image:"assets/red-rose.webp",
-        description:"A bouquet made up of chocolates and red roses",
-        category:"budget-friendly"
+        name: "057 - Red Rose & Chocolate Harmony",
+        price: 200,
+        image: "assets/red-rose.webp",
+        description: "A romantic bouquet combining classic red roses and assorted delicious chocolates.",
+        category: "budget-friendly"
     },
     {
         id: 58,
         name: "058 - Artificial Rose Bouquet",
-        price:150,
-        image:"assets/Artificial-Rose.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        price: 150,
+        image: "assets/Artificial-Rose.webp",
+        description: "A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
+        category: "budget-friendly"
     },
     {
         id: 59,
-        name: "059 - Blue Flower Bouquet",
-        price:250,
-        image:"assets/Blue-flower.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "059 - Single Pastel Blue Rose Bouquet",
+        price: 250,
+        image: "assets/Blue-flower.webp",
+        description: "A serene single pastel blue rose accented with delicate baby's breath in a minimalist cone wrap.",
+        category: "budget-friendly"
     },
     {
         id: 60,
-        name: "060 - Kitkat & galaxy Bouquet",
-        price:1500,
-        image:"assets/Chocolate-bout.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:["chocolate-bouquet"]
+        name: "060 - KitKat & Galaxy Chocolate Bouquet",
+        price: 1500,
+        image: "assets/Chocolate-bout.webp",
+        description: "Crispy KitKat bars and Galaxy Flutes paired with red roses in an elegant wrap for sweet celebrations.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 61,
-        name: "061 - Artificial Blue Rose Bouquet",
-        price:1000,
-        image:"assets/art-blue.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "061 - Royal Blue Satin Rose Bouquet",
+        price: 1000,
+        image: "assets/art-blue.webp",
+        description: "Vibrant handcrafted royal blue satin roses wrapped in stylish matte black paper with a matching satin bow.",
+        category: "budget-friendly"
     },
     {
         id: 62,
-        name: "062 - Redish Pink Rose Bouquet",
-        price:1000,
-        image:"assets/5-rose.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "062 - Five Satin Rose Elegance Bouquet",
+        price: 1000,
+        image: "assets/5-rose.webp",
+        description: "A graceful arrangement of five handcrafted satin roses wrapped in frosted paper with a rich satin ribbon.",
+        category: "budget-friendly"
     },
     {
         id: 63,
-        name: "063 - Elegant Rose Bouquet",
-        price:500,
-        image:"assets/Elegant-Rose.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "063 - Noir Red Rose Duo Bouquet",
+        price: 500,
+        image: "assets/Elegant-Rose.webp",
+        description: "Two velvety red roses with baby's breath, wrapped in sophisticated matte black paper with golden trim.",
+        category: "budget-friendly"
     },
     {
         id: 64,
-        name: "064 - Purple blue Rose Bouquet",
-        price:500,
-        image:"assets/ench-blue.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly",
+        name: "064 - Enchanted Purple Orchid Bouquet",
+        price: 500,
+        image: "assets/ench-blue.webp",
+        description: "Exquisite purple orchids arranged with fresh greens in a layered lilac wrap tied with a delicate cord bow.",
+        category: "budget-friendly",
         prebook: true
     },
     {
         id: 65,
-        name: "065 - White theme Rose Bouquet",
-        price:180,
-        image:"assets/white-backrose.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "065 - Frosted White Single Red Rose",
+        price: 180,
+        image: "assets/white-backrose.webp",
+        description: "A classic single red rose crowned with baby's breath, presented in a crisp frosted white wrap.",
+        category: "budget-friendly"
     },
     {
         id: 66,
-        name: "066 - Eternal Rose Bouquet",
-        price:180,
-        image:"assets/Eternal-Rose.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "066 - Eternal Satin Rose Bouquet",
+        price: 180,
+        image: "assets/Eternal-Rose.webp",
+        description: "A handcrafted everlasting red satin rose wrapped in blush and gold-bordered paper with a red ribbon.",
+        category: "budget-friendly"
     },
     {
         id: 67,
-        name: "067 - Earing Bouquet",
-        price:500,
-        image:"assets/Grab.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "067 - Traditional Earring Gift Bouquet",
+        price: 500,
+        image: "assets/Grab.webp",
+        description: "An adorable gift bouquet presenting gorgeous traditional earrings on a personalized portrait card.",
+        category: "budget-friendly"
     },
     {
         id: 68,
-        name: "068 - Pure Love Bouquet",
-        price:500,
-        image:"assets/pec.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "068 - Pure Love Rose Bouquet",
+        price: 500,
+        image: "assets/pec.webp",
+        description: "Fresh red roses surrounded by abundant baby's breath, gracefully wrapped in pastel pink paper.",
+        category: "budget-friendly"
     },
     {
         id: 69,
-        name: "069 - Kinder Joy Bouquet",
-        price:180,
-        image:"assets/Kinder-joy.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:["budget-friendly","chocolate-bouquet"]
+        name: "069 - Mini Kinder Joy Surprise Bouquet",
+        price: 180,
+        image: "assets/Kinder-joy.webp",
+        description: "An adorable mini bouquet featuring a Kinder Joy treat nestled in delicate baby's breath and tied with a red ribbon.",
+        category: ["budget-friendly","chocolate-bouquet"]
     },
     {
         id: 70,
-        name: "070 - Mini Flower Bouquet",
-        price:300,
-        image:"assets/Mini-flower.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "070 - Petite Crimson Rose Bouquet",
+        price: 300,
+        image: "assets/Mini-flower.webp",
+        description: "A charming mini bouquet featuring vibrant red blooms accented with baby's breath and a red ribbon.",
+        category: "budget-friendly"
     },
     {
         id: 71,
-        name: "071 - Sunflower Bouquet",
-        price:800,
-        image:"assets/Simple-sun.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "071 - Rustic Sunflower Duo Bouquet",
+        price: 800,
+        image: "assets/Simple-sun.webp",
+        description: "Radiant sunflowers paired with delicate baby's breath in a warm, rustic kraft paper wrap.",
+        category: "budget-friendly"
     },
     {
         id: 72,
-        name: "072 - Lays snack Bouquet",
-        price:1000,
-        image:"assets/Snack-attack.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "072 - Lay's Snack Attack Bouquet",
+        price: 1000,
+        image: "assets/Snack-attack.webp",
+        description: "A fun and crunchy bouquet packed with Lay's potato chips and Pringles for ultimate snack lovers.",
+        category: "budget-friendly"
     },
     {
         id: 73,
-        name: "073 - Gerbera daisy bouquet",
-        price:500,
-        image:"assets/pink-sunflower.webp",
-        description:"A grand bouquet of 100 artificial roses, crafted for everlasting beauty and unforgettable moments.",
-        category:"budget-friendly"
+        name: "073 - Pink Gerbera Daisy Bouquet",
+        price: 500,
+        image: "assets/pink-sunflower.webp",
+        description: "Charming pink gerbera daisies accented with baby's breath and wrapped in elegant pastel pink paper with gold borders.",
+        category: "budget-friendly"
     },
     {
         id: 74,
         name: "074 - Royal Red Anniversary Bouquet",
-        price:8500,
-        image:"assets/anniversary.webp",
-        description:"A luxurious heart of premium red roses crowned with elegance — crafted to celebrate timeless love.",
-        category:["wedding"]
+        price: 8500,
+        image: "assets/anniversary.webp",
+        description: "A luxurious heart of premium red roses crowned with elegance — crafted to celebrate timeless love.",
+        category: ["wedding"]
     },
     {
         id: 75,
         name: "075 - Blush Romance Box",
-        price:50000,
-        image:"assets/cake.webp",
-        description:"A stunning gradient of red, pink, and white roses arranged in a luxury round box.",
+        price: 50000,
+        image: "assets/cake.webp",
+        description: "A stunning gradient of red, pink, and white roses arranged in a luxury round box.",
         category: ["luxury"]
     },
     {
         id: 76,
         name: "076 - Scarlet Birthday Bloom",
-        price:3500,
-        image:"assets/custom.webp",
-        description:"Deep red roses wrapped in elegance",
+        price: 3500,
+        image: "assets/custom.webp",
+        description: "Deep red roses wrapped in elegant black paper, perfect for birthdays and milestones.",
         category: ["birthday"]
     },
     {
         id: 77,
         name: "077 - Golden Heart Delight",
-        price:80000,
-        image:"assets/chocorose.webp",
-        description:"Premium red roses surrounding a heart of Ferrero delights",
-        category:["luxury","chocolate-bouquet"]
+        price: 80000,
+        image: "assets/chocorose.webp",
+        description: "Premium red roses surrounding a heart of Ferrero Rocher delights for a rich romantic gesture.",
+        category: ["luxury","chocolate-bouquet"]
     },
     {
         id: 78,
         name: "078 - Pastel Garden Symphony",
-        price:2500,
-        image:"assets/enchant.webp",
-        description:"A vibrant harmony of roses and seasonal blooms",
-        category:"birthday"
+        price: 2500,
+        image: "assets/enchant.webp",
+        description: "A vibrant harmony of fresh roses and seasonal blooms arranged in soft pastel hues.",
+        category: "birthday"
     },
     {
         id: 79,
         name: "079 - Midnight Glow Elegance",
-        price:4500,
-        image:"assets/lflow.webp",
-        description:"Soft ivory roses wrapped in black luxury paper and illuminated with warm fairy lights",
-        category:"birthday"
+        price: 4500,
+        image: "assets/lflow.webp",
+        description: "Soft ivory roses wrapped in black luxury paper and illuminated with warm fairy lights.",
+        category: "birthday"
     },
     {
         id: 80,
         name: "080 - Heart Within Heart",
-        price:80000,
-        image:"assets/yrose.webp",
-        description:"A bold sea of red roses embracing a white heart — designed to say “You are my everything.”",
-        category:"luxury"
+        price: 80000,
+        image: "assets/yrose.webp",
+        description: "A bold sea of red roses embracing a white heart — designed to say \\\"You are my everything\\\".",
+        category: "luxury"
     },
     {
         id: 81,
         name: "081 - Blushing Grace",
-        price:4200,
-        image:"assets/pinkr.webp",
-        description:"Delicate pink roses wrapped in pastel elegance",
-        category:["birthday","wedding"]
+        price: 4200,
+        image: "assets/pinkr.webp",
+        description: "Delicate pink roses wrapped in pastel elegance, expressing gentle affection and grace.",
+        category: ["birthday","wedding"]
     },
     {
         id: 82,
         name: "082 - Crimson Celebration Wrap",
-        price:10500,
-        image:"assets/brose.webp",
-        description:"A dramatic black wrap filled with premium red roses",
-        category:["luxury","birthday"]
+        price: 10500,
+        image: "assets/brose.webp",
+        description: "A dramatic black wrap filled with premium red roses, designed for bold romantic declarations.",
+        category: ["luxury","birthday"]
     },
     {
         id: 83,
         name: "083 - The Grand Passion Dome",
-        price:100000,
-        image:"assets/arab.webp",
-        description:"An extravagant dome of handpicked red roses",
-        category:"luxury"
+        price: 100000,
+        image: "assets/arab.webp",
+        description: "An extravagant dome of handpicked red roses, making a grand and passionate statement.",
+        category: "luxury"
     },
     {
         id: 84,
-        name: "084 - Blush pink delight",
-        price:3500,
-        image:"assets/pink.webp",
-        description:"An extravagant working of blush rose",
-        category:"birthday"
+        name: "084 - Blush Pink Delight",
+        price: 3500,
+        image: "assets/pink.webp",
+        description: "An extravagant and delicate arrangement of blush pink roses wrapped in soft elegance.",
+        category: "birthday"
     },
     {
         id: 87,
-        name: "087 - Forever rose bouqet",
+        name: "087 - Forever Rose Bouquet",
         price: 400,
         image: "assets/roseeter.webp",
-        description: "Thoughtful gift for special moments.",
+        description: "A thoughtful, everlasting rose gift designed to cherish unforgettable moments.",
         category: "budget-friendly"
     },
     {
         id: 88,
-        name: "088 - Pink Rose paper bouquet",
+        name: "088 - Pink Rose Paper Bouquet",
         price: 500,
         image: "assets/ribbonr.webp",
-        description: "Elegant handcrafted paper roses with butterfly accent.",
+        description: "Elegant handcrafted paper roses adorned with delicate butterfly accents.",
         category: "budget-friendly"
     },
     {
@@ -703,15 +694,15 @@ const products = [
         name: "089 - Little Racer Surprise",
         price: 2200,
         image: "assets/teddywheel.webp",
-        description: "Cute teddy with Hot Wheels and blue roses.",
-        category: ["hot-wheels", "teddy-bouquet"]
+        description: "A cute plush teddy paired with Hot Wheels cars and cool blue roses.",
+        category: ["hot-wheels","teddy-bouquet"]
     },
     {
         id: 93,
         name: "093 - Rosy Chocolate Delight",
         price: 1500,
         image: "assets/pinkrose.webp",
-        description: "Fresh pink roses paired with premium chocolates.",
+        description: "Fresh pink roses paired with premium chocolates for a delightfully sweet surprise.",
         category: ["chocolate-bouquet"]
     },
     {
@@ -719,7 +710,7 @@ const products = [
         name: "094 - Lavender Whisper",
         price: 500,
         image: "assets/purple.webp",
-        description: "Single handcrafted rose with elegant wrap.",
+        description: "A single handcrafted lavender rose enveloped in an elegant presentation wrap.",
         category: "budget-friendly"
     },
     {
@@ -727,15 +718,15 @@ const products = [
         name: "096 - Speed & Sweetness",
         price: 1600,
         image: "assets/HOT.webp",
-        description: "Hot Wheels toy with chocolates and blue roses.",
+        description: "A thrilling Hot Wheels car paired with delicious chocolates and blue roses.",
         category: ["hot-wheels"]
     },
     {
         id: 97,
-        name: "097 - Saiyan Bloom",
+        name: "097 - Saiyan Warrior Bloom",
         price: 450,
         image: "assets/goku.webp",
-        description: "Bouquet inspired from our sayan kakarot.",
+        description: "An anime-inspired bouquet celebrating the legendary Saiyan spirit of Kakarot.",
         category: "budget-friendly"
     },
     {
@@ -743,7 +734,7 @@ const products = [
         name: "099 - Basket of Love",
         price: 4200,
         image: "assets/basket.webp",
-        description: "Fresh red roses in a classic wicker basket.",
+        description: "Fresh red roses arranged with greenery in a classic wicker basket.",
         category: ["birthday"]
     },
     {
@@ -751,7 +742,7 @@ const products = [
         name: "100 - Royal Love Mix",
         price: 3800,
         image: "assets/yrrose.webp",
-        description: "Vibrant roses wrapped with festive elegance.",
+        description: "Vibrant assorted roses wrapped with festive elegance for celebratory occasions.",
         category: ["birthday"]
     },
     {
@@ -759,7 +750,7 @@ const products = [
         name: "101 - Rustic Red Rose Bouquet",
         price: 1000,
         image: "assets/abc.webp",
-        description: "Dried red roses wrapped in earthy charm.",
+        description: "Earthy dried red roses wrapped in rustic charm for a vintage romantic feel.",
         category: "budget-friendly"
     },
     {
@@ -767,7 +758,7 @@ const products = [
         name: "102 - Yellow Single Rose Bouquet",
         price: 300,
         image: "assets/smallrose.webp",
-        description: "Single yellow rose in premium black wrap.",
+        description: "A single radiant yellow rose styled in a premium black wrap for friendship and joy.",
         category: "budget-friendly"
     },
     {
@@ -783,11 +774,9 @@ const products = [
         name: "104 - Classic White Rose Wedding Bouquet",
         price: 3500,
         image: "assets/wed1.webp",
-        description: "A beautiful classic white rose wedding bouquet beautifully wrapped.",
+        description: "A classic bridal bouquet of pristine white roses beautifully wrapped for wedding ceremonies.",
         category: "wedding"
     },
-    
-
     {
         id: 105,
         name: "105 - Rustic Autumn Rose Bouquet",
@@ -796,7 +785,6 @@ const products = [
         description: "A rustic autumn wedding bouquet with dried wheat and orange roses.",
         category: ["wedding"]
     },
-   
     {
         id: 106,
         name: "106 - Blue Hydrangea Maska Bouquet",
@@ -823,618 +811,611 @@ const products = [
     },
     {
         id: 109,
-        name: "109 - Ramzan Themed Bouquet",
-        price:3200,
-        image:"assets/ramzan.webp",
-        description:"A fantabulous money bouquet for ramzan",
-        category:["money-bouquet"]
+        name: "109 - Ramzan Celebration Money Bouquet",
+        price: 3200,
+        image: "assets/ramzan.webp",
+        description: "A grand money bouquet beautifully crafted for festive Ramzan celebrations.",
+        category: ["money-bouquet"]
     },
     {
         id: 110,
         name: "110 - Midnight Racer's Dream",
-        price:3800,
-        image:"assets/hotw1.webp",
-        description:"A stunning black-wrapped bouquet featuring delicate baby's breath and a collection of classic Hot Wheels cars.",
-        category:["hot-wheels"]
+        price: 3800,
+        image: "assets/hotw1.webp",
+        description: "A stunning black-wrapped bouquet featuring delicate baby's breath and a collection of classic Hot Wheels cars.",
+        category: ["hot-wheels"]
     },
     {
         id: 111,
         name: "111 - Azure Porsche Elegance",
-        price:2000,
-        image:"assets/hotw2.webp",
-        description:"Vibrant blue roses paired with a sleek Porsche model, wrapped in elegant translucent layers with a butterfly accent.",
-        category:["hot-wheels"]
+        price: 2000,
+        image: "assets/hotw2.webp",
+        description: "Vibrant blue roses paired with a sleek Porsche model, wrapped in elegant translucent layers with a butterfly accent.",
+        category: ["hot-wheels"]
     },
     {
         id: 112,
         name: "112 - Romantic Speedway Memories",
-        price:3200,
-        image:"assets/hotw3.webp",
-        description:"Beautiful red roses combined with custom Polaroid memories and fast Hot Wheels cars, perfect for your loved one.",
-        category:["hot-wheels"]
+        price: 3200,
+        image: "assets/hotw3.webp",
+        description: "Beautiful red roses combined with custom Polaroid memories and fast Hot Wheels cars, perfect for your loved one.",
+        category: ["hot-wheels"]
     },
     {
         id: 113,
         name: "113 - Royal Blue Crowned Racer",
-        price:2200,
-        image:"assets/hotw4.webp",
-        description:"An impressive arrangement of deep blue roses starring a golden crown and exclusive white/silver Hot Wheels models.",
-        category:["hot-wheels"]
+        price: 2200,
+        image: "assets/hotw4.webp",
+        description: "An impressive arrangement of deep blue roses starring a golden crown and exclusive white/silver Hot Wheels models.",
+        category: ["hot-wheels"]
     },
     {
         id: 114,
         name: "114 - Skyline Track Bouquet",
-        price:4500,
-        image:"assets/hot5.webp",
-        description:"A large sky-blue presentation featuring an exciting collection of Hot Wheels cars nestled among white and blue premium roses.",
-        category:["hot-wheels"]
+        price: 4500,
+        image: "assets/hot5.webp",
+        description: "A large sky-blue presentation featuring an exciting collection of Hot Wheels cars nestled among white and blue premium roses.",
+        category: ["hot-wheels"]
     },
     {
         id: 115,
         name: "115 - Sweet Speed Chocolate Mix",
-        price:2500,
-        image:"assets/hot6.webp",
-        description:"The ultimate combo of popular chocolate bars (Snickers, M&Ms) and colorful Hot Wheels cars in a lovely mint wrap.",
-        category:["hot-wheels"]
+        price: 2500,
+        image: "assets/hot6.webp",
+        description: "The ultimate combo of popular chocolate bars (Snickers, M&Ms) and colorful Hot Wheels cars in a lovely mint wrap.",
+        category: ["hot-wheels"]
     },
     {
         id: 116,
         name: "116 - Blue Rose Hot Wheels Bouquet",
-        price:3200,
-        image:"assets/hot7.webp",
-        description:"Bold blue roses wrapped with a sleek Hot Wheels car — a must-have for every car lover.",
-        category:["hot-wheels"]
+        price: 3200,
+        image: "assets/hot7.webp",
+        description: "Bold blue roses wrapped with a sleek Hot Wheels car — a must-have for every car lover.",
+        category: ["hot-wheels"]
     },
     {
         id: 117,
         name: "117 - Fast & Furious Special Bouquet",
-        price:4000,
-        image:"assets/hot8.webp",
-        description:"Speed meets style — a dramatic bouquet featuring exclusive Fast & Furious Hot Wheels cars.",
-        category:["hot-wheels"]
+        price: 4000,
+        image: "assets/hot8.webp",
+        description: "Speed meets style — a dramatic bouquet featuring exclusive Fast & Furious Hot Wheels cars.",
+        category: ["hot-wheels"]
     },
     {
         id: 118,
         name: "118 - Black Theme Hot Wheels Bouquet",
-        price:1200,
-        image:"assets/hot9.webp",
-        description:"Sleek black-wrapped bouquet featuring classic Hot Wheels cars for the ultimate car enthusiast.",
-        category:["hot-wheels"]
+        price: 1200,
+        image: "assets/hot9.webp",
+        description: "Sleek black-wrapped bouquet featuring classic Hot Wheels cars for the ultimate car enthusiast.",
+        category: ["hot-wheels"]
     },
     {
         id: 119,
         name: "119 - Retro Gold Speedway",
-        price:1200,
-        image:"assets/hot10.webp",
-        description:"Retro-style Hot Wheels cars gracefully paired with bright blue roses and wrapped in luxurious gold-accented paper.",
-        category: ["hot-wheels", "customized"]
+        price: 1200,
+        image: "assets/hot10.webp",
+        description: "Retro-style Hot Wheels cars gracefully paired with bright blue roses and wrapped in luxurious gold-accented paper.",
+        category: ["hot-wheels","customized"]
     },
     {
         id: 120,
         name: "120 - Hot Wheels Rose Special Bouquet",
-        price:3500,
-        image:"assets/hot11.webp",
-        description:"A special bouquet pairing vibrant roses with exciting Hot Wheels cars for a unique gift.",
-        category:["hot-wheels"]
+        price: 3500,
+        image: "assets/hot11.webp",
+        description: "A special bouquet pairing vibrant roses with exciting Hot Wheels cars for a unique gift.",
+        category: ["hot-wheels"]
     },
     {
         id: 121,
-        name: "121 - Money bouquet with 100rs note (x50 blue rose)",
-        price:2800,
-        image:"assets/100rupeeblue.webp",
-        description:"A money bouquet made up of 100rs notes",
-        category:["money-bouquet"]
+        name: "121 - 100 Rs Money Bouquet with Blue Roses (x50)",
+        price: 2800,
+        image: "assets/100rupeeblue.webp",
+        description: "An impressive bouquet combining fifty crisp 100-rupee notes with striking blue roses.",
+        category: ["money-bouquet"]
     },
     {
         id: 122,
-        name: "122 - Choco Delight bouquet",
-        price:3500,
-        image:"assets/allcho2.jpeg",
-        description:"All chocolates with love",
-        category:["chocolate-bouquet"]
+        name: "122 - Choco Delight Bouquet",
+        price: 3500,
+        image: "assets/allcho2.jpeg",
+        description: "A delicious assortment of favorite chocolates beautifully wrapped for any sweet occasion.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 123,
-        name: "123 - All chocolates bouquet",
-        price:2800,
-        image:"assets/allchocolate.jpeg",
-        description:"All chocolates with love",
-        category:["chocolate-bouquet"]
+        name: "123 - All Chocolates Grand Bouquet",
+        price: 2800,
+        image: "assets/allchocolate.jpeg",
+        description: "A rich collection of assorted gourmet chocolates arranged with love in elegant packaging.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 124,
-        name: "124 - Lotte choco pie bouquet",
-        price:2000,
-        image:"assets/choco_pie.jpeg",
-        description:"Soft and delicious choco pie bouquet",
-        category:["chocolate-bouquet"]
+        name: "124 - Lotte Choco Pie Bouquet",
+        price: 2000,
+        image: "assets/choco_pie.jpeg",
+        description: "A fun and sweet bouquet packed with soft, marshmallow-filled Lotte Choco Pies.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 125,
-        name: "125 - Kitkat & silk bouquet",
-        price:3000,
-        image:"assets/kitkat&silk.jpeg",
-        description:"A bouquet of kitkat and silk chocolates",
-        category:["chocolate-bouquet"]
+        name: "125 - KitKat & Silk Chocolate Bouquet",
+        price: 3000,
+        image: "assets/kitkat&silk.jpeg",
+        description: "A luscious combination of crispy KitKat bars and velvety Cadbury Dairy Milk Silk.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 126,
-        name: "126 - Simple dairy milk bouquet",
-        price:350,
-        image:"assets/ruba.jpeg",
-        description:"A simple bouquet of dairy milk chocolates",
-        category:["budget-friendly", "chocolate-bouquet"]
+        name: "126 - Classic Dairy Milk Bouquet",
+        price: 350,
+        image: "assets/ruba.jpeg",
+        description: "A timeless chocolate bouquet filled with beloved Cadbury Dairy Milk bars.",
+        category: ["budget-friendly","chocolate-bouquet"]
     },
     {
         id: 127,
-        name: "127 - 50 rs heart design bouquet (x50)",
-        price:2800,
-        image:"assets/50rs heart design.webp",
-        description:"A bouquet made up of 50 rs notes in heart design",
-        category:["money-bouquet"]
+        name: "127 - 50 Rs Heart Design Money Bouquet (x50)",
+        price: 2800,
+        image: "assets/50rs heart design.webp",
+        description: "A creative money bouquet artistically shaped into a heart using fifty crisp 50-rupee notes.",
+        category: ["money-bouquet"]
     },
     {
         id: 128,
-        name: "128 - 50 rs red rose bouquet",
-        price:1400,
-        image:"assets/50rs_with red rose.webp",
-        description:"A bouquet made up of 50 rs notes with red roses",
-        category:["money-bouquet"]
+        name: "128 - 50 Rs Money Bouquet with Red Roses",
+        price: 1400,
+        image: "assets/50rs_with red rose.webp",
+        description: "A romantic arrangement blending fresh red roses with crisp 50-rupee currency notes.",
+        category: ["money-bouquet"]
     },
     {
         id: 129,
-        name: "129 - all ind currency bouquet",
-        price:1200,
-        image:"assets/All rs whiteflower.webp",
-        description:"A bouquet made up of all Indian currency notes with white flowers",
-        category:["money-bouquet","customized"]
+        name: "129 - All Indian Currency & White Flower Bouquet",
+        price: 1200,
+        image: "assets/All rs whiteflower.webp",
+        description: "A grand celebration bouquet featuring diverse Indian currency denominations paired with white florals.",
+        category: ["money-bouquet","customized"]
     },
     {
         id: 130,
-        name: "130 - Apt 50 Rupees Cash Bouquet",
-        price:900,
-        image:"assets/money1.webp",
-        description:"money gives you happyness",
-        category:["money-bouquet", "budget-friendly","customized"]
+        name: "130 - Currency & Crimson Roses Money Bouquet",
+        price: 900,
+        image: "assets/money1.webp",
+        description: "An elegant combination of folded 50 and 100 rupee notes accented with rich red roses in a luxury black wrap.",
+        category: ["money-bouquet","budget-friendly","customized"]
     },
     {
         id: 131,
-        name: "131 - Luxury Currency & Rose Arrangement",
-        price:3500,
-        image:"assets/money2.webp",
-        description:"love is blind",
-        category:["money-bouquet","customized"]
+        name: "131 - Currency Mandala & Glitter Rose Bouquet",
+        price: 3500,
+        image: "assets/money2.webp",
+        description: "A magnificent radial money mandala crafted with multi-denomination notes and a shimmering glitter rose center.",
+        category: ["money-bouquet","customized"]
     },
     {
         id: 132,
-        name: "132 - Mega Money & Chocolate Display",
-        price:6300,
-        image:"assets/money3.webp",
-        description:"always you are my favourite",
-        category:["money-bouquet","chocolate-bouquet","customized"]
+        name: "132 - KitKat & Cash Celebration Cake",
+        price: 6300,
+        image: "assets/money3.webp",
+        description: "A tiered celebration arrangement featuring KitKat bars, rolled 50-rupee notes, and a lush crown of peach and pink roses.",
+        category: ["money-bouquet","chocolate-bouquet","customized"]
     },
     {
         id: 133,
-        name: "133 - Elegant Currency Bloom",
-        price:2300,
-        image:"assets/money4.webp",
-        description:"always want more flowers",
-        category:["money-bouquet","customized"]
+        name: "133 - Crimson Roses & 200 Rupees Cash Bouquet",
+        price: 2300,
+        image: "assets/money4.webp",
+        description: "Vibrant red roses artistically woven with folded 200-rupee notes in a dramatic black presentation wrap.",
+        category: ["money-bouquet","customized"]
     },
     {
         id: 134,
-        name: "134 - Stunning Cash & Floral Surprise (x100)",
-        price:4000,
-        image:"assets/money5.webp",
-        description:"everyone is deponds on love ",
-        category:["money-bouquet"]
+        name: "134 - Grand 100 Notes Cash Bloom Bouquet",
+        price: 4000,
+        image: "assets/money5.webp",
+        description: "A spectacular grand starburst bouquet featuring 100 folded currency notes centered with vibrant red roses.",
+        category: ["money-bouquet"]
     },
     {
         id: 135,
-        name: "135 - Trending 100 Rupees Cash Bouquet(x20) ",
-        price:800,
-        image:"assets/trending 100rs bouquet.webp",
-        description:"a bouquet made up of 100 rs notes",
-        category: ["money-bouquet", "budget-friendly", "customized"]
+        name: "135 - Trending 100 Rupees Cash Bouquet (x20)",
+        price: 800,
+        image: "assets/trending 100rs bouquet.webp",
+        description: "A trending money bouquet crafted with twenty crisp 100-rupee notes and tasteful accents.",
+        category: ["money-bouquet","budget-friendly","customized"]
     },
     {
         id: 136,
-        name: "136 - Premium 500 Rupees Money Bouquet(x20)",
-        price:1000,
-        image:"assets/500rs money bouquet.webp",
-        description:"a bouquet made up of 500 rs notes",
-        category: ["money-bouquet", "budget-friendly", "customized"]
+        name: "136 - Premium 500 Rupees Money Bouquet (x20)",
+        price: 1000,
+        image: "assets/500rs money bouquet.webp",
+        description: "A luxurious money bouquet crafted with twenty pristine 500-rupee notes in an opulent wrap.",
+        category: ["money-bouquet","budget-friendly","customized"]
     },
     {
         id: 137,
-        name: "137 - Hot Wheels & Cap Combo Bouquet",
-        price:3500,
-        image:"assets/hotwheel cap.webp",
-        description:"a bouquet made up of hotwheel with a caps",
-        category:["hot-wheels"]
+        name: "137 - Hot Wheels & LA Cap Combo Bouquet",
+        price: 3500,
+        image: "assets/hotwheel cap.webp",
+        description: "A stylish streetwear gift bouquet featuring an authentic LA cap, collectible Hot Wheels cars, and handcrafted red satin roses.",
+        category: ["hot-wheels"]
     },
     {
         id: 138,
-        name: "138 - Hot Wheels & Sunflowers Array",
-        price:2200,
-        image:"assets/hotwheels sun.webp",
-        description:"a bouquet made up of hotwheel with a sunflower",
-        category:["hot-wheels"]
+        name: "138 - Hot Wheels & Sunflower Kraft Bouquet",
+        price: 2200,
+        image: "assets/hotwheels sun.webp",
+        description: "A vibrant arrangement pairing a cheerful sunflower with Hot Wheels cars and chocolates in a rustic kraft wrap.",
+        category: ["hot-wheels"]
     },
     {
         id: 139,
-        name: "139 - Nike Lover's Gift Bouquet",
-        price:1900,
-        image:"assets/nick gift bouquet.webp",
-        description:"nike gift bouquet for all the nike lovers",
-        category:["birthday","customized"]
+        name: "139 - Nike Streetwear & Cap Gift Bouquet",
+        price: 1900,
+        image: "assets/nick gift bouquet.webp",
+        description: "An ultimate streetwear gift bouquet featuring authentic Nike accessories, rolled crew socks, and an LA cap.",
+        category: ["birthday","customized"]
     },
     {
         id: 140,
-        name: "140 - Hot Wheels & Hershey's Delight",
-        price:3500,
-        image:"assets/hw hersheys.webp",
-        description:"a bouquet made up of hotwheel with a hersheys chocolates",
-        category:["hot-wheels"]
+        name: "140 - Hot Wheels & Hershey's Gift Hamper",
+        price: 3500,
+        image: "assets/hw hersheys.webp",
+        description: "An exciting gift hamper filled with Hot Wheels cars, Hershey's chocolates, red roses, and a picture frame.",
+        category: ["hot-wheels"]
     },
     {
         id: 141,
         name: "141 - Mixed Indian Currency Bouquet",
-        price:3500,
-        image:"assets/all rs.webp",
-        description:"All Indian currency notes with flowers",
-        category:["money-bouquet","customized"]
+        price: 3500,
+        image: "assets/all rs.webp",
+        description: "A lavish money bouquet combining various Indian currency denominations with vibrant blooms.",
+        category: ["money-bouquet","customized"]
     },
     {
         id: 142,
-        name: "142 - Elegant 500 Rupees Floral Cash",
-        price:3500,
-        image:"assets/500 only.webp",
-        description:"500 rs bouquet with flowers",
-        category:["money-bouquet"]
+        name: "142 - Elegant 500 Rupees Floral Cash Bouquet",
+        price: 3500,
+        image: "assets/500 only.webp",
+        description: "An opulent floral cash bouquet featuring pristine 500-rupee notes paired with elegant floral accents.",
+        category: ["money-bouquet"]
     },
     {
         id: 143,
-        name: "143 - Couples Hot Wheels & Kinder Joy",
-        price:1800,
-        image:"assets/couple bouquet.webp",
-        description:"a bouquet two bouquets hotwheels & kinderjoy for couples",
-        category:["hot-wheels","chocolate-bouquet"]
+        name: "143 - His & Hers Hot Wheels & Kinder Joy Twin Bouquet",
+        price: 1800,
+        image: "assets/couple bouquet.webp",
+        description: "A delightful couple's twin bouquet set pairing a blue Hot Wheels bouquet with a sweet pink Kinder Joy arrangement.",
+        category: ["hot-wheels","chocolate-bouquet"]
     },
     {
         id: 144,
-        name: "144 - Miniature Bike Lovers Bouquet",
-        price:5200,
-        image:"assets/bike bouquet.webp",
-        description:"a bouquet whit a bike in the middle for bike lovers",
-        category:["birthday"]
+        name: "144 - Superbike Enthusiast Floral Bouquet",
+        price: 5200,
+        image: "assets/bike bouquet.webp",
+        description: "An extraordinary tribute bouquet showcasing a die-cast superbike model surrounded by bold red roses and a radiant sunflower.",
+        category: ["birthday"]
     },
     {
         id: 145,
-        name: "145 - Vibrant Red Hot Wheels Wrap",
-        price:3800,
-        image:"assets/red hw.webp",
-        description:"a bouquet made up of red hotwheels",
-        category:["hot-wheels"]
+        name: "145 - Red Hot Wheels & Satin Roses Wrap",
+        price: 3800,
+        image: "assets/red hw.webp",
+        description: "A bold black-wrapped bouquet showcasing red Hot Wheels cars, red satin roses, and white floral accents.",
+        category: ["hot-wheels"]
     },
     {
         id: 146,
-        name: "146 - Spider-Man Hot Wheels Collection",
-        price:4200,
-        image:"assets/hw with spiderman.webp",
-        description:"a bouquet made up of hotwheels with spiderman",
-        category:["hot-wheels"]
+        name: "146 - Spider-Man & Hot Wheels Action Bouquet",
+        price: 4200,
+        image: "assets/hw with spiderman.webp",
+        description: "An action-packed bouquet featuring a Spider-Man plush, Hot Wheels cars, Hershey's bars, and blue satin roses.",
+        category: ["hot-wheels"]
     },
     {
         id: 147,
         name: "147 - Premium Polaroids & Floral Bouquet",
-        price:2800,
-        image:"assets/pola1.webp",
-        description:"A luxurious bouquet featuring photos, small gifts, and floral elements, making it a complete surprise package.",
-        category:["polaroids-bouquet", "customized"]
+        price: 2800,
+        image: "assets/pola1.webp",
+        description: "A luxurious bouquet featuring photos, small gifts, and floral elements, making it a complete surprise package.",
+        category: ["polaroids-bouquet","customized"]
     },
     {
         id: 148,
         name: "148 - Black-Themed Chocolate & Photo Bouquet",
-        price:1500,
-        image:"assets/pola2.webp",
-        description:"A unique black-themed bouquet combining chocolates and photo memories, perfect for gifting with a sweet twist.",
-        category:["polaroids-bouquet"]
-     },
-     {
+        price: 1500,
+        image: "assets/pola2.webp",
+        description: "A unique black-themed bouquet combining chocolates and photo memories, perfect for gifting with a sweet twist.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 149,
         name: "149 - Blush Pink Romance Photo Bouquet",
-        price:2800,
-        image:"assets/pola3.webp",
-        description:"A soft pink bouquet decorated with photos and delicate flowers, ideal for romantic occasions.",
-        category:["polaroids-bouquet"]
-     },
-     {
+        price: 2800,
+        image: "assets/pola3.webp",
+        description: "A soft pink bouquet decorated with photos and delicate flowers, ideal for romantic occasions.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 150,
         name: "150 - Minimalist Black Polaroid Bouquet",
-        price:500,
-        image:"assets/pola4.webp",
-        description:"A minimal yet stylish black wrap bouquet with neatly arranged memories for a modern look.",
-        category: ["polaroids-bouquet", "budget-friendly"]
-     },
-     {
+        price: 500,
+        image: "assets/pola4.webp",
+        description: "A minimal yet stylish black wrap bouquet with neatly arranged memories for a modern look.",
+        category: ["polaroids-bouquet","budget-friendly"]
+    },
+    {
         id: 151,
         name: "151 - Deluxe Colorful Photo Celebration",
-        price:3200,
-        image:"assets/pola5.webp",
-        description:"A rich and colorful bouquet packed with photos and decorative elements, perfect for big celebrations.",
-        category:["polaroids-bouquet"]
-     },
-     {
+        price: 3200,
+        image: "assets/pola5.webp",
+        description: "A rich and colorful bouquet packed with photos and decorative elements, perfect for big celebrations.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 152,
         name: "152 - Red Ribbon Polaroid Elegance",
-        price:2200,
-        image:"assets/pola6.webp",
-        description:"A classy bouquet tied with a bold red ribbon, featuring carefully arranged polaroid memories.",
-        category:["polaroids-bouquet"]
-
-     },
-     {
+        price: 2200,
+        image: "assets/pola6.webp",
+        description: "A classy bouquet tied with a bold red ribbon, featuring carefully arranged polaroid memories.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 153,
         name: "153 - Midnight Elegance Photo Bouquet",
-        price:1800,
-        image:"assets/pola7.webp",
-        description:"A dark-themed elegant bouquet with beautifully arranged polaroid memories, perfect for a classy and unique gift.",
-        category:["polaroids-bouquet"]
-
-     },
-     {
+        price: 1800,
+        image: "assets/pola7.webp",
+        description: "A dark-themed elegant bouquet with beautifully arranged polaroid memories, perfect for a classy and unique gift.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 154,
         name: "154 - Red Roses & Captured Moments",
-        price:2000,
-        image:"assets/pola8.webp",
-        description:"A romantic bouquet featuring red roses and captured memories, symbolizing love and deep emotions.",
-        category:["polaroids-bouquet"]
-
-     },
-     {
+        price: 2000,
+        image: "assets/pola8.webp",
+        description: "A romantic bouquet featuring red roses and captured memories, symbolizing love and deep emotions.",
+        category: ["polaroids-bouquet"]
+    },
+    {
         id: 155,
         name: "155 - Subtle Floral Photo Arrangement",
-        price:1500,
-        image:"assets/pola9.webp",
-        description:"A clean and modern bouquet with subtle floral design and neatly arranged photos for a sophisticated look.",
-        category:["polaroids-bouquet"]
-     },
+        price: 1500,
+        image: "assets/pola9.webp",
+        description: "A clean and modern bouquet with subtle floral design and neatly arranged photos for a sophisticated look.",
+        category: ["polaroids-bouquet"]
+    },
     {
         id: 156,
         name: "156 - Vibrant Mixed Florals & Photos",
-        price:2500,
-        image:"assets/pola10.webp",
-        description:"A vibrant mix of colorful flowers and memories, perfect for birthdays and joyful occasions.",
-        category:["polaroids-bouquet"]
+        price: 2500,
+        image: "assets/pola10.webp",
+        description: "A vibrant mix of colorful flowers and memories, perfect for birthdays and joyful occasions.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 157,
         name: "157 - Standing Blush Floral Photo Frame",
-        price:1500,
-        image:"assets/pola11.webp",
-        description:"A unique standing bouquet with soft pink flowers and photo frames, giving a premium decorative feel.",
-        category:["polaroids-bouquet"]
+        price: 1500,
+        image: "assets/pola11.webp",
+        description: "A unique standing bouquet with soft pink flowers and photo frames, giving a premium decorative feel.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 158,
         name: "158 - Golden Sunset Polaroid Arrangement",
-        price:1800,
-        image:"assets/pola12.webp",
-        description:"Warm-toned bouquet inspired by sunset vibes, combining golden wrapping and cherished moments.",
-        category:["polaroids-bouquet"]
-
+        price: 1800,
+        image: "assets/pola12.webp",
+        description: "Warm-toned bouquet inspired by sunset vibes, combining golden wrapping and cherished moments.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 159,
         name: "159 - Miniature Soft Pink Photo Bouquet",
-        price:1000,
-        image:"assets/pola13.webp",
-        description:"Adorable mini bouquet in soft pink, perfect for sweet surprises.",
-        category: ["polaroids-bouquet", "budget-friendly"]
-
+        price: 1000,
+        image: "assets/pola13.webp",
+        description: "Adorable mini bouquet in soft pink, perfect for sweet surprises.",
+        category: ["polaroids-bouquet","budget-friendly"]
     },
     {
         id: 160,
         name: "160 - Printed Photos & Floral Touches",
-        price:1500,
-        image:"assets/nira1.webp",
-        description:"Printed photos and elegant floral touches for birthdays and surprises.",
-        category:["polaroids-bouquet"]
+        price: 1500,
+        image: "assets/nira1.webp",
+        description: "Printed photos and elegant floral touches for birthdays and surprises.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 161,
         name: "161 - Luxurious Pink Theme Photo Bouquet",
-        price:1500,
-        image:"assets/nira2.webp",
-        description:"Luxurious pink-themed bouquet with elegant photos and flowers.",
-        category:["polaroids-bouquet"]
+        price: 1500,
+        image: "assets/nira2.webp",
+        description: "Luxurious pink-themed bouquet with elegant photos and flowers.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 162,
         name: "162 - Cream Wrap Premium Polaroid Bouquet",
-        price:2000,
-        image:"assets/nira3.webp",
-        description:"Cream wrap with polaroid pictures for a premium aesthetic look.",
-        category:["polaroids-bouquet"]
-
+        price: 2000,
+        image: "assets/nira3.webp",
+        description: "Cream wrap with polaroid pictures for a premium aesthetic look.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 163,
         name: "163 - Ruby Red Roses & Memories",
-        price:2800,
-        image:"assets/nira4.webp",
-        description:"Red-themed bouquet with photos and roses for unforgettable moments.",
-        category:["polaroids-bouquet"]
+        price: 2800,
+        image: "assets/nira4.webp",
+        description: "Red-themed bouquet with photos and roses for unforgettable moments.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 164,
         name: "164 - Modern Black Wrap Photo Display",
-        price:2200,
-        image:"assets/nira5.webp",
-        description:"Stylish black wrap with modern design and personalized photos.",
-        category:["polaroids-bouquet"]
+        price: 2200,
+        image: "assets/nira5.webp",
+        description: "Stylish black wrap with modern design and personalized photos.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 165,
         name: "165 - Calming Pastel Photo Bouquet",
-        price:1500,
-        image:"assets/nira6.webp",
-        description:"Soft pastel tones with photos for a calm and elegant vibe.",
-        category:["polaroids-bouquet"]
+        price: 1500,
+        image: "assets/nira6.webp",
+        description: "Soft pastel tones with photos for a calm and elegant vibe.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 166,
         name: "166 - Joyful Pink Memories Bouquet",
-        price:2000,
-        image:"assets/nira7.webp",
-        description:"Vibrant pink bouquet with joyful memories for celebrations.",
-        category:["polaroids-bouquet"]
+        price: 2000,
+        image: "assets/nira7.webp",
+        description: "Vibrant pink bouquet with joyful memories for celebrations.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 167,
         name: "167 - Sky Blue Floral Photo Arrangement",
-        price:2000,
-        image:"assets/nira8.webp",
-        description:"Blue-themed bouquet with photos and flowers for beautiful memories.",
-        category:["polaroids-bouquet"]
+        price: 2000,
+        image: "assets/nira8.webp",
+        description: "Blue-themed bouquet with photos and flowers for beautiful memories.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 168,
         name: "168 - Rustic Brown Roses & Memories",
-        price:2000,
-        image:"assets/nira9.webp",
-        description:"Rustic brown wrap with roses and photos for heartfelt gifting.",
-        category:["polaroids-bouquet"]
+        price: 2000,
+        image: "assets/nira9.webp",
+        description: "Rustic brown wrap with roses and photos for heartfelt gifting.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 169,
-        name: "169 - Golden Wrap Floral & Photo Bouquet(COMBO OFFER)",
-        price:2500,
-        image:"assets/nira10.webp",
-        description:"Golden-toned wrap with precious memories and elegant floral accents.",
-        category:["polaroids-bouquet"]
+        name: "169 - Golden Wrap Floral & Photo Bouquet (Combo Offer)",
+        price: 2500,
+        image: "assets/nira10.webp",
+        description: "A golden-toned wrap featuring precious photo memories and elegant floral accents.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 170,
         name: "170 - Maroon Blooms & Premium Perfume",
-        price:4200,
-        image:"assets/niran1.webp",
-        description:"Fresh blooms paired with premium fragrance in rich maroon tones.",
-        category:["perfume-bouquet"]
+        price: 4200,
+        image: "assets/niran1.webp",
+        description: "Fresh blooms paired with premium fragrance in rich maroon tones.",
+        category: ["perfume-bouquet"]
     },
     {
-
         id: 171,
         name: "171 - Soft Pink Nail Polish & Florals",
-        price:3500,
-        image:"assets/niran2.webp",
-        description:"Elegant flowers with premium nail polishes in soft pink wrap.",
-        category:["customized"]
+        price: 3500,
+        image: "assets/niran2.webp",
+        description: "Elegant flowers with premium nail polishes in soft pink wrap.",
+        category: ["customized"]
     },
     {
         id: 172,
         name: "172 - Gourmet Chocolates & Red Roses Box",
-        price:7000,
-        image:"assets/niran4.webp",
-        description:"Gourmet chocolates with fresh flowers in rich red wrap.",
-        category:["chocolate-bouquet"]
+        price: 7000,
+        image: "assets/niran4.webp",
+        description: "Gourmet chocolates with fresh flowers in rich red wrap.",
+        category: ["chocolate-bouquet"]
     },
     {
         id: 173,
         name: "173 - Floral Box with Personalized Photos",
-        price:3200,
-        image:"assets/niran5.webp",
-        description:"Soft roses and personalized photos in an elegant floral box.",
-        category:["polaroids-bouquet"]
+        price: 3200,
+        image: "assets/niran5.webp",
+        description: "Soft roses and personalized photos in an elegant floral box.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 174,
         name: "174 - Pink & White Roses Perfume Box",
-        price:25000,
-        image:"assets/niran6.webp",
-        description:"Luxurious perfume with pink and white roses in a black box.",
-        category:["perfume-bouquet", "luxury"]
+        price: 25000,
+        image: "assets/niran6.webp",
+        description: "Luxurious perfume with pink and white roses in a black box.",
+        category: ["perfume-bouquet","luxury"]
     },
     {
         id: 175,
         name: "175 - Blush Pink Luxury Photo Box",
-        price:25000,
-        image:"assets/niran7.webp",
-        description:"Blush pink flowers and photos arranged in a luxury box.",
-        category: ["perfume-bouquet", "luxury"]
+        price: 25000,
+        image: "assets/niran7.webp",
+        description: "Blush pink flowers and photos arranged in a luxury box.",
+        category: ["perfume-bouquet","luxury"]
     },
     {
         id: 176,
         name: "176 - Soft Pink Roses Floral Dome",
-        price:3800,
-        image:"assets/niran8.webp",
-        description:"Personalized dome with soft pink roses — a timeless keepsake.",
-        category:["perfume-bouquet"]
+        price: 3800,
+        image: "assets/niran8.webp",
+        description: "Personalized dome with soft pink roses — a timeless keepsake.",
+        category: ["perfume-bouquet"]
     },
     {
         id: 177,
         name: "177 - Beauty Essentials & Roses Collection",
-        price:35000,
-        image:"assets/niran9.webp",
-        description:"Roses with beauty essentials for makeup lovers.",
-        category:["perfume-bouquet", "luxury"]
+        price: 35000,
+        image: "assets/niran9.webp",
+        description: "Roses with beauty essentials for makeup lovers.",
+        category: ["perfume-bouquet","luxury"]
     },
     {
         id: 178,
         name: "178 - Pink Roses Sweetheart Bundle",
-        price:5500,
-        image:"assets/niran10.webp",
-        description:"Pink roses with thoughtful add-ons to express love and care.",
-        category:["perfume-bouquet"]
+        price: 5500,
+        image: "assets/niran10.webp",
+        description: "Pink roses with thoughtful add-ons to express love and care.",
+        category: ["perfume-bouquet"]
     },
     {
         id: 179,
         name: "179 - Red Roses Passion Gift Hamper",
-        price:7200,
-        image:"assets/niran11.webp",
-        description:"Red roses with chocolates and gifts in one perfect bundle.",
-        category:["perfume-bouquet"]
+        price: 7200,
+        image: "assets/niran11.webp",
+        description: "Red roses with chocolates and gifts in one perfect bundle.",
+        category: ["perfume-bouquet"]
     },
     {
         id: 180,
         name: "180 - Red & White Roses Photo Bouquet",
-        price:2500,
-        image:"assets/niran12.webp",
-        description:"Red and white roses paired with your precious photo memories.",
-        category:["polaroids-bouquet"]
+        price: 2500,
+        image: "assets/niran12.webp",
+        description: "Red and white roses paired with your precious photo memories.",
+        category: ["polaroids-bouquet"]
     },
     {
         id: 181,
         name: "181 - Lavender Yardley & Chocolate Bouquet",
-        price:3200,
-        image:"assets/niran13.webp",
-        description:"Lavender-themed bouquet with chocolates and decorative flowers.",
-        category:["customized", "chocolate-bouquet"],
+        price: 3200,
+        image: "assets/niran13.webp",
+        description: "Lavender-themed bouquet with chocolates and decorative flowers.",
+        category: ["customized","chocolate-bouquet"]
     },
     {
         id: 182,
         name: "182 - Blush Beauty & Chocolates Bundle",
-        price:4200,
-        image:"assets/niran14.webp",
-        description:"Blush pink bouquet with beauty products, chocolates, and cute gifts.",
-        category: ["customized", "chocolate-bouquet"]
+        price: 4200,
+        image: "assets/niran14.webp",
+        description: "Blush pink bouquet with beauty products, chocolates, and cute gifts.",
+        category: ["customized","chocolate-bouquet"]
     },
     {
         id: 183,
         name: "183 - Gold & Blush Photo Chocolates Bouquet",
-        price:2500,
-        image:"assets/niran15.webp",
-        description:"Gold and blush pink bouquet with photos, chocolates, and flowers.",
-        category: ["customized", "chocolate-bouquet"]
+        price: 2500,
+        image: "assets/niran15.webp",
+        description: "Gold and blush pink bouquet with photos, chocolates, and flowers.",
+        category: ["customized","chocolate-bouquet"]
     },
     {
         id: 184,
         name: "184 - Classic Red Rose Floral Wrap",
-        price:3800,
-        image:"assets/niran17.webp",
-        description:"Fresh roses in elegant red wrap, symbolizing love and passion.",
-        category:["perfume-bouquet"]
+        price: 3800,
+        image: "assets/niran17.webp",
+        description: "Fresh roses in elegant red wrap, symbolizing love and passion.",
+        category: ["perfume-bouquet"]
     },
     {
         id: 185,
@@ -1442,7 +1423,7 @@ const products = [
         price: 2000,
         image: "assets/img3.webp",
         description: "Nivea Men grooming products with chocolates in royal blue wrap.",
-        category: ["birthday", "customized","perfume-bouquet"]
+        category: ["birthday","customized","perfume-bouquet"]
     },
     {
         id: 186,
@@ -1450,8 +1431,7 @@ const products = [
         price: 2000,
         image: "assets/img4.webp",
         description: "Men's hair care products with flowers in white and gold wrap.",
-        category: ["birthday", "customized"]
-
+        category: ["birthday","customized"]
     },
     {
         id: 187,
@@ -1459,7 +1439,7 @@ const products = [
         price: 2000,
         image: "assets/img5.webp",
         description: "Chanel luxury products with silk roses in black and gold wrap.",
-        category: ["perfume-bouquet", "customized"]
+        category: ["perfume-bouquet","customized"]
     },
     {
         id: 188,
@@ -1475,7 +1455,7 @@ const products = [
         price: 2000,
         image: "assets/img7.webp",
         description: "Dreamy holographic bouquet with perfume, Godiva, and fairy lights.",
-        category: ["perfume-bouquet", "customized"]
+        category: ["perfume-bouquet","customized"]
     },
     {
         id: 190,
@@ -1483,30 +1463,30 @@ const products = [
         price: 2000,
         image: "assets/nirma1.webp",
         description: "Fresh roses, chocolates, and money in one unique bouquet.",
-        category: ["money-bouquet", "chocolate-bouquet", "customized"]
+        category: ["money-bouquet","chocolate-bouquet","customized"]
     },
     {
         id: 191,
         name: "191 - Fresh Florals & Premium Perfume",
         price: 2000,
         image: "assets/nirma2.webp",
-        description: " A luxurious bouquet that combines the elegance of fresh flowers with the allure of premium perfumes.",
-        category: ["perfume-bouquet", "customized"]
+        description: "A luxurious bouquet combining the elegance of fresh flowers with the allure of a premium fragrance.",
+        category: ["perfume-bouquet","customized"]
     },
     {
         id: 192,
         name: "192 - KitKat Romantic Twist Bouquet",
         price: 1000,
         image: "assets/nirma3.webp",
-        description: " kit kat bouquet with a romantic twist.",
-        category: ["chocolate-bouquet", "budget-friendly"]
+        description: "A charming KitKat chocolate bouquet wrapped with red blooms for a sweet romantic gesture.",
+        category: ["chocolate-bouquet","budget-friendly"]
     },
     {
         id: 193,
         name: "193 - Custom Friends Polaroid Bouquet",
         price: 3800,
         image: "assets/nirma4.webp",
-        description: "A customized polaroids bouquet for friends and loved ones.",
+        description: "A customized Polaroid photo bouquet created to celebrate cherished friendships and special milestones.",
         category: ["polaroids-bouquet"]
     },
     {
@@ -1514,12 +1494,12 @@ const products = [
         name: "194 - KitKat Sweet Romance Bouquet",
         price: 1000,
         image: "assets/nirma5.webp",
-        description: "kit kat bouquet with a romantic twist.",
-        category: ["chocolate-bouquet", "budget-friendly"]
+        description: "A delightful KitKat chocolate bouquet styled with romantic accents for your special someone.",
+        category: ["chocolate-bouquet","budget-friendly"]
     },
-        {
+    {
         id: 195,
-        name: "195 - Black Wrap Roses & Chocolates"  ,
+        name: "195 - Black Wrap Roses & Chocolates",
         price: 3200,
         image: "assets/t1.webp",
         description: "Black-wrapped bouquet with red roses, baby's breath, and chocolates.",
@@ -1527,23 +1507,21 @@ const products = [
     },
     {
         id: 196,
-        name: "196 - Beige Wrap Chanel Roses Bouquet" ,
+        name: "196 - Beige Wrap Chanel Roses Bouquet",
         price: 2000,
         image: "assets/t2.webp",
         description: "Beige bouquet with cream roses, Chanel items, and gold cosmetics.",
         category: ["perfume-bouquet"]
     },
     {
-
         id: 197,
-        name: "197 - Milka & Milky Way Purple Bouquet" ,
+        name: "197 - Milka & Milky Way Purple Bouquet",
         price: 3000,
         image: "assets/t3.webp",
         description: "Purple-pink bouquet with Milka and Milky Way chocolates.",
         category: ["chocolate-bouquet"]
     },
     {
-        
         id: 198,
         name: "198 - Black Wrap Bears & Heart Balloons",
         price: 6000,
@@ -1553,16 +1531,15 @@ const products = [
     },
     {
         id: 199,
-        name: "199 - Grand Black Wrap Red Roses" ,
+        name: "199 - Grand Black Wrap Red Roses",
         price: 6500,
         image: "assets/t5.webp",
         description: "Large black bouquet of red roses and assorted chocolates.",
         category: ["chocolate-bouquet"]
     },
     {
-
         id: 200,
-        name: "200 - Gucci & Burberry Fragrance Box" ,
+        name: "200 - Gucci & Burberry Fragrance Box",
         price: 2000,
         image: "assets/t6.webp",
         description: "Luxury black box with Gucci, Burberry fragrances, chocolates, and white flowers.",
@@ -1571,123 +1548,120 @@ const products = [
     {
         id: 201,
         name: "201 - Purple Wrap Lavender & Makeup",
-        price:2000,
-        image:"assets/t7.webp",
+        price: 2000,
+        image: "assets/t7.webp",
         description: "Purple-wrapped bouquet with lavender, blush roses, and makeup.",
         category: ["perfume-bouquet"]
-     },
-     {
+    },
+    {
         id: 202,
         name: "202 - Pink Roses & Premium Beauty Wrap",
-        price:2000,
-        image:"assets/t8.webp",
+        price: 2000,
+        image: "assets/t8.webp",
         description: "Pink roses with baby's breath and premium beauty brands in a soft pink wrap.",
         category: ["perfume-bouquet"]
-     },
-     {
+    },
+    {
         id: 203,
         name: "203 - Purple Teddy & Gifts Flower Box",
-        price:2000,
-        image:"assets/t9.webp",
+        price: 2000,
+        image: "assets/t9.webp",
         description: "Purple teddy bear with gifts, snow globe, jewelry, chocolates, and flowers.",
         category: ["perfume-bouquet"]
-     },
-     {
+    },
+    {
         id: 204,
-        name: "204 - Black Wrap Red Roses & Skincare" ,
-        price:2000,
-        image:"assets/t10.webp",
+        name: "204 - Black Wrap Red Roses & Skincare",
+        price: 2000,
+        image: "assets/t10.webp",
         description: "Red roses with luxury skincare and makeup in dramatic black paper.",
         category: ["perfume-bouquet"]
     },
     {
         id: 205,
-        name: "205 - Soft Pink Dior Beauty Bouquet" ,
-        price:2000,
-        image:"assets/t11.webp",
+        name: "205 - Soft Pink Dior Beauty Bouquet",
+        price: 2000,
+        image: "assets/t11.webp",
         description: "Bouquet with Dior, luxury beauty items, roses, and chocolates in soft pink.",
         category: ["perfume-bouquet"]
     },
     {
-
         id: 206,
-        name: "206 - All-Black Coca-Cola & Candy Bouquet" ,
-        price:4500,
-        image:"assets/t12.webp",
+        name: "206 - All-Black Coca-Cola & Candy Bouquet",
+        price: 4500,
+        image: "assets/t12.webp",
         description: "All-black bouquet with Coca-Cola bottles, KitKat, Snickers, and chocolates.",
         category: ["chocolate-bouquet"]
     },
     {
         id: 207,
         name: "207 - Kinder Joy & KitKat Photo Bouquet",
-        price:3000,
-        image:"assets/t13.webp",
+        price: 3000,
+        image: "assets/t13.webp",
         description: "Personalized birthday bouquet with photos, Kinder Joy, KitKat, and roses.",
-        category:["chocolate-bouquet","polaroids-bouquet", "customized"]
+        category: ["chocolate-bouquet","polaroids-bouquet","customized"]
     },
-
     {
         id: 208,
         name: "208 - Hot Wheels Money & KitKat Luxury Bouquet",
-        price:5500,
-        image:"assets/a1.webp",
+        price: 5500,
+        image: "assets/a1.webp",
         description: "Premium navy bouquet with 10+ Hot Wheels cars, KitKat bars, snacks & money notes — the ultimate gift for car enthusiasts.",
-        category: ["hot-wheels", "money-bouquet"]
+        category: ["hot-wheels","money-bouquet"]
     },
-    
     {
         id: 209,
         name: "209 - Hot Wheels Daisy Bouquet",
-        price:2500,
-        image:"assets/a2.webp",
+        price: 2500,
+        image: "assets/a2.webp",
         description: "Kraft-wrapped daisy bouquet nestled with Hot Wheels classics including the Stingray & DeLorean — charming for kids and collectors alike.",
         category: ["hot-wheels"]
     },
     {
         id: 210,
         name: "210 - Adventure Force Snack Attack Bouquet",
-        price:4500,
-        image:"assets/a3.webp",
+        price: 4500,
+        image: "assets/a3.webp",
         description: "Vibrant bouquet packed with Adventure Force die-cast cars, Cheetos, Snickers & fun snacks — playful and bold for any boy's celebration.",
         category: ["hot-wheels"]
     },
     {
         id: 211,
         name: "211 - Red Rose Noir Bouquet",
-        price:2500,
-        image:"assets/patr1.webp",
+        price: 2500,
+        image: "assets/patr1.webp",
         description: "Deep red roses with white baby's breath, wrapped in black matte paper and finished with a bold red satin ribbon.",
         category: ["birthday"]
     },
     {
         id: 212,
         name: "212 - Ferrero Rocher Peach Bloom Bouquet",
-        price:2500,
-        image:"assets/patr3.webp",
+        price: 2500,
+        image: "assets/patr3.webp",
         description: "Peach and cream bouquet overflowing with ~18 Ferrero Rocher chocolates, baby's breath, and fern leaves.",
-        category: [ "chocolate-bouquet"]
+        category: ["chocolate-bouquet"]
     },
     {
         id: 213,
         name: "213 - Happy Birthday Ferrero Mini Bouquet",
-        price:1500,
-        image:"assets/patr4.webp",
+        price: 1500,
+        image: "assets/patr4.webp",
         description: "Petite sage green bouquet with Ferrero Rocher chocolates, a sparkly Happy Birthday topper, and a lace bow ribbon.",
-        category: ["chocolate-bouquet", "birthday"]
+        category: ["chocolate-bouquet","birthday"]
     },
     {
         id: 214,
         name: "214 - Make Over Cosmetics Bouquet",
-        price:2000,
-        image:"assets/patr5.webp",
+        price: 2000,
+        image: "assets/patr5.webp",
         description: "Black linen-wrapped bouquet featuring Make Over lipstick, gloss, foundation & spray with peach daisies and a heart balloon.",
         category: ["perfume-bouquet"]
     },
     {
         id: 215,
         name: "215 - Black & Gold Elegance Bouquet",
-        price:2000,
-        image:"assets/patr6.webp",
+        price: 2000,
+        image: "assets/patr6.webp",
         description: "Tall black matte fan bouquet with blush roses and Ferrero Rocher chocolates, finished with a gold satin bow.",
         category: ["chocolate-bouquet"]
     },
@@ -1702,316 +1676,347 @@ const products = [
     {
         id: 217,
         name: "217 - Just For You Ferrero Noir Bouquet",
-        price:2800,
-        image:"assets/patr8.webp",
+        price: 2800,
+        image: "assets/patr8.webp",
         description: "Black matte bouquet with blush pink silk roses and a Gucci Bloom perfume bottle at center — sleek and sophisticated.",
         category: ["chocolate-bouquet"]
     },
     {
         id: 218,
         name: "218 - KitKat Black Gold Bouquet",
-        price:2000,
-        image:"assets/patr9.webp",
+        price: 2000,
+        image: "assets/patr9.webp",
         description: "Black and gold bouquet with generous KitKat chocolates and blush pink silk roses, tied with a gold satin ribbon.",
-        category:["chocolate-bouquet"]
+        category: ["chocolate-bouquet"]
     },
     {
         id: 219,
         name: "219 - Kinder Rose Bouquet",
-        price:2000,
-        image:"assets/patr10.webp",
+        price: 2000,
+        image: "assets/patr10.webp",
         description: "Soft pink kraft bouquet blending fresh pink roses and Kinder chocolates for a playful, romantic gift.",
         category: ["chocolate-bouquet"]
-
     },
     {
         id: 220,
         name: "220 - Nude Luxe Beauty & Cake Pop Bouquet",
-        price:2000,
-        image:"assets/patr11.webp",
+        price: 2000,
+        image: "assets/patr11.webp",
         description: "Nude-toned bouquet with luxury beauty products, cake pops, and blush pink silk roses in a soft pink ribbon.",
-        category: ["polaroids-bouquet", "customized"]
-    } ,
+        category: ["polaroids-bouquet","customized"]
+    },
     {
         id: 221,
         name: "221 - Pink Glam Beauty Bouquet",
-        price:2000,
-        image:"assets/patr12.webp",
+        price: 2000,
+        image: "assets/patr12.webp",
         description: "Soft pink bouquet with luxury beauty products and blush silk roses, finished with a delicate pink satin ribbon.",
         category: ["perfume-bouquet"]
     },
     {
         id: 222,
         name: "222 - GRWM Twin Beauty Bouquet",
-        price:2000,
-        image:"assets/b13.webp", 
+        price: 2000,
+        image: "assets/b13.webp",
         description: "Black matte bouquet with gourmet chocolates and luxury beauty products, accented with blush roses and a black ribbon.",
         category: ["perfume-bouquet"]
     },
     {
-       id: 223,
-        name: "223 - Huda Beauty Gucci Luxe Bouquet",
-       price:2000,
-       image:"assets/patr14.webp",
-       description: "A high-end bouquet wrapped in luxurious black matte paper, featuring a curated selection of Huda Beauty and Gucci products,",
-       category: ["perfume-bouquet"]
+        id: 223,
+        name: "223 - Huda Beauty & Gucci Luxe Bouquet",
+        price: 2000,
+        image: "assets/patr14.webp",
+        description: "A high-end bouquet wrapped in luxurious black matte paper, featuring a curated selection of Huda Beauty and Gucci cosmetics.",
+        category: ["perfume-bouquet"]
     },
     {
         id: 224,
         name: "224 - Cadbury Rose Bouquet",
-        price:2800,
-        image:"assets/patr15.webp",
+        price: 2800,
+        image: "assets/patr15.webp",
         description: "Soft pink bouquet with fresh pink roses and Cadbury chocolates — sweet, charming, and perfect for gifting.",
         category: ["chocolate-bouquet"]
     },
     {
         id: 225,
         name: "225 - Whispers of Love",
-        price:5800,
-        image:"assets/masca.webp",
-        description: "A gentle blend of colors blooming in perfect balance",
-        category: ["wedding", "customized"]
+        price: 5800,
+        image: "assets/masca.webp",
+        description: "A gentle blend of colorful blooms and mascara beauty treats arranged in perfect harmony.",
+        category: ["wedding","customized"]
     },
     {
         id: 226,
-        name: "226 - dairy milk bouquet",
-        price:3800,
-        image:"assets/patr16.webp",
-        description: "a delightful bouquet of dairy milk chocolates wrapped in elegant paper.",
-        category: ["chocolate-bouquet", "customized"]
+        name: "226 - Dairy Milk Chocolate Bouquet",
+        price: 3800,
+        image: "assets/patr16.webp",
+        description: "A delightful bouquet of Cadbury Dairy Milk chocolates wrapped in elegant presentation paper.",
+        category: ["chocolate-bouquet","customized"]
     },
     {
         id: 227,
         name: "227 - Luxe Makeup Bloom Bouquet",
-        price:7500,
-        image:"assets/patr17.webp",
+        price: 7500,
+        image: "assets/patr17.webp",
         description: "Premium cosmetics elegantly arranged with blooms — a glamorous gift for beauty lovers.",
-        category: ["customized", "perfume-bouquet"]
+        category: ["customized","perfume-bouquet"]
     },
     {
         id: 228,
         name: "228 - Prestige Beauty Bouquet",
-        price:8500,
-        image:"assets/patr18.webp",
+        price: 8500,
+        image: "assets/patr18.webp",
         description: "High-end cosmetic brands beautifully arranged with fresh florals for the ultimate glam gift.",
-        category: ["customized", "perfume-bouquet"]
+        category: ["customized","perfume-bouquet"]
     },
     {
         id: 229,
         name: "229 - Signature Cosmetics Bouquet",
-        price:9500,
-        image:"assets/patr19.webp",
+        price: 9500,
+        image: "assets/patr19.webp",
         description: "A curated signature cosmetic bouquet blending beauty essentials with elegant floral styling.",
-        category: ["customized", "perfume-bouquet"]
+        category: ["customized","perfume-bouquet"]
     },
     {
         id: 230,
         name: "230 - Grand Beauty Celebration Bouquet",
-        price:10500,
-        image:"assets/patrr20.webp",
+        price: 10500,
+        image: "assets/patrr20.webp",
         description: "A grand statement of luxury — premium cosmetics and blooms crafted for grand celebrations.",
-        category: ["customized", "perfume-bouquet", "luxury"]
+        category: ["customized","perfume-bouquet","luxury"]
     },
     {
         id: 231,
         name: "231 - Elite Cosmetics Floral Bouquet",
-        price:11500,
-        image:"assets/patr21.webp",
+        price: 11500,
+        image: "assets/patr21.webp",
         description: "Top-tier cosmetics nestled with elegant flowers — the most exquisite beauty gift bouquet.",
-        category: ["customized", "perfume-bouquet", "luxury"]
+        category: ["customized","perfume-bouquet","luxury"]
     },
     {
         id: 232,
         name: "232 - Spring Bloom Arrangement",
-        price:3800,
-        image:"assets/thush2.webp",
+        price: 3800,
+        image: "assets/thush2.webp",
         description: "A fresh and vibrant floral arrangement bursting with seasonal blooms for every occasion.",
-        category: ["customized", "birthday", "wedding"]
+        category: ["customized","birthday","wedding"]
     },
     {
         id: 233,
         name: "233 - Pastel Garden Bouquet",
-        price:4500,
-        image:"assets/thus3.webp",
+        price: 4500,
+        image: "assets/thus3.webp",
         description: "Soft pastel flowers elegantly wrapped — a timeless floral gift for weddings and birthdays.",
-        category: ["customized", "birthday", "wedding"]
+        category: ["customized","birthday","wedding"]
     },
     {
         id: 234,
         name: "234 - Classic Floral Wrap",
-        price:5000,
-        image:"assets/thush4.webp",
+        price: 5000,
+        image: "assets/thush4.webp",
         description: "A classic, beautifully wrapped floral bouquet perfect for any celebration or heartfelt gift.",
-        category: ["customized", "birthday", "wedding"]
+        category: ["customized","birthday","wedding"]
     },
     {
         id: 235,
         name: "235 - Grand Luxury Floral Centrepiece (Only Pre-Booking)",
-        price:12000,
-        image:"assets/thush10.webp",
+        price: 12000,
+        image: "assets/thush10.webp",
         description: "An exquisite large-scale luxury floral centrepiece — the pinnacle of gifting elegance.",
-        category: ["customized", "birthday", "wedding", "luxury"]
+        category: ["customized","birthday","wedding","luxury"],
+        prebook: true
     },
     {
         id: 236,
         name: "236 - Ivory Blossom Bouquet",
-        price:3800,
-        image:"assets/thush11.webp",
+        price: 3800,
+        image: "assets/thush11.webp",
         description: "Elegant ivory and white blossoms arranged with grace — perfect for weddings and celebrations.",
-        category: ["customized", "birthday", "wedding"]
+        category: ["customized","birthday","wedding"]
     },
     {
         id: 237,
-        name: "237 - hotwheels bouquet with flowers",
-        price:4000,
-        image:"assets/box.webp",
-        description: "A fun and unique gift for car enthusiasts of all ages.",
-        category: ["birthday", "hot-wheels"]
+        name: "237 - Hot Wheels & Fresh Floral Harmony",
+        price: 4000,
+        image: "assets/box.webp",
+        description: "A fun and unique gift bouquet pairing collectible Hot Wheels cars with vibrant fresh blossoms.",
+        category: ["birthday","hot-wheels"]
     },
     {
         id: 238,
         name: "238 - Hot Wheels & Floral Surprise",
-        price:600,
-        image:"assets/box1.webp",
+        price: 600,
+        image: "assets/box1.webp",
         description: "A delightful combination of Hot Wheels and fresh floral arrangements for a unique gift experience.",
-        category: ["budget-friendly", "hot-wheels"]
-
+        category: ["budget-friendly","hot-wheels"]
     },
     {
         id: 239,
         name: "239 - Hot Wheels & Flowers Extravaganza",
-        price:3800,
-        image:"assets/box2.webp",
+        price: 3800,
+        image: "assets/box2.webp",
         description: "An extravagant gift featuring a variety of Hot Wheels cars and a stunning floral bouquet for a memorable celebration.",
-        category: [ "hot-wheels"]
+        category: ["hot-wheels"]
     },
     {
         id: 240,
         name: "240 - Hot Wheels & Floral Delight",
-        price:3800,
-        image:"assets/box6.webp",
+        price: 3800,
+        image: "assets/box6.webp",
         description: "A delightful gift set combining the excitement of Hot Wheels with the beauty of fresh flowers for a perfect birthday surprise.",
-        category: [ "hot-wheels"]
+        category: ["hot-wheels"]
     },
     {
         id: 241,
-        name: "241 - Hot Wheels fantasy car bouquet",
-        price:1800,
-        image:"assets/box7.webp",
-        description: "A whimsical bouquet featuring fantasy Hot Wheels cars and vibrant floral arrangements for a fun and imaginative gift.",
-        category: [ "hot-wheels"]
+        name: "241 - Hot Wheels Fantasy Car Bouquet",
+        price: 1800,
+        image: "assets/box7.webp",
+        description: "A whimsical bouquet featuring fantasy Hot Wheels cars and vibrant floral arrangements for an imaginative gift.",
+        category: ["hot-wheels"]
     },
     {
         id: 242,
-        name: "242 - Hot Wheels red car collection bouquet",
-        price:3800,
-        image:"assets/box8.webp",
-        description: "A striking bouquet showcasing a collection of red Hot Wheels cars paired with elegant floral accents for a bold and memorable gift.",
+        name: "242 - Hot Wheels Red Car Collection Bouquet",
+        price: 3800,
+        image: "assets/box8.webp",
+        description: "A striking bouquet showcasing a collection of red Hot Wheels cars paired with elegant floral accents.",
         category: ["hot-wheels"]
     },
     {
         id: 243,
-        name: "243 - Hot Wheels with batman funko pop bouquet",
-        price:2500,
-        image:"assets/box9.webp",
-        description: "A unique bouquet featuring a selection of Hot Wheels cars and a stylish Batman FUNKO POP for a fun and exciting gift.",
-        category: ["customized" , "hot-wheels"]
+        name: "243 - Hot Wheels & Batman Funko Pop Bouquet",
+        price: 2500,
+        image: "assets/box9.webp",
+        description: "A unique collector's bouquet featuring Hot Wheels cars and an authentic Batman Funko Pop figurine.",
+        category: ["customized","hot-wheels"]
     },
     {
         id: 244,
         name: "244 - Teddy Bloom Delight Bouquet",
-        price:3200,
-        image:"assets/tedd1.webp",
+        price: 3200,
+        image: "assets/tedd1.webp",
         description: "A cute mix of teddy, pastel roses, and chocolates wrapped with love.",
         category: ["teddy-bouquet"]
     },
     {
         id: 245,
         name: "245 - Sweet Love Surprise",
-        price:3800,
-        image:"assets/tedd2.webp",
+        price: 3800,
+        image: "assets/tedd2.webp",
         description: "Roses, chocolates, and a cuddly teddy packed into one adorable bouquet.",
         category: ["teddy-bouquet","chocolate-bouquet"]
     },
     {
         id: 246,
         name: "246 - Choco Teddy Bliss Bouquet",
-        price:4500,
-        image:"assets/tedd3.webp",
+        price: 4500,
+        image: "assets/tedd3.webp",
         description: "A dreamy bouquet filled with chocolates, soft blooms, and teddy charm.",
         category: ["teddy-bouquet","chocolate-bouquet"]
     },
     {
         id: 247,
         name: "247 - Blue Hug Bouquet",
-        price:3200,
-        image:"assets/tedd4.webp",
+        price: 3200,
+        image: "assets/tedd4.webp",
         description: "A soft blue teddy bouquet with chocolates and floral elegance.",
         category: ["teddy-bouquet","chocolate-bouquet"]
     },
     {
         id: 248,
-        name: "248 - Pastel Love Bear Bouquet(COMBO OFFER)",
-        price:2500,
-        image:"assets/tedd5.webp",
-        description: "A dreamy pastel bouquet with a cute teddy and sweet chocolate touch.",
+        name: "248 - Pastel Love Bear Bouquet (Combo Offer)",
+        price: 2500,
+        image: "assets/tedd5.webp",
+        description: "A dreamy pastel bouquet with an adorable teddy bear and sweet chocolate touches.",
         category: ["teddy-bouquet"]
     },
     {
         id: 249,
-        name: "249 -Choco Teddy Bliss Bouquet",
-        price:3200,
-        image:"assets/tedd6.webp",
-        description: "Cute teddy bouquet paired with chocolates and red roses for sweet surprise moments.",
+        name: "249 - Crimson Teddy & Choco Bloom Bouquet",
+        price: 3200,
+        image: "assets/tedd6.webp",
+        description: "A cute plush teddy bouquet paired with delicious chocolates and red roses for sweet surprise moments.",
         category: ["teddy-bouquet"]
     },
     {
         id: 250,
-        name: "250 - Lavender Teddy Bloom",
-        price:2800,
-        image:"assets/tedd7.webp",
-        description: "ASoft pastel floral bouquet with a cuddly teddy for elegant gifting.",
+        name: "250 - Lavender Teddy Bloom Bouquet",
+        price: 2800,
+        image: "assets/tedd7.webp",
+        description: "A soft pastel floral bouquet with a cuddly teddy bear crafted for elegant gifting.",
         category: ["teddy-bouquet"]
     },
     {
         id: 251,
-        name: "251 Blush Bear Bouquet",
-        price:2800,
-        image:"assets/tedd8.webp",
-        description: "Pink roses and teddy arranged in a dreamy bouquet design.",
+        name: "251 - Blush Bear Bouquet",
+        price: 2800,
+        image: "assets/tedd8.webp",
+        description: "Delicate pink roses and a plush teddy arranged in a dreamy pastel bouquet design.",
         category: ["teddy-bouquet"]
     },
     {
         id: 252,
         name: "252 - Royal Love Teddy Bouquet",
-        price:4800,
-        image:"assets/tedd9.webp",
+        price: 4800,
+        image: "assets/tedd9.webp",
         description: "Red roses with a crowned teddy and heart accent for romantic occasions.",
         category: ["teddy-bouquet"]
     },
     {
         id: 253,
         name: "253 - Graduation Teddy Bouquet",
-        price:2800,
-        image:"assets/tedd10.webp",
+        price: 2800,
+        image: "assets/tedd10.webp",
         description: "Graduation-themed teddy bouquet with elegant white floral touches.",
         category: ["teddy-bouquet"]
     },
     {
         id: 254,
         name: "254 - Peach Teddy Charm Bouquet",
-        price:2800,
-        image:"assets/tedd11.webp",
-        description: "Soft peach wrap bouquet featuring a teddy and delicate floral accents",
+        price: 2800,
+        image: "assets/tedd11.webp",
+        description: "A soft peach wrap bouquet featuring a cute teddy bear and delicate floral accents.",
         category: ["teddy-bouquet"]
     },
     {
         id: 255,
         name: "255 - Chocolate Teddy Treat Bouquet",
-        price:3500,
-        image:"assets/tedd12.webp",
+        price: 3500,
+        image: "assets/tedd12.webp",
         description: "Chocolate-filled bouquet with a pink teddy for the perfect sweet gift.",
         category: ["teddy-bouquet","chocolate-bouquet"]
+    },
+    {
+        id: 256,
+        name: "256 - Sunny Herald Bouquet",
+        price: 450,
+        image: "assets/mag.webp",
+        description: "Brighten any moment with our delightful Sunny Herald floral bouquet.",
+        category: ["budget-friendly"]
+    },
+    {
+        id: 257,
+        name: "257 - Kinder Joy Celebration Elegance",
+        price: 3800,
+        image: "assets/KINDER.webp",
+        description: "Wrapped in sophisticated black kraft paper with golden accents and a graceful blue ribbon, this bouquet is a feast for both eyes and heart.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 258,
+        name: "258 - Passion Peak Magenta Dream",
+        price: 950,
+        image: "assets/redsun.webp",
+        description: "A vibrant magenta bouquet, perfect for passionate declarations, celebrations, or making someone feel special.",
+        category: ["budget-friendly"]
+    },
+    {
+        id: 259,
+        name: "259 - Bangle Delight",
+        price: 4200,
+        image: "assets/bang.jpeg",
+        description: "A bouquet specially made up for women who loves bangle",
+        category: ["teddy-bouquet", "customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
@@ -2485,6 +2490,9 @@ function showProductModal(product) {
     if (productModal && productModalOverlay) {
         productModal.classList.add('active');
         productModalOverlay.classList.add('active');
+        // Pause Lenis so modal inner scroll works freely
+        if (window._lenis) window._lenis.stop();
+        document.body.style.overflow = 'hidden';
     }
 
     // Inject dynamic product schema
@@ -2495,6 +2503,9 @@ function closeProductModal() {
     if (productModal && productModalOverlay) {
         productModal.classList.remove('active');
         productModalOverlay.classList.remove('active');
+        // Resume Lenis page scroll
+        if (window._lenis) window._lenis.start();
+        document.body.style.overflow = '';
     }
     selectedProductForModal = null;
     modalQuantity = 1;
@@ -2692,7 +2703,9 @@ function openPerfumeWhatsApp(productName, productImage) {
     const phoneNumber = "919994588076";
     // If the image path is relative, construct the full absolute URL so it creates a preview on WhatsApp
     const imageUrl = new URL(productImage, window.location.href).href;
-    const message = `Hey The Secret Florist! 🌸 I need a customized perfume bouquet like the *"${productName}"* that I saw on your website.\n\nHere is the reference image: ${imageUrl}\n\nCould you please provide more details and pricing? Thank you!`;
+    const isPerfume = productName.toLowerCase().includes('perfume');
+    const bouquetType = isPerfume ? 'customized perfume bouquet' : 'customized bouquet';
+    const message = `Hey The Secret Florist! 🌸 I need a ${bouquetType} like the *"${productName}"* that I saw on your website.\n\nHere is the reference image: ${imageUrl}\n\nCould you please provide more details and pricing? Thank you!`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
@@ -2735,16 +2748,19 @@ if (hamburgerBtn && navLinks) {
 // ================== SMOOTH SCROLLING (LENIS) ==================
 if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
-        duration: 0.2,
+        duration: 1.1,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         direction: 'vertical',
         gestureDirection: 'vertical',
         smooth: true,
-        mouseMultiplier: 3,
-        smoothTouch: true,
-        touchMultiplier: 4,
+        mouseMultiplier: 1.0,
+        smoothTouch: false,
+        touchMultiplier: 1.5,
         infinite: false,
     });
+
+    // Expose lenis globally so modal open/close can pause it
+    window._lenis = lenis;
 
     function raf(time) {
         lenis.raf(time);
@@ -2761,7 +2777,7 @@ if (typeof Lenis !== 'undefined') {
             if (targetId && targetId !== '#') {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    lenis.scrollTo(targetElement);
+                    lenis.scrollTo(targetElement, { duration: 1.2 });
                 }
             }
         });
