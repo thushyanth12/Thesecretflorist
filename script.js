@@ -2017,6 +2017,14 @@ const products = [
         image: "assets/bang.jpeg",
         description: "A bouquet specially made up for women who loves bangle",
         category: ["teddy-bouquet", "customized"]
+    },
+    {
+        id: 260,
+        name: "260 - Cash & Bloom Luxury Money Bouquet",
+        price: 2500,
+        image: "assets/cashbloom.webp",
+        description: "A luxurious blend of fresh roses, delicate blooms, chocolates, and beautifully arranged currency notes—perfect for birthdays, celebrations, and special occasions.",
+        category: ["customized", "money-bouquet", "chocolate-bouquet", "luxury", "birthday"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
