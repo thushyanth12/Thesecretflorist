@@ -2025,6 +2025,78 @@ const products = [
         image: "assets/cashbloom.webp",
         description: "A luxurious blend of fresh roses, delicate blooms, chocolates, and beautifully arranged currency notes—perfect for birthdays, celebrations, and special occasions.",
         category: ["customized", "money-bouquet", "chocolate-bouquet", "luxury", "birthday"]
+    },
+    {
+        id: 261,
+        name: "261 - Ferrero Rocher & Crimson Rose Kraft Bouquet",
+        price: 1800,
+        image: "assets/ken1.jpg",
+        description: "Golden Ferrero Rocher chocolates paired with classic red roses and baby's breath in vintage kraft wrap.",
+        category: ["chocolate-bouquet"]  
+    },
+    {
+        id: 262,
+        name: "262 - Royal Purple Mega Chocolate Trio Bouquet",
+        price: 2200,
+        image: "assets/ken2.jpg",
+        description: "A grand mix of Dairy Milk, KitKat, and Ferrero Rocher chocolates in royal purple and vintage wrap.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 263,
+        name: "263 - Sunflower & Lavender Rosette Photo Bouquet",
+        price: 1800,
+        image: "assets/ken3.jpg",
+        description: "Cherished polaroid photos paired with handcrafted purple roses and a sunflower in floral print wrap.",
+        category: ["polaroids-bouquet"]
+    },
+    {
+        id: 264,
+        name: "264 - Pink Lilies & Cherished Moments Photo Bouquet",
+        price: 3200,
+        image: "assets/ken4.jpg",
+        description: "Vibrant pink lilies and personalized polaroid photos elegantly wrapped in frosted blush paper.",
+        category: ["polaroids-bouquet"]
+    },
+    {
+        id: 265,
+        name: "265 - Royal Sapphire Silk & Ferrero Rose Bouquet",
+        price: 3200,
+        image: "assets/kenn.webp",
+        description: "Creamy white roses and baby's breath paired with Cadbury Dairy Milk Silk bars and a golden Ferrero Rocher box, wrapped in shimmering royal blue with silver accents.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 266,
+        name: "266 - Iris Blue Carnation & Peach Rose Grand Bouquet",
+        price: 2500,
+        image: "assets/kenn2.webp",
+        description: "Lush pink spray carnations and soft peach roses layered with purple statice and gypsophila, presented in a statuesque iris blue wrap with a golden ribbon bow.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 267,
+        name: "267 - Royal Purple Anniversary Hamper & Polaroid Bouquet",
+        price: 6500,
+        image: "assets/kenn3.webp",
+        description: "A royal purple floral hamper with fairy lights, personalized polaroids, an anniversary topper, and twin mini cakes.",
+        category: ["polaroids-bouquet","chocolate-bouquet"]
+    },
+    {
+        id: 268,
+        name: "268 - Golden Rocher Pink Rosette Blossom Bouquet",
+        price: 2500,
+        image: "assets/kenn4.webp",
+        description: "Golden Ferrero Rocher chocolates nestled in handcrafted pink rosettes, wrapped in blush and crimson paper.",
+        category: ["chocolate-bouquet", "birthday"]
+    },
+    {
+        id: 269,
+        name: "269 - Classic Crimson Rose & Baby's Breath Gold-Trimmed Bouquet",
+        price: 1000,
+        image: "assets/kenn5.webp",
+        description: "Fresh red roses paired with white baby's breath, wrapped in gold-trimmed frosted champagne paper.",
+        category: ["budget-friendly"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
