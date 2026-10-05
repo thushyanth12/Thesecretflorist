@@ -2,15 +2,22 @@ const products = [
     {
         id: 1,
         name: "001 - The First Step",
-        price: 1800,
+        basePrice: 1800,
+        get price() { return this.basePrice; },
         image: "assets/child.webp",
         description: "A gentle pastel floral bouquet crafted specially for a baby's first birthday celebration.",
-        category: ["birthday","polaroids-bouquet"]
+        category: ["birthday","polaroids-bouquet"],
+        options: [
+            { name: "Add Greeting Card", price: 50, type: "checkbox" },
+            { name: "Add Gift Ribbon", price: 80, type: "checkbox" },
+            { name: "Add Balloon (1 pc)", price: 120, type: "checkbox" }
+        ]
     },
     {
         id: 2,
         name: "002 - Blush Harmony Box",
-        price: 3000,
+        basePrice: 3000,
+        get price() { return this.basePrice; },
         image: "assets/one.webp",
         description: "Soft pastel blooms and sweet treats arranged for elegant celebrations.",
         category: "customized"
@@ -58,10 +65,16 @@ const products = [
     {
         id: 8,
         name: "008 - Hot Wheels Fire",
-        price: 2800,
+        basePrice: 2800,
+        get price() { return this.basePrice; },
         image: "assets/nine.webp",
         description: "A bold Hot Wheels surprise wrapped with vibrant blooms and treats.",
-        category: "hot-wheels"
+        category: "hot-wheels",
+        options: [
+            { name: "Extra Hot Wheels Car", price: 200, type: "checkbox" },
+            { name: "Add Greeting Card", price: 50, type: "checkbox" },
+            { name: "Premium Gift Box", price: 150, type: "checkbox" }
+        ]
     },
     {
         id: 9,
@@ -916,15 +929,22 @@ const products = [
     {
         id: 122,
         name: "122 - Choco Delight Bouquet",
-        price: 3500,
+        basePrice: 3500,
+        get price() { return this.basePrice; },
         image: "assets/allcho2.jpeg",
         description: "A delicious assortment of favorite chocolates beautifully wrapped for any sweet occasion.",
-        category: ["chocolate-bouquet"]
+        category: ["chocolate-bouquet"],
+        options: [
+            { name: "Add Greeting Card", price: 50, type: "checkbox" },
+            { name: "Extra Chocolates (+3 pcs)", price: 180, type: "checkbox" },
+            { name: "Premium Gift Wrap", price: 100, type: "checkbox" }
+        ]
     },
     {
         id: 123,
         name: "123 - All Chocolates Grand Bouquet",
-        price: 2800,
+        basePrice: 2800,
+        get price() { return this.basePrice; },
         image: "assets/allchocolate.jpeg",
         description: "A rich collection of assorted gourmet chocolates arranged with love in elegant packaging.",
         category: ["chocolate-bouquet"]
@@ -1116,10 +1136,16 @@ const products = [
     {
         id: 147,
         name: "147 - Premium Polaroids & Floral Bouquet",
-        price: 2800,
+        basePrice: 2800,
+        get price() { return this.basePrice; },
         image: "assets/pola1.webp",
         description: "A luxurious bouquet featuring photos, small gifts, and floral elements, making it a complete surprise package.",
-        category: ["polaroids-bouquet","customized"]
+        category: ["polaroids-bouquet","customized"],
+        options: [
+            { name: "Print 5 Extra Photos", price: 150, type: "checkbox" },
+            { name: "Add Fairy Lights", price: 200, type: "checkbox" },
+            { name: "Premium Frame Stand", price: 250, type: "checkbox" }
+        ]
     },
     {
         id: 148,
@@ -1893,10 +1919,16 @@ const products = [
     {
         id: 244,
         name: "244 - Teddy Bloom Delight Bouquet",
-        price: 3200,
+        basePrice: 3200,
+        get price() { return this.basePrice; },
         image: "assets/tedd1.webp",
         description: "A cute mix of teddy, pastel roses, and chocolates wrapped with love.",
-        category: ["teddy-bouquet"]
+        category: ["teddy-bouquet"],
+        options: [
+            { name: "Upgrade Teddy (Larger)", price: 300, type: "checkbox" },
+            { name: "Add Chocolates", price: 150, type: "checkbox" },
+            { name: "Add Greeting Card", price: 50, type: "checkbox" }
+        ]
     },
     {
         id: 245,
@@ -2150,7 +2182,7 @@ counters.forEach(counter => {
   update();
 });
 
-// Cart is noidw an array of { product, quantity } objects
+// Cart is now an array of { product, quantity, selectedOptions, effectivePrice } objects
 let cart = [];
 let currentCategory = 'all';
 let searchTerm = '';
@@ -2159,6 +2191,9 @@ let occasionFilter = 'all';
 let wishlist = new Set();
 let selectedProductForModal = null;
 let modalQuantity = 1;
+// Tracks which options are currently selected inside the open modal
+// Format: Set of option names (for checkboxes) or a single name string (for radios per group)
+let selectedModalOptions = [];
 
 const productGrid = document.getElementById('product-grid');
 const cartItemsContainer = document.getElementById('cart-items');
@@ -2422,6 +2457,45 @@ function setupProductModal() {
             }
         });
     }
+
+    // ── Trackpad / wheel scroll fix ──────────────────────────────────────
+    // Lenis captures all wheel events on document. When the modal is open
+    // we stop propagation on the modal's scroll container so the wheel
+    // delta is consumed by the modal itself and never reaches Lenis/body.
+    if (productModal) {
+        const stopWheelProp = (e) => {
+            // Only intercept when the modal is actually open
+            if (!productModal.classList.contains('active')) return;
+
+            const scroller = productModal.querySelector('.modal-content');
+            if (!scroller) return;
+
+            const atTop    = scroller.scrollTop === 0;
+            const atBottom = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 1;
+
+            // Allow the event to bubble only if we're at the boundary and
+            // the user is trying to scroll further in that direction
+            // (so the page doesn't get stuck). Otherwise, contain it.
+            const scrollingUp   = e.deltaY < 0;
+            const scrollingDown = e.deltaY > 0;
+
+            if ((atTop && scrollingUp) || (atBottom && scrollingDown)) {
+                // At boundary — let it pass so the modal doesn't block page scroll
+                return;
+            }
+
+            e.stopPropagation();
+        };
+
+        productModal.addEventListener('wheel', stopWheelProp, { passive: true });
+
+        // Also prevent touchmove from bubbling (iOS / trackpad touch events)
+        productModal.addEventListener('touchmove', (e) => {
+            if (productModal.classList.contains('active')) {
+                e.stopPropagation();
+            }
+        }, { passive: true });
+    }
 }
 
 
@@ -2539,7 +2613,8 @@ function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
         selectedProductForModal = product;
-        modalQuantity = 1; // Reset quantity for new modal
+        modalQuantity = 1;          // Reset quantity for new modal
+        selectedModalOptions = [];  // Reset options for new modal
         showProductModal(product);
     }
 }
@@ -2551,6 +2626,7 @@ function showProductModal(product) {
     const modalProductPrice = document.getElementById('modal-product-price');
     const modalQtySelector = document.querySelector('.modal-qty-selector');
     const modalAddBtn = document.querySelector('.modal-add-btn');
+    const modalOptionsContainer = document.getElementById('modal-options-container');
 
     const isCustomizable = normalizeCategory(product).some(cat => ['perfume-bouquet', 'customized'].includes(cat));
 
@@ -2558,6 +2634,9 @@ function showProductModal(product) {
     modalProductImage.alt = getProductSEOAlt(product);
     modalProductName.textContent = product.name;
     modalProductDescription.textContent = product.description;
+
+    // Always clear options container first
+    if (modalOptionsContainer) modalOptionsContainer.innerHTML = '';
 
     if (isCustomizable) {
         // Hide price and quantity selector for customizable bouquets
@@ -2571,13 +2650,13 @@ function showProductModal(product) {
         }
     } else if (product.prebook) {
         // Prebook product
-        if (product.price === undefined || product.price === null) {
+        if (product.basePrice === undefined || product.basePrice === null) {
             modalProductPrice.style.display = 'none';
         } else {
             modalProductPrice.style.display = '';
-            modalProductPrice.textContent = `INR ${product.price.toLocaleString('en-IN')}`;
+            modalProductPrice.textContent = `INR ${product.basePrice.toLocaleString('en-IN')}`;
         }
-        if (modalQtySelector) modalQtySelector.style.display = 'none'; // Hide quantity for prebook?
+        if (modalQtySelector) modalQtySelector.style.display = 'none';
         if (modalAddBtn) {
             modalAddBtn.innerHTML = '<i class="fas fa-calendar-check"></i> Prebook 1 week before';
             modalAddBtn.className = 'modal-add-btn ripple prebook-modal-btn';
@@ -2585,14 +2664,20 @@ function showProductModal(product) {
         }
     } else {
         // Normal product — show price, qty, add-to-cart
-        modalProductPrice.style.display = '';
-        modalProductPrice.textContent = `INR ${product.price.toLocaleString('en-IN')}`;
         if (modalQtySelector) modalQtySelector.style.display = '';
         if (modalAddBtn) {
             modalAddBtn.innerHTML = '<i class="fas fa-cart-plus"></i> Add to Cart';
             modalAddBtn.className = 'modal-add-btn ripple';
             modalAddBtn.onclick = confirmAddToCart;
         }
+
+        // ── Render add-on options if the product has any ──
+        if (product.options && product.options.length > 0 && modalOptionsContainer) {
+            renderModalOptions(product, modalOptionsContainer);
+        }
+
+        // Set initial price display (recalculate considers selected options)
+        recalculateModalTotal(product);
     }
 
     // Update quantity display
@@ -2609,6 +2694,122 @@ function showProductModal(product) {
 
     // Inject dynamic product schema
     injectSingleProductSchema(product);
+}
+
+/**
+ * Renders checkboxes / radios for product add-on options inside the modal.
+ */
+function renderModalOptions(product, container) {
+    // Group radio options by a 'group' key if present; for now all radios share one group
+    const hasRadio = product.options.some(o => o.type === 'radio');
+
+    const itemsHTML = product.options.map((opt, idx) => {
+        const inputType = opt.type === 'radio' ? 'radio' : 'checkbox';
+        const groupName = hasRadio ? `modal-radio-${product.id}` : '';
+        const inputAttrs = inputType === 'radio'
+            ? `name="${groupName}"`
+            : '';
+        const priceLabel = opt.price === 0
+            ? '<span class="modal-option-price free">Free</span>'
+            : `<span class="modal-option-price">+ INR ${opt.price.toLocaleString('en-IN')}</span>`;
+
+        return `
+        <label class="modal-option-item" id="modal-opt-label-${product.id}-${idx}">
+            <input
+                type="${inputType}"
+                ${inputAttrs}
+                id="modal-opt-${product.id}-${idx}"
+                data-opt-index="${idx}"
+                onchange="handleOptionChange(event, ${product.id})"
+            >
+            <div class="modal-option-info">
+                <span class="modal-option-name">${opt.name}</span>
+                ${priceLabel}
+            </div>
+        </label>`;
+    }).join('');
+
+    container.innerHTML = `
+        <div class="modal-options-section">
+            <div class="modal-options-label">
+                <i class="fas fa-wand-magic-sparkles"></i> Add-ons
+            </div>
+            <div class="modal-options-list">
+                ${itemsHTML}
+            </div>
+        </div>
+        <div class="modal-total-row" id="modal-total-row">
+            <span class="modal-total-label">Total</span>
+            <span class="modal-total-amount" id="modal-total-amount"></span>
+        </div>`;
+}
+
+/**
+ * Called whenever a checkbox/radio changes inside the modal.
+ * Updates selectedModalOptions and refreshes the displayed total.
+ */
+function handleOptionChange(event, productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product || !product.options) return;
+
+    const input = event.target;
+    const idx = parseInt(input.dataset.optIndex, 10);
+    const opt = product.options[idx];
+
+    // Update the .selected class on the label for visual feedback
+    const label = input.closest('.modal-option-item');
+    if (label) label.classList.toggle('selected', input.checked);
+
+    if (opt.type === 'radio') {
+        // For radios: replace any existing radio-type selection
+        selectedModalOptions = selectedModalOptions.filter(o => {
+            const existing = product.options.find(po => po.name === o.name);
+            return existing && existing.type !== 'radio';
+        });
+        if (input.checked) selectedModalOptions.push(opt);
+    } else {
+        // Checkbox: toggle
+        if (input.checked) {
+            if (!selectedModalOptions.find(o => o.name === opt.name)) {
+                selectedModalOptions.push(opt);
+            }
+        } else {
+            selectedModalOptions = selectedModalOptions.filter(o => o.name !== opt.name);
+        }
+    }
+
+    recalculateModalTotal(product);
+}
+
+/**
+ * Recomputes basePrice + selected add-ons and updates the price display in the modal.
+ * If the product has the total-row element, it shows there; otherwise falls back to modal-product-price.
+ */
+function recalculateModalTotal(product) {
+    const base = product.basePrice || product.price || 0;
+    const addonsTotal = selectedModalOptions.reduce((sum, o) => sum + (o.price || 0), 0);
+    const total = base + addonsTotal;
+
+    const totalAmountEl = document.getElementById('modal-total-amount');
+    const modalProductPrice = document.getElementById('modal-product-price');
+
+    if (totalAmountEl) {
+        // Show live total in the dedicated row
+        totalAmountEl.textContent = `INR ${total.toLocaleString('en-IN')}`;
+        // Bounce animation
+        totalAmountEl.classList.remove('bump');
+        void totalAmountEl.offsetWidth; // reflow
+        totalAmountEl.classList.add('bump');
+        setTimeout(() => totalAmountEl.classList.remove('bump'), 200);
+        // Hide the separate price element (total row replaces it)
+        if (modalProductPrice) modalProductPrice.style.display = 'none';
+    } else {
+        // Fallback: product has no options, just show base price
+        if (modalProductPrice) {
+            modalProductPrice.style.display = '';
+            modalProductPrice.textContent = `INR ${total.toLocaleString('en-IN')}`;
+        }
+    }
 }
 
 function closeProductModal() {
@@ -2646,13 +2847,27 @@ function modalQtyPlus() {
     }
 }
 
-// Add product to cart with quantity support
-function addProductToCart(product, quantity) {
-    const existingIndex = cart.findIndex(item => item.product.id === product.id);
+// Add product to cart with quantity and selected options support.
+// Dedup key = product.id + sorted option names (so same product with different options = separate cart lines).
+function addProductToCart(product, quantity, options) {
+    const optionNames = (options || []).map(o => o.name).sort().join('|');
+    const existingIndex = cart.findIndex(item => {
+        const existingNames = (item.selectedOptions || []).map(o => o.name).sort().join('|');
+        return item.product.id === product.id && existingNames === optionNames;
+    });
+
+    const addonsTotal = (options || []).reduce((sum, o) => sum + (o.price || 0), 0);
+    const effectivePrice = (product.basePrice || product.price || 0) + addonsTotal;
+
     if (existingIndex !== -1) {
         cart[existingIndex].quantity += quantity;
     } else {
-        cart.push({ product: product, quantity: quantity });
+        cart.push({
+            product,
+            quantity,
+            selectedOptions: options || [],
+            effectivePrice
+        });
     }
     updateCartUI();
 
@@ -2663,7 +2878,7 @@ function addProductToCart(product, quantity) {
 
 function confirmAddToCart() {
     if (selectedProductForModal) {
-        addProductToCart(selectedProductForModal, modalQuantity);
+        addProductToCart(selectedProductForModal, modalQuantity, [...selectedModalOptions]);
         showToast(selectedProductForModal.name, selectedProductForModal.image);
         closeProductModal();
     }
@@ -2692,15 +2907,15 @@ function updateCartQty(index, delta) {
         const qtySpan = cartItem.querySelector('.qty-value');
         if (qtySpan) qtySpan.textContent = cart[index].quantity;
 
-        // Update the item price
+        // Update the item price (use effectivePrice which includes add-ons)
         const priceSpan = cartItem.querySelector('.item-price');
-        if (priceSpan) priceSpan.textContent = `INR ${(cart[index].product.price * cart[index].quantity).toLocaleString('en-IN')}`;
+        if (priceSpan) priceSpan.textContent = `INR ${(cart[index].effectivePrice * cart[index].quantity).toLocaleString('en-IN')}`;
     }
 
     // Update cart count badge and total
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCountElement.textContent = totalItems;
-    const total = cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+    const total = cart.reduce((sum, item) => sum + (item.effectivePrice * item.quantity), 0);
     cartTotalElement.textContent = `INR ${total.toLocaleString('en-IN')}`;
 }
 
@@ -2717,12 +2932,21 @@ function updateCartUI() {
                 <p>Your cart is empty</p>
             </div>`;
     } else {
-        cartItemsContainer.innerHTML = cart.map((entry, index) => `
+        cartItemsContainer.innerHTML = cart.map((entry, index) => {
+            // Build option tags HTML
+            const optTagsHTML = (entry.selectedOptions && entry.selectedOptions.length > 0)
+                ? `<div class="cart-item-options">${entry.selectedOptions.map(o =>
+                    `<span class="cart-option-tag">${o.name} ${o.price > 0 ? '+INR ' + o.price.toLocaleString('en-IN') : ''}</span>`
+                  ).join('')}</div>`
+                : '';
+
+            return `
             <div class="cart-item" data-index="${index}">
                 <img src="${entry.product.image}" alt="${entry.product.name}">
                 <div class="item-details">
                     <span class="item-title">${entry.product.name}</span>
-                    <span class="item-price">INR ${(entry.product.price * entry.quantity).toLocaleString('en-IN')}</span>
+                    ${optTagsHTML}
+                    <span class="item-price">INR ${(entry.effectivePrice * entry.quantity).toLocaleString('en-IN')}</span>
                     <div class="cart-qty-controls">
                         <button class="qty-btn" onclick="updateCartQty(${index}, -1)" aria-label="Decrease quantity">
                             <i class="fas fa-minus"></i>
@@ -2736,12 +2960,12 @@ function updateCartUI() {
                         </button>
                     </div>
                 </div>
-            </div>
-        `).join('');
+            </div>`;
+        }).join('');
     }
 
-    // Update total
-    const total = cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
+    // Update total (effectivePrice already includes add-ons)
+    const total = cart.reduce((sum, item) => sum + (item.effectivePrice * item.quantity), 0);
     cartTotalElement.textContent = `INR ${total.toLocaleString('en-IN')}`;
 }
 
@@ -2781,10 +3005,16 @@ function checkout() {
         message += "*Order Details:*\n";
         let total = 0;
         cart.forEach(entry => {
-            const itemTotal = entry.product.price * entry.quantity;
+            const itemTotal = entry.effectivePrice * entry.quantity;
             total += itemTotal;
             const imageUrl = new URL(entry.product.image, window.location.href).href;
             message += `- ${entry.product.name} (x${entry.quantity}) - INR ${itemTotal.toLocaleString('en-IN')}\n`;
+            // List selected add-ons if any
+            if (entry.selectedOptions && entry.selectedOptions.length > 0) {
+                entry.selectedOptions.forEach(o => {
+                    message += `  • Add-on: ${o.name}${o.price > 0 ? ' (+INR ' + o.price.toLocaleString('en-IN') + ')' : ''}\n`;
+                });
+            }
             message += `  Preview: ${imageUrl}\n`;
         });
 
