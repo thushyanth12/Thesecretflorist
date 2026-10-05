@@ -1607,7 +1607,7 @@ const products = [
         price: 5500,
         image: "assets/a1.webp",
         description: "Premium navy bouquet with 10+ Hot Wheels cars, KitKat bars, snacks & money notes — the ultimate gift for car enthusiasts.",
-        category: ["hot-wheels","money-bouquet"]
+        category: ["hot-wheels"]
     },
     {
         id: 209,
@@ -2097,6 +2097,38 @@ const products = [
         image: "assets/kenn5.webp",
         description: "Fresh red roses paired with white baby's breath, wrapped in gold-trimmed frosted champagne paper.",
         category: ["budget-friendly"]
+    },
+    {
+        id: 270,
+        name: "270 - Pikachu & Oxidized Jhumka Jewellery Bouquet",
+        price: 2500,
+        image: "assets/kenn6.webp",
+        description: "A playful Pikachu centerpiece surrounded by fresh green button mums and baby's breath, decorated with assorted statement jhumkas and fashion earrings in gold-trimmed wrap.",
+        category: ["birthday"]
+    },
+    {
+        id: 271,
+        name: "271 - Grand Assorted Chocolate & Sweet Treats Bouquet",
+        price: 1800,
+        image: "assets/kenn7.webp",
+        description: "An indulgent mix of KitKat, Dairy Milk, Munch Max, and Kinder Creamy nestled in baby's breath, wrapped in textured cream paper with a bright yellow satin bow.",
+        category: ["chocolate-bouquet", "birthday"]
+    },
+    {
+        id: 272,
+        name: "272 - Blushing Bunny & Pastel Sakura Blossom Bouquet",
+        price: 2299,
+        image: "assets/kenn8.webp",
+        description: "A plush bunny nestled amidst soft pink cherry blossoms and pastel roses, styled in layered frosted blush Korean wrap with a matching pink rosette ribbon.",
+        category: ["customized", "teddy-bouquet", "birthday"]
+    },
+    {
+        id: 273,
+        name: "273 - Royal ₹50 Currency Spiral & Velvet Rose Money Bouquet",
+        price: 4999,
+        image: "assets/kenn9.webp",
+        description: "An opulent spiral arrangement of folded ₹50 notes framed by handcrafted crimson and black roses in luxury gold-trimmed architectural wrap.",
+        category: ["money-bouquet", "luxury", "customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
