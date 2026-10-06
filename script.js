@@ -2149,10 +2149,10 @@ const products = [
     {
         id: 272,
         name: "272 - Blushing Bunny & Pastel Sakura Blossom Bouquet",
-        price: 2299,
+        price: 2800,
         image: "assets/kenn8.webp",
         description: "A plush bunny nestled amidst soft pink cherry blossoms and pastel roses, styled in layered frosted blush Korean wrap with a matching pink rosette ribbon.",
-        category: ["customized", "teddy-bouquet", "birthday"]
+        category: ["teddy-bouquet", "birthday"]
     },
     {
         id: 273,
@@ -2160,7 +2160,7 @@ const products = [
         price: 4999,
         image: "assets/kenn9.webp",
         description: "An opulent spiral arrangement of folded ₹50 notes framed by handcrafted crimson and black roses in luxury gold-trimmed architectural wrap.",
-        category: ["money-bouquet", "luxury", "customized"]
+        category: ["money-bouquet", "customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
