@@ -2450,7 +2450,8 @@ img {
     }
 
     .modal-image-container {
-        height: 220px;
+        height: 200px;
+
     }
 
     .modal-info h2 {
@@ -2862,7 +2863,7 @@ img {
 
 /* Image fills container with cover so it always looks full-bleed */
 .modal-image-container {
-    width: 100%;
+    width: 90%;
     flex: 0 0 auto;
     height: min(300px, 38vh);
     overflow: hidden;
@@ -3501,13 +3502,15 @@ body {
         height: 60vh;
         object-position: left top;
     }
+
     .floral-border-right {
         bottom: -5vh;
         right: -12vh;
         width: 40vh;
         height: 60vh;
         object-position: right bottom;
-        top: auto; /* Overrides default top: 0 */
+        top: auto;
+        /* Overrides default top: 0 */
     }
 }
 
@@ -3519,6 +3522,7 @@ body {
         width: 45vh;
         max-width: 25vw;
     }
+
     .floral-border-right {
         right: 0;
         object-position: right center;
@@ -4128,6 +4132,7 @@ body {
     .modal-option-item {
         padding: 8px 10px;
     }
+
     .modal-option-name {
         font-size: 0.82rem;
     }
