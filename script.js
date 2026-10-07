@@ -2188,7 +2188,6 @@ let currentCategory = 'all';
 let searchTerm = '';
 let maxPrice = 100000;
 let occasionFilter = 'all';
-let wishlist = new Set();
 let selectedProductForModal = null;
 let modalQuantity = 1;
 // Tracks which options are currently selected inside the open modal
@@ -2260,12 +2259,10 @@ function showToast(productName, productImage) {
     `;
     container.appendChild(toast);
 
-    // Trigger animation
     requestAnimationFrame(() => {
         toast.classList.add('show');
     });
 
-    // Auto-remove after 3.5 seconds
     setTimeout(() => {
         toast.classList.add('hiding');
         setTimeout(() => toast.remove(), 400);
@@ -2283,10 +2280,7 @@ function setupPageLoader() {
         }, 300);
     });
     
-    // Fallback: hide loader after 1.5 seconds max
-    setTimeout(() => {
-        loader.classList.add('hidden');
-    }, 1500);
+    setTimeout(() => loader.classList.add('hidden'), 1500);
 }
 
 // ================== SCROLL TO TOP ==================
@@ -2329,13 +2323,9 @@ function setupCategoryFilters() {
     const categoryButtons = document.querySelectorAll('.category-btn');
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
             categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             button.classList.add('active');
-            // Update current category
             currentCategory = button.dataset.category.toLowerCase().trim();
-            // Re-render products
             renderProducts();
         });
     });
@@ -2359,33 +2349,18 @@ function setupCategoryScrollButtons() {
         scrollRightBtn.disabled = isAtEnd;
     }
 
-    // Scroll left
     scrollLeftBtn.addEventListener('click', () => {
-        categoryFilter.scrollBy({
-            left: -scrollAmount,
-            behavior: 'smooth'
-        });
-        // Update button states after scroll
+        categoryFilter.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         setTimeout(updateButtonStates, 300);
     });
 
-    // Scroll right
     scrollRightBtn.addEventListener('click', () => {
-        categoryFilter.scrollBy({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-        // Update button states after scroll
+        categoryFilter.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         setTimeout(updateButtonStates, 300);
     });
 
-    // Update button states on scroll
     categoryFilter.addEventListener('scroll', updateButtonStates);
-
-    // Update button states on window resize
     window.addEventListener('resize', updateButtonStates);
-
-    // Initial state
     updateButtonStates();
 }
 
@@ -2396,8 +2371,6 @@ function setupSearchFilters() {
             renderProducts();
         });
     }
-
-
 }
 
 function setupProductInteractions() {
@@ -2830,7 +2803,6 @@ function closeProductModal() {
     }
 }
 
-// Modal quantity controls
 function modalQtyMinus() {
     if (modalQuantity > 1) {
         modalQuantity--;
@@ -3026,18 +2998,20 @@ function checkout() {
     const phoneNumber = "919994588076";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    setTimeout(() => {
-        if (orderStatus) {
-            orderStatus.classList.remove("loading");
-            orderStatus.classList.add("success");
-        }
-        window.open(whatsappUrl, '_blank');
+    if (orderStatus) {
+        orderStatus.classList.remove("loading");
+        orderStatus.classList.add("active", "success");
         setTimeout(() => {
-            if (orderStatus) {
-                orderStatus.classList.remove("active", "success");
-            }
-        }, 1200);
-    }, 1200);
+            orderStatus.classList.remove("active", "success");
+        }, 2000);
+    }
+
+    // Call window.open synchronously to preserve user activation gesture and prevent browser popup blocking
+    const win = window.open(whatsappUrl, '_blank');
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+        // Fallback for browsers or in-app webviews that block new windows
+        window.location.href = whatsappUrl;
+    }
 }
 
 // ================== PERFUME BOUQUET WHATSAPP ==================
@@ -3049,7 +3023,10 @@ function openPerfumeWhatsApp(productName, productImage) {
     const bouquetType = isPerfume ? 'customized perfume bouquet' : 'customized bouquet';
     const message = `Hey The Secret Florist! 🌸 I need a ${bouquetType} like the *"${productName}"* that I saw on your website.\n\nHere is the reference image: ${imageUrl}\n\nCould you please provide more details and pricing? Thank you!`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const win = window.open(whatsappUrl, '_blank');
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = whatsappUrl;
+    }
 }
 
 function openPrebookWhatsApp(productName, productImage) {
@@ -3057,10 +3034,12 @@ function openPrebookWhatsApp(productName, productImage) {
     const imageUrl = new URL(productImage, window.location.href).href;
     const message = `Hey The Secret Florist! 🌸 I'm interested in pre-booking the rare *"${productName}"* bouquet (1 week in advance).\n\nHere is the reference image: ${imageUrl}\n\nCould you please confirm the availability and process for this? Thank you!`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const win = window.open(whatsappUrl, '_blank');
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = whatsappUrl;
+    }
 }
 
-// Close cart when clicking outside
 if (cartOverlay) {
     cartOverlay.addEventListener('click', () => toggleCart(false));
 }
@@ -3073,7 +3052,6 @@ if (hamburgerBtn && navLinks) {
     hamburgerBtn.addEventListener('click', () => {
         hamburgerBtn.classList.toggle('active');
         navLinks.classList.toggle('mobile-open');
-        // Prevent body scroll when menu is open
         document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
     });
 
@@ -3231,7 +3209,7 @@ function injectProductSchema() {
             const availability = product.prebook ? "https://schema.org/PreOrder" : "https://schema.org/InStock";
             const absoluteImageUrl = new URL(product.image, window.location.href).href;
             
-            return {
+            const productSchema = {
                 "@type": "Product",
                 "name": product.name,
                 "image": absoluteImageUrl,
@@ -3239,15 +3217,24 @@ function injectProductSchema() {
                 "brand": {
                     "@type": "Brand",
                     "name": "The Secret Florist"
-                },
-                "offers": {
-                    "@type": "Offer",
-                    "priceCurrency": "INR",
-                    "price": product.price || 1500,
-                    "availability": availability,
-                    "url": window.location.href
                 }
             };
+
+            const rawPrice = (typeof product.price === 'number' && product.price > 0)
+                ? product.price
+                : (typeof product.basePrice === 'number' && product.basePrice > 0 ? product.basePrice : null);
+
+            if (rawPrice !== null) {
+                productSchema.offers = {
+                    "@type": "Offer",
+                    "priceCurrency": "INR",
+                    "price": rawPrice,
+                    "availability": availability,
+                    "url": window.location.href
+                };
+            }
+
+            return productSchema;
         })
     };
     
@@ -3276,15 +3263,22 @@ function injectSingleProductSchema(product) {
         "brand": {
             "@type": "Brand",
             "name": "The Secret Florist"
-        },
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "INR",
-            "price": product.price || 1500,
-            "availability": availability,
-            "url": window.location.href
         }
     };
+
+    const rawPrice = (typeof product.price === 'number' && product.price > 0)
+        ? product.price
+        : (typeof product.basePrice === 'number' && product.basePrice > 0 ? product.basePrice : null);
+
+    if (rawPrice !== null) {
+        schemaData.offers = {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "price": rawPrice,
+            "availability": availability,
+            "url": window.location.href
+        };
+    }
     
     const script = document.createElement('script');
     script.id = 'single-product-schema';

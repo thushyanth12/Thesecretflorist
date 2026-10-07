@@ -8,7 +8,9 @@
     "lighthouse": "node scripts/lighthouse-batch.js",
     "keywords": "node scripts/keyword-tracker.js",
     "full": "npm run audit && npm run lighthouse && npm run keywords",
-    "report": "node scripts/generate-report.js"
+    "report": "node scripts/generate-report.js",
+    "optimize:assets": "python scripts/optimize-assets.py",
+    "optimize:assets:dry": "python scripts/optimize-assets.py --dry-run"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

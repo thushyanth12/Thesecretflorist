@@ -15,38 +15,43 @@ async function runLighthouse(url) {
   const lighthouse = (await import("lighthouse")).default;
   const chromeLauncher = await import("chrome-launcher");
 
-  const chrome = await chromeLauncher.launch({
-    chromeFlags: ["--headless", "--no-sandbox", "--disable-gpu"],
-  });
+  let chrome;
+  try {
+    chrome = await chromeLauncher.launch({
+      chromeFlags: ["--headless", "--no-sandbox", "--disable-gpu"],
+    });
 
-  const options = {
-    logLevel: "error",
-    output: "json",
-    onlyCategories: ["performance", "accessibility", "seo", "best-practices"],
-    port: chrome.port,
-  };
+    const options = {
+      logLevel: "error",
+      output: "json",
+      onlyCategories: ["performance", "accessibility", "seo", "best-practices"],
+      port: chrome.port,
+    };
 
-  const runnerResult = await lighthouse(url, options);
-  await chrome.kill();
-
-  const lhr = runnerResult.lhr;
-  return {
-    url,
-    scores: {
-      performance: Math.round(lhr.categories.performance.score * 100),
-      accessibility: Math.round(lhr.categories.accessibility.score * 100),
-      seo: Math.round(lhr.categories.seo.score * 100),
-      bestPractices: Math.round(lhr.categories["best-practices"].score * 100),
-    },
-    audits: {
-      lcp: lhr.audits["largest-contentful-paint"]?.displayValue,
-      cls: lhr.audits["cumulative-layout-shift"]?.displayValue,
-      tbt: lhr.audits["total-blocking-time"]?.displayValue,
-      fcp: lhr.audits["first-contentful-paint"]?.displayValue,
-      si: lhr.audits["speed-index"]?.displayValue,
-    },
-    finalUrl: lhr.finalDisplayedUrl,
-  };
+    const runnerResult = await lighthouse(url, options);
+    const lhr = runnerResult.lhr;
+    return {
+      url,
+      scores: {
+        performance: Math.round(lhr.categories.performance.score * 100),
+        accessibility: Math.round(lhr.categories.accessibility.score * 100),
+        seo: Math.round(lhr.categories.seo.score * 100),
+        bestPractices: Math.round(lhr.categories["best-practices"].score * 100),
+      },
+      audits: {
+        lcp: lhr.audits["largest-contentful-paint"]?.displayValue,
+        cls: lhr.audits["cumulative-layout-shift"]?.displayValue,
+        tbt: lhr.audits["total-blocking-time"]?.displayValue,
+        fcp: lhr.audits["first-contentful-paint"]?.displayValue,
+        si: lhr.audits["speed-index"]?.displayValue,
+      },
+      finalUrl: lhr.finalDisplayedUrl,
+    };
+  } finally {
+    if (chrome) {
+      await chrome.kill();
+    }
+  }
 }
 
 async function main() {
