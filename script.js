@@ -2161,6 +2161,70 @@ const products = [
         image: "assets/kenn9.webp",
         description: "An opulent spiral arrangement of folded ₹50 notes framed by handcrafted crimson and black roses in luxury gold-trimmed architectural wrap.",
         category: ["money-bouquet", "customized"]
+    },
+    {
+        id: 274,
+        name: "274 - Grand Multi-Tier Chocolate Cake Tower & Lily Duo",
+        price: 10000,
+        image: "assets/ken1.webp",
+        description: "Multi-tier chocolate tower of KitKat, Ferrero Rocher, and Dairy Milk crowned with roses, paired with a fresh lily table bouquet.",
+        category: ["chocolate-bouquet", "luxury"]
+    },
+    {
+        id: 275,
+        name: "275 - Luxury iPhone Surprise & KitKat Fan Bouquet",
+        price: 2999,
+        image: "assets/ken2.webp",
+        description: "A surprise smartphone display framed by a fan of KitKat chocolates and baby's breath in gold-trimmed marble wrap.",
+        category: ["chocolate-bouquet", "customized", "birthday"]
+    },
+    {
+        id: 276,
+        name: "276 - Pastel Daisy, Peach Rose & Cadbury Rocher Bouquet",
+        price: 2800,
+        image: "assets/keni.webp",
+        description: "Fresh white daisies, peach roses, Cadbury Dairy Milk, and Ferrero Rocher in gold-scalloped ivory wrap with a black bow.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 277,
+        name: "277 - Royal Blue Anniversary Polaroid & KitKat Bouquet",
+        price: 1800,
+        image: "assets/keni3.webp",
+        description: "Personalized couple Polaroids and KitKat chocolates with a romantic couple figurine in royal blue and crimson gold-lined wrap.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 278,
+        name: "278 - Luminous Glow Bunny & Traditional Jhumka Bouquet",
+        price: 2500,
+        image: "assets/keni4.webp",
+        description: "A warm-lit glowing bunny centerpiece surrounded by traditional oxidized silver and gold jhumkas in starry champagne wrap.",
+        category: ["birthday"]
+    },
+    {
+        id: 279,
+        name: "279 - Blushing Pink Plush Penguin & Peony Rose Bouquet",
+        price: 3200,
+        image: "assets/keni5.webp",
+        description: "A hooded pink plush penguin nestled in vibrant magenta roses and peonies, wrapped in tiered frosted pastel pink paper.",
+        category: ["birthday", "teddy-bouquet"]
+    },
+    {
+        id: 280,
+        name: "280 - Grand Ferrero Rocher & Golden Gypsophila Dome Bouquet",
+        price: 4200,
+        image: "assets/keni6.webp",
+        description: "A grand dome of golden Ferrero Rocher chocolates, yellow baby's breath, and eucalyptus in geometric star-fold wrap.",
+        category: ["chocolate-bouquet"]
+    },
+    {
+        id: 281,
+        name: "281 - Surprise Pink Luxury Gift Box & Blossom Wand Bouquet",
+        price: 1999,
+        image: "assets/keni7.webp",
+        description: "A blush-pink ribboned luxury gift box elevated among vibrant cherry blossoms with a satin-wrapped wand handle.",
+        category: ["customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
