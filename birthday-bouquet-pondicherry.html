@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Order fresh birthday bouquets online in Pondicherry. Surprise your loved ones with handcrafted roses, chocolate bouquets, and custom floral gifts.">
+    <meta name="robots" content="index, follow">
     <meta name="keywords" content="birthday bouquet pondicherry, order birthday flowers online pondicherry, birthday surprise pondicherry, gift delivery pondicherry, florist birthday pondicherry">
     <title>Birthday Bouquet Delivery Pondicherry | The Secret Florist</title>
     <link rel="canonical" href="https://thesecretflorist.in/birthday-bouquet-pondicherry.html">
@@ -68,6 +69,80 @@
       ]
     }
     </script>
+
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I order a birthday bouquet with a cake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer birthday bouquets paired with delicious cakes, polaroids, and balloons to make the celebration extra special."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best birthday bouquets to order online in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some of our most popular birthday gifts include custom red rose wraps, Ferrero Rocher chocolate bouquets, and polaroid memory bouquets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is same-day birthday bouquet delivery available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, same-day delivery is available for birthday bouquets in Pondicherry depending on order time and availability. We recommend ordering at least 4-5 hours in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I customize a birthday bouquet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can write custom details or messages in the Custom Request box on this page or discuss personalization directly with us via WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas in Pondicherry do you deliver birthday bouquets to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We deliver birthday bouquets across White Town, Heritage Town, Lawspet, Muthialpet, Rainbow Nagar, Saram, and East Coast Road / Auroville junction with careful doorstep handling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a birthday bouquet cost in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Birthday bouquets start from budget-friendly single-rose and small mixed-flower wraps, with premium options including chocolate bouquets, teddy combos, and large luxury arrangements at higher price points to suit every budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add a personal birthday message to the bouquet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every birthday bouquet can include a handwritten note or printed card with your personal message. Simply add your message in the Custom Request box or mention it on WhatsApp when ordering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should I order a birthday bouquet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For weekends and popular dates, we recommend ordering one to two days ahead. For urgent gifts, same-day delivery is usually possible when you order early in the day via WhatsApp."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -88,6 +163,8 @@
 
     <!-- Aesthetic Background Ornaments -->
     <div class="bg-ornaments">
+        <img src="assets/left_floral_border.png" class="floral-border floral-border-left" alt="" loading="lazy" aria-hidden="true">
+        <img src="assets/right_floral_border.png" class="floral-border floral-border-right" alt="" loading="lazy" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
@@ -103,17 +180,15 @@
     </div>
 
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="display:flex; align-items:center; gap:4px; text-decoration:none;">
-                <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
-                <img src="assets/logo1.png" alt="The Secret Florist Logo" >
-            </a>
+        <div class="logo" onclick="window.location.href='index.html'" role="button" tabindex="0" aria-label="The Secret Florist Homepage" style="cursor:pointer;">
+            <img src="assets/png logo.PNG" alt="The Secret Florist floral emblem" class="brand-logo">
+            <img src="assets/logo1.png" alt="The Secret Florist Logo">
         </div>
 
         <div class="nav-links">
             <a href="index.html#home">Home</a>
-            <a href="index.html#shop">Collection</a>
-            <a href="index.html#customize">Customize</a>
+            <a href="#shop">Collection</a>
+            <a href="#customize">Customize</a>
             <a href="#faq">FAQ</a>
         </div>
         <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
@@ -132,14 +207,55 @@
         <span class="hero-petal hero-petal-4"></span>
         <span class="hero-petal hero-petal-5"></span>
         <span class="hero-petal hero-petal-6"></span>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-leaf"></i>
-                Fresh — Handcrafted — Same-Day
+
+        <div class="hero-inner-container">
+            <!-- Bouquet in blob frame -->
+            <div class="blob-frame-container">
+                <div class="blob-frame">
+                    <img src="assets/hero_bouquet.png" alt="Birthday flower bouquet online Pondicherry - The Secret Florist" class="hero-blob-image" fetchpriority="high">
+                </div>
+                <!-- Stamp badge -->
+                <div class="stamp-badge">
+                    <svg viewBox="0 0 100 100" class="stamp-svg">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text class="stamp-text">
+                            <textPath href="#circlePath" startOffset="0%">
+                                BIRTHDAY JOY • HANDCRAFTED • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="stamp-center">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                </div>
             </div>
-            <h1>Birthday Bouquet <span class="text-gradient">Order Online in Pondicherry</span></h1>
-            <p>Make birthdays unforgettable with fresh, handcrafted flower bouquets, teddy bouquets, and surprise combos delivered in Pondicherry.</p>
-            <div class="hero-actions">
+
+            <!-- Pill badge -->
+            <div class="hero-pill-badge">
+                <i class="fas fa-cake-candles"></i>
+                Birthday Specials • Handcrafted • Same-Day
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-title">
+                Birthday Bouquet <br>
+                <span class="hero-sub-text">Order Online in Pondicherry</span>
+            </h1>
+
+            <!-- Heart divider -->
+            <div class="heart-divider">
+                <span class="line"></span>
+                <i class="fas fa-heart"></i>
+                <span class="line"></span>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-desc">
+                Make birthdays unforgettable with fresh, handcrafted flower bouquets, teddy bouquets, and surprise combos delivered in Pondicherry.
+            </p>
+
+            <!-- Actions -->
+            <div class="hero-actions-container">
                 <a href="#shop" class="cta-button ripple">
                     <i class="fas fa-spa"></i> Explore Collection
                 </a>
@@ -147,42 +263,36 @@
                     <i class="fas fa-home"></i> Back to Home
                 </a>
             </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-image-glow"></div>
-            <img src="assets/hero.png" alt="Birthday flower bouquet online Pondicherry - The Secret Florist" class="hero-image" fetchpriority="high">
+
+            <!-- Trust strip inside Hero -->
+            <section class="trust-strip">
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-cake-candles"></i>
+                    </div>
+                    <h4>Fresh Everyday</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h4>Same-Day Delivery</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>Custom Combos</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>5-Star Rated</h4>
+                </div>
+            </section>
         </div>
     </header>
-
-    <!-- Section Divider -->
-   
-    <div class="container">
-    <section class="trust-strip">
-        <div class="trust-card">
-          <div class="icon-circle">🌸</div>
-          <h3>1k</h3>
-          <p>Bouquets Delivered</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🌷</div>
-          <h3>100%</h3>
-          <p>Fresh Blooms</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🚚</div>
-          <h3>500+</h3>
-          <p>Same-day Delivery</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">✏️</div>
-          <h3>800+</h3>
-          <p>Custom Orders</p>
-        </div>
-      </section>
-      </div>
     
       <!-- SEO Local Introduction -->
       <div class="container">
@@ -195,7 +305,6 @@
               </div>
           </section>
       </div>
-    
 
     <section id="shop" class="shop-section">
         <div class="section-header">
@@ -251,6 +360,65 @@
             </div>
         </div>
     </section>
+
+    <!-- SEO Content: Occasions & tips -->
+    <div class="container">
+        <section class="seo-content-section reveal">
+            <h2>Birthday Bouquets for Every Kind of Celebration</h2>
+            <p>
+                A <strong>birthday bouquet in Pondicherry</strong> should feel as unique as the person receiving it.
+                For a romantic partner, deep red roses or a heart-shaped rose box never fail. For friends, bright
+                mixed-flower wraps with sunflowers or gerberas bring instant smiles, while our chocolate bouquets
+                double as dessert and décor. For parents and elders, elegant lilies and orchids paired with a soft
+                teddy make a warm, memorable gift.
+            </p>
+            <p>
+                Planning a surprise at midnight or a delivery straight to a college hostel, office desk, or beach
+                café in White Town? Tell us the plan and we will coordinate the timing with you on WhatsApp so the
+                bouquet lands at exactly the right moment. We also craft budget-friendly birthday bouquets under
+                ₹500 for group gifts and students.
+            </p>
+            <div class="seo-celebrations-block">
+                <h3>Explore Other Celebrations</h3>
+                <p class="seo-celebrations-subtitle">Looking for something beyond birthdays? Handcrafted blooms ready for any special moment:</p>
+                <div class="occasions-mini-strip">
+                    <a href="anniversary-flowers-pondicherry.html" class="occasion-card anniversary ripple" aria-label="Explore Anniversary Flowers in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-heart"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Love &amp; Romance</span>
+                            <h3>Anniversary Flowers</h3>
+                            <p>Romantic red roses &amp; bespoke milestone wraps.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Romance</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="rose-bouquet-pondicherry.html" class="occasion-card roses ripple" aria-label="Explore Rose Bouquets in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-seedling"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Timeless Elegance</span>
+                            <h3>Rose Bouquets</h3>
+                            <p>Fresh daily roses in luxury matte wraps.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Roses</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="bouquet-delivery-pondicherry.html" class="occasion-card delivery ripple" aria-label="Order Bouquet Delivery across Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-truck-fast"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Speedy &amp; Fresh</span>
+                            <h3>Bouquet Delivery</h3>
+                            <p>Same-day hand delivery across Pondicherry.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Order Delivery</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq-section reveal">
@@ -323,6 +491,13 @@
                 <a href="index.html#customize">Customize</a>
                 <a href="#faq">FAQ</a>
             </div>
+            <div class="footer-links">
+                <h4>Popular Collections</h4>
+                <a href="birthday-bouquet-pondicherry.html">Birthday Bouquets</a>
+                <a href="anniversary-flowers-pondicherry.html">Anniversary Flowers</a>
+                <a href="rose-bouquet-pondicherry.html">Rose Bouquets</a>
+                <a href="bouquet-delivery-pondicherry.html">Bouquet Delivery</a>
+            </div>
             <div class="footer-social">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -383,7 +558,7 @@
         <button class="modal-close" onclick="closeProductModal()">&times;</button>
         <div class="modal-content">
             <div class="modal-image-container">
-                <img id="modal-product-image" src="" alt="Product" class="modal-product-image">
+                <img id="modal-product-image" src="" alt="Birthday bouquet from The Secret Florist Pondicherry" class="modal-product-image">
             </div>
             <div class="modal-info">
                 <h2 id="modal-product-name"></h2>

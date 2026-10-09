@@ -3360,6 +3360,424 @@ img {
     font-weight: 600;
 }
 
+/* ==========================================================================
+   HUMANIZED OCCASIONS SHOWCASE
+   ========================================================================== */
+.occasions-section {
+    position: relative;
+    padding: 10px 0 25px 0;
+    margin: 15px auto 30px auto;
+}
+
+.occasions-container {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: 38px 36px 30px 36px;
+    box-shadow: 0 16px 40px rgba(184, 41, 78, 0.08), 0 1px 3px rgba(212, 169, 106, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.occasions-container::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(244, 184, 203, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.occasions-container::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(212, 169, 106, 0.22) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.occasions-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 32px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.occasions-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--deep-rose);
+    background: rgba(244, 184, 203, 0.35);
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(224, 82, 122, 0.2);
+    margin-bottom: 12px;
+}
+
+.occasions-eyebrow i {
+    font-size: 0.8rem;
+    color: var(--romantic-pink);
+}
+
+.occasions-title {
+    font-family: var(--font-heading);
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: var(--petal-text);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+}
+
+.occasions-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--muted-bloom);
+    margin: 0;
+}
+
+.occasions-subtitle strong {
+    color: var(--bloom-magenta);
+    font-weight: 600;
+}
+
+/* 4-Column Balanced Grid */
+.occasions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.occasion-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(212, 169, 106, 0.32);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px 20px 20px;
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo), border-color 0.35s ease, background 0.35s ease;
+    box-shadow: 0 6px 20px rgba(184, 41, 78, 0.05);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.occasion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold-whisper), var(--romantic-pink));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.occasion-card:hover,
+.occasion-card:focus-visible {
+    transform: translateY(-6px);
+    background: #ffffff;
+    border-color: rgba(224, 82, 122, 0.55);
+    box-shadow: 0 16px 36px rgba(184, 41, 78, 0.14), 0 0 0 1px rgba(224, 82, 122, 0.2);
+    outline: none;
+}
+
+.occasion-card:hover::before,
+.occasion-card:focus-visible::before {
+    opacity: 1;
+}
+
+.occasion-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+    transition: transform 0.35s var(--ease-out-back);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.occasion-card:hover .occasion-icon-wrapper {
+    transform: scale(1.1) rotate(-4deg);
+}
+
+/* Individual Card Theming */
+.occasion-card.birthday .occasion-icon-wrapper {
+    background: linear-gradient(135deg, #FFE0E9, #FCE1E8);
+    color: #C4185C;
+    border: 1px solid rgba(196, 24, 92, 0.2);
+}
+
+.occasion-card.anniversary .occasion-icon-wrapper {
+    background: linear-gradient(135deg, #FFD2DC, #F4B8CB);
+    color: #B8294E;
+    border: 1px solid rgba(184, 41, 78, 0.2);
+}
+
+.occasion-card.roses .occasion-icon-wrapper {
+    background: linear-gradient(135deg, #FFF0F4, #FFE0E9);
+    color: #E0527A;
+    border: 1px solid rgba(224, 82, 122, 0.2);
+}
+
+.occasion-card.delivery .occasion-icon-wrapper {
+    background: linear-gradient(135deg, #FDF4E3, #F9E7C2);
+    color: #9E6B20;
+    border: 1px solid rgba(212, 169, 106, 0.4);
+}
+
+.occasion-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.occasion-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted-bloom);
+    margin-bottom: 6px;
+}
+
+.occasion-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--petal-text);
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    transition: color 0.2s ease;
+}
+
+.occasion-card:hover h3 {
+    color: var(--deep-rose);
+}
+
+.occasion-card p {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--muted-bloom);
+    margin: 0;
+}
+
+.occasion-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--romantic-pink);
+    transition: gap 0.25s ease, color 0.25s ease;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(212, 169, 106, 0.28);
+    width: 100%;
+}
+
+.occasion-card:hover .occasion-action {
+    color: var(--deep-rose);
+    gap: 12px;
+}
+
+.occasion-action i {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+}
+
+.occasion-card:hover .occasion-action i {
+    transform: translateX(4px);
+}
+
+/* Local Concierge Note Bar */
+.occasions-footer-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(212, 169, 106, 0.22);
+    font-size: 0.94rem;
+    line-height: 1.5;
+    color: var(--petal-text);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.occasions-footer-note i {
+    color: var(--romantic-pink);
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.occasions-footer-note strong {
+    color: var(--bloom-magenta);
+    font-weight: 600;
+}
+
+/* Landing Page Mini Occasion Strip */
+.occasions-mini-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0 10px 0;
+}
+
+.occasions-mini-strip .occasion-card {
+    padding: 20px 18px 16px 18px;
+}
+
+.occasions-mini-strip .occasion-icon-wrapper {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+
+.occasions-mini-strip .occasion-card h3 {
+    font-size: 1.15rem;
+}
+
+@media (max-width: 992px) {
+    .occasions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .occasions-title {
+        font-size: 1.85rem;
+    }
+
+    .occasions-mini-strip {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .occasions-mini-strip {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .occasions-container {
+        padding: 24px 16px 20px 16px;
+        border-radius: var(--radius-lg);
+    }
+    
+    .occasions-header {
+        margin-bottom: 20px;
+    }
+
+    .occasions-eyebrow {
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        padding: 5px 12px;
+        white-space: nowrap;
+        gap: 6px;
+    }
+
+    .occasions-title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .occasions-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    
+    .occasions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .occasion-card {
+        padding: 16px 12px 14px 12px;
+        border-radius: var(--radius-md);
+        min-height: 215px;
+    }
+    
+    .occasion-icon-wrapper {
+        width: 40px;
+        height: 40px;
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        border-radius: 12px;
+    }
+    
+    .occasion-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+        min-height: 2.5em;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .occasion-badge {
+        font-size: 0.65rem;
+        margin-bottom: 4px;
+    }
+    
+    .occasion-card p {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .occasion-action {
+        font-size: 0.75rem;
+        padding-top: 8px;
+        gap: 6px;
+    }
+    
+    .occasions-footer-note {
+        font-size: 0.82rem;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 18px;
+        padding-top: 14px;
+    }
+}
+
+
 /* FAQ Accordion Section */
 .faq-section {
     padding: 80px 0;
@@ -3867,9 +4285,13 @@ body {
     letter-spacing: -0.5px !important;
 }
 
-.hero-title span.qatar-text {
+/* Hero sub-heading line (kept small & elegant under the main H1) */
+.hero-title span.hero-sub-text {
+    font-size: 0.55em;
+    font-weight: 600;
     color: var(--romantic-pink) !important;
     display: inline-block;
+    letter-spacing: 0.3px;
 }
 
 /* Heart divider styling */
@@ -4137,3 +4559,115 @@ body {
         font-size: 0.82rem;
     }
 }
+
+/* ================== OCCASION LANDING PAGES & HERO CENTERING ALIGNMENT ================== */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0 auto 2rem;
+    width: 100%;
+}
+
+.seo-intro-section {
+    padding: 30px 35px;
+    margin: 20px auto 35px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.seo-intro-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--muted-bloom);
+    font-family: var(--font-body);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.seo-content-section {
+    max-width: 980px;
+    width: 100%;
+    margin: 36px auto;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 169, 106, 0.28);
+    border-radius: var(--radius-lg);
+    padding: 38px 36px;
+    box-shadow: 0 10px 28px rgba(184, 41, 78, 0.04);
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.seo-content-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    color: var(--petal-text);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.seo-content-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--petal-text);
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.seo-content-section p {
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.75;
+    color: #63434e;
+    margin-bottom: 16px;
+}
+
+.seo-celebrations-block {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(212, 169, 106, 0.25);
+    text-align: center;
+}
+
+.seo-celebrations-block p.seo-celebrations-subtitle {
+    color: var(--muted-bloom);
+    font-size: 0.95rem;
+    max-width: 620px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .seo-intro-section {
+        padding: 22px 18px;
+    }
+    .seo-content-section {
+        padding: 26px 20px;
+        margin: 20px auto;
+    }
+    .seo-content-section h2 {
+        font-size: 1.45rem;
+    }
+    .seo-content-section h3 {
+        font-size: 1.2rem;
+    }
+}

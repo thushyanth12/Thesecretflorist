@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Order luxury anniversary flowers and romantic bouquets online in Pondicherry. Surprise your spouse with premium red roses and custom floral gifts.">
+    <meta name="robots" content="index, follow">
     <meta name="keywords" content="anniversary flowers pondicherry, anniversary bouquet pondicherry, order roses online pondicherry, wedding bouquet delivery pondicherry, love bouquet pondicherry">
     <title>Anniversary Flowers in Pondicherry | The Secret Florist</title>
     <link rel="canonical" href="https://thesecretflorist.in/anniversary-flowers-pondicherry.html">
@@ -68,6 +69,80 @@
       ]
     }
     </script>
+
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which flowers are best for wedding anniversaries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Red roses, soft pink lilies, and elegant mixed luxury floral boxes are classic and highly popular choices for wedding anniversaries in Pondicherry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you design large luxury bouquets for major milestones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in high-end arrangements, including grand 100-rose arrangements and heart-shaped flower boxes for 10th, 25th, or 50th anniversary milestones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add a personalized card to my anniversary bouquet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! You can write a custom note in our Custom Request box, and we will include it with your floral package."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer midnight delivery in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please contact us directly via WhatsApp to coordinate specific delivery timings, and we will do our best to accommodate special timing requests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fresh are your anniversary flowers upon delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All blooms are hand-selected on the morning of delivery from top growers, conditioned in fresh floral hydration packs, and hand-delivered directly to your doorstep in Pondicherry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What anniversary flowers last the longest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lilies, carnations, and alstroemeria typically stay fresh for 5 to 7 days or more. For roses, our grand box arrangements keep stems hydrated longer than loose hand-tied wraps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine anniversary flowers with a gift like cake or perfume?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we create combination gifts pairing anniversary bouquets with cakes, perfumes, chocolates, polaroid photos, and personalized keepsakes for a complete romantic surprise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How early should I order anniversary flowers in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For large milestone arrangements we suggest ordering 2-3 days in advance. Same-day delivery is often possible for standard bouquets when you order early via WhatsApp."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -88,6 +163,8 @@
 
     <!-- Aesthetic Background Ornaments -->
     <div class="bg-ornaments">
+        <img src="assets/left_floral_border.png" class="floral-border floral-border-left" alt="" loading="lazy" aria-hidden="true">
+        <img src="assets/right_floral_border.png" class="floral-border floral-border-right" alt="" loading="lazy" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
@@ -103,17 +180,15 @@
     </div>
 
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="display:flex; align-items:center; gap:4px; text-decoration:none;">
-                <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
-                <img src="assets/logo1.png" alt="The Secret Florist Logo" >
-            </a>
+        <div class="logo" onclick="window.location.href='index.html'" role="button" tabindex="0" aria-label="The Secret Florist Homepage" style="cursor:pointer;">
+            <img src="assets/png logo.PNG" alt="The Secret Florist floral emblem" class="brand-logo">
+            <img src="assets/logo1.png" alt="The Secret Florist Logo">
         </div>
 
         <div class="nav-links">
             <a href="index.html#home">Home</a>
-            <a href="index.html#shop">Collection</a>
-            <a href="index.html#customize">Customize</a>
+            <a href="#shop">Collection</a>
+            <a href="#customize">Customize</a>
             <a href="#faq">FAQ</a>
         </div>
         <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
@@ -132,14 +207,55 @@
         <span class="hero-petal hero-petal-4"></span>
         <span class="hero-petal hero-petal-5"></span>
         <span class="hero-petal hero-petal-6"></span>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-leaf"></i>
-                Fresh — Handcrafted — Same-Day
+
+        <div class="hero-inner-container">
+            <!-- Bouquet in blob frame -->
+            <div class="blob-frame-container">
+                <div class="blob-frame">
+                    <img src="assets/hero_bouquet.png" alt="Romantic anniversary flowers Pondicherry - The Secret Florist" class="hero-blob-image" fetchpriority="high">
+                </div>
+                <!-- Stamp badge -->
+                <div class="stamp-badge">
+                    <svg viewBox="0 0 100 100" class="stamp-svg">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text class="stamp-text">
+                            <textPath href="#circlePath" startOffset="0%">
+                                ROMANCE &amp; LOVE • HANDCRAFTED • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="stamp-center">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
             </div>
-            <h1>Romantic Anniversary <span class="text-gradient">Flowers in Pondicherry</span></h1>
-            <p>Express your love with premium anniversary bouquets, luxury red rose arrangements, and elegant flower boxes delivered in Pondicherry.</p>
-            <div class="hero-actions">
+
+            <!-- Pill badge -->
+            <div class="hero-pill-badge">
+                <i class="fas fa-heart"></i>
+                Anniversary Flowers • Romantic • Same-Day
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-title">
+                Romantic Anniversary <br>
+                <span class="hero-sub-text">Flowers in Pondicherry</span>
+            </h1>
+
+            <!-- Heart divider -->
+            <div class="heart-divider">
+                <span class="line"></span>
+                <i class="fas fa-heart"></i>
+                <span class="line"></span>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-desc">
+                Express your love with premium anniversary bouquets, luxury red rose arrangements, and elegant flower boxes delivered in Pondicherry.
+            </p>
+
+            <!-- Actions -->
+            <div class="hero-actions-container">
                 <a href="#shop" class="cta-button ripple">
                     <i class="fas fa-spa"></i> Explore Collection
                 </a>
@@ -147,42 +263,36 @@
                     <i class="fas fa-home"></i> Back to Home
                 </a>
             </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-image-glow"></div>
-            <img src="assets/hero.png" alt="Anniversary flowers and wedding bouquet delivery Pondicherry - The Secret Florist" class="hero-image" fetchpriority="high">
+
+            <!-- Trust strip inside Hero -->
+            <section class="trust-strip">
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Romantic Roses</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h4>Same-Day Delivery</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h4>Luxury Wraps</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>5-Star Rated</h4>
+                </div>
+            </section>
         </div>
     </header>
-
-    <!-- Section Divider -->
-   
-    <div class="container">
-    <section class="trust-strip">
-        <div class="trust-card">
-          <div class="icon-circle">🌸</div>
-          <h3>1k</h3>
-          <p>Bouquets Delivered</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🌷</div>
-          <h3>100%</h3>
-          <p>Fresh Blooms</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🚚</div>
-          <h3>500+</h3>
-          <p>Same-day Delivery</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">✏️</div>
-          <h3>800+</h3>
-          <p>Custom Orders</p>
-        </div>
-      </section>
-      </div>
     
       <!-- SEO Local Introduction -->
       <div class="container">
@@ -195,7 +305,6 @@
               </div>
           </section>
       </div>
-    
 
     <section id="shop" class="shop-section">
         <div class="section-header">
@@ -249,6 +358,65 @@
             </div>
         </div>
     </section>
+
+    <!-- SEO Content: Ideas & tips -->
+    <div class="container">
+        <section class="seo-content-section reveal">
+            <h2>How to Choose the Perfect Anniversary Bouquet</h2>
+            <p>
+                Not sure where to start? Match the flowers to the message. <strong>Red roses</strong> remain the
+                timeless language of passionate love. <strong>Pink roses and lilies</strong> express admiration and
+                gratitude — lovely for partners and in-laws alike. <strong>White and gold arrangements</strong> suit
+                milestone celebrations, while <strong>orchids and mixed exotics</strong> feel modern and
+                sophisticated for couples who like something different.
+            </p>
+            <p>
+                Timing matters too. For surprise deliveries to workplaces in the city centre, we recommend a late
+                morning slot; for home surprises, evening delivery just before dinner creates the perfect moment.
+                Midnight anniversary delivery can often be arranged on request — message us early on WhatsApp to
+                confirm availability for your date.
+            </p>
+            <div class="seo-celebrations-block">
+                <h3>Explore Other Celebrations</h3>
+                <p class="seo-celebrations-subtitle">Looking for something beyond anniversaries? Handcrafted bouquets ready for any special moment:</p>
+                <div class="occasions-mini-strip">
+                    <a href="birthday-bouquet-pondicherry.html" class="occasion-card birthday ripple" aria-label="Explore Birthday Bouquets in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-cake-candles"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Joyful Moments</span>
+                            <h3>Birthday Bouquets</h3>
+                            <p>Festive wraps, chocolates &amp; keepsake memories.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Collection</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="rose-bouquet-pondicherry.html" class="occasion-card roses ripple" aria-label="Explore Rose Bouquets in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-seedling"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Timeless Elegance</span>
+                            <h3>Rose Bouquets</h3>
+                            <p>Fresh daily roses in luxury matte wraps.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Roses</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="bouquet-delivery-pondicherry.html" class="occasion-card delivery ripple" aria-label="Order Bouquet Delivery across Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-truck-fast"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Speedy &amp; Fresh</span>
+                            <h3>Bouquet Delivery</h3>
+                            <p>Same-day hand delivery across Pondicherry.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Order Delivery</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq-section reveal">
@@ -321,6 +489,13 @@
                 <a href="index.html#customize">Customize</a>
                 <a href="#faq">FAQ</a>
             </div>
+            <div class="footer-links">
+                <h4>Popular Collections</h4>
+                <a href="birthday-bouquet-pondicherry.html">Birthday Bouquets</a>
+                <a href="anniversary-flowers-pondicherry.html">Anniversary Flowers</a>
+                <a href="rose-bouquet-pondicherry.html">Rose Bouquets</a>
+                <a href="bouquet-delivery-pondicherry.html">Bouquet Delivery</a>
+            </div>
             <div class="footer-social">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -381,7 +556,7 @@
         <button class="modal-close" onclick="closeProductModal()">&times;</button>
         <div class="modal-content">
             <div class="modal-image-container">
-                <img id="modal-product-image" src="" alt="Product" class="modal-product-image">
+                <img id="modal-product-image" src="" alt="Anniversary bouquet from The Secret Florist Pondicherry" class="modal-product-image">
             </div>
             <div class="modal-info">
                 <h2 id="modal-product-name"></h2>

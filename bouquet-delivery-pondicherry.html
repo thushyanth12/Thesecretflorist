@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fresh flower bouquet delivery in Pondicherry for birthdays, anniversaries, and surprises. Handcrafted premium floral bouquets with same-day local delivery.">
+    <meta name="robots" content="index, follow">
     <meta name="keywords" content="flower delivery pondicherry, bouquet delivery pondicherry, order flowers online pondicherry, florist in pondicherry, same day flower delivery pondicherry">
     <title>Fresh Bouquet Delivery in Pondicherry | The Secret Florist</title>
     <link rel="canonical" href="https://thesecretflorist.in/bouquet-delivery-pondicherry.html">
@@ -68,6 +69,80 @@
       ]
     }
     </script>
+
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I order flower delivery in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can browse our collection online, select your favorite bouquet, add it to your cart, and place your order directly via WhatsApp for fast confirmation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you deliver flowers across all areas of Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide doorstep delivery of fresh bouquets across White Town, Heritage Town, Lawspet, Muthialpet, Rainbow Nagar, Saram, and East Coast Road / Auroville locations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize a flower bouquet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! We specialize in customized floral arrangements, including cash/money bouquets, polaroids bouquets, and custom rose selections. Just write a note in the customize section or reach out via WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide same-day bouquet delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, same-day delivery is available for most designs. We recommend placing orders early in the day to guarantee same-day slots."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your delivery charges in Pondicherry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Delivery within Pondicherry city limits is typically free or charged a small nominal fee depending on distance. Your final delivery cost is confirmed instantly when you place your order on WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods do you accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept cash on delivery, UPI payments, and bank transfers. Payment details are shared securely on WhatsApp when you confirm your order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I schedule a bouquet delivery for a future date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can pre-book deliveries for birthdays, anniversaries, and surprises in advance. Simply mention your preferred date and time slot when placing your order on WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the recipient is not available at the delivery address?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our delivery partner will call the recipient before arriving. If they are unavailable, we coordinate an alternate time or a safe handover spot, ensuring your flowers arrive fresh and on time."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -88,6 +163,8 @@
 
     <!-- Aesthetic Background Ornaments -->
     <div class="bg-ornaments">
+        <img src="assets/left_floral_border.png" class="floral-border floral-border-left" alt="" loading="lazy" aria-hidden="true">
+        <img src="assets/right_floral_border.png" class="floral-border floral-border-right" alt="" loading="lazy" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
@@ -103,17 +180,15 @@
     </div>
 
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="display:flex; align-items:center; gap:4px; text-decoration:none;">
-                <img src="assets/png logo.PNG" alt="png logo" class="brand-logo">
-                <img src="assets/logo1.png" alt="The Secret Florist Logo" >
-            </a>
+        <div class="logo" onclick="window.location.href='index.html'" role="button" tabindex="0" aria-label="The Secret Florist Homepage" style="cursor:pointer;">
+            <img src="assets/png logo.PNG" alt="The Secret Florist floral emblem" class="brand-logo">
+            <img src="assets/logo1.png" alt="The Secret Florist Logo">
         </div>
 
         <div class="nav-links">
             <a href="index.html#home">Home</a>
-            <a href="index.html#shop">Collection</a>
-            <a href="index.html#customize">Customize</a>
+            <a href="#shop">Collection</a>
+            <a href="#customize">Customize</a>
             <a href="#faq">FAQ</a>
         </div>
         <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
@@ -132,14 +207,55 @@
         <span class="hero-petal hero-petal-4"></span>
         <span class="hero-petal hero-petal-5"></span>
         <span class="hero-petal hero-petal-6"></span>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-leaf"></i>
-                Fresh — Handcrafted — Same-Day
+
+        <div class="hero-inner-container">
+            <!-- Bouquet in blob frame -->
+            <div class="blob-frame-container">
+                <div class="blob-frame">
+                    <img src="assets/hero_bouquet.png" alt="Fresh flower bouquet delivery in Pondicherry - The Secret Florist" class="hero-blob-image" fetchpriority="high">
+                </div>
+                <!-- Stamp badge -->
+                <div class="stamp-badge">
+                    <svg viewBox="0 0 100 100" class="stamp-svg">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text class="stamp-text">
+                            <textPath href="#circlePath" startOffset="0%">
+                                EXPRESS DELIVERY • PONDICHERRY • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="stamp-center">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                </div>
             </div>
-            <h1>Online Flower & <span class="text-gradient">Bouquet Delivery in Pondicherry</span></h1>
-            <p>Same-day delivery of fresh flower bouquets, customized arrangements, and luxury floral gifts across Pondicherry.</p>
-            <div class="hero-actions">
+
+            <!-- Pill badge -->
+            <div class="hero-pill-badge">
+                <i class="fas fa-truck-fast"></i>
+                Express Delivery • Handcrafted • Same-Day
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-title">
+                Bouquet Delivery <br>
+                <span class="hero-sub-text">Across Pondicherry</span>
+            </h1>
+
+            <!-- Heart divider -->
+            <div class="heart-divider">
+                <span class="line"></span>
+                <i class="fas fa-heart"></i>
+                <span class="line"></span>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-desc">
+                Same-day delivery of fresh flower bouquets, customized arrangements, and luxury floral gifts across Pondicherry.
+            </p>
+
+            <!-- Actions -->
+            <div class="hero-actions-container">
                 <a href="#shop" class="cta-button ripple">
                     <i class="fas fa-spa"></i> Explore Collection
                 </a>
@@ -147,42 +263,36 @@
                     <i class="fas fa-home"></i> Back to Home
                 </a>
             </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-image-glow"></div>
-            <img src="assets/hero.png" alt="Fresh flower bouquet delivery in Pondicherry - The Secret Florist" class="hero-image" fetchpriority="high">
+
+            <!-- Trust strip inside Hero -->
+            <section class="trust-strip">
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h4>Doorstep Delivery</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>100% Fresh Blooms</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h4>All Pondy Areas</h4>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon-img">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>5-Star Rated</h4>
+                </div>
+            </section>
         </div>
     </header>
-
-    <!-- Section Divider -->
-   
-    <div class="container">
-    <section class="trust-strip">
-        <div class="trust-card">
-          <div class="icon-circle">🌸</div>
-          <h3>1k</h3>
-          <p>Bouquets Delivered</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🌷</div>
-          <h3>100%</h3>
-          <p>Fresh Blooms</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">🚚</div>
-          <h3>500+</h3>
-          <p>Same-day Delivery</p>
-        </div>
-      
-        <div class="trust-card">
-          <div class="icon-circle">✏️</div>
-          <h3>800+</h3>
-          <p>Custom Orders</p>
-        </div>
-      </section>
-      </div>
     
       <!-- SEO Local Introduction -->
       <div class="container">
@@ -195,7 +305,6 @@
               </div>
           </section>
       </div>
-    
 
     <section id="shop" class="shop-section">
         <div class="section-header">
@@ -291,6 +400,64 @@
         </div>
     </section>
 
+    <!-- SEO Content: Coverage & timing -->
+    <div class="container">
+        <section class="seo-content-section reveal">
+            <h2>Delivery Areas and Timing in Pondicherry</h2>
+            <p>
+                Our delivery team runs multiple rounds through the day, so you can choose a slot that fits the
+                surprise — morning office deliveries, afternoon hospital visits to Gorimedu or PIMS, or evening
+                doorstep surprises. Order before 4 PM for guaranteed same-day flower delivery in Pondicherry; later
+                orders are still possible on request via WhatsApp depending on the day's schedule.
+            </p>
+            <p>
+                Delivering to a resort, hotel, or event venue? We coordinate directly with front desks for smooth
+                handovers, including discreet surprise deliveries arranged through WhatsApp. For bulk orders —
+                weddings, engagements, shop openings, or corporate gifting — message us for custom pricing and
+                dedicated design support.
+            </p>
+            <div class="seo-celebrations-block">
+                <h3>Explore by Occasion</h3>
+                <p class="seo-celebrations-subtitle">Handcrafted floral arrangements tailored for every special moment across Pondicherry:</p>
+                <div class="occasions-mini-strip">
+                    <a href="birthday-bouquet-pondicherry.html" class="occasion-card birthday ripple" aria-label="Explore Birthday Bouquets in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-cake-candles"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Joyful Moments</span>
+                            <h3>Birthday Bouquets</h3>
+                            <p>Festive wraps, chocolates &amp; keepsake memories.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Collection</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="anniversary-flowers-pondicherry.html" class="occasion-card anniversary ripple" aria-label="Explore Anniversary Flowers in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-heart"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Love &amp; Romance</span>
+                            <h3>Anniversary Flowers</h3>
+                            <p>Romantic red roses &amp; bespoke milestone wraps.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Romance</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a href="rose-bouquet-pondicherry.html" class="occasion-card roses ripple" aria-label="Explore Rose Bouquets in Pondicherry">
+                        <div class="occasion-icon-wrapper"><i class="fas fa-seedling"></i></div>
+                        <div class="occasion-content">
+                            <span class="occasion-badge">Timeless Elegance</span>
+                            <h3>Rose Bouquets</h3>
+                            <p>Fresh daily roses in luxury matte wraps.</p>
+                        </div>
+                        <div class="occasion-action">
+                            <span>Explore Roses</span> <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <!-- FAQ Section -->
     <section id="faq" class="faq-section reveal">
         <div class="container">
@@ -353,6 +520,13 @@
                 <a href="index.html#customize">Customize</a>
                 <a href="#faq">FAQ</a>
             </div>
+            <div class="footer-links">
+                <h4>Popular Collections</h4>
+                <a href="birthday-bouquet-pondicherry.html">Birthday Bouquets</a>
+                <a href="anniversary-flowers-pondicherry.html">Anniversary Flowers</a>
+                <a href="rose-bouquet-pondicherry.html">Rose Bouquets</a>
+                <a href="bouquet-delivery-pondicherry.html">Bouquet Delivery</a>
+            </div>
             <div class="footer-social">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -413,7 +587,7 @@
         <button class="modal-close" onclick="closeProductModal()">&times;</button>
         <div class="modal-content">
             <div class="modal-image-container">
-                <img id="modal-product-image" src="" alt="Product" class="modal-product-image">
+                <img id="modal-product-image" src="" alt="Bouquet from The Secret Florist Pondicherry" class="modal-product-image">
             </div>
             <div class="modal-info">
                 <h2 id="modal-product-name"></h2>
