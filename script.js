@@ -2225,6 +2225,14 @@ const products = [
         image: "assets/keni7.webp",
         description: "A blush-pink ribboned luxury gift box elevated among vibrant cherry blossoms with a satin-wrapped wand handle.",
         category: ["customized"]
+    },
+    {
+        id: 282,
+        name: "282 - Golden Promise Bouquet(AI Recreated)",
+        price: 3499,
+        image: "assets/goldd.webp",
+        description: "An opulent, everlasting arrangement in radiant gold, adorned with shimmering florals, intricate filigree butterflies, and an 'Engaged Forever' heart centerpiece.",
+        category: ["customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
