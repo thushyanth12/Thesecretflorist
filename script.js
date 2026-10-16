@@ -2233,6 +2233,14 @@ const products = [
         image: "assets/goldd.webp",
         description: "An opulent, everlasting arrangement in radiant gold, adorned with shimmering florals, intricate filigree butterflies, and an 'Engaged Forever' heart centerpiece.",
         category: ["customized"]
+    },
+    {
+        id: 283,
+        name: "283 - Gerbera & Assorted Chocolate Bouquet",
+        price: 1999,
+        image: "assets/recent.webp",
+        description: "A charming celebration of Ferrero Rocher, KitKat, and Dairy Milk paired with fresh pastel florals for sweet, cherished surprises.",
+        category: ["chocolate-bouquet", "birthday", "customized"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
