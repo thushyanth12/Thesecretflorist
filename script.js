@@ -2237,10 +2237,10 @@ const products = [
     {
         id: 283,
         name: "283 - Gerbera & Assorted Chocolate Bouquet",
-        price: 1999,
+        price: 3500,
         image: "assets/recent.webp",
         description: "A charming celebration of Ferrero Rocher, KitKat, and Dairy Milk paired with fresh pastel florals for sweet, cherished surprises.",
-        category: ["chocolate-bouquet", "birthday", "customized"]
+        category: ["chocolate-bouquet", "birthday"]
     }
 ];
 const counters = document.querySelectorAll(".trust-card h3");
