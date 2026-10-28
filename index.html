@@ -202,7 +202,27 @@
         <button class="hamburger" id="hamburger-btn" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
+        <!-- Floating search button — placed below hamburger button -->
+        <button class="navbar-search-btn" id="navbar-search-btn" aria-label="Search bouquets" aria-expanded="false">
+            <i class="fas fa-search"></i>
+        </button>
     </nav>
+
+    <!-- Search panel — slides down from top when search button is clicked -->
+    <div class="mobile-search-panel" id="mobile-search-panel" aria-hidden="true">
+        <div class="mobile-search-container">
+            <label class="mobile-search-inner" for="search-input">
+                <i class="fas fa-search"></i>
+                <input id="search-input" type="text" placeholder="Search bouquets e.g. chocolate under 1000" autocomplete="off" inputmode="search">
+                <button class="mobile-search-clear" id="mobile-search-clear" aria-label="Clear search" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </label>
+            <button class="mobile-search-close-btn" id="mobile-search-close-btn" aria-label="Close search" type="button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 
     <header id="home" class="hero">
         <span class="hero-petal hero-petal-1"></span>
@@ -394,9 +414,10 @@
             <p class="section-subtitle reveal">Each bouquet is handcrafted with love, using the finest seasonal blooms.</p>
         </div>
         <div class="shop-controls">
-            <label class="search-bar" for="search-input">
+            <!-- Desktop search – hidden on mobile (mobile uses navbar panel) -->
+            <label class="search-bar desktop-search-bar" for="search-input-desktop">
                 <i class="fas fa-search"></i>
-                <input id="search-input" type="text" placeholder="Search bouquet...">
+                <input id="search-input-desktop" type="text" placeholder="Search bouquet e.g. chocolate under 1000" autocomplete="off">
             </label>
         </div>
         <div class="category-scroll-container">

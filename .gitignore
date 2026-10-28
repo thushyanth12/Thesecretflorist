@@ -29,7 +29,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS Artifacts
+# OS & Editor Artifacts
+.vscode/
 .DS_Store
 Thumbs.db
 desktop.ini

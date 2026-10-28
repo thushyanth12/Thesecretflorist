@@ -4684,4 +4684,236 @@ body {
     .seo-content-section h3 {
         font-size: 1.2rem;
     }
+}
+
+/* ==========================================
+   FLOATING SEARCH BUTTON + SLIDE-DOWN PANEL
+   ========================================== */
+
+/* ── Floating Search Action Button (Placed directly below Hamburger) ── */
+.navbar-search-btn {
+    position: fixed !important;
+    top: 155px !important;
+    right: 25px !important;
+    width: 52px !important;
+    height: 52px !important;
+    background: var(--romantic-pink) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2000 !important;
+    box-shadow: 0 8px 24px rgba(184, 41, 78, 0.25) !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    font-size: 1.15rem !important;
+    transition: all 0.3s var(--ease-out-back) !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-search-btn:hover {
+    transform: scale(1.08) !important;
+    background: var(--deep-rose) !important;
+}
+
+.navbar-search-btn[aria-expanded="true"] {
+    background: var(--deep-rose) !important;
+    transform: scale(1.05) !important;
+}
+
+/* ── Slide-Down Search Panel (Clean top overlay) ── */
+.mobile-search-panel {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 2500 !important;
+    background: rgba(255, 245, 247, 0.98) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border-bottom: 1px solid rgba(212, 169, 106, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(180, 40, 78, 0.12) !important;
+    padding: 0 1.25rem !important;
+    box-sizing: border-box !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity    0.25s ease,
+        padding    0.25s ease !important;
+}
+
+.mobile-search-panel.open {
+    max-height: 85px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    padding-top: 0.85rem !important;
+    padding-bottom: 0.85rem !important;
+}
+
+.mobile-search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Inner pill-shaped input row */
+.mobile-search-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex: 1;
+    min-width: 0;
+    background: #fff;
+    border: 1.5px solid rgba(229, 138, 168, 0.25);
+    border-radius: 999px;
+    padding: 0.65rem 1.1rem;
+    box-shadow: 0 4px 16px rgba(229, 138, 168, 0.10);
+    cursor: text;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    box-sizing: border-box;
+}
+
+.mobile-search-inner:focus-within {
+    border-color: var(--accent-color);
+    box-shadow: 0 6px 20px rgba(229, 138, 168, 0.20);
+}
+
+.mobile-search-inner i.fa-search {
+    color: var(--accent-color);
+    font-size: 0.88rem;
+    opacity: 0.75;
+    flex-shrink: 0;
+}
+
+.mobile-search-inner input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-family: inherit;
+    min-width: 0;
+}
+
+.mobile-search-inner input::placeholder {
+    color: #b8a5ad;
+    font-size: 0.86rem;
+}
+
+/* Clear (×) button – hidden until there is input */
+.mobile-search-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: rgba(229, 138, 168, 0.15);
+    color: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.72rem;
+    padding: 0;
+    flex-shrink: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.mobile-search-inner:focus-within .mobile-search-clear,
+.mobile-search-panel.has-text .mobile-search-clear {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-search-clear:hover {
+    background: rgba(229, 138, 168, 0.28);
+}
+
+/* Close search button */
+.mobile-search-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: rgba(229, 138, 168, 0.15);
+    color: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.mobile-search-close-btn:hover {
+    background: var(--romantic-pink);
+    color: #fff;
+    transform: scale(1.06);
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Position floating search button directly below hamburger on mobile */
+    .navbar-search-btn {
+        top: 132px !important;
+        right: 20px !important;
+        width: 46px !important;
+        height: 46px !important;
+        font-size: 1.05rem !important;
+    }
+
+    /* Hide the in-page desktop search bar on mobile (search is in the panel) */
+    .desktop-search-bar {
+        display: none !important;
+    }
+}
+
+/* Extra small mobile screens (320px – 380px) */
+@media (max-width: 380px) {
+    .mobile-search-panel {
+        padding: 0 0.65rem !important;
+    }
+
+    .mobile-search-panel.open {
+        padding-top: 0.65rem !important;
+        padding-bottom: 0.65rem !important;
+    }
+
+    .mobile-search-inner {
+        padding: 0.55rem 0.85rem;
+        gap: 0.45rem;
+    }
+
+    .mobile-search-inner input {
+        font-size: 0.85rem;
+    }
+
+    .mobile-search-inner input::placeholder {
+        font-size: 0.76rem;
+    }
+
+    .mobile-search-close-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
 }

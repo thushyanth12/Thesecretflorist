@@ -2268,6 +2268,9 @@ let currentCategory = 'all';
 let searchTerm = '';
 let maxPrice = 100000;
 let occasionFilter = 'all';
+// Parsed from the search query; null means no price constraint from search
+let searchPriceLimit = null;   // numeric cap extracted from query string
+let searchPriceInclusive = true; // true = "up to" (<=), false = "under/below" (<)
 let selectedProductForModal = null;
 let modalQuantity = 1;
 // Tracks which options are currently selected inside the open modal
@@ -2280,7 +2283,8 @@ const cartTotalElement = document.getElementById('cart-total');
 const cartCountElement = document.getElementById('cart-count');
 const cartSidebar = document.getElementById('cart-sidebar');
 const cartOverlay = document.querySelector('.cart-overlay');
-const searchInput = document.getElementById('search-input');
+const searchInput        = document.getElementById('search-input');         // mobile navbar panel
+const desktopSearchInput = document.getElementById('search-input-desktop'); // desktop shop section
 const messageInput = document.getElementById('message-input');
 const productModal = document.getElementById('product-modal');
 const productModalOverlay = document.getElementById('product-modal-overlay');
@@ -2291,6 +2295,7 @@ const orderStatus = document.getElementById('order-status');
 function init() {
     setupPageLoader();
     setupMobileMenu();
+    setupMobileSearchPanel();
     setupCategoryFilters();
     setupCategoryScrollButtons();
     setupCategoryPillsFlow();
@@ -2444,11 +2449,209 @@ function setupCategoryScrollButtons() {
     updateButtonStates();
 }
 
+// ── Search synonym map ───────────────────────────────────────────────────────
+// Maps a query keyword to one or more category slugs or product keywords.
+// Add more entries here as needed — no external library required.
+const SEARCH_SYNONYMS = {
+    'choco':        'chocolate',
+    'chocolates':   'chocolate',
+    'chocolate':    'chocolate-bouquet',
+    'teddy':        'teddy-bouquet',
+    'teddies':      'teddy-bouquet',
+    'photo':        'polaroids-bouquet',
+    'photos':       'polaroids-bouquet',
+    'polaroid':     'polaroids-bouquet',
+    'memory':       'polaroids-bouquet',
+    'memories':     'polaroids-bouquet',
+    'money':        'money-bouquet',
+    'cash':         'money-bouquet',
+    'currency':     'money-bouquet',
+    'perfume':      'perfume-bouquet',
+    'fragrance':    'perfume-bouquet',
+    'scent':        'perfume-bouquet',
+    'hotwheels':    'hot-wheels',
+    'hot wheel':    'hot-wheels',
+    'cars':         'hot-wheels',
+    'car':          'hot-wheels',
+    'budget':       'budget-friendly',
+    'cheap':        'budget-friendly',
+    'affordable':   'budget-friendly',
+    'luxury':       'luxury',
+    'premium':      'luxury',
+    'grand':        'luxury',
+    'wedding':      'wedding',
+    'anniversary':  'wedding',
+    'bride':        'wedding',
+    'birthday':     'birthday',
+    'bday':         'birthday',
+    'sunflower':    'sunflower',
+    'rose':         'rose',
+    'roses':        'rose',
+    'tulip':        'tulip',
+    'tulips':       'tulip'
+};
+
+/**
+ * parseSearchQuery(raw)
+ * ----------------------
+ * Extracts an optional price constraint and a clean keyword string from a
+ * raw search query.  Supports only these explicit patterns — no AI/NLP:
+ *
+ *   "under 1000"     → price < 1000  (exclusive)
+ *   "below 1500"     → price < 1500  (exclusive)
+ *   "up to 1000"     → price <= 1000 (inclusive)
+ *   "upto 1000"      → price <= 1000 (inclusive)
+ *   "maximum 1000"   → price <= 1000 (inclusive)
+ *   "max 1000"       → price <= 1000 (inclusive)
+ *   "₹1000"          → price <= 1000 (inclusive, prefix rupee symbol)
+ *
+ * Returns { keywords: string, priceLimit: number|null, inclusive: boolean }
+ */
+function parseSearchQuery(raw) {
+    let q = raw.trim().toLowerCase();
+
+    let priceLimit = null;
+    let inclusive  = true;
+
+    // Patterns: (under|below) followed by optional ₹/rs/inr and a number
+    const exclusiveRe = /\b(under|below)\s*[₹]?\s*(rs\.?|inr)?\s*(\d+(?:[,.]\d+)*)\b/i;
+    // Patterns: (up to|upto|maximum|max) followed by optional ₹/rs/inr and a number
+    const inclusiveRe = /\b(up\s*to|upto|maximum|max)\s*[₹]?\s*(rs\.?|inr)?\s*(\d+(?:[,.]\d+)*)\b/i;
+    // Bare ₹ prefix: ₹1000 with no operator → treat as inclusive
+    const rupeeRe     = /[₹]\s*(\d+(?:[,.]\d+)*)/i;
+
+    let match;
+    if ((match = exclusiveRe.exec(q))) {
+        priceLimit = parseFloat(match[3].replace(/,/g, ''));
+        inclusive  = false;
+        q = q.replace(match[0], ' ').trim();
+    } else if ((match = inclusiveRe.exec(q))) {
+        priceLimit = parseFloat(match[3].replace(/,/g, ''));
+        inclusive  = true;
+        q = q.replace(match[0], ' ').trim();
+    } else if ((match = rupeeRe.exec(q))) {
+        priceLimit = parseFloat(match[1].replace(/,/g, ''));
+        inclusive  = true;
+        q = q.replace(match[0], ' ').trim();
+    }
+
+    // Expand synonyms: replace recognised words with their mapped values
+    // Sort keys longest-first so multi-word keys ("hot wheel") match before single-word ones
+    const synonymKeys = Object.keys(SEARCH_SYNONYMS).sort((a, b) => b.length - a.length);
+    for (const key of synonymKeys) {
+        const keyRe = new RegExp('\\b' + key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi');
+        if (keyRe.test(q)) {
+            q = q.replace(keyRe, SEARCH_SYNONYMS[key]);
+        }
+    }
+
+    // Collapse extra whitespace left after stripping price phrases
+    q = q.replace(/\s{2,}/g, ' ').trim();
+
+    return { keywords: q, priceLimit, inclusive };
+}
+
+// ================== MOBILE SEARCH PANEL ==================
+function setupMobileSearchPanel() {
+    const toggleBtn  = document.getElementById('navbar-search-btn');
+    const panel      = document.getElementById('mobile-search-panel');
+    const clearBtn   = document.getElementById('mobile-search-clear');
+    const closeBtn   = document.getElementById('mobile-search-close-btn');
+
+    if (!toggleBtn || !panel) return;
+
+    function openPanel() {
+        panel.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        panel.setAttribute('aria-hidden', 'false');
+        // Focus the mobile input after transition
+        setTimeout(() => { if (searchInput) searchInput.focus(); }, 200);
+    }
+
+    function closePanel() {
+        panel.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('aria-hidden', 'true');
+    }
+
+    toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        panel.classList.contains('open') ? closePanel() : openPanel();
+    });
+
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closePanel();
+        });
+    }
+
+    // Clear button
+    if (clearBtn) {
+        clearBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (searchInput) {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+            if (desktopSearchInput) desktopSearchInput.value = '';
+            searchInput && searchInput.focus();
+        });
+    }
+
+    // Close panel when tapping outside
+    document.addEventListener('click', (e) => {
+        if (panel.classList.contains('open') &&
+            !panel.contains(e.target) &&
+            !toggleBtn.contains(e.target)) {
+            closePanel();
+        }
+    });
+
+    // Close panel on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanel();
+    });
+}
+
 function setupSearchFilters() {
+    // Single handler that parses the query and updates state
+    function handleSearch(rawValue) {
+        const raw    = rawValue.trim().toLowerCase();
+        const parsed = parseSearchQuery(raw);
+        searchTerm           = parsed.keywords;
+        searchPriceLimit     = parsed.priceLimit;
+        searchPriceInclusive = parsed.inclusive;
+        renderProducts();
+    }
+
+    // Mobile panel input (canonical id="search-input")
     if (searchInput) {
-        searchInput.addEventListener('input', (event) => {
-            searchTerm = event.target.value.trim().toLowerCase();
-            renderProducts();
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            // Keep desktop input in sync so they show the same text
+            if (desktopSearchInput) desktopSearchInput.value = val;
+            handleSearch(val);
+        });
+
+        // Scroll to shop when user presses Enter
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const shopEl = document.getElementById('shop');
+                if (shopEl) shopEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Desktop input (id="search-input-desktop") — drives the same state
+    if (desktopSearchInput) {
+        desktopSearchInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            // Keep mobile input in sync
+            if (searchInput) searchInput.value = val;
+            handleSearch(val);
         });
     }
 }
@@ -2617,9 +2820,29 @@ function renderProducts() {
         const productCategories = normalizeCategory(product);
         const matchesCategory = currentCategory === 'all' || productCategories.includes(currentCategory);
         const matchesOccasion = occasionFilter === 'all' || productCategories.includes(occasionFilter);
-        const matchesSearch = !searchTerm || product.name.toLowerCase().includes(searchTerm) || product.description.toLowerCase().includes(searchTerm);
-        const matchesPrice = product.price === undefined || product.price === null || product.price <= maxPrice;
-        return matchesCategory && matchesOccasion && matchesSearch && matchesPrice;
+
+        // ── Search keyword matching ──────────────────────────────────────────
+        // After parseSearchQuery() strips price phrases and expands synonyms,
+        // searchTerm may be empty (price-only query) or hold keywords/slugs.
+        const matchesSearch = !searchTerm ||
+            product.name.toLowerCase().includes(searchTerm) ||
+            product.description.toLowerCase().includes(searchTerm) ||
+            productCategories.some(cat => cat.includes(searchTerm));
+
+        // ── Price matching ───────────────────────────────────────────────────
+        // maxPrice: set by any external price-range slider (existing behaviour).
+        // searchPriceLimit: extracted from the search query string.
+        const price = product.price;
+        const priceKnown = price !== undefined && price !== null;
+        const matchesMaxPrice = !priceKnown || price <= maxPrice;
+        let matchesSearchPrice = true;
+        if (searchPriceLimit !== null && priceKnown) {
+            matchesSearchPrice = searchPriceInclusive
+                ? price <= searchPriceLimit          // "up to" / "maximum"
+                : price <  searchPriceLimit;         // "under" / "below"
+        }
+
+        return matchesCategory && matchesOccasion && matchesSearch && matchesMaxPrice && matchesSearchPrice;
     });
 
     if (filteredProducts.length === 0) {
@@ -3229,8 +3452,9 @@ function detectLandingPageFilter() {
     } else if (path.includes('rose-bouquet-pondicherry')) {
         currentCategory = 'all';
         searchTerm = 'rose';
-        const sInput = document.getElementById('search-input');
-        if (sInput) sInput.value = 'rose';
+        // Populate both inputs so UI is correct on any screen size
+        if (searchInput) searchInput.value = 'rose';
+        if (desktopSearchInput) desktopSearchInput.value = 'rose';
     } else if (path.includes('bouquet-delivery-pondicherry')) {
         currentCategory = 'all';
         setActiveCategoryButton('all');
