@@ -15,11 +15,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js" integrity="sha384-KZetIXtrdbXstGhLNEbeSTfjZCr0QrioGU9dJl486Zr69ewuEbtdUsrqTIkGOPgl" crossorigin="anonymous"></script>
     <link rel="preload" as="image" href="assets/hero.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -179,11 +177,24 @@
         <div class="bg-noise"></div>
     </div>
 
+    <!-- Announcement Bar (Artisanal Boutique) -->
+    <aside class="announcement-bar" aria-label="Announcement">
+        <div class="announcement-container">
+            <span class="announcement-item"><i class="fas fa-truck-fast"></i> Same-Day Delivery in Pondicherry</span>
+            <span class="announcement-divider">•</span>
+            <span class="announcement-item"><i class="fa-solid fa-hand-holding-heart"></i> Handcrafted With Love</span>
+            <span class="announcement-divider">•</span>
+            <a href="https://wa.me/919994588076" target="_blank" class="announcement-link" aria-label="WhatsApp Contact">
+                <i class="fa-brands fa-whatsapp"></i> Chat: +91 99945 88076
+            </a>
+        </div>
+    </aside>
+
     <nav class="navbar">
-        <div class="logo" onclick="window.location.href='index.html'" role="button" tabindex="0" aria-label="The Secret Florist Homepage" style="cursor:pointer;">
+        <a href="index.html#home" class="logo" aria-label="The Secret Florist Home">
             <img src="assets/png logo.PNG" alt="The Secret Florist floral emblem" class="brand-logo">
             <img src="assets/logo1.png" alt="The Secret Florist Logo">
-        </div>
+        </a>
 
         <div class="nav-links">
             <a href="index.html#home">Home</a>
@@ -191,13 +202,16 @@
             <a href="#customize">Customize</a>
             <a href="#faq">FAQ</a>
         </div>
-        <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
-            <i class="fas fa-shopping-bag"></i>
-            <span id="cart-count">0</span>
-        </button>
-        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
+
+        <div class="nav-actions" style="display: flex; align-items: center;">
+            <button class="cart-icon" onclick="toggleCart()" aria-label="Open cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </button>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
     <header id="home" class="hero">
