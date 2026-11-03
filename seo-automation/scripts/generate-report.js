@@ -48,8 +48,16 @@ async function main() {
 
   if (kw) {
     md += `## Tracked Keywords\n\n`;
-    for (const k of kw.keywords || []) {
-      md += `- **${k.keyword}**: ${k.position ?? "not tracked yet"}\n`;
+    const trackedKeywords = [
+      ...(kw.gsc?.trackedKeywords || []),
+      ...(Array.isArray(kw.serpapi) ? kw.serpapi : []),
+    ];
+    if (trackedKeywords.length === 0) {
+      md += `No keyword ranking data is available in the latest report.\n`;
+    }
+    for (const k of trackedKeywords) {
+      const position = k.position ?? "not ranked";
+      md += `- **${k.keyword}** (${k.source || "unknown source"}): ${position}\n`;
     }
   }
 

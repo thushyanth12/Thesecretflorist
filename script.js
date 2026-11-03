@@ -2676,7 +2676,8 @@ function setupProductInteractions() {
     productGrid.addEventListener('click', (event) => {
         const addButton = event.target.closest('.add-btn');
 
-        if (addButton) {
+        // Customize and prebook buttons handle their own WhatsApp flows.
+        if (addButton && !addButton.classList.contains('customize-wa-btn') && !addButton.classList.contains('prebook-btn')) {
             const id = Number(addButton.dataset.id);
             addToCart(id);
         }
@@ -3363,27 +3364,6 @@ if (cartOverlay) {
     cartOverlay.addEventListener('click', () => toggleCart(false));
 }
 
-// ================== HAMBURGER MENU ==================
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburgerBtn && navLinks) {
-    hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        navLinks.classList.toggle('mobile-open');
-        document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
-    });
-
-    // Close menu when a nav link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburgerBtn.classList.remove('active');
-            navLinks.classList.remove('mobile-open');
-            document.body.style.overflow = '';
-        });
-    });
-}
-
 // ================== FAST & RESPONSIVE BRAND SMOOTH SCROLLING ==================
 // Implements 100% native compositor GPU scrolling (Apple, Zara, Nike, Shopify pattern):
 // - 0ms input latency on wheel, trackpad, and touch.
@@ -3657,26 +3637,29 @@ function setupMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     
     if (hamburgerBtn && navLinks) {
+        const closeMenu = () => {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
         hamburgerBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             hamburgerBtn.classList.toggle('active');
             navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
         
         // Close menu when clicking a link
         const links = navLinks.querySelectorAll('a');
         links.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenu);
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                hamburgerBtn.classList.remove('active');
-                navLinks.classList.remove('active');
+                closeMenu();
             }
         });
     }

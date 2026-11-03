@@ -21,17 +21,23 @@ const results = {
 };
 
 async function fetchHtml(url) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (compatible; SEO-Automation/1.0)",
-      Accept: "text/html,application/xhtml+xml",
-    },
-    redirect: "follow",
-    timeout: 15000,
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  const html = await res.text();
-  return { html, finalUrl: res.url, status: res.status };
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  try {
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; SEO-Automation/1.0)",
+        Accept: "text/html,application/xhtml+xml",
+      },
+      redirect: "follow",
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+    const html = await res.text();
+    return { html, finalUrl: res.url, status: res.status };
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
 function analyzePage(url, html, finalUrl) {
