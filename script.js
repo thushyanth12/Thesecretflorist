@@ -2241,7 +2241,25 @@ const products = [
         image: "assets/recent.webp",
         description: "A charming celebration of Ferrero Rocher, KitKat, and Dairy Milk paired with fresh pastel florals for sweet, cherished surprises.",
         category: ["chocolate-bouquet", "birthday"]
+    },
+    {
+        id: 284,
+        name: "284 - Royal Purple Chocolate Bouquet",
+        price: 3800,
+        image: "assets/DIARY.webp",
+        description: "A luxurious and elegant chocolate bouquet featuring Cadbury Dairy Milk chocolates and a Cadbury Silk Bubbly centerpiece, beautifully arranged with delicate white baby’s breath flowers. Wrapped in premium black and white floral paper with elegant golden borders and finished with a royal purple satin ribbon, this bouquet makes the perfect gift for birthdays, anniversaries, Valentine's Day, and other special occasions.",
+        category: ["chocolate-bouquet"]
+
+    },
+    {
+        id: 285,
+        name: "285 - Golden Elegance Dried Flower Bouquet",
+        price: 10000,
+        image: "assets/GOLDEN.webp",
+        description: "A stunning premium dried flower bouquet featuring a beautiful arrangement of delicate dried flowers, baby's breath, and decorative golden accents. Elegantly wrapped in luxurious golden and bronze-toned floral paper with heart-shaped decorative picks, this bouquet creates a rich, warm, and sophisticated look. Perfect for birthdays.",
+        category: ["birthday"]
     }
+
 ];
 const counters = document.querySelectorAll(".trust-card h3");
 
