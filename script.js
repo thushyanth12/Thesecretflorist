@@ -3127,12 +3127,8 @@ function renderModalOptions(product, container) {
 
     container.innerHTML = `
         <div class="modal-options-section">
-            <div class="modal-options-label">
-                <i class="fas fa-wand-magic-sparkles"></i> Add-ons
-            </div>
-            <div class="modal-options-list">
-                ${itemsHTML}
-            </div>
+           
+          
         </div>
         <div class="modal-total-row" id="modal-total-row">
             <span class="modal-total-label">Total</span>

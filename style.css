@@ -1972,28 +1972,47 @@ img {
 
 .lightbox-close {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.22);
     border: 1px solid rgba(255, 255, 255, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    line-height: 1;
-    color: white;
+    padding: 0;
+    font-size: 0;          /* hides the × text so only the drawn cross shows */
+    line-height: 0;
+    color: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 3001;
-}
-
-.lightbox-close:hover {
+  }
+  
+  /* the two bars that form the cross, centered exactly */
+  .lightbox-close::before,
+  .lightbox-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  
+  .lightbox-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .lightbox-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  .lightbox-close:hover {
     background: var(--romantic-pink);
     transform: scale(1.08);
-}
+  }
 
 /* ================== MISC ================== */
 .product-meta {
@@ -2609,15 +2628,8 @@ img {
         font-size: 1.05rem;
     }
 
-    .lightbox {
-        padding: 1rem;
-    }
-
-    .lightbox-close {
-        top: 15px;
-        right: 20px;
-        font-size: 2rem;
-    }
+   
+   
 
     /* Toast notification alignment on mobile */
     #toast-container {
@@ -5215,4 +5227,4 @@ body {
         height: 34px;
         font-size: 0.85rem;
     }
-}
+}
